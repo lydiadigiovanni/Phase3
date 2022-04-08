@@ -6,23 +6,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Homepage.HomePageController">
    <children>
       <ImageView fitHeight="837.0" fitWidth="802.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Documents/GitHub/Phase3/pictures/background.jpg" />
+            <Image url="@../../../Pictures/HomePage/Background.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="190.0" fitWidth="368.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Documents/GitHub/Phase3/pictures/logo.png" />
+            <Image url="@../../../Pictures/HomePage/Logo.png" />
          </image>
       </ImageView>
       <Button id="logOut" fx:id="LogOutButton" contentDisplay="CENTER" layoutX="608.0" layoutY="-26.0" mnemonicParsing="false" onAction="#logOutButtonPressed" style="-fx-background-color: transparent;" text="&#10;&#10;&#10;  LOG OUT" textAlignment="CENTER" textFill="#ed7e33">
          <graphic>
             <ImageView fitHeight="153.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Documents/GitHub/Phase3/pictures/LogOutButton.png" />
+                  <Image url="@../../../Pictures/HomePage/LogOut.png" />
                </image>
             </ImageView>
          </graphic>
@@ -34,7 +34,7 @@
          <graphic>
             <ImageView fitHeight="209.0" fitWidth="217.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Documents/GitHub/Phase3/pictures/ProfileShip.png" />
+                  <Image url="@../../../Pictures/HomePage/ProfileShip.png" />
                </image>
             </ImageView>
          </graphic>
@@ -46,7 +46,7 @@
          <graphic>
             <ImageView fitHeight="198.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Documents/GitHub/Phase3/pictures/Island1.png" />
+                  <Image url="@../../../Pictures/HomePage/Island1.png" />
                </image>
             </ImageView>
          </graphic>
@@ -58,7 +58,7 @@
          <graphic>
             <ImageView fitHeight="153.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Documents/GitHub/Phase3/pictures/Isalnd2.png" />
+                  <Image url="@../../../Pictures/HomePage/Island2.png" />
                </image>
             </ImageView>
          </graphic>
@@ -70,7 +70,7 @@
          <graphic>
             <ImageView fitHeight="271.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Documents/GitHub/Phase3/pictures/Island3.png" />
+                  <Image url="@../../../Pictures/HomePage/Island3.png" />
                </image>
             </ImageView>
          </graphic>
