@@ -1,7 +1,4 @@
 package UI.Homepage;
-
-import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,7 +31,7 @@ public class HomePageController {
     }
 
     @FXML
-    void island1ButtonPressed(ActionEvent event) throws IOException {
+    void island1ButtonPressed(ActionEvent event){
         try {
         Parent islandOneMapParent = FXMLLoader.load(getClass().getResource("/UI/Map/MapView.fxml"));
         Scene islandOneMapScene = new Scene(islandOneMapParent);
@@ -46,7 +43,6 @@ public class HomePageController {
             //TODO: handle exception
             e.printStackTrace();
         }
-        
     }
 
     @FXML
