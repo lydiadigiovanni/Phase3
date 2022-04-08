@@ -49,24 +49,24 @@
 <children>
       <ImageView fitHeight="764.0" fitWidth="1015.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Pictures/treasure_map_scaled.png" />
+            <Image url="@../../../Pictures/Map/MapBackround.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="391.0" fitWidth="925.0" layoutX="41.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" scaleY="1.5">
          <image>
-            <Image url="@../../Pictures/Practice/board_Lighter.png" />
+            <Image url="@../../../Pictures/Practice/board_Lighter.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="379.0" fitWidth="59.0" layoutX="647.0" layoutY="213.0" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
          <image>
-            <Image url="@../../Pictures/Practice/black_line.png" />
+            <Image url="@../../../Pictures/Practice/black_line.png" />
          </image>
       </ImageView>
       <StackPane layoutX="205.0" layoutY="60.0" prefHeight="150.0" prefWidth="200.0">
          <children>
             <ImageView fitHeight="148.0" fitWidth="619.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../Pictures/Practice/board_Lighter.png" />
+                  <Image url="@../../../Pictures/Practice/board_Lighter.png" />
                </image>
             </ImageView>
             <Label text="PRACTICE">
