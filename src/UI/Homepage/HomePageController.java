@@ -1,8 +1,15 @@
 package UI.Homepage;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class HomePageController {
 
@@ -27,8 +34,19 @@ public class HomePageController {
     }
 
     @FXML
-    void island1ButtonPressed(ActionEvent event) {
+    void island1ButtonPressed(ActionEvent event) throws IOException {
+        try {
+        Parent islandOneMapParent = FXMLLoader.load(getClass().getResource("/UI/Map/MapView.fxml"));
+        Scene islandOneMapScene = new Scene(islandOneMapParent);
 
+        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+        window.setScene(islandOneMapScene);
+        window.show();
+        } catch (Exception e) {
+            //TODO: handle exception
+            e.printStackTrace();
+        }
+        
     }
 
     @FXML
