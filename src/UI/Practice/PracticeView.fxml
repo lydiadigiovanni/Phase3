@@ -45,8 +45,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Practice.PracticeController">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Practice.PracticeController">
 <children>
       <ImageView fitHeight="764.0" fitWidth="1015.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -58,11 +59,114 @@
             <Image url="@../../../Pictures/Practice/board_Lighter.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="379.0" fitWidth="59.0" layoutX="647.0" layoutY="213.0" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
-         <image>
-            <Image url="@../../../Pictures/Practice/black_line.png" />
-         </image>
-      </ImageView>
+      <AnchorPane disable="true" layoutX="114.0" layoutY="175.10000610351562" visible="false">
+         <children>
+            <ImageView fitHeight="379.0" fitWidth="59.0" layoutX="518.25" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
+               <image>
+                  <Image url="@../../../Pictures/Practice/black_line.png" />
+               </image>
+            </ImageView>
+            <VBox layoutY="225.89999389648438" prefHeight="113.0" prefWidth="377.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="choiceButtonFour" cache="true" mnemonicParsing="false" text="1">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="multipleChoiceQuestion" />
+                           </toggleGroup>
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="24.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton>
+                        <RadioButton fx:id="choiceButtonThree" mnemonicParsing="false" text="1" toggleGroup="$multipleChoiceQuestion">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="choiceButtonOne" mnemonicParsing="false" text="1" toggleGroup="$multipleChoiceQuestion">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton>
+                        <RadioButton fx:id="choiceButtonTwo" mnemonicParsing="false" prefHeight="24.0" prefWidth="87.0" text="1" toggleGroup="$multipleChoiceQuestion">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="confirmButton" layoutX="344.0" layoutY="329.8999938964844" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="CONFIRM">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="nextButton" layoutX="445.0" layoutY="329.8999938964844" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="questionLabel" alignment="CENTER" layoutX="10.0" layoutY="68.89999389648438" prefHeight="93.0" prefWidth="397.0" text="Spaghetti">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="correctLabel" alignment="CENTER" layoutX="600.0" layoutY="281.8999938964844" prefHeight="25.0" prefWidth="164.0">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox fx:id="pictureBox" alignment="CENTER" layoutX="8.0" layoutY="132.89999389648438" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
+            <Label layoutX="621.0" layoutY="68.89999389648438" text="PROGRESS">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="numberCorrectLabel" layoutX="663.0" layoutY="98.89999389648438" text="0/5">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
       <StackPane layoutX="205.0" layoutY="60.0" prefHeight="150.0" prefWidth="200.0">
          <children>
             <ImageView fitHeight="148.0" fitWidth="619.0" pickOnBounds="true">
@@ -77,137 +181,45 @@
             </Label>
          </children>
       </StackPane>
-      <VBox layoutX="114.0" layoutY="401.0" prefHeight="113.0" prefWidth="377.0">
+      <AnchorPane fx:id="practiceAnchorPane" layoutX="-24.0" layoutY="577.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <RadioButton fx:id="choiceButtonFour" cache="true" mnemonicParsing="false" text="1">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="multipleChoiceQuestion" />
-                     </toggleGroup>
-                     <font>
-                        <Font name="Berlin Sans FB Bold" size="24.0" />
-                     </font>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                     </padding>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </RadioButton>
-                  <RadioButton fx:id="choiceButtonThree" mnemonicParsing="false" text="1" toggleGroup="$multipleChoiceQuestion">
-                     <font>
-                        <Font name="Berlin Sans FB Bold" size="24.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                     </padding>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </RadioButton>
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <RadioButton fx:id="choiceButtonOne" mnemonicParsing="false" text="1" toggleGroup="$multipleChoiceQuestion">
-                     <font>
-                        <Font name="Berlin Sans FB Bold" size="24.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                     </padding>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </RadioButton>
-                  <RadioButton fx:id="choiceButtonTwo" mnemonicParsing="false" prefHeight="24.0" prefWidth="87.0" text="1" toggleGroup="$multipleChoiceQuestion">
-                     <font>
-                        <Font name="Berlin Sans FB Bold" size="24.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                     </padding>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </RadioButton>
-               </children>
-            </HBox>
+            <Button fx:id="backButton" contentDisplay="CENTER" layoutY="9.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="   MAP" textFill="#ed7e33">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="55.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="109.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Pictures/Practice/BackArrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="113.0" fitWidth="123.0" layoutX="235.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pictures/Practice/CartoonMap.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="backButton1" contentDisplay="CENTER" layoutX="732.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="DONE" textFill="#ed7e33">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="55.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="109.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../../../Pictures/Practice/BackArrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
-      </VBox>
-      <Button fx:id="confirmButton" layoutX="458.0" layoutY="505.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="CONFIRM">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Berlin Sans FB Bold" size="14.0" />
-         </font></Button>
-      <Button fx:id="nextButton" layoutX="559.0" layoutY="505.0" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Berlin Sans FB Bold" size="14.0" />
-         </font></Button>
-      <Button fx:id="backButton" contentDisplay="CENTER" layoutX="-24.0" layoutY="586.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="   MAP" textFill="#ed7e33">
-         <font>
-            <Font name="Berlin Sans FB Bold" size="55.0" />
-         </font>
-         <graphic>
-            <ImageView fitHeight="109.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Pictures/Practice/BackArrow.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Label fx:id="questionLabel" alignment="CENTER" layoutX="124.0" layoutY="244.0" prefHeight="93.0" prefWidth="397.0" text="Spaghetti">
-         <font>
-            <Font name="Berlin Sans FB Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label fx:id="correctLabel" alignment="CENTER" layoutX="714.0" layoutY="457.0" prefHeight="25.0" prefWidth="164.0">
-         <font>
-            <Font name="Berlin Sans FB Bold" size="24.0" />
-         </font>
-      </Label>
-      <HBox fx:id="pictureBox" alignment="CENTER" layoutX="122.0" layoutY="308.0" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
-      <Label layoutX="735.0" layoutY="244.0" text="PROGRESS">
-         <font>
-            <Font name="Berlin Sans FB Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label fx:id="numberCorrectLabel" layoutX="777.0" layoutY="274.0" text="0/5">
-         <font>
-            <Font name="Berlin Sans FB Bold" size="24.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="113.0" fitWidth="123.0" layoutX="211.0" layoutY="603.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../Pictures/Practice/CartoonMap.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="backButton1" contentDisplay="CENTER" layoutX="708.0" layoutY="577.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="DONE" textFill="#ed7e33">
-         <font>
-            <Font name="Berlin Sans FB Bold" size="55.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <ImageView fitHeight="109.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
-               <image>
-                  <Image url="@../../../Pictures/Practice/BackArrow.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      </AnchorPane>
+      <WebView fx:id="youtubeVideo" disable="true" layoutX="114.0" layoutY="210.0" prefHeight="371.0" prefWidth="776.0" visible="false" />
 </children>
 </AnchorPane>

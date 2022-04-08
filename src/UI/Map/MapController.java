@@ -1,5 +1,8 @@
 package UI.Map;
 
+import java.lang.ModuleLayer.Controller;
+
+import UI.Practice.PracticeController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,15 +47,19 @@ public class MapController {
 
     @FXML
     void practiceButton1Clicked(ActionEvent event) {
-        
         String firstFourLetters = practiceButton1.getId().substring(0, 4);
         String lastLetter = practiceButton1.getId().substring((practiceButton1.getId().length()) - 1);        
         try {
-            Parent practiceOneParent = FXMLLoader.load(getClass().getResource("/UI/Practice/PracticeView.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Practice/PracticeView.fxml"));
+            Parent practiceOneParent = loader.load();
             Scene practiceOneScene = new Scene(practiceOneParent);
+            PracticeController controller = loader.getController();
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
             window.setScene(practiceOneScene);
             window.show();
+            controller.setFirstLetter(firstFourLetters);
+            controller.setLastLetter(lastLetter);
+            controller.initialize();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -60,14 +67,19 @@ public class MapController {
 
     @FXML
     void practiceButton2Clicked(ActionEvent event) {
-        String firstFourLetters = practiceButton1.getId().substring(0, 4);
-        String lastLetter = practiceButton1.getId().substring((practiceButton1.getId().length()) - 1);        
+        String firstFourLetters = practiceButton2.getId().substring(0, 4);
+        String lastLetter = practiceButton2.getId().substring((practiceButton2.getId().length()) - 1);        
         try {
-            Parent practiceOneParent = FXMLLoader.load(getClass().getResource("/UI/Practice/PracticeView.fxml"));
-            Scene practiceOneScene = new Scene(practiceOneParent);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Practice/PracticeView.fxml"));
+            Parent practiceTwoParent = loader.load();
+            Scene practiceTwoScene = new Scene(practiceTwoParent);
+            PracticeController controller = loader.getController();
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
-            window.setScene(practiceOneScene);
+            window.setScene(practiceTwoScene);
             window.show();
+            controller.setFirstLetter(firstFourLetters);
+            controller.setLastLetter(lastLetter);
+            controller.initialize();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -95,12 +107,42 @@ public class MapController {
 
     @FXML
     void tutorialButton1Clicked(ActionEvent event) {
-
+        String firstFourLetters = tutorialButton1.getId().substring(0, 4);
+        String lastLetter = tutorialButton1.getId().substring((tutorialButton1.getId().length()) - 1);        
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Practice/PracticeView.fxml"));
+            Parent tutorialOneParent = loader.load();
+            Scene tutorialOneScene = new Scene(tutorialOneParent);
+            PracticeController controller = loader.getController();
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+            window.setScene(tutorialOneScene);
+            window.show();
+            controller.setFirstLetter(firstFourLetters);
+            controller.setLastLetter(lastLetter);
+            controller.initialize();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void tutorialButton2Clicked(ActionEvent event) {
-
+        String firstFourLetters = tutorialButton2.getId().substring(0, 4);
+        String lastLetter = tutorialButton2.getId().substring((tutorialButton2.getId().length()) - 1);        
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Practice/PracticeView.fxml"));
+            Parent tutorialTwoParent = loader.load();
+            Scene tutorialTwoScene = new Scene(tutorialTwoParent);
+            PracticeController controller = loader.getController();
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+            window.setScene(tutorialTwoScene);
+            window.show();
+            controller.setFirstLetter(firstFourLetters);
+            controller.setLastLetter(lastLetter);
+            controller.initialize();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
