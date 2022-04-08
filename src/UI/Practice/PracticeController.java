@@ -21,6 +21,9 @@ public class PracticeController {
     private ToggleGroup multipleChoiceQuestion;
     
     @FXML
+    private Button backButton;
+
+    @FXML
     private RadioButton choiceButtonOne;
     
     @FXML
@@ -42,6 +45,9 @@ public class PracticeController {
     private Label correctLabel;
 
     @FXML
+    private Button doneButton;
+
+    @FXML
     private Label numberCorrectLabel;
 
     @FXML
@@ -53,6 +59,11 @@ public class PracticeController {
 
     private PracticeModel model = new PracticeModel();
     
+    @FXML
+    void completeAssignment(ActionEvent event) {
+
+    }
+
     @FXML
     void checkAnswer(ActionEvent event) {
         String correctString = model.checkAnswer(((RadioButton) multipleChoiceQuestion.getSelectedToggle()).getText());
@@ -74,6 +85,9 @@ public class PracticeController {
         model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour);
     }
 
-    
+    @FXML
+    void returnToMap(ActionEvent event) {
+
+    }
 
 }

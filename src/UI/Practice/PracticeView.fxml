@@ -146,6 +146,28 @@
          <font>
             <Font name="Berlin Sans FB Bold" size="14.0" />
          </font></Button>
+      <Button fx:id="nextButton" layoutX="559.0" layoutY="505.0" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Berlin Sans FB Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="backButton" contentDisplay="CENTER" layoutX="-24.0" layoutY="586.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="   MAP" textFill="#ed7e33">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="55.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="109.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pictures/Practice/BackArrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
       <Label fx:id="questionLabel" alignment="CENTER" layoutX="124.0" layoutY="244.0" prefHeight="93.0" prefWidth="397.0" text="Spaghetti">
          <font>
             <Font name="Berlin Sans FB Bold" size="24.0" />
@@ -156,13 +178,6 @@
             <Font name="Berlin Sans FB Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="nextButton" layoutX="559.0" layoutY="505.0" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Berlin Sans FB Bold" size="14.0" />
-         </font></Button>
       <HBox fx:id="pictureBox" alignment="CENTER" layoutX="122.0" layoutY="308.0" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
       <Label layoutX="735.0" layoutY="244.0" text="PROGRESS">
          <font>
@@ -174,5 +189,25 @@
             <Font name="Berlin Sans FB Bold" size="24.0" />
          </font>
       </Label>
+      <ImageView fitHeight="113.0" fitWidth="123.0" layoutX="211.0" layoutY="603.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pictures/Practice/CartoonMap.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton1" contentDisplay="CENTER" layoutX="708.0" layoutY="577.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="DONE" textFill="#ed7e33">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="55.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="109.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@../../../Pictures/Practice/BackArrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
 </children>
 </AnchorPane>
