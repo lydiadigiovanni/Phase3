@@ -8,13 +8,13 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 
-public class Model {
+public class PracticeModel {
     
     private int randomizePlacement;
 
     private String answer;
 
-    public Model() {
+    public PracticeModel() {
         // TODO Auto-generated constructor stub
     }
 

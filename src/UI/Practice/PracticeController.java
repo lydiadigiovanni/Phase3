@@ -9,7 +9,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.HBox;
 
-public class Controller {
+public class PracticeController {
 
     @FXML
     private ResourceBundle resources;
@@ -51,7 +51,7 @@ public class Controller {
     private HBox pictureBox;
     
 
-    private Model model = new Model();
+    private PracticeModel model = new PracticeModel();
     
     @FXML
     void checkAnswer(ActionEvent event) {
