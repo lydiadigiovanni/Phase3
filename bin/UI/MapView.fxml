@@ -4,14 +4,13 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MapController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.MapController">
    <children>
       <ImageView fitHeight="608.0" fitWidth="810.0" layoutX="-6.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/MapBackround.png" />
+            <Image url="@../../Pictures/Map/MapBackround.png" />
          </image>
       </ImageView>
       <Button fx:id="tutorialButton1" layoutX="-239.0" layoutY="74.0" mnemonicParsing="false" onAction="#tutorialButton1Clicked" prefHeight="600.0" prefWidth="800.0" rotate="-28.8" style="-fx-background-color: tr;" text="TUTORIAL" textFill="RED" AnchorPane.bottomAnchor="-74.0" AnchorPane.leftAnchor="-239.0" AnchorPane.rightAnchor="239.0" AnchorPane.topAnchor="74.0">
@@ -30,102 +29,94 @@
          <font>
             <Font name="Berlin Sans FB Bold" size="28.0" />
          </font></Button>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="150.0" fitWidth="136.0" layoutX="460.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" rotate="11.3">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/TutorialButton.png" />
+            <Image url="@../../Pictures/Map/TutorialButton.png" />
          </image>
       </ImageView>
-      <VBox prefHeight="200.0" prefWidth="100.0" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="practiceImage2" fitHeight="150.0" fitWidth="136.0" layoutX="609.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/ExamButton.png" />
+            <Image url="@../../Pictures/Map/ExamButtonFlipped.png" />
          </image>
       </ImageView>
       <ImageView fx:id="tutorialImage1" fitHeight="150.0" fitWidth="136.0" layoutX="58.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true" rotate="-6.7">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/TutorialButton.png" />
+            <Image url="@../../Pictures/Map/TutorialButton.png" />
          </image>
       </ImageView>
       <ImageView fx:id="practiceImage1" fitHeight="150.0" fitWidth="136.0" layoutX="236.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Software%20Engineering/multiplechoicepictures/ExamButtonFlipped.png" />
+            <Image url="@../../Pictures/Map/ExamButton.png" />
          </image>
       </ImageView>
       <ImageView fx:id="testImage" fitHeight="150.0" fitWidth="136.0" layoutX="377.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/XTest.png" />
+            <Image url="@../../Pictures/Map/XTest.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="145.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="138.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="203.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="176.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true" rotate="146.7">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="183.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
-         <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="383.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="334.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" rotate="-33.7">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="221.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="214.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="432.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" rotate="26.6">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="563.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true" rotate="39.8">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="633.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" rotate="50.7">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="601.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true" rotate="-135.0">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="576.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true" rotate="-22.4">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="531.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" rotate="-19.8">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="483.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true" rotate="-15.9">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/RedLine.png" />
+            <Image url="@../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="615.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../SoftwareEngineeringProject/Pics/BackButton.png" />
+            <Image url="@../../Pictures/Map/BackButton.png" />
          </image>
       </ImageView>
       <Button fx:id="tutorialButton2" layoutX="407.0" layoutY="153.0" mnemonicParsing="false" onAction="#tutorialButton2Clicked" prefHeight="162.0" prefWidth="212.0" rotate="14.9" style="-fx-background-color: tr;" text="TUTORIAL" textFill="RED">

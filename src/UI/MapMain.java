@@ -1,4 +1,4 @@
-package UserInterface;
+package UI;
 
 import java.io.IOException;
 import javafx.application.Application;
