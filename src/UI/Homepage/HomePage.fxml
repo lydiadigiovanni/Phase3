@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -29,8 +30,11 @@
          <font>
             <Font name="Berlin Sans FB Bold" size="30.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button id="profile" fx:id="ProfileButton" contentDisplay="CENTER" layoutX="262.0" layoutY="294.0" mnemonicParsing="false" onAction="#profileButtonPressed" prefHeight="299.0" prefWidth="279.0" style="-fx-background-color: transparent;" text="&#10;&#10;&#10;&#10;PROFILE" textAlignment="CENTER" textFill="#4472c2">
+      <Button id="profile" fx:id="ProfileButton" contentDisplay="CENTER" layoutX="262.0" layoutY="323.0" mnemonicParsing="false" onAction="#profileButtonPressed" prefHeight="286.0" prefWidth="276.0" style="-fx-background-color: transparent;" text="&#10;&#10;&#10;&#10;PROFILE" textAlignment="CENTER" textFill="#4472c2">
          <graphic>
             <ImageView fitHeight="209.0" fitWidth="217.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -41,6 +45,9 @@
          <font>
             <Font name="Berlin Sans FB Bold" size="40.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button id="island1" fx:id="Island1Button" contentDisplay="CENTER" layoutX="2.0" layoutY="199.0" mnemonicParsing="false" onAction="#island1ButtonPressed" prefHeight="101.0" prefWidth="122.0" rotate="-15.0" style="-fx-background-color: transparent;" text="COUNTING&#10;COVE&#10;" textAlignment="CENTER" textFill="#ffc41d">
          <graphic>
@@ -53,10 +60,13 @@
          <font>
             <Font name="Berlin Sans FB Bold" size="36.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button id="island2" fx:id="Island2Button" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="245.0" layoutY="141.0" mnemonicParsing="false" onAction="#Island2ButtonPressed" prefHeight="148.0" prefWidth="229.0" style="-fx-background-color: transparent;" text="OPERATION&#10;ISLE" textAlignment="CENTER" textFill="#70ad47">
+      <Button id="island2" fx:id="Island2Button" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="239.0" layoutY="113.0" mnemonicParsing="false" onAction="#Island2ButtonPressed" prefHeight="148.0" prefWidth="229.0" style="-fx-background-color: transparent;" text="OPERATION&#10;ISLE" textAlignment="CENTER" textFill="#70ad47">
          <graphic>
-            <ImageView fitHeight="153.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="201.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Pictures/HomePage/Island2.png" />
                </image>
@@ -65,6 +75,9 @@
          <font>
             <Font name="Berlin Sans FB Bold" size="35.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button id="island3" fx:id="Island3Button" contentDisplay="CENTER" layoutX="532.0" layoutY="139.0" mnemonicParsing="false" onAction="#island3ButtonPressed" prefHeight="215.0" prefWidth="184.0" rotate="15.0" style="-fx-background-color: transparent;" text="&#10;GEOMETRY&#10;COAST" textAlignment="CENTER" textFill="RED">
          <graphic>
@@ -77,6 +90,9 @@
          <font>
             <Font name="Berlin Sans FB Bold" size="35.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </AnchorPane>

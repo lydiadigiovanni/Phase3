@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,7 +14,7 @@
             <Image url="@../../../Pictures/Map/MapBackround.png" />
          </image>
       </ImageView>
-      <Button fx:id="tutorialButton1" contentDisplay="TOP" layoutX="27.0" layoutY="222.0" mnemonicParsing="false" onAction="#tutorialButton1Clicked" prefHeight="189.0" prefWidth="186.0" rotate="-28.8" style="-fx-background-color: tr;" text="TUTORIAL" textAlignment="CENTER" textFill="RED" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="587.0" AnchorPane.topAnchor="222.0">
+      <Button fx:id="tutorialButton1" contentDisplay="CENTER" layoutX="27.0" layoutY="222.0" mnemonicParsing="false" onAction="#tutorialButton1Clicked" prefHeight="189.0" prefWidth="186.0" rotate="-28.8" style="-fx-background-color: tr;" text="&#10;&#10;&#10;TUTORIAL" textAlignment="CENTER" textFill="RED" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="587.0" AnchorPane.topAnchor="222.0">
          <font>
             <Font name="Berlin Sans FB Bold" size="28.0" />
          </font>
@@ -24,7 +25,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="practiceButton1" contentDisplay="TOP" layoutX="217.0" layoutY="89.0" mnemonicParsing="false" onAction="#practiceButton1Clicked" style="-fx-background-color: tr;" text="PRACTICE" textAlignment="CENTER" textFill="RED">
+      <Button fx:id="practiceButton1" contentDisplay="CENTER" layoutX="217.0" layoutY="89.0" mnemonicParsing="false" onAction="#practiceButton1Clicked" style="-fx-background-color: tr;" text="&#10;&#10;&#10;PRACTICE" textAlignment="CENTER" textFill="RED">
          <font>
             <Font name="Berlin Sans FB Bold" size="28.0" />
          </font>
@@ -34,20 +35,26 @@
                   <Image url="@../../../Pictures/Map/ExamButton.png" />
                </image>
             </ImageView>
-         </graphic></Button>
-      <Button fx:id="tutorialButton2" contentDisplay="TOP" layoutX="446.0" layoutY="89.0" mnemonicParsing="false" onAction="#tutorialButton2Clicked" prefHeight="162.0" prefWidth="212.0" rotate="14.9" style="-fx-background-color: tr;" text="TUTORIAL" textAlignment="CENTER" textFill="RED">
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="tutorialButton2" contentDisplay="CENTER" layoutX="446.0" layoutY="89.0" mnemonicParsing="false" onAction="#tutorialButton2Clicked" prefHeight="173.0" prefWidth="212.0" rotate="14.9" style="-fx-background-color: tr;" text="&#10;&#10;&#10;TUTORIAL" textAlignment="CENTER" textFill="RED">
          <font>
             <Font name="Berlin Sans FB Bold" size="28.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="150.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="149.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Pictures/Map/TutorialButton.png" />
                </image>
             </ImageView>
          </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button fx:id="practiceButton2" contentDisplay="TOP" layoutX="595.0" layoutY="267.0" mnemonicParsing="false" onAction="#practiceButton2Clicked" style="-fx-background-color: tr;" text="PRACTICE" textAlignment="CENTER" textFill="RED">
+      <Button fx:id="practiceButton2" contentDisplay="CENTER" layoutX="595.0" layoutY="267.0" mnemonicParsing="false" onAction="#practiceButton2Clicked" style="-fx-background-color: tr;" text="&#10;&#10;&#10;PRACTICE" textAlignment="CENTER" textFill="RED">
          <font>
             <Font name="Berlin Sans FB Bold" size="28.0" />
          </font>
@@ -57,8 +64,11 @@
                   <Image url="@../../../Pictures/Map/ExamButtonFlipped.png" />
                </image>
             </ImageView>
-         </graphic></Button>
-      <Button fx:id="testButton" contentDisplay="TOP" layoutX="389.0" layoutY="362.0" mnemonicParsing="false" onAction="#testButtonClicked" style="-fx-background-color: tr;" text="TEST" textAlignment="CENTER" textFill="RED">
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="testButton" contentDisplay="CENTER" layoutX="389.0" layoutY="362.0" mnemonicParsing="false" onAction="#testButtonClicked" style="-fx-background-color: tr;" text="&#10;&#10;&#10;TEST" textAlignment="CENTER" textFill="RED">
          <font>
             <Font name="Berlin Sans FB Bold" size="28.0" />
          </font>
@@ -67,14 +77,23 @@
                <image>
                   <Image url="@../../../Pictures/Map/XTest.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
-         </graphic></Button>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Button fx:id="homeButton" layoutX="613.0" layoutY="-1.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Pictures/Map/BackButton.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
          </graphic>
       </Button>

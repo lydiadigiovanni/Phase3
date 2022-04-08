@@ -33,6 +33,7 @@
 -->
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
@@ -45,7 +46,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="675.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Practice.PracticeController">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Practice.PracticeController">
 <children>
       <ImageView fitHeight="764.0" fitWidth="1015.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -93,6 +94,9 @@
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </RadioButton>
                   <RadioButton fx:id="choiceButtonThree" mnemonicParsing="false" text="1" toggleGroup="$multipleChoiceQuestion">
                      <font>
@@ -101,6 +105,9 @@
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </RadioButton>
                </children>
             </HBox>
@@ -113,6 +120,9 @@
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </RadioButton>
                   <RadioButton fx:id="choiceButtonTwo" mnemonicParsing="false" prefHeight="24.0" prefWidth="87.0" text="1" toggleGroup="$multipleChoiceQuestion">
                      <font>
@@ -121,12 +131,21 @@
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </RadioButton>
                </children>
             </HBox>
          </children>
       </VBox>
-      <Button fx:id="confirmButton" layoutX="464.0" layoutY="473.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="25.0" prefWidth="59.0" text="Confirm" />
+      <Button fx:id="confirmButton" layoutX="458.0" layoutY="505.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="CONFIRM">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Berlin Sans FB Bold" size="14.0" />
+         </font></Button>
       <Label fx:id="questionLabel" alignment="CENTER" layoutX="124.0" layoutY="244.0" prefHeight="93.0" prefWidth="397.0" text="Spaghetti">
          <font>
             <Font name="Berlin Sans FB Bold" size="24.0" />
@@ -137,7 +156,13 @@
             <Font name="Berlin Sans FB Bold" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="nextButton" layoutX="473.0" layoutY="502.0" mnemonicParsing="false" onAction="#nextQuestion" text="Next" />
+      <Button fx:id="nextButton" layoutX="559.0" layoutY="505.0" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Berlin Sans FB Bold" size="14.0" />
+         </font></Button>
       <HBox fx:id="pictureBox" alignment="CENTER" layoutX="122.0" layoutY="308.0" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
       <Label layoutX="735.0" layoutY="244.0" text="PROGRESS">
          <font>
