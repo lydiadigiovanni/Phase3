@@ -1,3 +1,4 @@
+package UI.Map;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
