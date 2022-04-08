@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -28,7 +27,7 @@ public class MapMain extends Application {
   }
   
   catch (IOException e) {
-     
+     e.printStackTrace();
 
   }
 }
@@ -36,8 +35,6 @@ public class MapMain extends Application {
     
  
  public static void main(String[] args) {
-        System.out.println("asjhafh");
         launch(args);
-        System.out.println("hi");
     }
 }

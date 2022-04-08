@@ -7,10 +7,10 @@ import javafx.scene.image.ImageView;
 public class MapController {
 
     @FXML
-    private Button practiceButton1;
+    private Button practiceButton1; //
 
     @FXML
-    private Button practiceButton2;
+    private Button practiceButton2; //
 
     @FXML
     private ImageView practiceImage1;
@@ -19,13 +19,13 @@ public class MapController {
     private ImageView practiceImage2;
 
     @FXML
-    private Button testButton;
+    private Button testButton; //
 
     @FXML
     private ImageView testImage;
 
     @FXML
-    private Button tutorialButton1;
+    private Button tutorialButton1; //
 
     @FXML
     private Button tutorialButton2;
