@@ -2,8 +2,13 @@ package UI.Map;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class MapController {
 
@@ -49,6 +54,16 @@ public class MapController {
 
     @FXML
     void returnHome(ActionEvent event) {
+        try {
+            Parent homepageParent = FXMLLoader.load(getClass().getResource("/UI/Homepage/HomePage.fxml"));
+            Scene homeScene = new Scene(homepageParent);
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+            window.setScene(homeScene);
+            window.show();
+            } catch (Exception e) {
+                //TODO: handle exception
+                e.printStackTrace();
+            }
 
     }
 
