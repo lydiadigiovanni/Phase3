@@ -1,4 +1,4 @@
-package UI;
+package UI.Map;
 
 import java.io.IOException;
 import javafx.application.Application;

@@ -1,4 +1,4 @@
-package UI;
+package UI.Map;
 
 import javafx.scene.control.Button;
 
