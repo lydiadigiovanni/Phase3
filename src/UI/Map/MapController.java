@@ -44,12 +44,33 @@ public class MapController {
 
     @FXML
     void practiceButton1Clicked(ActionEvent event) {
-
+        
+        String firstFourLetters = practiceButton1.getId().substring(0, 4);
+        String lastLetter = practiceButton1.getId().substring((practiceButton1.getId().length()) - 1);        
+        try {
+            Parent practiceOneParent = FXMLLoader.load(getClass().getResource("/UI/Practice/PracticeView.fxml"));
+            Scene practiceOneScene = new Scene(practiceOneParent);
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+            window.setScene(practiceOneScene);
+            window.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void practiceButton2Clicked(ActionEvent event) {
-
+        String firstFourLetters = practiceButton1.getId().substring(0, 4);
+        String lastLetter = practiceButton1.getId().substring((practiceButton1.getId().length()) - 1);        
+        try {
+            Parent practiceOneParent = FXMLLoader.load(getClass().getResource("/UI/Practice/PracticeView.fxml"));
+            Scene practiceOneScene = new Scene(practiceOneParent);
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+            window.setScene(practiceOneScene);
+            window.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
