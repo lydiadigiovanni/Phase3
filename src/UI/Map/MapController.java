@@ -96,7 +96,8 @@ public class MapController {
             controller.setFirstLetter(firstFourLetters);
             controller.setLastLetter(lastLetter);
             controller.initialize();
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -110,7 +111,6 @@ public class MapController {
             window.setScene(homeScene);
             window.show();
             } catch (Exception e) {
-                //TODO: handle exception
                 e.printStackTrace();
             }
 
