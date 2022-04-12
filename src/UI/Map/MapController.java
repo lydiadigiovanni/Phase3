@@ -16,6 +16,12 @@ public class MapController {
     private Button homeButton;
 
     @FXML
+    private ImageView practice1Check;
+
+    @FXML
+    private ImageView practice2Check;
+
+    @FXML
     private Button practiceButton1;
 
     @FXML
@@ -31,7 +37,17 @@ public class MapController {
     private Button testButton;
 
     @FXML
+    private ImageView testCheck;
+
+    @FXML
     private ImageView testImage;
+
+    @FXML
+    private ImageView tutorial1Check;
+
+    @FXML
+    private ImageView tutorial2Check;
+
 
     @FXML
     private Button tutorialButton1;
