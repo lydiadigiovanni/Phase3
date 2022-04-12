@@ -47,7 +47,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Practice.PracticeController">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.TutoPracTest.TutoPracTestController">
 <children>
       <ImageView fitHeight="764.0" fitWidth="1015.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -61,7 +61,7 @@
       </ImageView>
       <AnchorPane fx:id="practiceAnchorPane" disable="true" layoutX="114.0" layoutY="175.10000610351562" visible="false">
          <children>
-            <ImageView fitHeight="379.0" fitWidth="59.0" layoutX="518.25" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
+            <ImageView disable="true" fitHeight="379.0" fitWidth="59.0" layoutX="518.0" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
                <image>
                   <Image url="@../../../Pictures/Practice/black_line.png" />
                </image>
@@ -149,7 +149,7 @@
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="correctLabel" alignment="CENTER" layoutX="600.0" layoutY="281.8999938964844" prefHeight="25.0" prefWidth="164.0">
+            <Label fx:id="correctAnswerLabel" alignment="CENTER" layoutX="581.0" layoutY="320.0" prefHeight="25.0" prefWidth="164.0">
                <font>
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
@@ -165,6 +165,7 @@
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
+            <ImageView fx:id="incorrectCorrect" fitHeight="150.0" fitWidth="200.0" layoutX="563.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
       <StackPane layoutX="205.0" layoutY="60.0" prefHeight="150.0" prefWidth="200.0">
@@ -174,7 +175,7 @@
                   <Image url="@../../../Pictures/Practice/board_Lighter.png" />
                </image>
             </ImageView>
-            <Label text="PRACTICE">
+            <Label fx:id="titleLabel" textAlignment="CENTER">
                <font>
                   <Font name="Berlin Sans FB Bold" size="68.0" />
                </font>

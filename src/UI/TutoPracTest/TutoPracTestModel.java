@@ -1,4 +1,4 @@
-package UI.Practice;
+package UI.TutoPracTest;
 import java.util.concurrent.ThreadLocalRandom;
 
 import Backend.QuestionGenerator;
@@ -8,7 +8,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 
-public class PracticeModel {
+public class TutoPracTestModel {
     
     private int randomizePlacement;
 
@@ -18,16 +18,16 @@ public class PracticeModel {
 
     private String lastLetter;
 
-    public PracticeModel() {
+    public TutoPracTestModel() {
         // TODO Auto-generated constructor stub
     }
 
-    public String checkAnswer(String multipleChoiceQuestion) {
+    public boolean checkAnswer(String multipleChoiceQuestion) {
         if (multipleChoiceQuestion.equalsIgnoreCase(answer)) {
-            return "CORRECT!";
+            return true;
         }
         else {
-            return "INCORRECT";
+            return false;
         }
     }
 
@@ -69,4 +69,7 @@ public class PracticeModel {
         return firstFourLetters;
     }
     
+    public String getAnswer() {
+        return answer;
+    }
 }
