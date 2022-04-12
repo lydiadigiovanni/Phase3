@@ -109,8 +109,6 @@ public class PracticeController {
                 case "prac":
                     practiceAnchorPane.visibleProperty().set(true);
                     practiceAnchorPane.disableProperty().set(false);
-                    nextButton.visibleProperty().set(true);
-                    numberCorrectLabel.visibleProperty().set(true);
                     System.out.println("anchor pane has been made visible");
                     model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour); 
                     break;

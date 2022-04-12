@@ -59,7 +59,7 @@
             <Image url="@../../../Pictures/Practice/board_Lighter.png" />
          </image>
       </ImageView>
-      <AnchorPane disable="true" layoutX="114.0" layoutY="175.10000610351562" visible="false">
+      <AnchorPane fx:id="practiceAnchorPane" disable="true" layoutX="114.0" layoutY="175.10000610351562" visible="false">
          <children>
             <ImageView fitHeight="379.0" fitWidth="59.0" layoutX="518.25" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
                <image>
@@ -181,7 +181,7 @@
             </Label>
          </children>
       </StackPane>
-      <AnchorPane fx:id="practiceAnchorPane" layoutX="-24.0" layoutY="577.0">
+      <AnchorPane layoutX="-24.0" layoutY="577.0">
          <children>
             <Button fx:id="backButton" contentDisplay="CENTER" layoutY="9.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="   MAP" textFill="#ed7e33">
                <font>
