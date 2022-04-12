@@ -1,4 +1,4 @@
-package UI.Practice;
+package UI.TutoPracTest;
 import java.util.concurrent.ThreadLocalRandom;
 
 import Backend.QuestionGenerator;
@@ -8,7 +8,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 
-public class PracticeModel {
+public class TutoPracTestModel {
     
     private int randomizePlacement;
 
@@ -18,7 +18,7 @@ public class PracticeModel {
 
     private String lastLetter;
 
-    public PracticeModel() {
+    public TutoPracTestModel() {
         // TODO Auto-generated constructor stub
     }
 
