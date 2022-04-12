@@ -165,5 +165,30 @@
             <Image url="@../../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="tutorial1Check" fitHeight="60.0" fitWidth="60.0" layoutX="112.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pictures/Map/itemCompleted.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="practice1Check" fitHeight="60.0" fitWidth="60.0" layoutX="320.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pictures/Map/itemCompleted.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tutorial2Check" fitHeight="60.0" fitWidth="60.0" layoutX="576.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pictures/Map/itemCompleted.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="practice2Check" fitHeight="60.0" fitWidth="60.0" layoutX="719.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pictures/Map/itemCompleted.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="testCheck" fitHeight="60.0" fitWidth="60.0" layoutX="495.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pictures/Map/itemCompleted.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

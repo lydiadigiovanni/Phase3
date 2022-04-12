@@ -18,6 +18,9 @@ public class RewardController {
     private ImageView prizePhoto;
 
     @FXML
+    private ImageView treasureChest;
+
+    @FXML
     void prizeClaim(ActionEvent event) {
 
     }
