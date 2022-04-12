@@ -14,6 +14,10 @@ public class PracticeModel {
 
     private String answer;
 
+    private String firstFourLetters;
+
+    private String lastLetter;
+
     public PracticeModel() {
         // TODO Auto-generated constructor stub
     }
@@ -51,6 +55,18 @@ public class PracticeModel {
         if (randomizePlacement == 5) {
             randomizePlacement = 1;
         }
+    }
+
+    public void setFirstLetter(String firstFourLetters) {
+        this.firstFourLetters = firstFourLetters;
+    }
+
+    public void setLastLetter(String lastLetter) {
+        this.lastLetter = lastLetter;
+    }
+
+    public String getFirstLetters() {
+        return firstFourLetters;
     }
     
 }
