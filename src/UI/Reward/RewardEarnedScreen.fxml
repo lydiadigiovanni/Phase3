@@ -15,7 +15,7 @@
             <Image url="@../../../Pictures/Practice/board_Lighter.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="486.0" fitWidth="686.0" layoutX="75.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="treasureChest" fitHeight="486.0" fitWidth="686.0" layoutX="75.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Pictures/Practice/TreasureChest.png" />
          </image>

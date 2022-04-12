@@ -64,9 +64,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button id="island2" fx:id="Island2Button" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="239.0" layoutY="113.0" mnemonicParsing="false" onAction="#Island2ButtonPressed" prefHeight="148.0" prefWidth="229.0" style="-fx-background-color: transparent;" text="OPERATION&#10;ISLE" textAlignment="CENTER" textFill="#70ad47">
+      <Button id="island2" fx:id="Island2Button" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="253.0" layoutY="122.0" mnemonicParsing="false" onAction="#Island2ButtonPressed" prefHeight="148.0" prefWidth="229.0" style="-fx-background-color: transparent;" text="OPERATION&#10;ISLE" textAlignment="CENTER" textFill="#70ad47">
          <graphic>
-            <ImageView fitHeight="201.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="163.0" fitWidth="255.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Pictures/HomePage/Island2.png" />
                </image>
