@@ -22,12 +22,12 @@ public class PracticeModel {
         // TODO Auto-generated constructor stub
     }
 
-    public String checkAnswer(String multipleChoiceQuestion) {
+    public boolean checkAnswer(String multipleChoiceQuestion) {
         if (multipleChoiceQuestion.equalsIgnoreCase(answer)) {
-            return "CORRECT!";
+            return true;
         }
         else {
-            return "INCORRECT";
+            return false;
         }
     }
 
@@ -69,4 +69,7 @@ public class PracticeModel {
         return firstFourLetters;
     }
     
+    public String getAnswer() {
+        return answer;
+    }
 }

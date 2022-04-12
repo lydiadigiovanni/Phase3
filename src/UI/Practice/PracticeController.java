@@ -1,4 +1,6 @@
 package UI.Practice;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -11,6 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.web.WebView;
@@ -49,13 +53,19 @@ public class PracticeController {
     private Label questionLabel;
 
     @FXML
-    private Label correctLabel;
+    private Label correctAnswerLabel;
+
+    @FXML
+    private ImageView incorrectCorrect;
 
     @FXML
     private Button doneButton;
 
     @FXML
     private Label numberCorrectLabel;
+
+    @FXML
+    private Label titleLabel;
 
     @FXML
     private Button nextButton;
@@ -71,6 +81,20 @@ public class PracticeController {
     
 
     private PracticeModel model = new PracticeModel();
+
+    private Image correctmark;
+    private Image incorrectMark;
+
+    public PracticeController() {
+        super();
+        try {
+            correctmark = new Image(new FileInputStream("Pictures/Map/checkmark.png"));
+            incorrectMark = new Image(new FileInputStream("Pictures/Practice/incorrectMark.png"));
+        } 
+        catch (FileNotFoundException e) {   
+            e.printStackTrace();
+        }
+    }
     
     @FXML
     public void completeAssignment(ActionEvent event) {
@@ -87,19 +111,29 @@ public class PracticeController {
     }
 
     @FXML
-    public void checkAnswer(ActionEvent event) {
-        String correctString = model.checkAnswer(((RadioButton) multipleChoiceQuestion.getSelectedToggle()).getText());
-        correctLabel.setText(correctString);
+    public void checkAnswer(ActionEvent event) throws FileNotFoundException { //Confirm button's method
+        boolean correctBoolean = model.checkAnswer(((RadioButton) multipleChoiceQuestion.getSelectedToggle()).getText());
+        correctAnswerLabel.setText(model.getAnswer());
+        if (correctBoolean) {
+            incorrectCorrect.setImage(correctmark);
+        } else {
+            incorrectCorrect.setImage(incorrectMark);
+        }
     }
 
     @FXML
-    public void nextQuestion(ActionEvent event) {
-        if(correctLabel.getText().equalsIgnoreCase("CORRECT!")) {
-        correctLabel.setText("");
+    public void nextQuestion(ActionEvent event) { //Next button's method
+        if(incorrectCorrect.getImage() == null) {
+            return;
+        }
+        if(incorrectCorrect.getImage().equals(correctmark)) { //If the user got the question correct
+            numberCorrectLabel.setText((Character.getNumericValue(numberCorrectLabel.getText().charAt(0)) + 1) + "/5");
+        }
+        correctAnswerLabel.setText("");
+        incorrectCorrect.setImage(null);
         multipleChoiceQuestion.selectToggle(null);
         model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour);
-        numberCorrectLabel.setText((Character.getNumericValue(numberCorrectLabel.getText().charAt(0)) + 1) + "/5");
-        }
+        
     }
 
     @FXML
@@ -109,15 +143,26 @@ public class PracticeController {
                 case "prac":
                     practiceAnchorPane.visibleProperty().set(true);
                     practiceAnchorPane.disableProperty().set(false);
-                    System.out.println("anchor pane has been made visible");
+                    youtubeVideo.visibleProperty().set(false);
+                    youtubeVideo.disableProperty().set(true);
+                    titleLabel.setText("PRACTICE");
                     model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour); 
                     break;
                 case "test":
-                    //TODO: INSERT TEST SHIT HERE
+                System.out.println("I AM TEST");
+                    practiceAnchorPane.visibleProperty().set(true);
+                    practiceAnchorPane.disableProperty().set(false);
+                    youtubeVideo.visibleProperty().set(false);
+                    youtubeVideo.disableProperty().set(true);
+                    titleLabel.setText("TEST");
+                    model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour); 
                     break;
                 case "tuto":
+                    practiceAnchorPane.visibleProperty().set(false);
+                    practiceAnchorPane.disableProperty().set(true);
                     youtubeVideo.visibleProperty().set(true);
                     youtubeVideo.disableProperty().set(false);
+                    titleLabel.setText("TUTORIAL");
                     youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
                 default:
                     break;

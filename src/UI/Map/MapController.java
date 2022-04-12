@@ -118,6 +118,22 @@ public class MapController {
 
     @FXML
     void testButtonClicked(ActionEvent event) {
+        String firstFourLetters = testButton.getId().substring(0, 4);
+        String lastLetter = testButton.getId().substring((testButton.getId().length()) - 1);        
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Practice/PracticeView.fxml"));
+            Parent testParent = loader.load();
+            Scene testScene = new Scene(testParent);
+            PracticeController controller = loader.getController();
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+            window.setScene(testScene);
+            window.show();
+            controller.setFirstLetter(firstFourLetters);
+            controller.setLastLetter(lastLetter);
+            controller.initialize();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
