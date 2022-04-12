@@ -1,4 +1,4 @@
-package UI.Practice;
+package UI.TutoPracTest;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
@@ -20,7 +20,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
-public class PracticeController {
+public class TutoPracTestController {
 
     @FXML
     private ResourceBundle resources;
@@ -80,12 +80,12 @@ public class PracticeController {
     private AnchorPane practiceAnchorPane;
     
 
-    private PracticeModel model = new PracticeModel();
+    private TutoPracTestModel model = new TutoPracTestModel();
 
     private Image correctmark;
     private Image incorrectMark;
 
-    public PracticeController() {
+    public TutoPracTestController() {
         super();
         try {
             correctmark = new Image(new FileInputStream("Pictures/Map/checkmark.png"));

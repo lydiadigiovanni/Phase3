@@ -25,6 +25,8 @@ public class HomePageController {
     @FXML
     private Button ProfileButton;
 
+    private HomePageModel model = new HomePageModel();
+
     @FXML
     void Island2ButtonPressed(ActionEvent event) {
 
@@ -32,17 +34,7 @@ public class HomePageController {
 
     @FXML
     void island1ButtonPressed(ActionEvent event){
-        try {
-        Parent islandOneMapParent = FXMLLoader.load(getClass().getResource("/UI/Map/MapView.fxml"));
-        Scene islandOneMapScene = new Scene(islandOneMapParent);
-
-        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
-        window.setScene(islandOneMapScene);
-        window.show();
-        } catch (Exception e) {
-            //TODO: handle exception
-            e.printStackTrace();
-        }
+        model.goToIsland(event, Island1Button, "/UI/Map/MapView.fxml");
     }
 
     @FXML
