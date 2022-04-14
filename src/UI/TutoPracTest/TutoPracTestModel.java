@@ -85,6 +85,10 @@ public class TutoPracTestModel {
     public String getFirstLetters() {
         return firstFourLetters;
     }
+
+    public String getLastLetter() {
+        return lastLetter;
+    }
     
     public String getAnswer() {
         return answer;

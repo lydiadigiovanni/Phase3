@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import UI.Map.MapController;
 import UI.Reward.RewardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -108,23 +109,61 @@ public class TutoPracTestController {
     @FXML
     public void completeAssignment(ActionEvent event) { //Done button
         //TODO: ADD CODE HERE OF LIKE SAVING ASSIGNMENT OR WHATEVER
-        try {
-            FXMLLoader rewardLoader = new FXMLLoader(getClass().getResource("/UI/Reward/RewardEarnedScreen.fxml"));
-            Parent rewardParent = rewardLoader.load();
-            Scene rewardScene = new Scene(rewardParent);
-            RewardController controller = rewardLoader.getController();
-            controller.setRewardGrade((numbercorrect*100/totalNumberOfQuestions));
-            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
-            System.out.println(numbercorrect + " = number correct");
-            System.out.println(totalNumberOfQuestions + " = total number of questions");
-            System.out.println("answer is " + (numbercorrect*100/totalNumberOfQuestions));
-            
-            window.setScene(rewardScene);
-            window.show();
+        if (model.getFirstLetters().equalsIgnoreCase("Test")) {
+            try {
+                FXMLLoader rewardLoader = new FXMLLoader(getClass().getResource("/UI/Reward/RewardEarnedScreen.fxml"));
+                Parent rewardParent = rewardLoader.load();
+                Scene rewardScene = new Scene(rewardParent);
+                RewardController controller = rewardLoader.getController();
+                controller.setRewardGrade((numbercorrect*100/totalNumberOfQuestions));
+                controller.initialize();
+                Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+                
+                window.setScene(rewardScene);
+                window.show();
 
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+        }
+        else
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Map/MapView.fxml"));
+                Parent parent = loader.load();
+                Scene scene = new Scene(parent);
+                MapController controller = loader.getController();
+                Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+                window.setScene(scene);
+                window.show();
+                int checkmarkindex = 0;
+                switch (model.getFirstLetters()) {
+                    case "prac":
+                        switch (model.getLastLetter()) {
+                            case "1":
+                                checkmarkindex = 1;
+                                break;
+                            case "2":
+                                checkmarkindex = 3;
+                                break;
+                        }
+                    case "tuto":
+                        switch (model.getLastLetter()) {
+                            case "1":
+                                checkmarkindex = 0;
+                                break;
+                            case "2":
+                                checkmarkindex = 2;
+                                break;
+                        }
+                        break;
+                }
+                controller.setCheckmarkBoolean(checkmarkindex);
+                controller.initialize();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
     }
 
     @FXML
@@ -183,7 +222,16 @@ public class TutoPracTestController {
                     youtubeVideo.visibleProperty().set(true);
                     youtubeVideo.disableProperty().set(false);
                     titleLabel.setText("TUTORIAL");
-                    youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+                    switch (model.getLastLetter()) {
+                        case "1":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=bGetqbqDVaA");
+                            break;
+                        case "2":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=5Re3nbmqVaU");
+                            break;
+                        default:
+                            break;
+                    }
                     doneButton.setVisible(true);
                     doneButton.setDisable(false);
                     break;

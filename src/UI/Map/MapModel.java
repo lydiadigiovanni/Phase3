@@ -14,6 +14,8 @@ import javafx.event.ActionEvent;
  */
 public class MapModel {
 
+    private Boolean checkmarkIndex[] = new Boolean[]{false, false, false, false, false};
+    
     public MapModel() {
 
     }
@@ -48,6 +50,14 @@ public class MapModel {
                 e.printStackTrace();
             }
             
+    }
+
+    public void setCheckmarkBoolean(int checkmarkindex) {
+        checkmarkIndex[checkmarkindex] = true;
+    }
+    
+    public Boolean[] getCheckmarkIndex() {
+        return checkmarkIndex;
     }
 }
 

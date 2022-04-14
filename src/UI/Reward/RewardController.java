@@ -52,8 +52,6 @@ public class RewardController {
      */
     public void setGrade(int grade) {
         gradeNum.setText(grade + "%");
-        System.out.println("gradeNum's label =" + gradeNum.getText());
-        System.out.println("Reward has" + grade);
         try {
             if(grade <= 49) {
                 treasureChest.setVisible((false));
@@ -77,11 +75,9 @@ public class RewardController {
         @FXML
         public void initialize() {
             setGrade(rewardModel.getGrade());
-            System.out.println("When initilizing grade is = " + rewardModel.getGrade());
         }
 
         public void setRewardGrade(int grade) {
-            System.out.println("When setting, grade is set to " + grade);
             rewardModel.setGrade(grade);
         }
         
