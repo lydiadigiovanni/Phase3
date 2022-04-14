@@ -144,7 +144,7 @@
                   <Font name="Berlin Sans FB Bold" size="14.0" />
                </font>
             </Button>
-            <Label fx:id="questionLabel" alignment="CENTER" layoutX="10.0" layoutY="68.89999389648438" prefHeight="93.0" prefWidth="397.0" text="Spaghetti">
+            <Label fx:id="questionLabel" alignment="CENTER" layoutX="10.0" layoutY="69.0" prefHeight="113.0" prefWidth="526.0" text="Spaghetti">
                <font>
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
@@ -154,7 +154,7 @@
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
-            <HBox fx:id="pictureBox" alignment="CENTER" layoutX="8.0" layoutY="132.89999389648438" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
+            <HBox fx:id="pictureBox" alignment="CENTER" layoutX="10.0" layoutY="152.0" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
             <Label fx:id="progressQuestionsLabel" layoutX="621.0" layoutY="68.89999389648438" text="PROGRESS">
                <font>
                   <Font name="Berlin Sans FB Bold" size="24.0" />

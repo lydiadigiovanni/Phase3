@@ -53,7 +53,7 @@ public class KiPractice2 extends Assessment{
         list[1] = rng + 2;
         list[2] = rng + 4;
         randomNumber = rng + 6;
-        String[] question = new String[4];
+        String[] question = new String[6];
         question[0] = "What comes after numbers " + list[0] + " " + list[1] + " " + list[2];
         question[1] = Integer.toString(randomNumber);
         question[2] = Integer.toString(randomNumber-1);
@@ -64,10 +64,9 @@ public class KiPractice2 extends Assessment{
 
     private String[] generateQuestionTwo() {
         int randomNumber = ThreadLocalRandom.current().nextInt(50-1)/2 * 2;
-        String[] question = new String[2];
+        String[] question = new String[6];
         question[0] = "What comes after numbers " + randomNumber + " " + (randomNumber + 3) + " " + (randomNumber + 6);
         question[1] = Integer.toString(randomNumber + 9);
-        question[1] = Integer.toString(randomNumber);
         question[2] = Integer.toString(randomNumber-1);
         question[3] = Integer.toString(randomNumber+1);
         question[4] = Integer.toString(randomNumber+3);
@@ -76,10 +75,9 @@ public class KiPractice2 extends Assessment{
 
     private String[] generateQuestionThree() {
         int randomNumber = ThreadLocalRandom.current().nextInt(50-1)/2 * 2;
-        String[] question = new String[2];
+        String[] question = new String[6];
         question[0] = "What is the missing number " + randomNumber + " " + "____" + " " + (randomNumber + 6) + " " + (randomNumber + 9);
         question[1] = Integer.toString(randomNumber + 3);
-        question[1] = Integer.toString(randomNumber);
         question[2] = Integer.toString(randomNumber-1);
         question[3] = Integer.toString(randomNumber+1);
         question[4] = Integer.toString(randomNumber+3);
@@ -88,10 +86,9 @@ public class KiPractice2 extends Assessment{
 
     private String[] generateQuestionFour() {
         int randomNumber = ThreadLocalRandom.current().nextInt(50-1)/2 * 2;
-        String[] question = new String[2];
+        String[] question = new String[6];
         question[0] = "What is the missing number " + randomNumber + " " + (randomNumber + 2) + " " + "____" + " " + (randomNumber + 6);
         question[1] = Integer.toString(randomNumber + 4);
-        question[1] = Integer.toString(randomNumber);
         question[2] = Integer.toString(randomNumber-1);
         question[3] = Integer.toString(randomNumber+1);
         question[4] = Integer.toString(randomNumber+3);

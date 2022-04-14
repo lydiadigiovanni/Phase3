@@ -136,8 +136,6 @@ public class TutoPracTestController {
                 window.setScene(scene);
                 window.show();
                 int checkmarkindex = 0;
-                System.out.println(model.getFirstLetters());
-                System.out.println(model.getLastLetter());
                 if (model.getFirstLetters().equalsIgnoreCase("Tuto")) {
                     if(model.getLastLetter().equalsIgnoreCase("1")) {
                         checkmarkindex = 0;
@@ -193,11 +191,13 @@ public class TutoPracTestController {
                 doneButton.setDisable(false);
             }
         }
+        confirmButton.setDisable(true);
     }
 
     @FXML
     public void nextQuestion(ActionEvent event) { //Next button's method
         disableRadioButtons(false);
+        confirmButton.setDisable(false);
         correctAnswerLabel.setText("");
         incorrectCorrect.setImage(null);
         multipleChoiceQuestion.selectToggle(null);

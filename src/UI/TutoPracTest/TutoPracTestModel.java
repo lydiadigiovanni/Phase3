@@ -34,7 +34,19 @@ public class TutoPracTestModel {
 
     public void generateMultipleChoiceQuestion(Label questionLabel, HBox pictureBox, RadioButton choiceButtonOne, RadioButton choiceButtonTwo, RadioButton choiceButtonThree, RadioButton choiceButtonFour) {
         try {
+            String s = "";
             Class<?> assessmentClass = Class.forName("Backend.Assessment.KiPractice1");
+            switch (getFirstLetters()) {
+                case "prac":
+                    s = "Practice";
+                    assessmentClass = Class.forName("Backend.Assessment.Ki" + s + getLastLetter());
+                    break;
+                case "test":
+                    int random = ThreadLocalRandom.current().nextInt(2);
+                    setLastLetter(Integer.toString(random+1));
+                    assessmentClass = Class.forName("Backend.Assessment.KiPractice" + (random + 1));
+            }
+  
             Assessment assessment = (Assessment) assessmentClass.getDeclaredConstructor().newInstance();
             String questionTypeAndWhatQuestionAndQuestion[][][] = assessment.generateQuestion();
             String questionType = questionTypeAndWhatQuestionAndQuestion[0][0][0];
@@ -45,7 +57,7 @@ public class TutoPracTestModel {
             answer = question[1];
             int numAnswer = Integer.parseInt(question[1]);
             pictureBox.getChildren().clear();
-            if(whatQuestion.equalsIgnoreCase("0")) {
+            if(whatQuestion.equalsIgnoreCase("0") && lastLetter.equalsIgnoreCase("1")) {
                 for (int i = 0; i < numAnswer; i++) {
                     pictureBox.getChildren().addAll(new Circle(20.0, Paint.valueOf(question[5])));
                 }
