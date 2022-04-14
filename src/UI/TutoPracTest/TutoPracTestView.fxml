@@ -59,9 +59,9 @@
             <Image url="@../../../Pictures/Practice/board_Lighter.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="practiceAnchorPane" disable="true" layoutX="114.0" layoutY="175.10000610351562" visible="false">
+      <AnchorPane fx:id="practiceAnchorPane" disable="true" layoutX="114.0" layoutY="175.10000610351562">
          <children>
-            <ImageView disable="true" fitHeight="379.0" fitWidth="59.0" layoutX="518.0" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
+            <ImageView disable="true" fitHeight="334.0" fitWidth="59.0" layoutX="520.0" layoutY="64.0" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
                <image>
                   <Image url="@../../../Pictures/Practice/black_line.png" />
                </image>
@@ -128,7 +128,7 @@
                   </HBox>
                </children>
             </VBox>
-            <Button fx:id="confirmButton" layoutX="344.0" layoutY="329.8999938964844" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="CONFIRM">
+            <Button fx:id="confirmButton" layoutX="344.0" layoutY="329.8999938964844" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="SUBMIT">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -136,7 +136,7 @@
                   <Font name="Berlin Sans FB Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="nextButton" layoutX="445.0" layoutY="329.8999938964844" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT">
+            <Button fx:id="nextButton" disable="true" layoutX="445.0" layoutY="329.8999938964844" mnemonicParsing="false" onAction="#nextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT" visible="false">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -149,13 +149,13 @@
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="correctAnswerLabel" alignment="CENTER" layoutX="581.0" layoutY="320.0" prefHeight="25.0" prefWidth="164.0">
+            <Label fx:id="correctAnswerLabel" alignment="CENTER" layoutX="600.0" layoutY="313.0" prefHeight="25.0" prefWidth="164.0">
                <font>
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
             <HBox fx:id="pictureBox" alignment="CENTER" layoutX="8.0" layoutY="132.89999389648438" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
-            <Label layoutX="621.0" layoutY="68.89999389648438" text="PROGRESS">
+            <Label fx:id="progressQuestionsLabel" layoutX="621.0" layoutY="68.89999389648438" text="PROGRESS">
                <font>
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
@@ -165,7 +165,7 @@
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="incorrectCorrect" fitHeight="150.0" fitWidth="200.0" layoutX="563.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="incorrectCorrect" fitHeight="150.0" fitWidth="200.0" layoutX="622.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
       <StackPane layoutX="205.0" layoutY="60.0" prefHeight="150.0" prefWidth="200.0">
@@ -204,7 +204,7 @@
                   <Image url="@../../../Pictures/Practice/CartoonMap.png" />
                </image>
             </ImageView>
-            <Button fx:id="backButton1" contentDisplay="CENTER" layoutX="732.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="DONE" textFill="#ed7e33">
+            <Button fx:id="doneButton" contentDisplay="CENTER" disable="true" layoutX="732.0" mnemonicParsing="false" onAction="#completeAssignment" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="DONE" textFill="#ed7e33" visible="false">
                <font>
                   <Font name="Berlin Sans FB Bold" size="55.0" />
                </font>
