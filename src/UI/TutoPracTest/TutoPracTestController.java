@@ -136,27 +136,25 @@ public class TutoPracTestController {
                 window.setScene(scene);
                 window.show();
                 int checkmarkindex = 0;
-                switch (model.getFirstLetters()) {
-                    case "prac":
-                        switch (model.getLastLetter()) {
-                            case "1":
-                                checkmarkindex = 1;
-                                break;
-                            case "2":
-                                checkmarkindex = 3;
-                                break;
-                        }
-                    case "tuto":
-                        switch (model.getLastLetter()) {
-                            case "1":
-                                checkmarkindex = 0;
-                                break;
-                            case "2":
-                                checkmarkindex = 2;
-                                break;
-                        }
-                        break;
+                System.out.println(model.getFirstLetters());
+                System.out.println(model.getLastLetter());
+                if (model.getFirstLetters().equalsIgnoreCase("Tuto")) {
+                    if(model.getLastLetter().equalsIgnoreCase("1")) {
+                        checkmarkindex = 0;
+                    }
+                    else {
+                        checkmarkindex = 2;
+                    }
                 }
+                else if (model.getFirstLetters().equalsIgnoreCase("Prac")) {
+                    if(model.getLastLetter().equalsIgnoreCase("1")) {
+                        checkmarkindex = 1;
+                    }
+                    else {
+                        checkmarkindex = 3;
+                    }
+                }
+                System.out.println("index is: " + checkmarkindex);
                 controller.setCheckmarkBoolean(checkmarkindex);
                 controller.initialize();
 
