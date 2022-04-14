@@ -21,7 +21,7 @@
                   <Image url="@../../../Pictures/Map/TutorialButton.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="tutorial1Check" fitHeight="60.0" fitWidth="60.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="tutorial1Check" fitHeight="60.0" fitWidth="60.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../../Pictures/Map/checkmark.png" />
                </image>
@@ -53,7 +53,7 @@
                   <Image url="@../../../Pictures/Map/Practice.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="practice1Check" fitHeight="60.0" fitWidth="60.0" layoutX="90.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="practice1Check" fitHeight="60.0" fitWidth="60.0" layoutX="90.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../../Pictures/Map/checkmark.png" />
                </image>
@@ -80,7 +80,7 @@
                   <Image url="@../../../Pictures/Map/Tutorial.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="tutorial2Check" fitHeight="60.0" fitWidth="60.0" layoutX="90.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="tutorial2Check" fitHeight="60.0" fitWidth="60.0" layoutX="90.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../../Pictures/Map/checkmark.png" />
                </image>
@@ -107,7 +107,7 @@
                   <Image url="@../../../Pictures/Map/Practice.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="practice2Check" fitHeight="60.0" fitWidth="60.0" layoutX="95.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="practice2Check" fitHeight="60.0" fitWidth="60.0" layoutX="95.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../../Pictures/Map/checkmark.png" />
                </image>
@@ -140,7 +140,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fx:id="testCheck" fitHeight="60.0" fitWidth="60.0" layoutX="93.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="testCheck" fitHeight="60.0" fitWidth="60.0" layoutX="93.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../../Pictures/Map/checkmark.png" />
                </image>
@@ -255,12 +255,12 @@
             <Image url="@../../../Pictures/Map/island1MapDecor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="174.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="175.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true" rotate="18.4">
          <image>
             <Image url="@../../../Pictures/Map/RedLine.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="178.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true" rotate="-43.1">
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="180.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" rotate="-55.0">
          <image>
             <Image url="@../../../Pictures/Map/RedLine.png" />
          </image>
