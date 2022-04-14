@@ -1,5 +1,7 @@
 package UI.Reward;
 
+import java.io.FileInputStream;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -25,6 +28,8 @@ public class RewardController {
     @FXML
     private ImageView treasureChest;
 
+    private RewardModel rewardModel = new RewardModel();
+
     @FXML
     void prizeClaim(ActionEvent event) {
         try {
@@ -39,4 +44,45 @@ public class RewardController {
             }
     }
 
-}
+    /**
+     * Gold for 100 - 90%
+     * Silver for 89 - 70%
+     * Bronze for 69 - 50%
+     * F for 49 - 0%
+     */
+    public void setGrade(int grade) {
+        gradeNum.setText(grade + "%");
+        try {
+            if(grade <= 49) {
+                treasureChest.setVisible((false));
+                prizePhoto.setImage(new Image(new FileInputStream("Pictures/Rewards/failGrade.png")));
+            }
+            else if(grade <= 69) {
+                treasureChest.setVisible((true));
+                prizePhoto.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Bronze-Medal.png")));
+            }
+            else if (grade <= 89) {
+                treasureChest.setVisible((true));
+                prizePhoto.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Silver-Medal.png")));
+            }
+            else {
+                treasureChest.setVisible((true));
+                prizePhoto.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Gold-Medal.png")));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        }
+
+        @FXML
+        public void initialize() {
+            setGrade(rewardModel.getGrade());
+        }
+
+        public void setRewardGrade(int grade) {
+            rewardModel.setGrade(grade);
+        }
+        
+    }
+

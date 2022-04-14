@@ -99,4 +99,17 @@ public class MapController {
         model.switchToTutoPracTest(event, tutorialButton2, "/UI/TutoPracTest/TutoPracTestView.fxml");
     }
 
+    public void setCheckmarkBoolean(int checkmarkindex) {
+        model.setCheckmarkBoolean(checkmarkindex);
+    }
+
+    @FXML
+    public void initialize() {
+        Boolean[] checkmarkIndex = model.getCheckmarkIndex();
+        tutorial1Check.setVisible(checkmarkIndex[0]);
+        practice1Check.setVisible(checkmarkIndex[1]);
+        tutorial2Check.setVisible(checkmarkIndex[2]);
+        practice2Check.setVisible(checkmarkIndex[3]);
+        testCheck.setVisible(checkmarkIndex[4]);
+    }
 }
