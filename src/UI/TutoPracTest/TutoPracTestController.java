@@ -113,8 +113,12 @@ public class TutoPracTestController {
             Parent rewardParent = rewardLoader.load();
             Scene rewardScene = new Scene(rewardParent);
             RewardController controller = rewardLoader.getController();
+            controller.setRewardGrade((numbercorrect*100/totalNumberOfQuestions));
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
-            controller.setGrade((numbercorrect/totalNumberOfQuestions)*100);
+            System.out.println(numbercorrect + " = number correct");
+            System.out.println(totalNumberOfQuestions + " = total number of questions");
+            System.out.println("answer is " + (numbercorrect*100/totalNumberOfQuestions));
+            
             window.setScene(rewardScene);
             window.show();
 
