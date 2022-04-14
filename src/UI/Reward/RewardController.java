@@ -58,12 +58,15 @@ public class RewardController {
                 prizePhoto.setImage(new Image(new FileInputStream("Pictures/Rewards/failGrade.png")));
             }
             else if(grade <= 69) {
+                treasureChest.setVisible((true));
                 prizePhoto.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Bronze-Medal.png")));
             }
             else if (grade <= 89) {
+                treasureChest.setVisible((true));
                 prizePhoto.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Silver-Medal.png")));
             }
             else {
+                treasureChest.setVisible((true));
                 prizePhoto.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Gold-Medal.png")));
             }
         } catch (Exception e) {
