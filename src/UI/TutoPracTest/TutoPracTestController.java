@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import UI.Map.MapController;
+import UI.Map.Map1.MapController;
 import UI.Reward.RewardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -128,7 +128,7 @@ public class TutoPracTestController {
         }
         else
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Map/MapView.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
                 Parent parent = loader.load();
                 Scene scene = new Scene(parent);
                 MapController controller = loader.getController();
@@ -227,6 +227,12 @@ public class TutoPracTestController {
                         case "2":
                             youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=5Re3nbmqVaU");
                             break;
+                        case "3":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            break;
+                        case "4":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            break;
                         default:
                             break;
                     }
@@ -262,7 +268,7 @@ public class TutoPracTestController {
     @FXML
     public void returnToMap(ActionEvent event) {
         try {
-            Parent MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/MapView.fxml"));
+            Parent MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
             Scene MapScene = new Scene(MapParent);
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
             window.setScene(MapScene);

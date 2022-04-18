@@ -1,4 +1,4 @@
-package UI.Map;
+package UI.Map.Map2;
 
 import UI.TutoPracTest.TutoPracTestController;
 import javafx.fxml.FXMLLoader;
@@ -9,14 +9,11 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
-/**
- * MapModel
- */
-public class MapModel {
+public class Map2Model {
 
     private Boolean checkmarkIndex[] = new Boolean[]{false, false, false, false, false};
     
-    public MapModel() {
+    public Map2Model() {
 
     }
 
@@ -60,11 +57,3 @@ public class MapModel {
         return checkmarkIndex;
     }
 }
-
-/* public class MapModel {
-    public Button textBorder() {
-
-    }
-*/
-    
-

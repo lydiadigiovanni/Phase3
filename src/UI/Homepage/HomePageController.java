@@ -39,12 +39,12 @@ public class HomePageController {
 
     @FXML
     void Island2ButtonPressed(ActionEvent event) {
-
+        model.goToIsland(event, Island2Button, "/UI/Map/Map2/Map2View.fxml");
     }
 
     @FXML
     void island1ButtonPressed(ActionEvent event){
-        model.goToIsland(event, Island1Button, "/UI/Map/MapView.fxml");
+        model.goToIsland(event, Island1Button, "/UI/Map/Map1/MapView.fxml");
     }
 
     @FXML

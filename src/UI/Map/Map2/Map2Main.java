@@ -1,4 +1,4 @@
-package UI.Map;
+package UI.Map.Map2;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -8,19 +8,11 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
  
-public class MapMain extends Application {
+public class Map2Main extends Application {
     @Override
     public void start(Stage primaryStage) {
-     
- 
-           
-        
-  
-  
-  
-
   try {
-    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MapView.fxml"));
+    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MapView2.fxml"));
     Parent root = (Parent) fxmlLoader.load();
      Scene scene = new Scene(root);
      primaryStage.setTitle("Math Islands");
@@ -33,9 +25,6 @@ public class MapMain extends Application {
 
   }
 }
-  
-    
- 
  public static void main(String[] args) {
         launch(args);
     }
