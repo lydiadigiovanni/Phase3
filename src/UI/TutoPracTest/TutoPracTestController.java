@@ -3,6 +3,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.ThreadLocalRandom;
 
 import UI.Map.MapController;
 import UI.Reward.RewardController;
@@ -15,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -50,7 +52,10 @@ public class TutoPracTestController {
     private RadioButton choiceButtonFour;
 
     @FXML
-    private Button confirmButton;
+    private AnchorPane multipleChoiceAnchor;
+
+    @FXML
+    private Button multipleChoiceConfirmButton;
 
     @FXML
     private Label questionLabel;
@@ -71,7 +76,7 @@ public class TutoPracTestController {
     private Label titleLabel;
 
     @FXML
-    private Button nextButton;
+    private Button multipleChoiceNextButton;
 
     @FXML
     private HBox pictureBox;
@@ -84,6 +89,18 @@ public class TutoPracTestController {
 
     @FXML
     private Label progressQuestionsLabel;
+
+    @FXML
+    private AnchorPane userInputAnchor;
+
+    @FXML
+    private Button userInputConfirmButton;
+
+    @FXML
+    private Button userInputNextButton;
+
+    @FXML
+    private TextField userInputTextField;
     
 
     private TutoPracTestModel model = new TutoPracTestModel();
@@ -163,52 +180,86 @@ public class TutoPracTestController {
     }
 
     @FXML
-    public void checkAnswer(ActionEvent event) throws FileNotFoundException { //Confirm button's method
+    public void mutlipleChoiceCheckAnswer(ActionEvent event) throws FileNotFoundException { //Confirm button's method
         if(multipleChoiceQuestion.getSelectedToggle() != null) {
             disableRadioButtons(true);
-            nextButton.setDisable(false);
-            nextButton.setVisible(true);
+            multipleChoiceNextButton.setDisable(false);
+            multipleChoiceNextButton.setVisible(true);
             boolean correctBoolean = model.checkAnswer(((RadioButton) multipleChoiceQuestion.getSelectedToggle()).getText());
             correctAnswerLabel.setText(model.getAnswer());
-            if (correctBoolean) {
-                incorrectCorrect.setImage(correctmark);
-                numbercorrect++;
-                if (model.getFirstLetters().equalsIgnoreCase("prac")) {
-                    numberCorrectLabel.setText(numbercorrect + "/" + totalNumberOfQuestions);
-
-                }
-            } else {
-                incorrectCorrect.setImage(incorrectMark);
-            }
-            if (questionNumber == totalNumberOfQuestions) {
-                nextButton.setDisable(true);
-                nextButton.setVisible(false);
-                doneButton.setDisable(false);
-                doneButton.setVisible(true);
-            }
-            if (numbercorrect == totalNumberOfQuestions) {
-                doneButton.setVisible(true);
-                doneButton.setDisable(false);
-            }
+            answerChecker(correctBoolean, multipleChoiceNextButton);
         }
-        confirmButton.setDisable(true);
+        multipleChoiceConfirmButton.setDisable(true);
+    }
+
+    private void answerChecker(Boolean correctBoolean, Button nextButton) {
+        if (correctBoolean) {
+            incorrectCorrect.setImage(correctmark);
+            numbercorrect++;
+            if (model.getFirstLetters().equalsIgnoreCase("prac")) {
+                numberCorrectLabel.setText(numbercorrect + "/" + totalNumberOfQuestions);
+
+            }
+        } else {
+            incorrectCorrect.setImage(incorrectMark);
+        }
+        if (questionNumber == totalNumberOfQuestions) {
+            nextButton.setDisable(true);
+            nextButton.setVisible(false);
+            doneButton.setDisable(false);
+            doneButton.setVisible(true);
+        }
+        if (numbercorrect == totalNumberOfQuestions) {
+            doneButton.setVisible(true);
+            doneButton.setDisable(false);
+        }
     }
 
     @FXML
-    public void nextQuestion(ActionEvent event) { //Next button's method
-        disableRadioButtons(false);
-        confirmButton.setDisable(false);
+    void userInputCheckAnswer(ActionEvent event) {
+        if(userInputTextField.getText() != null) {
+            userInputTextField.setDisable(true);
+            userInputNextButton.setDisable(false);
+            userInputNextButton.setVisible(true);
+            boolean correctBoolean = model.checkAnswer(userInputTextField.getText());
+            answerChecker(correctBoolean, userInputNextButton);
+            userInputConfirmButton.setDisable(true);
+        }
+    }
+
+    @FXML
+    void userInputNextQuestion(ActionEvent event) {
+        userInputTextField.setDisable(false);
+        userInputConfirmButton.setDisable(false);
+        userInputTextField.setText("");
         correctAnswerLabel.setText("");
         incorrectCorrect.setImage(null);
-        multipleChoiceQuestion.selectToggle(null);
-        model.generateMultipleChoiceQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour);
-        nextButton.setVisible(false);
-        nextButton.setDisable(true);
+        userInputNextButton.setDisable(true);
+        userInputNextButton.setVisible(false);
+        generateQuestion();
         if (model.getFirstLetters().equalsIgnoreCase("test")) {
             questionNumber++;
             numberCorrectLabel.setText(Integer.toString(questionNumber));
         }
     }
+
+    @FXML
+    public void multipleChoiceNextQuestion(ActionEvent event) { //Next button's method
+        disableRadioButtons(false);
+        multipleChoiceConfirmButton.setDisable(false);
+        correctAnswerLabel.setText("");
+        incorrectCorrect.setImage(null);
+        multipleChoiceQuestion.selectToggle(null);
+        generateQuestion();
+        multipleChoiceNextButton.setVisible(false);
+        multipleChoiceNextButton.setDisable(true);
+        if (model.getFirstLetters().equalsIgnoreCase("test")) {
+            questionNumber++;
+            numberCorrectLabel.setText(Integer.toString(questionNumber));
+        }
+    }
+
+    
 
     @FXML
     public void initialize() {
@@ -239,7 +290,10 @@ public class TutoPracTestController {
                     youtubeVideo.visibleProperty().set(false);
                     youtubeVideo.disableProperty().set(true);
                     titleLabel.setText("PRACTICE");
-                    model.generateMultipleChoiceQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour); 
+                    //multipleChoiceAnchor.visibleProperty().set(true);
+                    //userInputAnchor.visibleProperty().set(false);
+                    generateQuestion();
+                    //userInputAnchor.setVisible(true);
                     totalNumberOfQuestions = 5;
                     numberCorrectLabel.setText("0/" + totalNumberOfQuestions);
                     break;
@@ -249,7 +303,8 @@ public class TutoPracTestController {
                     youtubeVideo.visibleProperty().set(false);
                     youtubeVideo.disableProperty().set(true);
                     titleLabel.setText("TEST");
-                    model.generateMultipleChoiceQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour); 
+                    //multipleChoiceAnchor.visibleProperty().set(true);
+                    generateQuestion(); 
                     totalNumberOfQuestions = 10;
                     //numberCorrectLabel.setText("0/" + totalNumberOfQuestions);
                     progressQuestionsLabel.setText("Question");
@@ -285,6 +340,10 @@ public class TutoPracTestController {
         choiceButtonTwo.setDisable(trueFalse);
         choiceButtonThree.setDisable(trueFalse);
         choiceButtonFour.setDisable(trueFalse);
+    }
+
+    private void generateQuestion() {
+        model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour, userInputAnchor, multipleChoiceAnchor);
     }
 
 }
