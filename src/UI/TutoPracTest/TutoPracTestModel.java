@@ -1,7 +1,5 @@
 package UI.TutoPracTest;
 import java.util.concurrent.ThreadLocalRandom;
-
-import Backend.QuestionGenerator;
 import Backend.Assessment.Assessment;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
