@@ -30,6 +30,7 @@ public class Map2Model {
             window.show();
             controller.setFirstLetter(firstFourLetters);
             controller.setLastLetter(lastLetter);
+            controller.setMapName(this.getClass().getSimpleName().substring(0,4));
             controller.initialize();
         } catch (Exception e) {
             e.printStackTrace();
