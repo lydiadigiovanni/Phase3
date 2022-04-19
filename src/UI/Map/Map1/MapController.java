@@ -1,17 +1,9 @@
-package UI.Map;
+package UI.Map.Map1;
 
-import java.lang.ModuleLayer.Controller;
-
-import UI.TutoPracTest.TutoPracTestController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 
 public class MapController {
 
@@ -31,19 +23,10 @@ public class MapController {
     private Button practiceButton2;
 
     @FXML
-    private ImageView practiceImage1;
-
-    @FXML
-    private ImageView practiceImage2;
-
-    @FXML
     private Button testButton;
 
     @FXML
     private ImageView testCheck;
-
-    @FXML
-    private ImageView testImage;
 
     @FXML
     private ImageView tutorial1Check;
@@ -51,15 +34,11 @@ public class MapController {
     @FXML
     private ImageView tutorial2Check;
 
-
     @FXML
     private Button tutorialButton1;
 
     @FXML
     private Button tutorialButton2;
-
-    @FXML
-    private ImageView tutorialImage1;
 
     private MapModel model = new MapModel();
 

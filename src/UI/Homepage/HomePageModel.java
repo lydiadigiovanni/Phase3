@@ -17,10 +17,10 @@ public class HomePageModel {
     Event = user clicked, button = what they clicked, path = where it takes you*/
     public void goToIsland(ActionEvent event, Button button, String path) {
         try {
-            Parent islandOneMapParent = FXMLLoader.load(getClass().getResource(path)); //Parent will be the path 
-            Scene islandOneMapScene = new Scene(islandOneMapParent); //Make scene with said path
+            Parent islandMapParent = FXMLLoader.load(getClass().getResource(path)); //Parent will be the path 
+            Scene islandMapScene = new Scene(islandMapParent); //Make scene with said path
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow()); //Assign nodes to the window
-            window.setScene(islandOneMapScene); //Ensure scene has been set
+            window.setScene(islandMapScene); //Ensure scene has been set
             window.show(); //Make content visible
             } catch (Exception e) {
                 e.printStackTrace();
