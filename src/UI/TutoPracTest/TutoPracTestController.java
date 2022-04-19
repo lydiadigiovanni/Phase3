@@ -233,6 +233,12 @@ public class TutoPracTestController {
                         case "4":
                             youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
                             break;
+                        case "5":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            break;
+                        case "6":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            break;
                         default:
                             break;
                     }

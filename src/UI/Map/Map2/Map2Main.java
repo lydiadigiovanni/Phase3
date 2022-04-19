@@ -12,7 +12,7 @@ public class Map2Main extends Application {
     @Override
     public void start(Stage primaryStage) {
   try {
-    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MapView2.fxml"));
+    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Map2View.fxml"));
     Parent root = (Parent) fxmlLoader.load();
      Scene scene = new Scene(root);
      primaryStage.setTitle("Math Islands");

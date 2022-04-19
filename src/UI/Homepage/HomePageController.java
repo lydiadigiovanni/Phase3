@@ -49,7 +49,7 @@ public class HomePageController {
 
     @FXML
     void island3ButtonPressed(ActionEvent event) {
-
+        model.goToIsland(event, Island2Button, "/UI/Map/Map3/Map3View.fxml");
     }
 
     @FXML
