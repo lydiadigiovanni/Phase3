@@ -1,3 +1,4 @@
+//Purpose: Controller in the MVC structure for the homepage
 package UI.Homepage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,6 +45,8 @@ public class HomePageController {
 
     @FXML
     void island1ButtonPressed(ActionEvent event){
+        /*Call goToIsland() from HomePageModel;
+        When Island1Button is pressed, the software takes you back to the map!*/
         model.goToIsland(event, Island1Button, "/UI/Map/Map1/MapView.fxml");
     }
 

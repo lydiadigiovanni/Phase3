@@ -1,3 +1,4 @@
+//Purpose: Class with soul purpose of launching the map and getting the FXML to load on the primaryStage
 package UI.Map.Map1;
 
 import java.io.IOException;
@@ -12,12 +13,13 @@ public class MapMain extends Application {
     @Override
     public void start(Stage primaryStage) {
   try {
+    //Retrieve the fxml for the map 
     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MapView.fxml"));
-    Parent root = (Parent) fxmlLoader.load();
-     Scene scene = new Scene(root);
-     primaryStage.setTitle("Math Islands");
-     primaryStage.setScene(scene);
-     primaryStage.show();
+    Parent root = (Parent) fxmlLoader.load(); //Assign that fxml as the parent node
+    Scene scene = new Scene(root); //Create a new scene containing root
+     primaryStage.setTitle("Math Islands"); //Title will always be the name of the software
+     primaryStage.setScene(scene); //Ensure the scene is set as the primaryStage
+     primaryStage.show(); //Make visible
   }
   
   catch (IOException e) {
