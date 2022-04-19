@@ -1,11 +1,12 @@
 package UI.Map.Map2;
 
+import UI.Map.MapControllerParent;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
-public class Map2Controller {
+public class Map2Controller implements MapControllerParent{
 
     @FXML
     private Button homeButton;
@@ -70,6 +71,22 @@ public class Map2Controller {
     @FXML
     void tutorialButton4Clicked(ActionEvent event) {
         model.switchToTutoPracTest(event, tutorialButton4, "/UI/TutoPracTest/TutoPracTestView.fxml");
+    }
+
+    @FXML
+    public void initialize() {
+        Boolean[] checkmarkIndex = model.getCheckmarkIndex();
+        tutorial3Check.setVisible(checkmarkIndex[0]);
+        practice3Check.setVisible(checkmarkIndex[1]);
+        tutorial4Check.setVisible(checkmarkIndex[2]);
+        practice4Check.setVisible(checkmarkIndex[3]);
+        testCheck.setVisible(checkmarkIndex[4]);
+        
+    }
+
+    @Override
+    public void setCheckmarkBoolean(int checkmarkindex) {
+        model.setCheckmarkBoolean(checkmarkindex);
     }
 
 }

@@ -2,10 +2,14 @@ package UI.TutoPracTest;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.concurrent.ThreadLocalRandom;
 
+import UI.Map.MapControllerParent;
 import UI.Map.Map1.MapController;
+import UI.Map.Map2.Map2Controller;
+import UI.Map.Map3.Map3Controller;
 import UI.Reward.RewardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -145,10 +149,24 @@ public class TutoPracTestController {
         }
         else
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
+                FXMLLoader loader = new FXMLLoader();
+                MapControllerParent controller = new MapController();
+                switch (model.getMapName()) {
+                    case "MapM"://Map 1
+                        loader = FXMLLoader.load(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
+                        controller = loader.getController();
+                        break;
+                    case "Map2":
+                        loader = FXMLLoader.load(getClass().getResource("/UI/Map/Map2/Map2View.fxml"));
+                        controller = loader.getController();
+                        break;
+                    case "Map3":
+                        loader = FXMLLoader.load(getClass().getResource("/UI/Map/Map3/Map3View.fxml"));
+                        controller = loader.getController();
+                        break;
+                }
                 Parent parent = loader.load();
                 Scene scene = new Scene(parent);
-                MapController controller = loader.getController();
                 Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
                 window.setScene(scene);
                 window.show();
@@ -329,7 +347,18 @@ public class TutoPracTestController {
     @FXML
     public void returnToMap(ActionEvent event) {
         try {
-            Parent MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
+            Parent MapParent = new Parent(){};
+            switch (model.getMapName()) {
+                case "MapM"://Map 1
+                    MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
+                    break;
+                case "Map2":
+                    MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/Map2/Map2View.fxml"));
+                    break;
+                case "Map3":
+                    MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/Map3/Map3View.fxml"));
+                    break;
+            }
             Scene MapScene = new Scene(MapParent);
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
             window.setScene(MapScene);
@@ -356,6 +385,10 @@ public class TutoPracTestController {
 
     private void generateQuestion() {
         model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour, userInputAnchor, multipleChoiceAnchor);
+    }
+
+    public void setMapName(String substring) {
+        model.setMapName(substring);
     }
 
 }

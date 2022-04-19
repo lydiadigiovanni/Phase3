@@ -18,6 +18,8 @@ public class TutoPracTestModel {
 
     private String lastLetter;
 
+    private String mapName;
+
     public TutoPracTestModel() {
         // TODO Auto-generated constructor stub
     }
@@ -143,6 +145,14 @@ public class TutoPracTestModel {
             default:
                 break;
         }
+    }
+
+    public void setMapName(String substring) {
+        mapName = substring;
+    }
+
+    public String getMapName() {
+        return mapName;
     }
 
     
