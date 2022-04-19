@@ -7,7 +7,6 @@ public class User {
     private String securityQuestionAnswerOne;
     private String securityQuestionAnswerTwo;
     private Image profilePicture;
-    private Grade gradeLevel;
     private Image rewards[];
 
     public String getUsername() {
@@ -34,10 +33,5 @@ public class User {
     public void setGradeLevel() {
 
     }
-
-   public Grade getGradeLevel() {
-    return gradeLevel;
-
-   }
      
 }
