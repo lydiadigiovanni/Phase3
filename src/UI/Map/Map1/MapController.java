@@ -79,10 +79,12 @@ public class MapController implements MapControllerParent{
         model.switchToTutoPracTest(event, tutorialButton2, "/UI/TutoPracTest/TutoPracTestView.fxml");
     }
     
+    @Override
     public void setCheckmarkBoolean(int checkmarkindex) {
         model.setCheckmarkBoolean(checkmarkindex);
     }
 
+    @Override
     @FXML
     public void initialize() {
         Boolean[] checkmarkIndex = model.getCheckmarkIndex();

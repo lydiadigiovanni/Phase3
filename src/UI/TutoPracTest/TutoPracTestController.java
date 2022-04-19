@@ -130,6 +130,7 @@ public class TutoPracTestController {
     @FXML
     public void completeAssignment(ActionEvent event) { //Done button
         //TODO: ADD CODE HERE OF LIKE SAVING ASSIGNMENT OR WHATEVER
+        youtubeVideo = null;
         if (model.getFirstLetters().equalsIgnoreCase("Test")) {
             try {
                 FXMLLoader rewardLoader = new FXMLLoader(getClass().getResource("/UI/Reward/RewardEarnedScreen.fxml"));
@@ -151,39 +152,42 @@ public class TutoPracTestController {
             try {
                 FXMLLoader loader = new FXMLLoader();
                 MapControllerParent controller = new MapController();
+                Parent parent = new Parent(){};
                 switch (model.getMapName()) {
                     case "MapM"://Map 1
-                        loader = FXMLLoader.load(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
+                        loader = new FXMLLoader(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
+                        parent = loader.load();
                         controller = loader.getController();
                         break;
                     case "Map2":
-                        loader = FXMLLoader.load(getClass().getResource("/UI/Map/Map2/Map2View.fxml"));
+                        loader = new FXMLLoader(getClass().getResource("/UI/Map/Map2/Map2View.fxml"));
+                        parent = loader.load();
                         controller = loader.getController();
                         break;
                     case "Map3":
-                        loader = FXMLLoader.load(getClass().getResource("/UI/Map/Map3/Map3View.fxml"));
+                        loader = new FXMLLoader(getClass().getResource("/UI/Map/Map3/Map3View.fxml"));
+                        parent = loader.load();
                         controller = loader.getController();
                         break;
                 }
-                Parent parent = loader.load();
                 Scene scene = new Scene(parent);
                 Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
                 window.setScene(scene);
                 window.show();
                 int checkmarkindex = 0;
                 if (model.getFirstLetters().equalsIgnoreCase("Tuto")) {
-                    if(model.getLastLetter().equalsIgnoreCase("1")) {
+                    if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
                         checkmarkindex = 0;
                     }
-                    else {
+                    else if (model.getLastLetter().equalsIgnoreCase("2") || model.getLastLetter().equalsIgnoreCase("4") || model.getLastLetter().equalsIgnoreCase("6")) {
                         checkmarkindex = 2;
                     }
                 }
                 else if (model.getFirstLetters().equalsIgnoreCase("Prac")) {
-                    if(model.getLastLetter().equalsIgnoreCase("1")) {
+                    if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
                         checkmarkindex = 1;
                     }
-                    else {
+                    else if (model.getLastLetter().equalsIgnoreCase("2") || model.getLastLetter().equalsIgnoreCase("4") || model.getLastLetter().equalsIgnoreCase("6")) {
                         checkmarkindex = 3;
                     }
                 }
@@ -346,6 +350,7 @@ public class TutoPracTestController {
 
     @FXML
     public void returnToMap(ActionEvent event) {
+        youtubeVideo = null; //TODO: SCREAM
         try {
             Parent MapParent = new Parent(){};
             switch (model.getMapName()) {
