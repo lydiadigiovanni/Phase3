@@ -26,4 +26,16 @@ public class HomePageModel {
                 e.printStackTrace();
             }
     }
+
+    public void goToProfile(ActionEvent event, Button button) {
+        try {
+            Parent profileParent = FXMLLoader.load(getClass().getResource("/UI/Profile/profilePage.fxml")); //Parent will be the path 
+            Scene profileScene = new Scene(profileParent); //Make scene with said path
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow()); //Assign nodes to the window
+            window.setScene(profileScene); //Ensure scene has been set
+            window.show(); //Make content visible
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
 }
