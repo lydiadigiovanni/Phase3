@@ -39,6 +39,10 @@ public class HomePageController {
     @FXML
     private Label island3Name;
 
+    private Media sound;
+
+    private MediaPlayer mediaPlayer;
+
     private HomePageModel model = new HomePageModel();
 
     @FXML
@@ -56,6 +60,8 @@ public class HomePageController {
     @FXML
     void island3ButtonPressed(ActionEvent event) {
         model.goToIsland(event, Island2Button, "/UI/Map/Map3/Map3View.fxml");
+
+        mediaPlayer.stop();
     }
 
     @FXML
@@ -70,8 +76,8 @@ public class HomePageController {
 
     @FXML
     public void initialize() {
-        Media sound = new Media(getClass().getResource("/Sounds/ocean-waves-1.mp3").toExternalForm());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        sound = new Media(getClass().getResource("/Sounds/ocean-waves-1.mp3").toExternalForm());
+        mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
     }
 

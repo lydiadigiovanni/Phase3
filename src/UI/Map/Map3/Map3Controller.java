@@ -5,6 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 public class Map3Controller implements MapControllerParent{
 
@@ -41,6 +43,10 @@ public class Map3Controller implements MapControllerParent{
     @FXML
     private Button tutorialButton6;
 
+    private Media sound;
+
+    private MediaPlayer mediaPlayer;
+
     private Map3Model model = new Map3Model();
 
     @FXML
@@ -56,6 +62,8 @@ public class Map3Controller implements MapControllerParent{
     @FXML
     void returnHome(ActionEvent event) {
         model.toHomePage(event);
+
+        mediaPlayer.stop();
     }
 
     @FXML
@@ -66,11 +74,15 @@ public class Map3Controller implements MapControllerParent{
     @FXML
     void tutorialButton5Clicked(ActionEvent event) {
         model.switchToTutoPracTest(event, tutorialButton5, "/UI/TutoPracTest/TutoPracTestView.fxml");
+
+        mediaPlayer.stop();
     }
 
     @FXML
     void tutorialButton6Clicked(ActionEvent event) {
         model.switchToTutoPracTest(event, tutorialButton6, "/UI/TutoPracTest/TutoPracTestView.fxml");
+
+        mediaPlayer.stop();
     }
 
     @FXML
@@ -81,6 +93,10 @@ public class Map3Controller implements MapControllerParent{
         tutorial6Check.setVisible(checkmarkIndex[2]);
         practice6Check.setVisible(checkmarkIndex[3]);
         testCheck.setVisible(checkmarkIndex[4]);
+
+        sound = new Media(getClass().getResource("/Sounds/campfire-1.mp3").toExternalForm());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
         
     }
 
