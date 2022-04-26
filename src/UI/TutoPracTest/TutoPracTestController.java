@@ -2,14 +2,11 @@ package UI.TutoPracTest;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
-import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.concurrent.ThreadLocalRandom;
-
+import Backend.Grade.Grade;
+import Backend.Grade.GradeKi;
 import UI.Map.MapControllerParent;
 import UI.Map.Map1.MapController;
-import UI.Map.Map2.Map2Controller;
-import UI.Map.Map3.Map3Controller;
 import UI.Reward.RewardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -115,9 +112,11 @@ public class TutoPracTestController {
     private int numbercorrect = 0; //The number of questions gotten correct in practice
     private int totalNumberOfQuestions; //The total number of questions for both practice and test to display the done button
     private int questionNumber = 1; //This is the number of the question that it is currently on.
+    private Grade grade;
 
     public TutoPracTestController() {
         super();
+        grade = new GradeKi(); //TODO: REMOVE LATER
         try {
             correctmark = new Image(new FileInputStream("Pictures/Map/checkmark.png"));
             incorrectMark = new Image(new FileInputStream("Pictures/Practice/incorrectMark.png"));
@@ -130,7 +129,9 @@ public class TutoPracTestController {
     @FXML
     public void completeAssignment(ActionEvent event) { //Done button
         //TODO: ADD CODE HERE OF LIKE SAVING ASSIGNMENT OR WHATEVER
-        youtubeVideo = null;
+        if (youtubeVideo != null) {
+            youtubeVideo.getEngine().load("");
+        }
         if (model.getFirstLetters().equalsIgnoreCase("Test")) {
             try {
                 FXMLLoader rewardLoader = new FXMLLoader(getClass().getResource("/UI/Reward/RewardEarnedScreen.fxml"));
@@ -293,26 +294,28 @@ public class TutoPracTestController {
                     youtubeVideo.visibleProperty().set(true);
                     youtubeVideo.disableProperty().set(false);
                     titleLabel.setText("TUTORIAL");
+                    /**
+                     * check grade
+                     * make grade object then do get youtubeVideo
+                     */
                     switch (model.getLastLetter()) {
                         case "1":
-                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=bGetqbqDVaA");
+                            youtubeVideo = grade.getYoutubeVideo1();
                             break;
                         case "2":
-                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=5Re3nbmqVaU");
+                            youtubeVideo = grade.getYoutubeVideo2();
                             break;
                         case "3":
-                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            youtubeVideo = grade.getYoutubeVideo3();
                             break;
                         case "4":
-                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            youtubeVideo = grade.getYoutubeVideo4();
                             break;
                         case "5":
-                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            youtubeVideo = grade.getYoutubeVideo5();
                             break;
                         case "6":
-                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
-                            break;
-                        default:
+                            youtubeVideo = grade.getYoutubeVideo6();
                             break;
                     }
                     doneButton.setVisible(true);
@@ -350,7 +353,9 @@ public class TutoPracTestController {
 
     @FXML
     public void returnToMap(ActionEvent event) {
-        youtubeVideo = null; //TODO: SCREAM
+        if (youtubeVideo != null) {
+            youtubeVideo.getEngine().load("");
+        }
         try {
             Parent MapParent = new Parent(){};
             switch (model.getMapName()) {
@@ -392,6 +397,10 @@ public class TutoPracTestController {
         model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour, userInputAnchor, multipleChoiceAnchor);
     }
 
+    /**
+     * This an indicator of what island it is, 1, 2, 3.
+     * @param substring
+     */
     public void setMapName(String substring) {
         model.setMapName(substring);
     }

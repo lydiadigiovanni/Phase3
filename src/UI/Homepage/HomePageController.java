@@ -1,15 +1,11 @@
 //Purpose: Controller in the MVC structure for the homepage
 package UI.Homepage;
+import Backend.Grade.Grade;
+import Backend.Grade.GradeKi; //TODO: REMOVE THISLATER
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 
 public class HomePageController {
 
@@ -39,6 +35,12 @@ public class HomePageController {
 
     private HomePageModel model = new HomePageModel();
 
+    private Grade grade;
+
+    public HomePageController() {
+        super();
+        grade = new GradeKi(); //TODO: GET THIS FROM DATBASE
+    }
     @FXML
     void Island2ButtonPressed(ActionEvent event) {
         model.goToIsland(event, Island2Button, "/UI/Map/Map2/Map2View.fxml");
@@ -64,6 +66,13 @@ public class HomePageController {
     @FXML
     void profileButtonPressed(ActionEvent event) {
         model.goToProfile(event, ProfileButton);
+    }
+
+    @FXML
+    public void initialize() {        
+        island1Name.setText(grade.getIsland1Name());
+        island2Name.setText(grade.getIsland2Name());
+        island3Name.setText(grade.getIsland3Name());
     }
 
 }

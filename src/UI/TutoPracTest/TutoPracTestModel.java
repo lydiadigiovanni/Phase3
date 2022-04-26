@@ -20,6 +20,10 @@ public class TutoPracTestModel {
 
     private String mapName;
 
+    private String grade;
+
+    private String island;
+
     public TutoPracTestModel() {
         // TODO Auto-generated constructor stub
     }
@@ -57,7 +61,7 @@ public class TutoPracTestModel {
         
     }
 
-    private Assessment getAssessmentClass() {
+    private Assessment getAssessmentClass(String grade, String island) {
         try {
             String s = "";
             Class<?> assessmentClass = Class.forName("Backend.Assessment.KiPractice1");
@@ -77,11 +81,9 @@ public class TutoPracTestModel {
 
             }
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
-            System.out.println("huge fuck up");
         }
-        return null; //If this returns null, there was a fuck up.
+        return null; 
     }
 
     public void generateUserInputQuestion(String[][][] questionTypeAndWhatQuestionAndQuestion, Label questionLabel) {
@@ -121,7 +123,7 @@ public class TutoPracTestModel {
     }
 
     public void generateQuestion(Label questionLabel, HBox pictureBox, RadioButton choiceButtonOne, RadioButton choiceButtonTwo, RadioButton choiceButtonThree, RadioButton choiceButtonFour, AnchorPane userInputAnchor, AnchorPane multipleChoiceAnchor) {
-        String questionTypeAndWhatQuestionAndQuestion[][][] = getAssessmentClass().generateQuestion();
+        String questionTypeAndWhatQuestionAndQuestion[][][] = getAssessmentClass(grade, island).generateQuestion();
         String questionType = questionTypeAndWhatQuestionAndQuestion[0][0][0];
         switch (questionType) {
             case "0":
@@ -149,6 +151,19 @@ public class TutoPracTestModel {
 
     public void setMapName(String substring) {
         mapName = substring;
+        switch (substring) {
+            case "MapM":
+                island = "1";
+                break;
+        
+            case "Map2":
+                island = "2";
+                break;
+            
+            case "Map3":
+                island = "3";
+                break;
+        }
     }
 
     public String getMapName() {
