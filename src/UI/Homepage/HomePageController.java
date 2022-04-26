@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class HomePageController {
@@ -64,6 +66,13 @@ public class HomePageController {
     @FXML
     void profileButtonPressed(ActionEvent event) {
         model.goToProfile(event, ProfileButton);
+    }
+
+    @FXML
+    public void initialize() {
+        Media sound = new Media(getClass().getResource("/Sounds/ocean-waves-1.mp3").toExternalForm());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
     }
 
 }
