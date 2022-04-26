@@ -7,9 +7,9 @@ public class GradeKi extends Grade {
         
 
     public GradeKi() {
-        setIsland1Name("Counting\nCove");
-        setIsland2Name("Operation\nIsle");
-        setIsland3Name("Geometry\nCoast");
+        setIsland1Name("COUNTING\nCOVE");
+        setIsland2Name("OPERATION\nISLE");
+        setIsland3Name("GEOMETRY\nCOAST");
     }  
 
     @Override
