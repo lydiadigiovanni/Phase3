@@ -43,9 +43,11 @@ public class ProfilePageController {
     @FXML
     private ImageView userAvatar;
 
+    private ProfilePageModel model = new ProfilePageModel();
+
     @FXML
     void backButtonPressed(ActionEvent event) {
-
+        model.toHomePage(event);
     }
 
     @FXML

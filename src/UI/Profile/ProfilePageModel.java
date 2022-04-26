@@ -9,5 +9,16 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class ProfilePageModel {
-    
+    public void toHomePage(ActionEvent event) {
+        try {
+            Parent homepageParent = FXMLLoader.load(getClass().getResource("/UI/Homepage/HomePage.fxml"));
+            Scene homeScene = new Scene(homepageParent);
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+            window.setScene(homeScene);
+            window.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
+    }
 }

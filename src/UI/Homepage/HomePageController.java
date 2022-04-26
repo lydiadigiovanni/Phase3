@@ -63,7 +63,7 @@ public class HomePageController {
 
     @FXML
     void profileButtonPressed(ActionEvent event) {
-
+        model.goToProfile(event, ProfileButton);
     }
 
 }
