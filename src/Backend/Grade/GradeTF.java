@@ -5,37 +5,37 @@ import javafx.scene.web.WebView;
 public class GradeTF extends Grade{
 
     @Override
-    public WebView getYoutubeVideo1() {
+    public String getYoutubeVideo1() {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public WebView getYoutubeVideo2() {
+    public String getYoutubeVideo2() {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public WebView getYoutubeVideo3() {
+    public String getYoutubeVideo3() {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public WebView getYoutubeVideo4() {
+    public String getYoutubeVideo4() {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public WebView getYoutubeVideo5() {
+    public String getYoutubeVideo5() {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public WebView getYoutubeVideo6() {
+    public String getYoutubeVideo6() {
         // TODO Auto-generated method stub
         return null;
     }

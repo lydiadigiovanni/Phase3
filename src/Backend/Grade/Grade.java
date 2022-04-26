@@ -15,17 +15,17 @@ public abstract class Grade {
     private String island3Name;
 
 
-    public abstract WebView getYoutubeVideo1();
+    public abstract String getYoutubeVideo1();
 
-    public abstract WebView getYoutubeVideo2();
+    public abstract String getYoutubeVideo2();
 
-    public abstract WebView getYoutubeVideo3();
+    public abstract String getYoutubeVideo3();
 
-    public abstract WebView getYoutubeVideo4();
+    public abstract String getYoutubeVideo4();
 
-    public abstract WebView getYoutubeVideo5();
+    public abstract String getYoutubeVideo5();
 
-    public abstract WebView getYoutubeVideo6();
+    public abstract String getYoutubeVideo6();
 
     public String getIsland1Name() {
         return island1Name;

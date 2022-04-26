@@ -300,22 +300,22 @@ public class TutoPracTestController {
                      */
                     switch (model.getLastLetter()) {
                         case "1":
-                            youtubeVideo = grade.getYoutubeVideo1();
+                            youtubeVideo.getEngine().load(grade.getYoutubeVideo1()); 
                             break;
                         case "2":
-                            youtubeVideo = grade.getYoutubeVideo2();
+                            youtubeVideo.getEngine().load(grade.getYoutubeVideo2());
                             break;
                         case "3":
-                            youtubeVideo = grade.getYoutubeVideo3();
+                            youtubeVideo.getEngine().load(grade.getYoutubeVideo3());
                             break;
                         case "4":
-                            youtubeVideo = grade.getYoutubeVideo4();
+                            youtubeVideo.getEngine().load(grade.getYoutubeVideo4());
                             break;
                         case "5":
-                            youtubeVideo = grade.getYoutubeVideo5();
+                            youtubeVideo.getEngine().load(grade.getYoutubeVideo5());
                             break;
                         case "6":
-                            youtubeVideo = grade.getYoutubeVideo6();
+                            youtubeVideo.getEngine().load(grade.getYoutubeVideo6());
                             break;
                     }
                     doneButton.setVisible(true);
