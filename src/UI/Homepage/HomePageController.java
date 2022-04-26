@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -28,13 +29,13 @@ public class HomePageController {
     private Button ProfileButton;
 
     @FXML
-    private ImageView island1Name;
+    private Label island1Name;
 
     @FXML
-    private ImageView island2Name;
+    private Label island2Name;
 
     @FXML
-    private ImageView island3Name;
+    private Label island3Name;
 
     private HomePageModel model = new HomePageModel();
 
