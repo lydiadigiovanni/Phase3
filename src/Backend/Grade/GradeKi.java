@@ -3,7 +3,7 @@ package Backend.Grade;
 import javafx.scene.web.WebView;
 
 public class GradeKi extends Grade {
-    private WebView youtubeVideo;
+    private String youtubeVideo;
         
 
     public GradeKi() {
@@ -13,39 +13,39 @@ public class GradeKi extends Grade {
     }  
 
     @Override
-    public WebView getYoutubeVideo1() {
-        youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=bGetqbqDVaA");
+    public String getYoutubeVideo1() {
+        youtubeVideo = ("https://www.youtube.com/watch?v=bGetqbqDVaA");
 
         return youtubeVideo;
     }
 
     @Override
-    public WebView getYoutubeVideo2() {
-        youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=5Re3nbmqVaU");
+    public String getYoutubeVideo2() {
+        youtubeVideo = ("https://www.youtube.com/watch?v=5Re3nbmqVaU");
         return youtubeVideo;
     }
 
     @Override
-    public WebView getYoutubeVideo3() {
-        youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+    public String getYoutubeVideo3() {
+        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
         return youtubeVideo;
     }
 
     @Override
-    public WebView getYoutubeVideo4() {
-        youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+    public String getYoutubeVideo4() {
+        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
         return youtubeVideo;
     }
 
     @Override
-    public WebView getYoutubeVideo5() {
-        youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+    public String getYoutubeVideo5() {
+        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
         return youtubeVideo;
     }
 
     @Override
-    public WebView getYoutubeVideo6() {
-        youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+    public String getYoutubeVideo6() {
+        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
         return youtubeVideo;
     }
     
