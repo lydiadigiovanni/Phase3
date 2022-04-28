@@ -26,7 +26,7 @@ public class MapController implements MapControllerParent{
     private Button practiceButton2;
 
     @FXML
-    private Button testButton;
+    private Button testButton1;
 
     @FXML
     private ImageView testCheck;
@@ -78,7 +78,7 @@ public class MapController implements MapControllerParent{
 
     @FXML
     void testButtonClicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, testButton, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, testButton1, "/UI/TutoPracTest/TutoPracTestView.fxml");
 
         mediaPlayer.stop();
     }

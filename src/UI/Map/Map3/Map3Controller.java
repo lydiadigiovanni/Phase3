@@ -26,7 +26,7 @@ public class Map3Controller implements MapControllerParent{
     private Button practiceButton6;
 
     @FXML
-    private Button testButton;
+    private Button testButton5;
 
     @FXML
     private ImageView testCheck;
