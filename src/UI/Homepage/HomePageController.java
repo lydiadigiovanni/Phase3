@@ -43,19 +43,19 @@ public class HomePageController {
     }
     @FXML
     void Island2ButtonPressed(ActionEvent event) {
-        model.goToIsland(event, Island2Button, "/UI/Map/Map2/Map2View.fxml");
+        model.goToIsland(event, Island2Button, "/UI/Map/Map2/Map2View.fxml", grade);
     }
 
     @FXML
     void island1ButtonPressed(ActionEvent event){
         /*Call goToIsland() from HomePageModel;
         When Island1Button is pressed, the software takes you back to the map!*/
-        model.goToIsland(event, Island1Button, "/UI/Map/Map1/MapView.fxml");
+        model.goToIsland(event, Island1Button, "/UI/Map/Map1/MapView.fxml", grade);
     }
 
     @FXML
     void island3ButtonPressed(ActionEvent event) {
-        model.goToIsland(event, Island2Button, "/UI/Map/Map3/Map3View.fxml");
+        model.goToIsland(event, Island2Button, "/UI/Map/Map3/Map3View.fxml", grade);
     }
 
     @FXML

@@ -1,6 +1,8 @@
 package Backend.Grade;
 
-import javafx.scene.web.WebView;
+import Backend.Assessment.Assessment;
+import Backend.Assessment.KiPractice1;
+import Backend.Assessment.KiPractice2;
 
 public class GradeKi extends Grade {
     private String youtubeVideo;
@@ -47,6 +49,40 @@ public class GradeKi extends Grade {
     public String getYoutubeVideo6() {
         youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
         return youtubeVideo;
+    }
+
+    @Override
+    protected Assessment getPractice1() {
+        return new KiPractice1();
+    }
+
+    @Override
+    protected Assessment getPractice2() {
+        return new KiPractice2();
+    }
+
+    @Override
+    protected Assessment getPractice3() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    protected Assessment getPractice4() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    protected Assessment getPractice5() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    protected Assessment getPractice6() {
+        // TODO Auto-generated method stub
+        return null;
     }
     
 }

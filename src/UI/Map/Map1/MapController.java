@@ -1,12 +1,14 @@
 package UI.Map.Map1;
 
+import Backend.Grade.Grade;
 import UI.Map.MapControllerParent;
+import UI.Map.MapModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
-public class MapController implements MapControllerParent{
+public class MapController extends MapControllerParent{
 
     @FXML
     private Button homeButton;
@@ -50,13 +52,13 @@ public class MapController implements MapControllerParent{
 
     @FXML
     void practiceButton1Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, practiceButton1, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, practiceButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
 
     }
 
     @FXML
     void practiceButton2Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, practiceButton2, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, practiceButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
     }
 
     @FXML
@@ -66,17 +68,17 @@ public class MapController implements MapControllerParent{
 
     @FXML
     void testButtonClicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, testButton, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, testButton, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
     }
 
     @FXML
     void tutorialButton1Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton1, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, tutorialButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
     }
 
     @FXML
     void tutorialButton2Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton2, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, tutorialButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
     }
     
     @Override

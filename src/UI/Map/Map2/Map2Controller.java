@@ -1,12 +1,14 @@
 package UI.Map.Map2;
 
+import Backend.Grade.Grade;
 import UI.Map.MapControllerParent;
+import UI.Map.MapModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
-public class Map2Controller implements MapControllerParent{
+public class Map2Controller extends MapControllerParent{
 
     @FXML
     private Button homeButton;
@@ -41,7 +43,7 @@ public class Map2Controller implements MapControllerParent{
     @FXML
     private Button tutorialButton4;
 
-    private Map2Model model = new Map2Model();
+    private MapModel model = new MapModel();
 
     @FXML
     void practiceButton3Clicked(ActionEvent event) {
@@ -65,12 +67,12 @@ public class Map2Controller implements MapControllerParent{
 
     @FXML
     void tutorialButton3Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton3, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, tutorialButton3, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
     }
 
     @FXML
     void tutorialButton4Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton4, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, tutorialButton4, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
     }
 
     @FXML

@@ -1,5 +1,6 @@
-package UI.Map.Map2;
+package UI.Map;
 
+import Backend.Grade.Grade;
 import UI.TutoPracTest.TutoPracTestController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,15 +10,16 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
-public class Map2Model {
 
+public class MapModel {
+    
     private Boolean checkmarkIndex[] = new Boolean[]{false, false, false, false, false};
     
-    public Map2Model() {
+    public MapModel() {
 
     }
 
-    public void switchToTutoPracTest(ActionEvent event, Button button, String path) {
+    public void switchToTutoPracTest(ActionEvent event, Button button, String path, Grade grade) {
         String firstFourLetters = button.getId().substring(0, 4);
         String lastLetter = button.getId().substring((button.getId().length()) - 1);        
         try {
@@ -31,6 +33,7 @@ public class Map2Model {
             controller.setFirstLetter(firstFourLetters);
             controller.setLastLetter(lastLetter);
             controller.setMapName(this.getClass().getSimpleName().substring(0,4));
+            controller.setGrade(grade);
             controller.initialize();
         } catch (Exception e) {
             e.printStackTrace();

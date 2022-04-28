@@ -405,4 +405,8 @@ public class TutoPracTestController {
         model.setMapName(substring);
     }
 
+    public void setGrade(Grade grade) {
+        model.setGrade(grade);
+    }
+
 }

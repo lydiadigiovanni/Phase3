@@ -1,6 +1,6 @@
 package Backend.Grade;
 
-import javafx.scene.web.WebView;
+import Backend.Assessment.Assessment;
 
 public abstract class Grade {
     /**
@@ -50,4 +50,31 @@ public abstract class Grade {
     public void setIsland3Name(String island3Name) {
         this.island3Name = island3Name;
     }
+
+    public Assessment getPractice(String string) {
+        switch (string) {
+            case "1":
+                return getPractice1();
+            case "2":
+                return getPractice2();
+            case "3":
+                return getPractice3();
+            case "4":
+                return getPractice4();
+            case "5":   
+                return getPractice5();
+            case "6":
+                return getPractice6();
+            default:
+                return getPractice1();
+        }
+    }
+
+    protected abstract Assessment getPractice1();
+    protected abstract Assessment getPractice2();
+    protected abstract Assessment getPractice3();
+    protected abstract Assessment getPractice4();
+    protected abstract Assessment getPractice5();
+    protected abstract Assessment getPractice6();
+
 }

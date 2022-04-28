@@ -1,6 +1,7 @@
 package UI.TutoPracTest;
 import java.util.concurrent.ThreadLocalRandom;
 import Backend.Assessment.Assessment;
+import Backend.Grade.Grade;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.AnchorPane;
@@ -20,7 +21,7 @@ public class TutoPracTestModel {
 
     private String mapName;
 
-    private String grade;
+    private Grade grade;
 
     private String island;
 
@@ -61,22 +62,23 @@ public class TutoPracTestModel {
         
     }
 
-    private Assessment getAssessmentClass(String grade, String island) {
+    private Assessment getAssessmentClass(Grade grade, String island) {
+        /**
+         * Call the proper Practice based off of the grade and the island.
+         */
         try {
             String s = "";
-            Class<?> assessmentClass = Class.forName("Backend.Assessment.KiPractice1");
+            //Class<?> assessmentClass = Class.forName("Backend.Assessment.KiPractice1");
             Assessment assessment;
             switch (getFirstLetters()) {
                 case "prac":
                     s = "Practice";
-                    assessmentClass = Class.forName("Backend.Assessment.Ki" + s + getLastLetter());
-                    assessment = (Assessment) assessmentClass.getDeclaredConstructor().newInstance();
+                    assessment = grade.getPractice(lastLetter);
                     return assessment;
                 case "test":
                     int random = ThreadLocalRandom.current().nextInt(2);
                     setLastLetter(Integer.toString(random+1));
-                    assessmentClass = Class.forName("Backend.Assessment.KiPractice" + (random + 1));
-                    assessment = (Assessment) assessmentClass.getDeclaredConstructor().newInstance();
+                    assessment = grade.getPractice(lastLetter);
                     return assessment;
 
             }
@@ -168,6 +170,10 @@ public class TutoPracTestModel {
 
     public String getMapName() {
         return mapName;
+    }
+
+    public void setGrade(Grade grade) {
+        this.grade = grade;
     }
 
     
