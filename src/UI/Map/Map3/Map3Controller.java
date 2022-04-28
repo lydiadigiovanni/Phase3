@@ -52,10 +52,14 @@ public class Map3Controller implements MapControllerParent{
     @FXML
     void practiceButton5Clicked(ActionEvent event) {
 
+        mediaPlayer.stop();
+
     }
 
     @FXML
     void practiceButton6Clicked(ActionEvent event) {
+
+        mediaPlayer.stop();
 
     }
 
@@ -68,6 +72,8 @@ public class Map3Controller implements MapControllerParent{
 
     @FXML
     void testButtonClicked(ActionEvent event) {
+
+        mediaPlayer.stop();
 
     }
 

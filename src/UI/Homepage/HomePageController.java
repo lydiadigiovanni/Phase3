@@ -48,6 +48,8 @@ public class HomePageController {
     @FXML
     void Island2ButtonPressed(ActionEvent event) {
         model.goToIsland(event, Island2Button, "/UI/Map/Map2/Map2View.fxml");
+        
+        mediaPlayer.stop();
     }
 
     @FXML
@@ -55,6 +57,8 @@ public class HomePageController {
         /*Call goToIsland() from HomePageModel;
         When Island1Button is pressed, the software takes you back to the map!*/
         model.goToIsland(event, Island1Button, "/UI/Map/Map1/MapView.fxml");
+
+        mediaPlayer.stop();
     }
 
     @FXML
@@ -67,11 +71,15 @@ public class HomePageController {
     @FXML
     void logOutButtonPressed(ActionEvent event) {
 
+        mediaPlayer.stop();
+
     }
 
     @FXML
     void profileButtonPressed(ActionEvent event) {
         model.goToProfile(event, ProfileButton);
+
+        mediaPlayer.stop();
     }
 
     @FXML
@@ -79,6 +87,7 @@ public class HomePageController {
         sound = new Media(getClass().getResource("/Sounds/ocean-waves-1.mp3").toExternalForm());
         mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
+        mediaPlayer.setVolume(0.25);
     }
 
 }
