@@ -2,9 +2,14 @@ package UI.TutoPracTest;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.concurrent.ThreadLocalRandom;
 
-import UI.Map.MapController;
+import UI.Map.MapControllerParent;
+import UI.Map.Map1.MapController;
+import UI.Map.Map2.Map2Controller;
+import UI.Map.Map3.Map3Controller;
 import UI.Reward.RewardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -50,7 +56,10 @@ public class TutoPracTestController {
     private RadioButton choiceButtonFour;
 
     @FXML
-    private Button confirmButton;
+    private AnchorPane multipleChoiceAnchor;
+
+    @FXML
+    private Button multipleChoiceConfirmButton;
 
     @FXML
     private Label questionLabel;
@@ -71,7 +80,7 @@ public class TutoPracTestController {
     private Label titleLabel;
 
     @FXML
-    private Button nextButton;
+    private Button multipleChoiceNextButton;
 
     @FXML
     private HBox pictureBox;
@@ -84,6 +93,18 @@ public class TutoPracTestController {
 
     @FXML
     private Label progressQuestionsLabel;
+
+    @FXML
+    private AnchorPane userInputAnchor;
+
+    @FXML
+    private Button userInputConfirmButton;
+
+    @FXML
+    private Button userInputNextButton;
+
+    @FXML
+    private TextField userInputTextField;
     
 
     private TutoPracTestModel model = new TutoPracTestModel();
@@ -109,6 +130,7 @@ public class TutoPracTestController {
     @FXML
     public void completeAssignment(ActionEvent event) { //Done button
         //TODO: ADD CODE HERE OF LIKE SAVING ASSIGNMENT OR WHATEVER
+        youtubeVideo = null;
         if (model.getFirstLetters().equalsIgnoreCase("Test")) {
             try {
                 FXMLLoader rewardLoader = new FXMLLoader(getClass().getResource("/UI/Reward/RewardEarnedScreen.fxml"));
@@ -128,27 +150,44 @@ public class TutoPracTestController {
         }
         else
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Map/MapView.fxml"));
-                Parent parent = loader.load();
+                FXMLLoader loader = new FXMLLoader();
+                MapControllerParent controller = new MapController();
+                Parent parent = new Parent(){};
+                switch (model.getMapName()) {
+                    case "MapM"://Map 1
+                        loader = new FXMLLoader(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
+                        parent = loader.load();
+                        controller = loader.getController();
+                        break;
+                    case "Map2":
+                        loader = new FXMLLoader(getClass().getResource("/UI/Map/Map2/Map2View.fxml"));
+                        parent = loader.load();
+                        controller = loader.getController();
+                        break;
+                    case "Map3":
+                        loader = new FXMLLoader(getClass().getResource("/UI/Map/Map3/Map3View.fxml"));
+                        parent = loader.load();
+                        controller = loader.getController();
+                        break;
+                }
                 Scene scene = new Scene(parent);
-                MapController controller = loader.getController();
                 Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
                 window.setScene(scene);
                 window.show();
                 int checkmarkindex = 0;
                 if (model.getFirstLetters().equalsIgnoreCase("Tuto")) {
-                    if(model.getLastLetter().equalsIgnoreCase("1")) {
+                    if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
                         checkmarkindex = 0;
                     }
-                    else {
+                    else if (model.getLastLetter().equalsIgnoreCase("2") || model.getLastLetter().equalsIgnoreCase("4") || model.getLastLetter().equalsIgnoreCase("6")) {
                         checkmarkindex = 2;
                     }
                 }
                 else if (model.getFirstLetters().equalsIgnoreCase("Prac")) {
-                    if(model.getLastLetter().equalsIgnoreCase("1")) {
+                    if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
                         checkmarkindex = 1;
                     }
-                    else {
+                    else if (model.getLastLetter().equalsIgnoreCase("2") || model.getLastLetter().equalsIgnoreCase("4") || model.getLastLetter().equalsIgnoreCase("6")) {
                         checkmarkindex = 3;
                     }
                 }
@@ -163,52 +202,86 @@ public class TutoPracTestController {
     }
 
     @FXML
-    public void checkAnswer(ActionEvent event) throws FileNotFoundException { //Confirm button's method
+    public void mutlipleChoiceCheckAnswer(ActionEvent event) throws FileNotFoundException { //Confirm button's method
         if(multipleChoiceQuestion.getSelectedToggle() != null) {
             disableRadioButtons(true);
-            nextButton.setDisable(false);
-            nextButton.setVisible(true);
+            multipleChoiceNextButton.setDisable(false);
+            multipleChoiceNextButton.setVisible(true);
             boolean correctBoolean = model.checkAnswer(((RadioButton) multipleChoiceQuestion.getSelectedToggle()).getText());
             correctAnswerLabel.setText(model.getAnswer());
-            if (correctBoolean) {
-                incorrectCorrect.setImage(correctmark);
-                numbercorrect++;
-                if (model.getFirstLetters().equalsIgnoreCase("prac")) {
-                    numberCorrectLabel.setText(numbercorrect + "/" + totalNumberOfQuestions);
-
-                }
-            } else {
-                incorrectCorrect.setImage(incorrectMark);
-            }
-            if (questionNumber == totalNumberOfQuestions) {
-                nextButton.setDisable(true);
-                nextButton.setVisible(false);
-                doneButton.setDisable(false);
-                doneButton.setVisible(true);
-            }
-            if (numbercorrect == totalNumberOfQuestions) {
-                doneButton.setVisible(true);
-                doneButton.setDisable(false);
-            }
+            answerChecker(correctBoolean, multipleChoiceNextButton);
         }
-        confirmButton.setDisable(true);
+        multipleChoiceConfirmButton.setDisable(true);
+    }
+
+    private void answerChecker(Boolean correctBoolean, Button nextButton) {
+        if (correctBoolean) {
+            incorrectCorrect.setImage(correctmark);
+            numbercorrect++;
+            if (model.getFirstLetters().equalsIgnoreCase("prac")) {
+                numberCorrectLabel.setText(numbercorrect + "/" + totalNumberOfQuestions);
+
+            }
+        } else {
+            incorrectCorrect.setImage(incorrectMark);
+        }
+        if (questionNumber == totalNumberOfQuestions) {
+            nextButton.setDisable(true);
+            nextButton.setVisible(false);
+            doneButton.setDisable(false);
+            doneButton.setVisible(true);
+        }
+        if (numbercorrect == totalNumberOfQuestions) {
+            doneButton.setVisible(true);
+            doneButton.setDisable(false);
+        }
     }
 
     @FXML
-    public void nextQuestion(ActionEvent event) { //Next button's method
-        disableRadioButtons(false);
-        confirmButton.setDisable(false);
+    void userInputCheckAnswer(ActionEvent event) {
+        if(userInputTextField.getText() != null) {
+            userInputTextField.setDisable(true);
+            userInputNextButton.setDisable(false);
+            userInputNextButton.setVisible(true);
+            boolean correctBoolean = model.checkAnswer(userInputTextField.getText());
+            answerChecker(correctBoolean, userInputNextButton);
+            userInputConfirmButton.setDisable(true);
+        }
+    }
+
+    @FXML
+    void userInputNextQuestion(ActionEvent event) {
+        userInputTextField.setDisable(false);
+        userInputConfirmButton.setDisable(false);
+        userInputTextField.setText("");
         correctAnswerLabel.setText("");
         incorrectCorrect.setImage(null);
-        multipleChoiceQuestion.selectToggle(null);
-        model.generateMultipleChoiceQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour);
-        nextButton.setVisible(false);
-        nextButton.setDisable(true);
+        userInputNextButton.setDisable(true);
+        userInputNextButton.setVisible(false);
+        generateQuestion();
         if (model.getFirstLetters().equalsIgnoreCase("test")) {
             questionNumber++;
             numberCorrectLabel.setText(Integer.toString(questionNumber));
         }
     }
+
+    @FXML
+    public void multipleChoiceNextQuestion(ActionEvent event) { //Next button's method
+        disableRadioButtons(false);
+        multipleChoiceConfirmButton.setDisable(false);
+        correctAnswerLabel.setText("");
+        incorrectCorrect.setImage(null);
+        multipleChoiceQuestion.selectToggle(null);
+        generateQuestion();
+        multipleChoiceNextButton.setVisible(false);
+        multipleChoiceNextButton.setDisable(true);
+        if (model.getFirstLetters().equalsIgnoreCase("test")) {
+            questionNumber++;
+            numberCorrectLabel.setText(Integer.toString(questionNumber));
+        }
+    }
+
+    
 
     @FXML
     public void initialize() {
@@ -227,6 +300,18 @@ public class TutoPracTestController {
                         case "2":
                             youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=5Re3nbmqVaU");
                             break;
+                        case "3":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            break;
+                        case "4":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            break;
+                        case "5":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            break;
+                        case "6":
+                            youtubeVideo.getEngine().load("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+                            break;
                         default:
                             break;
                     }
@@ -239,7 +324,10 @@ public class TutoPracTestController {
                     youtubeVideo.visibleProperty().set(false);
                     youtubeVideo.disableProperty().set(true);
                     titleLabel.setText("PRACTICE");
-                    model.generateMultipleChoiceQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour); 
+                    //multipleChoiceAnchor.visibleProperty().set(true);
+                    //userInputAnchor.visibleProperty().set(false);
+                    generateQuestion();
+                    //userInputAnchor.setVisible(true);
                     totalNumberOfQuestions = 5;
                     numberCorrectLabel.setText("0/" + totalNumberOfQuestions);
                     break;
@@ -249,7 +337,8 @@ public class TutoPracTestController {
                     youtubeVideo.visibleProperty().set(false);
                     youtubeVideo.disableProperty().set(true);
                     titleLabel.setText("TEST");
-                    model.generateMultipleChoiceQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour); 
+                    //multipleChoiceAnchor.visibleProperty().set(true);
+                    generateQuestion(); 
                     totalNumberOfQuestions = 10;
                     //numberCorrectLabel.setText("0/" + totalNumberOfQuestions);
                     progressQuestionsLabel.setText("Question");
@@ -261,8 +350,20 @@ public class TutoPracTestController {
 
     @FXML
     public void returnToMap(ActionEvent event) {
+        youtubeVideo = null; //TODO: SCREAM
         try {
-            Parent MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/MapView.fxml"));
+            Parent MapParent = new Parent(){};
+            switch (model.getMapName()) {
+                case "MapM"://Map 1
+                    MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/Map1/MapView.fxml"));
+                    break;
+                case "Map2":
+                    MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/Map2/Map2View.fxml"));
+                    break;
+                case "Map3":
+                    MapParent = FXMLLoader.load(getClass().getResource("/UI/Map/Map3/Map3View.fxml"));
+                    break;
+            }
             Scene MapScene = new Scene(MapParent);
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
             window.setScene(MapScene);
@@ -285,6 +386,14 @@ public class TutoPracTestController {
         choiceButtonTwo.setDisable(trueFalse);
         choiceButtonThree.setDisable(trueFalse);
         choiceButtonFour.setDisable(trueFalse);
+    }
+
+    private void generateQuestion() {
+        model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour, userInputAnchor, multipleChoiceAnchor);
+    }
+
+    public void setMapName(String substring) {
+        model.setMapName(substring);
     }
 
 }

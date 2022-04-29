@@ -6,14 +6,13 @@ public abstract class Assessment {
         /**
      * Generates a question of either type multiple choice, true/false, or user input.
      * 0 = multiple choice
-     * 1 = true/false
-     * 2 = user input
+     * 1 = user input
+     * 2 = true/false
      */
-    
     public String[][][] generateQuestion() { 
-        int i = ThreadLocalRandom.current().nextInt(3);
+        int i = ThreadLocalRandom.current().nextInt(2);
         String[][][] typeAndQuestion = new String[2][1][1];
-        switch (0) {
+        switch (i) {
             case 0:
                 typeAndQuestion[0][0] = new String[]{"0"};
                 typeAndQuestion[1] = generateMultipleChoiceQuestion();
@@ -21,14 +20,15 @@ public abstract class Assessment {
                 break;
             case 1:
                 typeAndQuestion[0][0] = new String[]{"1"};
-                typeAndQuestion[1] = generateTrueFalseQuestion();
+                typeAndQuestion[1] = generateUserInputQuestion();
 
                 break;
             case 2:
                 typeAndQuestion[0][0] = new String[]{"2"};
-                typeAndQuestion[1] = generateUserInputQuestion();
+                typeAndQuestion[1] = generateTrueFalseQuestion();
 
                 break;
+            
         }
         return typeAndQuestion;
     }

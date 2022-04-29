@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Map.Map3.Map3Controller">
+   <children>
+      <ImageView fitHeight="608.0" fitWidth="810.0" layoutX="-6.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Pictures/Map/MapBackround.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="350.0" fitWidth="626.0" layoutX="-242.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/mapDecorSmoke.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="350.0" fitWidth="626.0" layoutX="212.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Pictures/Map/mapDecorSmoke.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="61.0" layoutY="90.0" rotate="-5.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="136.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/TutorialButton.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tutorial5Check" fitHeight="60.0" fitWidth="60.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../../Pictures/Map/checkmark.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="136.0" layoutX="4.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/Tutorial.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="tutorialButton5" contentDisplay="CENTER" layoutX="5.0" layoutY="9.0" mnemonicParsing="false" onAction="#tutorialButton5Clicked" prefHeight="119.0" prefWidth="140.0" style="-fx-background-color: tr;" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="92.0" layoutY="312.0" rotate="-10.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/ExamButton.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="136.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/Practice.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="practice5Check" fitHeight="60.0" fitWidth="60.0" layoutX="90.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../../Pictures/Map/checkmark.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="practiceButton5" contentDisplay="CENTER" layoutY="16.0" mnemonicParsing="false" onAction="#practiceButton5Clicked" prefHeight="109.0" prefWidth="136.0" style="-fx-background-color: tr;" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="322.0" layoutY="397.0">
+         <children>
+            <ImageView fitHeight="149.0" fitWidth="136.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/TutorialButton.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="149.0" fitWidth="136.0" layoutX="1.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/Tutorial.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tutorial6Check" fitHeight="60.0" fitWidth="60.0" layoutX="90.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../../Pictures/Map/checkmark.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="tutorialButton6" contentDisplay="CENTER" layoutY="13.0" mnemonicParsing="false" onAction="#tutorialButton6Clicked" prefHeight="115.0" prefWidth="138.0" style="-fx-background-color: tr;" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="557.0" layoutY="315.0" rotate="10.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/ExamButtonFlipped.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="136.0" layoutX="9.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/Practice.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="practice6Check" fitHeight="60.0" fitWidth="60.0" layoutX="95.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../../Pictures/Map/checkmark.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="practiceButton6" contentDisplay="CENTER" layoutX="9.0" layoutY="15.0" mnemonicParsing="false" onAction="#practiceButton6Clicked" prefHeight="107.0" prefWidth="133.0" style="-fx-background-color: tr;" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="513.0" layoutY="106.0" prefWidth="133.0" rotate="5.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/XTest.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="42.0" fitWidth="90.0" layoutX="22.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/Test.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="testCheck" fitHeight="60.0" fitWidth="60.0" layoutX="93.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../../Pictures/Map/checkmark.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="testButton" contentDisplay="CENTER" layoutX="11.0" layoutY="10.0" mnemonicParsing="false" onAction="#testButtonClicked" prefHeight="127.0" prefWidth="110.0" style="-fx-background-color: tr;" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="homeButton" layoutX="613.0" layoutY="-1.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Pictures/Map/BackButton.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="89.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="63.0" layoutX="94.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true" rotate="80.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="210.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" rotate="-143.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="102.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true" rotate="72.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="271.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true" rotate="-160.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="445.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true" rotate="-18.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="508.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" rotate="-36.9">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="478.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" rotate="-27.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="596.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true" rotate="-107.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="606.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true" rotate="-100.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="589.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" rotate="-73.6">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="98.0" layoutX="53.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" rotate="-19.5">
+         <image>
+            <Image url="@../../../../Pictures/Map/Start.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="104.0" layoutX="520.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" rotate="10.6">
+         <image>
+            <Image url="@../../../../Pictures/Map/Finish.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="107.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true" rotate="100.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="95.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true" rotate="41.8">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="274.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true" rotate="-128.2">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="270.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true" rotate="-10.9">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="514.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true" rotate="116.6">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="506.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true" rotate="-12.3">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="600.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="67.0" layoutX="609.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="65.0" layoutX="239.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" rotate="-150.0">
+         <image>
+            <Image url="@../../../../Pictures/Map/RedLine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="350.0" fitWidth="284.0" layoutX="225.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Pictures/Map/mapDecorVolcano.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -7,7 +7,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class HomePageController {
@@ -28,41 +31,63 @@ public class HomePageController {
     private Button ProfileButton;
 
     @FXML
-    private ImageView island1Name;
+    private Label island1Name;
 
     @FXML
-    private ImageView island2Name;
+    private Label island2Name;
 
     @FXML
-    private ImageView island3Name;
+    private Label island3Name;
+
+    private Media sound;
+
+    private MediaPlayer mediaPlayer;
 
     private HomePageModel model = new HomePageModel();
 
     @FXML
     void Island2ButtonPressed(ActionEvent event) {
-
+        model.goToIsland(event, Island2Button, "/UI/Map/Map2/Map2View.fxml");
+        
+        mediaPlayer.stop();
     }
 
     @FXML
     void island1ButtonPressed(ActionEvent event){
         /*Call goToIsland() from HomePageModel;
         When Island1Button is pressed, the software takes you back to the map!*/
-        model.goToIsland(event, Island1Button, "/UI/Map/MapView.fxml");
+        model.goToIsland(event, Island1Button, "/UI/Map/Map1/MapView.fxml");
+
+        mediaPlayer.stop();
     }
 
     @FXML
     void island3ButtonPressed(ActionEvent event) {
+        model.goToIsland(event, Island2Button, "/UI/Map/Map3/Map3View.fxml");
 
+        mediaPlayer.stop();
     }
 
     @FXML
     void logOutButtonPressed(ActionEvent event) {
 
+        mediaPlayer.stop();
+
     }
 
     @FXML
     void profileButtonPressed(ActionEvent event) {
+        model.goToProfile(event, ProfileButton);
 
+        mediaPlayer.stop();
+    }
+
+    @FXML
+    public void initialize() {
+        sound = new Media(getClass().getResource("/Sounds/ocean-waves-1.mp3").toExternalForm());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+        mediaPlayer.setVolume(0.25);
     }
 
 }

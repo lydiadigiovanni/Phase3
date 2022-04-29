@@ -1,5 +1,5 @@
 //Purpose: Class with soul purpose of launching the map and getting the FXML to load on the primaryStage
-package UI.Map;
+package UI.Map.Map1;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -12,14 +12,6 @@ import javafx.stage.Stage;
 public class MapMain extends Application {
     @Override
     public void start(Stage primaryStage) {
-     
- 
-           
-        
-  
-  
-  
-
   try {
     //Retrieve the fxml for the map 
     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MapView.fxml"));
@@ -35,9 +27,6 @@ public class MapMain extends Application {
 
   }
 }
-  
-    
- 
  public static void main(String[] args) {
         launch(args);
     }
