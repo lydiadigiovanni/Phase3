@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Homepage.HomePageController">
+   <children>
+      <ImageView fitHeight="837.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="190.0" fitWidth="368.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Logo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="295.0" layoutY="302.0">
+         <children>
+            <ImageView fitHeight="205.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/ProfileShip.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="23.0" layoutY="200.0" rotate="-15.0">
+         <children>
+            <ImageView fitHeight="198.0" fitWidth="204.0" layoutX="10.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Island1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="276.0" layoutY="130.0">
+         <children>
+            <ImageView fitHeight="155.0" fitWidth="235.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Island2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="555.0" layoutY="142.0" rotate="15.0">
+         <children>
+            <ImageView fitHeight="271.0" fitWidth="256.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Island3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <StackPane layoutX="80.0" layoutY="100.0" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="148.0" fitWidth="619.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../Desktop/FinalProject/Files/Pictures/Practice/board_Lighter.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="titleLabel" text="LOGIN" textAlignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="68.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <ImageView fitHeight="300.0" fitWidth="900.0" layoutX="20.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Desktop/FinalProject/Files/Pictures/Practice/board_Lighter.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="73.0" layoutY="289.0" prefHeight="221.0" prefWidth="648.0" style="-fx-background-color: cbaa70;">
+         <children>
+            <Label layoutX="135.0" layoutY="125.0" text="Password">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="132.0" layoutY="49.0" text="Username">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField layoutX="300.0" layoutY="49.0" prefHeight="25.0" prefWidth="200.0" style="-fx-border-color: black;" />
+            <TextField layoutX="300.0" layoutY="125.0" prefHeight="25.0" prefWidth="200.0" style="-fx-border-color: black;" />
+            <AnchorPane layoutX="564.0" layoutY="8.0" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: d17319;">
+               <children>
+                  <ImageView fitHeight="63.0" fitWidth="60.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Desktop/FinalProject/Files/Pictures/Login/CreateAccount.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="80.0" layoutY="432.0" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: d17319;">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Desktop/FinalProject/Files/Pictures/Login/ForgotPassword.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="-1.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="639.0" layoutY="432.0" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: d17319;">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Desktop/FinalProject/Files/Pictures/Login/Enter.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="-1.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
