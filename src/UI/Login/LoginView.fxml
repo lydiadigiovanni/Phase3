@@ -13,19 +13,24 @@
    <children>
       <ImageView fitHeight="837.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Background.jpg" />
+            <Image url="@../../../Pictures/Login/Background.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="190.0" fitWidth="368.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Logo.png" />
+            <Image url="@../../../Pictures/Login/Logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="103.0" fitWidth="102.0" layoutX="684.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pictures/Login/Sun.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="295.0" layoutY="302.0">
          <children>
             <ImageView fitHeight="205.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/ProfileShip.png" />
+                  <Image url="@../../../Pictures/Login/board_Lighter.png" />
                </image>
             </ImageView>
          </children>
@@ -34,7 +39,7 @@
          <children>
             <ImageView fitHeight="198.0" fitWidth="204.0" layoutX="10.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Island1.png" />
+                  <Image url="@../../../Pictures/Login/Island1.png" />
                </image>
             </ImageView>
          </children>
@@ -43,7 +48,7 @@
          <children>
             <ImageView fitHeight="155.0" fitWidth="235.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Island2.png" />
+                  <Image url="@../../../Pictures/Login/Island2.png" />
                </image>
             </ImageView>
          </children>
@@ -52,7 +57,7 @@
          <children>
             <ImageView fitHeight="271.0" fitWidth="256.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Desktop/FinalProject/Files/Pictures/HomePage/Island3.png" />
+                  <Image url="@../../../Pictures/Login/Island3.png" />
                </image>
             </ImageView>
          </children>
@@ -61,19 +66,19 @@
          <children>
             <ImageView fitHeight="148.0" fitWidth="619.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../Desktop/FinalProject/Files/Pictures/Practice/board_Lighter.png" />
+                  <Image url="@../../../Pictures/Login/board_Lighter.png" />
                </image>
             </ImageView>
             <Label fx:id="titleLabel" text="LOGIN" textAlignment="CENTER">
                <font>
-                  <Font name="Berlin Sans FB Bold" size="68.0" />
+                  <Font name="Berlin Sans FB Bold" size="58.0" />
                </font>
             </Label>
          </children>
       </StackPane>
       <ImageView fitHeight="300.0" fitWidth="900.0" layoutX="20.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Desktop/FinalProject/Files/Pictures/Practice/board_Lighter.png" />
+            <Image url="@../../../Pictures/Login/board_Lighter.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="73.0" layoutY="289.0" prefHeight="221.0" prefWidth="648.0" style="-fx-background-color: cbaa70;">
@@ -94,7 +99,7 @@
                <children>
                   <ImageView fitHeight="63.0" fitWidth="60.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../Desktop/FinalProject/Files/Pictures/Login/CreateAccount.png" />
+                        <Image url="@../../../Pictures/Login/CreateAccount.png" />
                      </image>
                   </ImageView>
                   <Button layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
@@ -106,7 +111,7 @@
          <children>
             <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Desktop/FinalProject/Files/Pictures/Login/ForgotPassword.png" />
+                  <Image url="@../../../Pictures/Login/ForgotPassword.png" />
                </image>
             </ImageView>
             <Button layoutX="-1.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
@@ -116,7 +121,7 @@
          <children>
             <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Desktop/FinalProject/Files/Pictures/Login/Enter.png" />
+                  <Image url="@../../../Pictures/Login/Enter.png" />
                </image>
             </ImageView>
             <Button layoutX="-1.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
