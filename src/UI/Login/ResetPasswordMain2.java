@@ -1,5 +1,6 @@
+//Main program for 2nd page of reset password (where they actually reset it)
 package UI.Login;
-//Main program for first page of create account
+
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,12 +9,12 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
  
-public class CreateAccountMain1 extends Application {
+public class ResetPasswordMain2 extends Application {
     @Override
     public void start(Stage primaryStage) {
   try {
-    //Retrieve the fxml for the 1st create account scene
-    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CreateAccountView1.fxml"));
+    //Retrieve the fxml for the 2nd reset password screen
+    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ResetPasswordView2.fxml"));
     Parent root = (Parent) fxmlLoader.load(); //Assign that fxml as the parent node
     Scene scene = new Scene(root); //Create a new scene containing root
      primaryStage.setTitle("Math Islands"); //Title will always be the name of the software

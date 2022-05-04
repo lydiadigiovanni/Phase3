@@ -1,3 +1,4 @@
+//Main program for login page
 package UI.Login;
 
 import java.io.IOException;

@@ -1,17 +1,17 @@
-//Controller for first page of create account 
+//Controller for 2nd page of reset password (has them enter new password/confirm)
 package UI.Login;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class CreateAccount1Controller {
+public class ResetPasswordController2 {
 
     @FXML
     private Button loginButton;
 
     @FXML
-    private Button nextButton;
+    private Button submitButton;
 
     @FXML
     private Label titleLabel;

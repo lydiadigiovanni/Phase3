@@ -1,20 +1,17 @@
-//Controller for login page
+//Controller for first page of reset password (confirms security questions)
 package UI.Login;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class LoginController {
+public class ResetPasswordController1 {
 
     @FXML
-    private Button clickEnter;
+    private Button loginButton;
 
     @FXML
-    private Button createAccount;
-
-    @FXML
-    private Button forgotPassword;
+    private Button nextButton;
 
     @FXML
     private Label titleLabel;

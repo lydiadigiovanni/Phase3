@@ -1,3 +1,4 @@
+//Main program for 2nd page of create account AKA security questions
 package UI.Login;
 
 import java.io.IOException;
@@ -12,7 +13,7 @@ public class CreateAccountMain2 extends Application {
     @Override
     public void start(Stage primaryStage) {
   try {
-    //Retrieve the fxml for the login screen
+    //Retrieve the fxml for the 2nd create account scene
     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CreateAccountView2.fxml"));
     Parent root = (Parent) fxmlLoader.load(); //Assign that fxml as the parent node
     Scene scene = new Scene(root); //Create a new scene containing root
