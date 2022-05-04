@@ -145,7 +145,7 @@
                   <Image url="@../../../../Pictures/Map/checkmark.png" />
                </image>
             </ImageView>
-            <Button fx:id="testButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#testButtonClicked" prefHeight="124.0" prefWidth="111.0" style="-fx-background-color: tr;" textAlignment="CENTER" textFill="RED">
+            <Button fx:id="testButton1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#testButtonClicked" prefHeight="124.0" prefWidth="111.0" style="-fx-background-color: tr;" textAlignment="CENTER" textFill="RED">
                <font>
                   <Font name="Berlin Sans FB Bold" size="28.0" />
                </font>
