@@ -133,7 +133,7 @@
                         </DropShadow>
                      </effect>
                   </ImageView>
-                  <Button fx:id="createAccount" layoutX="21.0" layoutY="7.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="102.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="createAccount" layoutX="21.0" layoutY="7.0" mnemonicParsing="false" onAction="#createAccountClicked" prefHeight="78.0" prefWidth="102.0" style="-fx-background-color: transparent;">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
@@ -161,7 +161,7 @@
                         <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
                      </effect>
                   </Label>
-                  <Button fx:id="clickEnter" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="66.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="enterButton" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#enterClicked" prefHeight="71.0" prefWidth="66.0" style="-fx-background-color: transparent;">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
@@ -189,7 +189,7 @@
                         <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
                      </effect>
                   </Label>
-                  <Button fx:id="forgotPassword" layoutX="28.0" layoutY="5.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="95.0" style="-fx-background-color: transparent;">
+                  <Button fx:id="forgotPassword" layoutX="28.0" layoutY="5.0" mnemonicParsing="false" onAction="#forgotPasswordClicked" prefHeight="71.0" prefWidth="95.0" style="-fx-background-color: transparent;">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

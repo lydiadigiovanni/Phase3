@@ -1,6 +1,8 @@
 //Purpose: First round of practice questions for Time & Money Shore (MONEY RELATED QUESTIONS)
 package Backend.Assessment;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class FSPractice3 extends Assessment {
@@ -136,5 +138,21 @@ public class FSPractice3 extends Assessment {
         return questionTwo;
         
     }
+
+    /*Question three: Which is a correct way of making 50 cents?
+    private String[] questionThree() {
+        String[] correctWays = {"4 dimes and 2 nickels", "3 dimes and 4 nickels", "2 dimes and 6 nickels",
+        "1 dime and 8 nickels", "1 quarter, 2 dimes, and 1 nickel", "1 quarter, 1 dime, and 3 nickels",
+        "1 quarter and 5 nickels", "1 quarter and 25 pennies", "10 pennies and 4 dimes", "20 pennies and 6 nickels"};
+        String[] wrongWays = {"3 dimes and 5 nickels", "2 dimes and 7 nickels", "4 dimes and 3 nickels",
+        "1 dime and 10 nickels", "1 quarter, 1 dime, and 6 nickels", "1 quarter, 2 dimes, and 5 nickels", 
+        "1 quarter and 4 nickels", "20 pennies and 2 dimes", "30 pennies and 2 nickels", "30 pennies and 3 nickels"};
+        List<String> newList = Arrays.asList(wrongWays);
+        ArrayList<String> listOfWrongWays = new ArrayList<String>();
+        listOfWrongWays.addAll(newList);
+        return null;
+
+    }
+    */
 
 }
