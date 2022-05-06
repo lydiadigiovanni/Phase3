@@ -7,6 +7,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 public class MapController extends MapControllerParent{
 
@@ -26,7 +28,7 @@ public class MapController extends MapControllerParent{
     private Button practiceButton2;
 
     @FXML
-    private Button testButton;
+    private Button testButton1;
 
     @FXML
     private ImageView testCheck;
@@ -43,6 +45,10 @@ public class MapController extends MapControllerParent{
     @FXML
     private Button tutorialButton2;
 
+    private Media sound;
+
+    private MediaPlayer mediaPlayer;
+
     private MapModel model = new MapModel();
 
     public MapController() {
@@ -54,31 +60,43 @@ public class MapController extends MapControllerParent{
     void practiceButton1Clicked(ActionEvent event) {
         model.switchToTutoPracTest(event, practiceButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
 
+        mediaPlayer.stop();
+
     }
 
     @FXML
     void practiceButton2Clicked(ActionEvent event) {
         model.switchToTutoPracTest(event, practiceButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+
+        mediaPlayer.stop();
     }
 
     @FXML
     void returnHome(ActionEvent event) {
         model.toHomePage(event);
+
+        mediaPlayer.stop();
     }
 
     @FXML
     void testButtonClicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, testButton, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, testButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+
+        mediaPlayer.stop();
     }
 
     @FXML
     void tutorialButton1Clicked(ActionEvent event) {
         model.switchToTutoPracTest(event, tutorialButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+
+        mediaPlayer.stop();
     }
 
     @FXML
     void tutorialButton2Clicked(ActionEvent event) {
         model.switchToTutoPracTest(event, tutorialButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+
+        mediaPlayer.stop();
     }
     
     @Override
@@ -95,5 +113,10 @@ public class MapController extends MapControllerParent{
         tutorial2Check.setVisible(checkmarkIndex[2]);
         practice2Check.setVisible(checkmarkIndex[3]);
         testCheck.setVisible(checkmarkIndex[4]);
+
+        sound = new Media(getClass().getResource("/Sounds/lake-waves-lapping-gently-on-the-beach-01.mp3").toExternalForm());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+        mediaPlayer.setVolume(0.15);
     }
 }

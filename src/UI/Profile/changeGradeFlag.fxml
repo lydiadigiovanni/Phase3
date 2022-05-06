@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="1512.0" fitWidth="2470.0" layoutX="-350.0" layoutY="-50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pictures/HomePage/Background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-46.0" layoutY="-24.0">
+         <children>
+            <ImageView fitHeight="627.0" fitWidth="935.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pictures/ChangeGrade/changeGradeFlag.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="135.0" layoutY="135.0" prefHeight="55.0" prefWidth="566.0" text="CHANGE YOUR GRADE LEVEL" textFill="#4472c4" underline="true">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="37.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" spread="1.0" width="5.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <AnchorPane layoutX="328.0" layoutY="200.0">
+               <children>
+                  <HBox alignment="CENTER" layoutY="2.0" prefHeight="74.0" prefWidth="119.0">
+                     <children>
+                        <RadioButton fx:id="K" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="changeGrade" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <Label text="K" textFill="#ffc41d">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="55.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="19.0" layoutY="66.0" prefHeight="74.0" prefWidth="119.0">
+                     <children>
+                        <RadioButton fx:id="FS" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" toggleGroup="$changeGrade">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <Label text="1-2" textFill="#70ad47">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="55.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="13.0" layoutY="132.0" prefHeight="74.0" prefWidth="137.0">
+                     <children>
+                        <RadioButton fx:id="TF" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" toggleGroup="$changeGrade">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <Label text="3-4" textFill="RED">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="55.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="733.0" fitWidth="65.0" layoutX="83.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pictures/ChangeGrade/flagpole.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="430.0" layoutY="430.0" prefHeight="190.0" prefWidth="492.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="93.4285888671875" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../../../Pictures/Login/BackArrow.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="224.0" layoutY="110.0" text="SAVE" textFill="#ed7e33">
+                     <font>
+                        <Font name="Berlin Sans FB Bold" size="43.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Label>
+                  <Button fx:id="saveGradeChange" layoutX="195.0" layoutY="91.0" mnemonicParsing="false" onAction="#saveGradeChangeButtonClicked" prefHeight="99.0" prefWidth="206.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-112.0" layoutY="431.0" prefHeight="190.0" prefWidth="492.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="93.4285888671875" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Pictures/Login/BackArrow.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="256.0" layoutY="110.0" text="BACK" textFill="#ed7e33">
+                     <font>
+                        <Font name="Berlin Sans FB Bold" size="43.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Label>
+                  <Button fx:id="returnHomeButton" layoutX="195.0" layoutY="91.0" mnemonicParsing="false" onAction="#returnHomeButtonClicked" prefHeight="99.0" prefWidth="206.0" style="-fx-background-color: transparent;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

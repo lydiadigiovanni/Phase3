@@ -104,8 +104,8 @@ public class KiPractice1 extends Assessment {
         String[] nameOfItems ={"anchors", "compasses", "coconuts"}; //Array of what are supposed to be the images
         //nameOfItem contains a random name of one of the items above
         String nameOfItem = nameOfItems[ThreadLocalRandom.current().nextInt(3)];
-        int item = ThreadLocalRandom.current().nextInt(10) + 1; //?
-        int randomNumber = ThreadLocalRandom.current().nextInt(10) + 1; 
+        int randomNumber = ThreadLocalRandom.current().nextInt(10) + 1; //The number of said items that will be generated
+        int item = ThreadLocalRandom.current().nextInt(10) + 1;
         String[] question = new String[6]; //Array will contain the question and its answers
         question[0] = "Are there " + randomNumber + " " + nameOfItem + "?"; //0th index: actual question
         //Pass checkAnswer the randomNumber and item itself and store in answerkey array
