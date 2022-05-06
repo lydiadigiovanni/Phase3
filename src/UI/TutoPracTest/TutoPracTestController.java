@@ -245,6 +245,7 @@ public class TutoPracTestController {
             userInputNextButton.setDisable(false);
             userInputNextButton.setVisible(true);
             boolean correctBoolean = model.checkAnswer(userInputTextField.getText());
+            correctAnswerLabel.setText(model.getAnswer());
             answerChecker(correctBoolean, userInputNextButton);
             userInputConfirmButton.setDisable(true);
         }
