@@ -26,16 +26,16 @@ public class changeGradeFlagController {
     @FXML
     private Button saveGradeChange;
     
-    private ProfilePageModel model = new ProfilePageModel();
+    private changeGradeFlagModel model = new changeGradeFlagModel();
 
     @FXML
     void returnHomeButtonClicked(ActionEvent event) {
-        model.toHomePage(event);
+        model.toProfilePage(event);
     }
 
     @FXML
     void saveGradeChangeButtonClicked(ActionEvent event) {
-
+        model.saveGradeChange(event);
     }
 
 }

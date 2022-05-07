@@ -13,6 +13,9 @@ public class ProfilePageController {
     private Button backButton;
 
     @FXML
+    private Button changeAvatarButton;
+
+    @FXML
     private Button changeGradeButton;
 
     @FXML
@@ -59,7 +62,15 @@ public class ProfilePageController {
     }
 
     @FXML
+    void changeAvatarButtonClicked(ActionEvent event) {
+        model.toChangeAvatar(event);
+
+        mediaPlayer.stop();
+    }
+
+    @FXML
     void changeGradeButtonPressed(ActionEvent event) {
+        model.toChangeGradeFlag(event);
 
         mediaPlayer.stop();
 
