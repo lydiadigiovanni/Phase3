@@ -39,37 +39,39 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.TutoPracTest.TutoPracTestController">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.TutoPracTest.TutoPracTestController">
 <children>
-      <ImageView fitHeight="764.0" fitWidth="1015.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="616.0" fitWidth="809.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Pictures/Map/MapBackround.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="391.0" fitWidth="925.0" layoutX="41.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" scaleY="1.5">
+      <ImageView fitHeight="286.0" fitWidth="723.0" layoutX="41.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" scaleY="1.5">
          <image>
             <Image url="@../../../Pictures/Practice/board_Lighter.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="practiceAnchorPane" layoutX="114.0" layoutY="175.10000610351562">
+      <AnchorPane fx:id="practiceAnchorPane" layoutX="114.0" layoutY="175.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="617.0">
          <children>
-            <ImageView disable="true" fitHeight="334.0" fitWidth="59.0" layoutX="520.0" layoutY="64.0" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
+            <ImageView disable="true" fitHeight="270.0" fitWidth="59.0" layoutX="394.0" layoutY="34.0" pickOnBounds="true" scaleX="1.5" scaleY="1.2">
                <image>
                   <Image url="@../../../Pictures/Practice/black_line.png" />
                </image>
             </ImageView>
-            <AnchorPane fx:id="multipleChoiceAnchor" layoutY="152.0" visible="false">
+            <AnchorPane fx:id="multipleChoiceAnchor" layoutX="-19.0" layoutY="124.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="439.0" visible="false">
                <children>
-                  <VBox layoutY="73.89999389648438" prefHeight="113.0" prefWidth="377.0">
+                  <VBox layoutX="14.0" layoutY="17.0" prefHeight="126.0" prefWidth="225.0">
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
@@ -131,7 +133,7 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <Button fx:id="multipleChoiceConfirmButton" layoutX="344.0" layoutY="177.89999389648438" mnemonicParsing="false" onAction="#mutlipleChoiceCheckAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="SUBMIT">
+                  <Button fx:id="multipleChoiceConfirmButton" layoutX="248.0" layoutY="92.0" mnemonicParsing="false" onAction="#mutlipleChoiceCheckAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="SUBMIT">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -139,7 +141,7 @@
                         <Font name="Berlin Sans FB Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="multipleChoiceNextButton" disable="true" layoutX="445.0" layoutY="177.89999389648438" mnemonicParsing="false" onAction="#multipleChoiceNextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT" visible="false">
+                  <Button fx:id="multipleChoiceNextButton" disable="true" layoutX="349.0" layoutY="92.0" mnemonicParsing="false" onAction="#multipleChoiceNextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT" visible="false">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -147,33 +149,33 @@
                         <Font name="Berlin Sans FB Bold" size="14.0" />
                      </font>
                   </Button>
-                  <HBox fx:id="pictureBox" alignment="CENTER" layoutX="10.0" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
+                  <HBox fx:id="pictureBox" alignment="CENTER" layoutX="1.0" layoutY="-46.0" prefHeight="80.0" prefWidth="437.0" spacing="5.0" />
                </children>
             </AnchorPane>
-            <Label fx:id="questionLabel" alignment="CENTER" layoutX="10.0" layoutY="69.0" prefHeight="113.0" prefWidth="526.0" text="Spaghetti">
+            <Label fx:id="questionLabel" alignment="CENTER" layoutX="-44.0" layoutY="-10.0" prefHeight="113.0" prefWidth="468.0">
                <font>
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="correctAnswerLabel" alignment="CENTER" layoutX="600.0" layoutY="313.0" prefHeight="25.0" prefWidth="164.0">
+            <Label fx:id="correctAnswerLabel" alignment="CENTER" layoutX="432.0" layoutY="245.0" prefHeight="25.0" prefWidth="164.0">
                <font>
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="progressQuestionsLabel" layoutX="621.0" layoutY="68.89999389648438" text="PROGRESS">
+            <Label fx:id="progressQuestionsLabel" layoutX="452.0" layoutY="36.0" text="PROGRESS">
                <font>
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="numberCorrectLabel" layoutX="663.0" layoutY="98.89999389648438" text="0/5">
+            <Label fx:id="numberCorrectLabel" layoutX="495.0" layoutY="76.0" text="0/5">
                <font>
                   <Font name="Berlin Sans FB Bold" size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="incorrectCorrect" fitHeight="150.0" fitWidth="200.0" layoutX="622.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" />
-            <AnchorPane fx:id="userInputAnchor" layoutY="152.0" visible="false">
+            <ImageView fx:id="incorrectCorrect" fitHeight="150.0" fitWidth="135.0" layoutX="446.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane fx:id="userInputAnchor" layoutX="-10.0" layoutY="103.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="437.0" visible="false">
                <children>
-                  <Button fx:id="userInputConfirmButton" layoutX="344.0" layoutY="177.89999389648438" mnemonicParsing="false" onAction="#userInputCheckAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="SUBMIT">
+                  <Button fx:id="userInputConfirmButton" layoutX="240.0" layoutY="113.0" mnemonicParsing="false" onAction="#userInputCheckAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="SUBMIT">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -181,7 +183,7 @@
                         <Font name="Berlin Sans FB Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="userInputNextButton" disable="true" layoutX="445.0" layoutY="177.89999389648438" mnemonicParsing="false" onAction="#userInputNextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT" visible="false">
+                  <Button fx:id="userInputNextButton" disable="true" layoutX="338.0" layoutY="113.0" mnemonicParsing="false" onAction="#userInputNextQuestion" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="NEXT" visible="false">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -190,33 +192,40 @@
                      </font>
                   </Button>
                   <HBox fx:id="pictureBox1" alignment="CENTER" layoutX="10.0" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
-                  <TextField fx:id="userInputTextField" layoutX="193.0" layoutY="93.0" />
+                  <TextField fx:id="userInputTextField" layoutX="40.0" layoutY="88.0" />
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
-      <StackPane layoutX="205.0" layoutY="60.0" prefHeight="150.0" prefWidth="200.0">
+      <StackPane layoutX="162.0" layoutY="37.0" prefHeight="150.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="148.0" fitWidth="619.0" pickOnBounds="true">
+            <ImageView fitHeight="131.0" fitWidth="439.0" pickOnBounds="true">
                <image>
                   <Image url="@../../../Pictures/Practice/board_Lighter.png" />
                </image>
             </ImageView>
-            <Label fx:id="titleLabel" textAlignment="CENTER">
+            <Label fx:id="titleLabel" alignment="CENTER" prefHeight="93.0" prefWidth="374.0">
                <font>
                   <Font name="Berlin Sans FB Bold" size="68.0" />
                </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" spread="1.0" width="5.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Label>
          </children>
       </StackPane>
-      <AnchorPane layoutX="-24.0" layoutY="577.0">
+      <AnchorPane layoutX="-5.0" layoutY="438.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="771.0">
          <children>
-            <Button fx:id="backButton" contentDisplay="CENTER" layoutY="9.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="   MAP" textFill="#ed7e33">
+            <Button fx:id="backButton" contentDisplay="CENTER" layoutY="21.0" mnemonicParsing="false" onAction="#returnToMap" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="   MAP" textFill="#ed7e33">
                <font>
-                  <Font name="Berlin Sans FB Bold" size="55.0" />
+                  <Font name="Berlin Sans FB Bold" size="36.0" />
                </font>
                <graphic>
-                  <ImageView fitHeight="109.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="78.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../Pictures/Practice/BackArrow.png" />
                      </image>
@@ -226,20 +235,20 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <ImageView fitHeight="113.0" fitWidth="123.0" layoutX="235.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="80.0" fitWidth="89.0" layoutX="210.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Pictures/Practice/CartoonMap.png" />
                </image>
             </ImageView>
-            <Button fx:id="doneButton" contentDisplay="CENTER" disable="true" layoutX="732.0" mnemonicParsing="false" onAction="#completeAssignment" prefHeight="150.0" prefWidth="291.0" style="-fx-background-color: transparent;" text="DONE" textFill="#ed7e33" visible="false">
+            <Button fx:id="doneButton" contentDisplay="CENTER" disable="true" layoutX="539.0" layoutY="14.0" mnemonicParsing="false" onAction="#completeAssignment" prefHeight="150.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="DONE" textFill="#ed7e33" visible="false">
                <font>
-                  <Font name="Berlin Sans FB Bold" size="55.0" />
+                  <Font name="Berlin Sans FB Bold" size="36.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <graphic>
-                  <ImageView fitHeight="109.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                  <ImageView fitHeight="91.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
                      <image>
                         <Image url="@../../../Pictures/Practice/BackArrow.png" />
                      </image>
@@ -248,6 +257,6 @@
             </Button>
          </children>
       </AnchorPane>
-      <WebView fx:id="youtubeVideo" disable="true" layoutX="114.0" layoutY="210.0" prefHeight="371.0" prefWidth="776.0" visible="false" />
+      <WebView fx:id="youtubeVideo" disable="true" layoutX="43.0" layoutY="52.0" prefHeight="482.0" prefWidth="717.0" visible="false" />
 </children>
 </AnchorPane>
