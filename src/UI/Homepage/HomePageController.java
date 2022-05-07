@@ -37,6 +37,15 @@ public class HomePageController {
     @FXML
     private Label island3Name;
 
+    @FXML
+    private ImageView kFlag;
+
+    @FXML
+    private ImageView fsFlag;
+
+    @FXML
+    private ImageView tfFlag;
+
     private Media sound;
 
     private MediaPlayer mediaPlayer;
@@ -74,6 +83,7 @@ public class HomePageController {
 
     @FXML
     void logOutButtonPressed(ActionEvent event) {
+        model.logOut(event);
 
         mediaPlayer.stop();
 

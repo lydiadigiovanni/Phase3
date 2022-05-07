@@ -44,4 +44,16 @@ public class HomePageModel {
                 e.printStackTrace();
             }
     }
+
+    public void logOut(ActionEvent event) {
+        try {
+            Parent loginParent = FXMLLoader.load(getClass().getResource("/UI/Login/LoginView.fxml")); //Parent will be the path 
+            Scene loginScene = new Scene(loginParent); //Make scene with said path
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow()); //Assign nodes to the window
+            window.setScene(loginScene); //Ensure scene has been set
+            window.show(); //Make content visible
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
 }

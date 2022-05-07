@@ -48,12 +48,12 @@
       </AnchorPane>
       <AnchorPane layoutX="295.0" layoutY="302.0">
          <children>
-            <ImageView fitHeight="205.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="252.0" fitWidth="258.0" layoutX="-21.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Pictures/HomePage/ProfileShip.png" />
                </image>
             </ImageView>
-            <Label layoutX="24.0" layoutY="186.0" prefHeight="44.0" prefWidth="160.0" text="PROFILE" textAlignment="CENTER" textFill="#4472c4">
+            <Label layoutX="20.0" layoutY="223.0" prefHeight="44.0" prefWidth="160.0" text="PROFILE" textAlignment="CENTER" textFill="#4472c4">
                <font>
                   <Font name="Berlin Sans FB Bold" size="36.0" />
                </font>
@@ -61,7 +61,22 @@
                   <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" spread="1.0" width="5.0" />
                </effect>
             </Label>
-            <Button id="profile" fx:id="ProfileButton" contentDisplay="CENTER" layoutX="13.0" layoutY="7.0" mnemonicParsing="false" onAction="#profileButtonPressed" prefHeight="215.0" prefWidth="200.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#4472c2">
+            <ImageView fx:id="kFlag" fitHeight="55.0" fitWidth="54.0" layoutX="75.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Pictures/HomePage/k.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="fsFlag" fitHeight="55.0" fitWidth="54.0" layoutX="74.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../Pictures/HomePage/1-2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="tfFlag" fitHeight="55.0" fitWidth="54.0" layoutX="76.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../../../Pictures/HomePage/3-4.png" />
+               </image>
+            </ImageView>
+            <Button id="profile" fx:id="ProfileButton" contentDisplay="CENTER" layoutX="-4.0" layoutY="12.0" mnemonicParsing="false" onAction="#profileButtonPressed" prefHeight="252.0" prefWidth="240.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#4472c2">
                <font>
                   <Font name="Berlin Sans FB Bold" size="40.0" />
                </font>

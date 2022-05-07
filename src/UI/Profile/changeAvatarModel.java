@@ -5,10 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class changeGradeFlagModel {
+public class changeAvatarModel {
     public void toProfilePage(ActionEvent event) {
         try {
             Parent homepageParent = FXMLLoader.load(getClass().getResource("profilePage.fxml"));
@@ -22,9 +21,9 @@ public class changeGradeFlagModel {
             
     }
 
-    public void saveGradeChange(ActionEvent event) {
+    public void saveNewAvatar(ActionEvent event) {
         try {
-            Parent homepageParent = FXMLLoader.load(getClass().getResource("/UI/Homepage/HomePage.fxml"));
+            Parent homepageParent = FXMLLoader.load(getClass().getResource("profilePage.fxml"));
             Scene homeScene = new Scene(homepageParent);
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
             window.setScene(homeScene);

@@ -51,6 +51,14 @@ public class FSPractice1 extends Assessment {
           System.out.println(question2[2]); 
           System.out.println(question2[3]); 
           System.out.println(question2[4]);
+          //Test question three
+          FSPractice1 test3 = new FSPractice1();
+          String[] question3 = test3.generateQuestionThree();
+          System.out.println(question3[0]);
+          System.out.println(question3[1]); 
+          System.out.println(question3[2]); 
+          System.out.println(question3[3]); 
+          System.out.println(question3[4]);
 
     }
     
@@ -104,6 +112,26 @@ public class FSPractice1 extends Assessment {
         }
 
         return questionTwo;
+        
+    }
+
+    //Question Three: You have " " apples and your friend gives you " " more. How many apples do you have now?
+    private String[] generateQuestionThree() {
+        String[] questionThree = new String[6]; //Array will contain question and possible answers
+        String[] fruits = {"apples", "bananas", "oranges", "pineapples"}; //Array of fruits
+        String randomFruit = fruits[ThreadLocalRandom.current().nextInt(4)]; //Fruit to use in the question/answer
+        Random randomGenerator = new Random(); //Create random number generator
+        int firstNumber = randomGenerator.nextInt(100) + 1; //Generate random number between 1 and 100
+        int secondNumber = randomGenerator.nextInt(100) + 1;  //Generate random number between 1 and 100
+        int answer = firstNumber + secondNumber; //Answer is basic addition
+        questionThree[0] = "You have " + firstNumber + " " + randomFruit + " and your friend gives you "
+        + secondNumber + " more. How many " + randomFruit + " do you have now?"; //The question
+        questionThree[1] = Integer.toString(answer) + " " + randomFruit; //The answer;
+        questionThree[2] = Integer.toString(answer + 2) + " " + randomFruit; //First wrong answer
+        questionThree[3] = Integer.toString(answer - 1) + " " + randomFruit; //Second wrong answer
+        questionThree[4] = Integer.toString(answer + 1) + " " + randomFruit; //Third wrong answer
+
+        return questionThree;
         
     }
 }
