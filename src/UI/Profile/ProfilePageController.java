@@ -120,7 +120,7 @@ public class ProfilePageController {
                     else if(array[index] <= 69) {
                         kiReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Bronze-Medal.png")));
                     }
-                    else {
+                    else if(array[index] <= 49) {
                         kiReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
                     }
                 case(1):
@@ -133,7 +133,7 @@ public class ProfilePageController {
                     else if(array[index] <= 69) {
                         kiReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Operation-Bronze-Medal.png")));
                     }
-                    else {
+                    else if(array[index] <= 49) {
                         kiReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
                     }
                 case(2):
@@ -146,7 +146,7 @@ public class ProfilePageController {
                     else if(array[index] <= 69) {
                         kiReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Geometry-Bronze-Medal.png")));
                     }
-                    else {
+                    else if(array[index] <= 49) {
                         kiReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
                     }
                 case(3):
@@ -159,7 +159,7 @@ public class ProfilePageController {
                     else if(array[index] <= 69) {
                         fsReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Operation-Bronze-Medal.png")));
                     }
-                    else {
+                    else if(array[index] <= 49) {
                         fsReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
                     }
                 case(4):
@@ -172,7 +172,7 @@ public class ProfilePageController {
                     else if(array[index] <= 69) {
                         fsReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Time-Bronze-Medal.png")));
                     }
-                    else {
+                    else if(array[index] <= 49) {
                         fsReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
                     }
                 case(5):
@@ -185,7 +185,7 @@ public class ProfilePageController {
                     else if(array[index] <= 69) {
                         fsReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Measurement-Bronze-Medal.png")));
                     }
-                    else {
+                    else if(array[index] <= 49) {
                         fsReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
                     }
                 case(6):
@@ -198,7 +198,7 @@ public class ProfilePageController {
                     else if(array[index] <= 69) {
                         tfReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Operation-Bronze-Medal.png")));
                     }
-                    else {
+                    else if(array[index] <= 49) {
                         tfReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
                     }
                 case(7):
@@ -211,7 +211,7 @@ public class ProfilePageController {
                     else if(array[index] <= 69) {
                         tfReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Fraction-Bronze-Medal.png")));
                     }
-                    else {
+                    else if(array[index] <= 49) {
                         tfReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
                     }
                 case(8):
@@ -224,7 +224,7 @@ public class ProfilePageController {
                     else if(array[index] <= 69) {
                         tfReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Algebra-Bronze-Medal.png")));
                     }
-                    else {
+                    else if(array[index] <= 49) {
                         tfReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
                     }
             }
