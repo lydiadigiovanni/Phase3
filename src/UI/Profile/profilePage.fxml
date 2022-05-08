@@ -29,9 +29,9 @@
                   <Image url="@../../../Pictures/Profile/Avatar_1.png" />
                </image>
             </ImageView>
-            <Label fx:id="usernameLabel" layoutX="27.0" layoutY="263.0" prefHeight="92.0" prefWidth="304.0" text="username" textAlignment="CENTER">
+            <Label fx:id="usernameLabel" alignment="CENTER" layoutX="27.0" layoutY="263.0" prefHeight="92.0" prefWidth="304.0" text="username" textAlignment="CENTER" textFill="#ffc400">
                <font>
-                  <Font name="Berlin Sans FB Bold" size="64.0" />
+                  <Font name="Berlin Sans FB Bold" size="40.0" />
                </font>
                <effect>
                   <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" spread="1.0" width="5.0">
