@@ -100,9 +100,8 @@ public class HomePageController {
     }
 
     @FXML
-    public void initialize() throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
-        Class<?> clazz = Class.forName("Backend.Grade.Grade" + Database.getCurrentUserGrade());
-        grade = (Grade) clazz.getDeclaredConstructor().newInstance();
+    public void initialize() {
+        grade = Database.getCurrentUserGradeClass();
         switch (grade.getGrade()) {
             case "Ki":
                 kFlag.setVisible(true);

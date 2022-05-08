@@ -1,9 +1,12 @@
 package Backend.Database;
 
+import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import Backend.Grade.Grade;
 
 public class Database {
     private static Connection connection = null;
@@ -95,10 +98,10 @@ public class Database {
         connection = getConnection();
         Statement st = connection.createStatement();
         st.executeUpdate("UPDATE student_information SET studentGrade = '" + grade + "' WHERE studentUserName = 'DummyUser'");
-        st.executeUpdate("UPDATE student_information SET studentGrade = '" + grade + "' WHERE studentUserName = '" + getUsername() + "'");
+        st.executeUpdate("UPDATE student_information SET studentGrade = '" + grade + "' WHERE studentUserName = '" + getCurrentUsername() + "'");
     }
 
-    public static String getUsername() throws SQLException {
+    public static String getCurrentUsername() throws SQLException {
         connection = getConnection();
         Statement st = connection.createStatement();
         ResultSet rs = st.executeQuery("SELECT studentTestVariable from student_information WHERE studentUserName = 'DummyUser'");
@@ -106,10 +109,10 @@ public class Database {
             return rs.getString("studentTestVariable");
     }
 
-    public static Boolean[] getMapProgress(String userName, String grade, String map) throws SQLException {
+    public static Boolean[] getMapProgress(String map) throws SQLException {
         connection = getConnection();
         Statement st = connection.createStatement();
-        ResultSet rs = st.executeQuery("SELECT * FROM " + grade + "_" + map + " WHERE studentUserName = '" + userName + "'");
+        ResultSet rs = st.executeQuery("SELECT * FROM " + getCurrentUserGrade().toLowerCase() + "_" + map.toLowerCase() + " WHERE studentUserName = '" + getCurrentUsername() + "'");
         while(rs.next()) {
             Boolean[] progress = new Boolean[5];
             progress[0] = rs.getBoolean("tutorialOneProgress");
@@ -120,6 +123,30 @@ public class Database {
             return progress;
         }
         return null;
+    }
+
+    public static void setCheckmarkBoolean(int checkmarkindex, String mapName) throws SQLException {
+        connection = getConnection();
+        Statement st = connection.createStatement();
+        switch (checkmarkindex) {
+            case 0:
+                st.executeUpdate("UPDATE " + getCurrentUserGrade().toLowerCase() + "_" + mapName.toLowerCase() + " SET tutorialOneProgress = '1' WHERE studentUserName = '" + getCurrentUsername() + "'");
+                break;
+            case 1:
+                st.executeUpdate("UPDATE " + getCurrentUserGrade().toLowerCase() + "_" + mapName.toLowerCase() + " SET practiceOneProgress = '1' WHERE studentUserName = '" + getCurrentUsername() + "'");
+                break;
+            case 2:
+                st.executeUpdate("UPDATE " + getCurrentUserGrade().toLowerCase() + "_" + mapName.toLowerCase() + " SET tutorialTwoProgress = '1' WHERE studentUserName = '" + getCurrentUsername() + "'");
+                break;
+            case 3:
+                st.executeUpdate("UPDATE " + getCurrentUserGrade().toLowerCase() + "_" + mapName.toLowerCase() + " SET practiceTwoProgress = '1' WHERE studentUserName = '" + getCurrentUsername() + "'");
+                break;
+            case 4:
+                st.executeUpdate("UPDATE " + getCurrentUserGrade().toLowerCase() + "_" + mapName.toLowerCase() + " SET testProgress = '1' WHERE studentUserName = '" + getCurrentUsername() + "'");
+                break;
+            default:
+                break;
+        }
     }
 
     public static void main(String[] args) {
@@ -138,7 +165,75 @@ public class Database {
             e.printStackTrace();
         }
     }
-    
 
+    public static Grade getCurrentUserGradeClass() {
+        Class<?> clazz;
+        Grade grade = null;
+        try {
+            clazz = Class.forName("Backend.Grade.Grade" + Database.getCurrentUserGrade());
+            grade = (Grade) clazz.getDeclaredConstructor().newInstance();
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (SecurityException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return grade;
+    }
+
+    public static void setAssigmentGrade(String firstLetters, String lastLetter, int assignmentGrade) {
+        connection = getConnection();
+        try {
+            Statement st = connection.createStatement();
+            st.executeUpdate("UPDATE student_information SET " + firstLetters.toLowerCase() + lastLetter.toLowerCase() + " = '" + assignmentGrade + "' WHERE studentUserName = '" + getCurrentUsername() + "'");
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public static int[] getAssignmentGrades() {
+        int[] grades = new int[9];
+        connection = getConnection();
+        try {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM student_information WHERE studentUserName = '" + getCurrentUsername() + "'");
+            while(rs.next()) {
+                grades[0] = rs.getInt("kitest1");
+                grades[1] = rs.getInt("kitest3");
+                grades[2] = rs.getInt("kitest5");
+                grades[3] = rs.getInt("fstest1");
+                grades[4] = rs.getInt("fstest3");
+                grades[5] = rs.getInt("fstest5");
+                grades[6] = rs.getInt("tftest1");
+                grades[7] = rs.getInt("tftest3");
+                grades[8] = rs.getInt("tftest5");
+            }
+
+            return grades;
+       } catch (SQLException e) {
+        e.printStackTrace();
+        }
+        return grades;
+    }
     
 }

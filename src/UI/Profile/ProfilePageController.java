@@ -84,7 +84,10 @@ public class ProfilePageController {
 
     @FXML
     public void initialize() throws SQLException {
-        usernameLabel.setText(Database.getUsername());
+        usernameLabel.setText(Database.getCurrentUsername());
+        int[] array = Database.getAssignmentGrades();
+
+
         sound = new Media(getClass().getResource("/Sounds/ship-creaking-1.mp3").toExternalForm());
         mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();

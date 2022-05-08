@@ -94,7 +94,7 @@ public class Map3Controller extends MapControllerParent{
 
     @FXML
     public void initialize() {
-        Boolean[] checkmarkIndex = model.getCheckmarkIndex();
+        Boolean[] checkmarkIndex = model.getCheckmarkIndex("Map3");
         tutorial5Check.setVisible(checkmarkIndex[0]);
         practice5Check.setVisible(checkmarkIndex[1]);
         tutorial6Check.setVisible(checkmarkIndex[2]);
@@ -109,7 +109,7 @@ public class Map3Controller extends MapControllerParent{
 
     @Override
     public void setCheckmarkBoolean(int checkmarkindex) {
-        model.setCheckmarkBoolean(checkmarkindex);
+        model.setCheckmarkBoolean(checkmarkindex, "map3");
     }
 
 }

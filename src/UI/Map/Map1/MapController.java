@@ -1,5 +1,6 @@
 package UI.Map.Map1;
 
+import Backend.Database.Database;
 import Backend.Grade.Grade;
 import UI.Map.MapControllerParent;
 import UI.Map.MapModel;
@@ -101,13 +102,13 @@ public class MapController extends MapControllerParent{
     
     @Override
     public void setCheckmarkBoolean(int checkmarkindex) {
-        model.setCheckmarkBoolean(checkmarkindex);
+        model.setCheckmarkBoolean(checkmarkindex, "map1");
     }
 
     @Override
     @FXML
     public void initialize() {
-        Boolean[] checkmarkIndex = model.getCheckmarkIndex();
+        Boolean[] checkmarkIndex = model.getCheckmarkIndex("Map1");
         tutorial1Check.setVisible(checkmarkIndex[0]);
         practice1Check.setVisible(checkmarkIndex[1]);
         tutorial2Check.setVisible(checkmarkIndex[2]);
