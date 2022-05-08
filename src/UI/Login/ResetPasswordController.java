@@ -5,17 +5,28 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class ResetPasswordController {
 
     @FXML
+    private PasswordField confirmPasswordText;
+
+    @FXML
     private Button loginButton;
+
+    @FXML
+    private PasswordField passwordText;
 
     @FXML
     private Button submitButton;
 
     @FXML
     private Label titleLabel;
+
+    @FXML
+    private TextField usernameText;
 
     private ResetPasswordModel model = new ResetPasswordModel(); //Make ResetPasswordModel object
 
