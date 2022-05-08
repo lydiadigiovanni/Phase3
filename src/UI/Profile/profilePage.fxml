@@ -29,7 +29,7 @@
                   <Image url="@../../../Pictures/Profile/Avatar_1.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="27.0" layoutY="263.0" prefHeight="92.0" prefWidth="304.0" text="username" textAlignment="CENTER" textFill="#ffc400">
+            <Label alignment="CENTER" layoutX="27.0" layoutY="263.0" prefHeight="92.0" prefWidth="304.0" text="username" textAlignment="CENTER" textFill="#0600a8">
                <font>
                   <Font name="Berlin Sans FB Bold" size="40.0" />
                </font>
