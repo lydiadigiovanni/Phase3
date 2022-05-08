@@ -30,7 +30,9 @@ public class CreateAccountController {
     //Event = user clicks next button to continue to the security question screen
     @FXML
     void nextButtonPressed(ActionEvent event) {
+        //If password & confirm password match, go to security page
         model.goToSecurity(event, nextButton);
+        //Else open PasswordPopup.fxml
 
     }
 

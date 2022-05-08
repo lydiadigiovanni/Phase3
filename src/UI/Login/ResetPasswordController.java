@@ -29,7 +29,7 @@ public class ResetPasswordController {
     private TextField usernameText;
 
     private ResetPasswordModel model = new ResetPasswordModel(); //Make ResetPasswordModel object
-
+    
     //Event = user presses login button
     @FXML
     void loginButtonPressed(ActionEvent event) {
@@ -38,8 +38,13 @@ public class ResetPasswordController {
     }
 
     //Event = user presses submit button
+    //Take user back to login page so they can login again
     @FXML
     void submitButtonPressed(ActionEvent event) {
+        //if passwords match & security questions are correct
+        model.goToLogin(event, loginButton);
+        //else
+        //model.openPopup(event, loginButton)
 
     }
 

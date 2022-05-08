@@ -27,8 +27,13 @@ public class SecurityController {
     }
 
     //Event = user clicked submit button
+    //Take user back to login page so they can login again
     @FXML
     void submitButtonPressed(ActionEvent event) {
+        //if all information was correct
+        model.goToLogin(event, loginButton);
+        //else
+        //model.openPopup(event, loginButton);
 
     }
 
