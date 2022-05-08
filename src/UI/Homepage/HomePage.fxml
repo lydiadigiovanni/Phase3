@@ -61,7 +61,7 @@
                   <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" spread="1.0" width="5.0" />
                </effect>
             </Label>
-            <ImageView fx:id="kFlag" fitHeight="55.0" fitWidth="54.0" layoutX="75.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="kFlag" fitHeight="55.0" fitWidth="54.0" layoutX="75.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../../Pictures/HomePage/k.png" />
                </image>
