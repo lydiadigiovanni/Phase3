@@ -11,8 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+//import javafx.scene.media.Media;
+//import javafx.scene.media.MediaPlayer;
 
 public class ProfilePageController {
 
@@ -58,9 +58,10 @@ public class ProfilePageController {
     @FXML
     private Label usernameLabel;
 
-    private Media sound;
+    //SOUNDS TOO BUGGY RIGHT NOW, FIX LATER?
+    //private Media sound;
 
-    private MediaPlayer mediaPlayer;
+    //private MediaPlayer mediaPlayer;
 
     private ProfilePageModel model = new ProfilePageModel();
 
@@ -68,20 +69,20 @@ public class ProfilePageController {
     void backButtonPressed(ActionEvent event) {
         model.toHomePage(event);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     void changeAvatarButtonClicked(ActionEvent event) {
         model.toChangeAvatar(event);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     void changeGradeButtonPressed(ActionEvent event) {
         model.toChangeGradeFlag(event);
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
 
     }
 
@@ -231,9 +232,9 @@ public class ProfilePageController {
         }
 
 
-        sound = new Media(getClass().getResource("/Sounds/ship-creaking-1.mp3").toExternalForm());
-        mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
+        //sound = new Media(getClass().getResource("/Sounds/ship-creaking-1.mp3").toExternalForm());
+        //mediaPlayer = new MediaPlayer(sound);
+        //mediaPlayer.play();
     }
 
 }
