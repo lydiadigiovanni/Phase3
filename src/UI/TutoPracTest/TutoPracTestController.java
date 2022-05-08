@@ -214,8 +214,8 @@ public class TutoPracTestController {
             boolean correctBoolean = model.checkAnswer(((RadioButton) multipleChoiceQuestion.getSelectedToggle()).getText());
             correctAnswerLabel.setText(model.getAnswer());
             answerChecker(correctBoolean, multipleChoiceNextButton);
+            multipleChoiceConfirmButton.setDisable(true);
         }
-        multipleChoiceConfirmButton.setDisable(true);
     }
 
     private void answerChecker(Boolean correctBoolean, Button nextButton) {
@@ -243,7 +243,7 @@ public class TutoPracTestController {
 
     @FXML
     void userInputCheckAnswer(ActionEvent event) {
-        if(userInputTextField.getText() != null) {
+        if(!userInputTextField.getText().isEmpty()) {
             userInputTextField.setDisable(true);
             userInputNextButton.setDisable(false);
             userInputNextButton.setVisible(true);
