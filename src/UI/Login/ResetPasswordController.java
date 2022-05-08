@@ -29,6 +29,7 @@ public class ResetPasswordController {
     //Event = user presses submit button
     @FXML
     void submitButtonPressed(ActionEvent event) {
+        
 
     }
 

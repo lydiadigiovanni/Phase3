@@ -10,6 +10,11 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class SecurityModel{
+
+    private String tempUsername = "";
+    private String tempPassword = "";
+    private String tempGrade = "";
+
     public SecurityModel() {
 
     }
@@ -27,6 +32,24 @@ public class SecurityModel{
             e.printStackTrace();
         }
         
+    }
+
+    public void setData(String userName, String password, String grade) {
+        tempUsername = userName;
+        tempPassword = password;
+        tempGrade = grade;
+    }
+
+    public String getGrade() {
+        return tempGrade;
+    }
+
+    public String getPassword() {
+        return tempPassword;
+    }
+
+    public String getUsername() {
+        return tempUsername;
     }
 
     /*Gotta make a popup that says "Account created successfully. Please login to verify"

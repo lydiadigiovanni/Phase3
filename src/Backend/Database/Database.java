@@ -30,14 +30,43 @@ public class Database {
         }
     }
 
+    /**
+     * This gets the current user, which will be the "dummy data" user who we'll get the information of
+     * @return
+     * @throws SQLException
+     */
     public static String getCurrentUserGrade() throws SQLException {
         connection = getConnection();
         Statement st = connection.createStatement();
-        ResultSet rs = st.executeQuery("SELECT studentGrade FROM student_information WHERE studentUserName = 'Testing1'");
+        ResultSet rs = st.executeQuery("SELECT studentGrade FROM student_information WHERE studentUserName = 'DummyUser'");
         while(rs.next()) {
             return rs.getString("studentGrade");
         }
         return "grade failed";        
+    }
+
+    public static boolean getUser(String username, String password) throws SQLException {
+        connection = getConnection();
+        Statement st = connection.createStatement();
+        ResultSet rs = st.executeQuery("SELECT studentPassword FROM student_information WHERE studentUserName = '" + username + "'");
+        while(rs.next()) {
+            String databasePassword = rs.getString("studentPassword"); 
+            if (databasePassword.equalsIgnoreCase(password)) {
+                ResultSet rs2 = st.executeQuery("SELECT studentGrade FROM student_information WHERE studentUserName = '" + username + "'");
+                while(rs2.next()) {
+                    modifyDummyUser(username, rs2.getString("studentGrade"));
+                    return true;
+                }
+            }
+        }
+        return false;        
+    }
+
+    public static void modifyDummyUser(String username, String grade) throws SQLException {
+        connection = getConnection();
+        Statement st = connection.createStatement();
+        st.executeUpdate("UPDATE student_information SET studentTestVariable = '" + username + "' WHERE studentUserName = 'DummyUser'");
+        st.executeUpdate("UPDATE student_information SET studentGrade = '" + grade + "' WHERE studentUserName = 'DummyUser'");
     }
 
 
@@ -87,12 +116,9 @@ public class Database {
     public static void main(String[] args) {
         try {
             //createUser("TestUser1", "Ki", "Password", "Spaghetti", "Also Spaghetti");
-            Boolean progress[] = getMapProgress("TestUser1", "ki", "map1");
-            System.out.println(progress[0]);
-            System.out.println(progress[1]);
-            System.out.println(progress[2]);
-            System.out.println(progress[3]);
-            System.out.println(progress[4]);
+            //Boolean progress[] = getMapProgress("TestUser1", "ki", "map1");
+
+            System.out.println(getCurrentUserGrade());
             //updateUserGrade("Testing1", "Ki");
             //System.out.println(getCurrentUserGrade());
             //insertUser("Testing1", "Ki");

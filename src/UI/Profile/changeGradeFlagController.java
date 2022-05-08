@@ -1,5 +1,6 @@
 package UI.Profile;
 
+import Backend.Database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

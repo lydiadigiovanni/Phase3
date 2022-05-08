@@ -1,5 +1,9 @@
 //Purpose: Controller in the MVC structure for the homepage
 package UI.Homepage;
+import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
+
+import Backend.Database.Database;
 import Backend.Grade.Grade;
 import Backend.Grade.GradeKi; //TODO: REMOVE THISLATER
 import javafx.event.ActionEvent;
@@ -56,7 +60,6 @@ public class HomePageController {
 
     public HomePageController() {
         super();
-        grade = new GradeKi(); //TODO: GET THIS FROM DATBASE
     }
     @FXML
     void Island2ButtonPressed(ActionEvent event) {
@@ -97,7 +100,28 @@ public class HomePageController {
     }
 
     @FXML
-    public void initialize() {
+    public void initialize() throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+        Class<?> clazz = Class.forName("Backend.Grade.Grade" + Database.getCurrentUserGrade());
+        grade = (Grade) clazz.getDeclaredConstructor().newInstance();
+        switch (grade.getGrade()) {
+            case "Ki":
+                kFlag.setVisible(true);
+                fsFlag.setVisible(false);
+                tfFlag.setVisible(false);
+                break;
+            case "FS":
+                kFlag.setVisible(false);
+                fsFlag.setVisible(true);
+                tfFlag.setVisible(false);
+                break;
+            case "TF":
+                kFlag.setVisible(false);
+                fsFlag.setVisible(false);
+                tfFlag.setVisible(true);
+                break;
+            default:
+                break;
+        }
         island1Name.setText(grade.getIsland1Name());
         island2Name.setText(grade.getIsland2Name());
         island3Name.setText(grade.getIsland3Name());

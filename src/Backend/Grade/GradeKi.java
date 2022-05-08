@@ -12,6 +12,7 @@ public class GradeKi extends Grade {
         setIsland1Name("COUNTING\nCOVE");
         setIsland2Name("OPERATION\nISLE");
         setIsland3Name("GEOMETRY\nCOAST");
+        setGrade("Ki");
     }  
 
     @Override

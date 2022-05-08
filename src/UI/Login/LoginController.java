@@ -1,10 +1,15 @@
 //Controller for login page
 package UI.Login;
 
+import java.sql.SQLException;
+
+import Backend.Database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class LoginController {
 
@@ -18,14 +23,22 @@ public class LoginController {
     private Button forgotPassword;
 
     @FXML
+    private PasswordField passwordTextField;
+
+    @FXML
     private Label titleLabel;
+
+    @FXML
+    private TextField usernameTextField;
 
     private LoginModel model = new LoginModel(); //Make Login Model object
 
     //Take them to the homepage when they click the enter button
     @FXML
-    void enterClicked(ActionEvent event) {
-        model.goToHomePage(event, enterButton);
+    void enterClicked(ActionEvent event) throws SQLException {
+        if(Database.getUser(usernameTextField.getText(), passwordTextField.getText())) {
+            model.goToHomePage(event, enterButton);
+        }
     }
 
     //Take them to the create account form when they click create account

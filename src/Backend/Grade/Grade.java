@@ -14,6 +14,7 @@ public abstract class Grade {
 
     private String island3Name;
 
+    private String grade;
 
     public abstract String getYoutubeVideo1();
 
@@ -68,6 +69,14 @@ public abstract class Grade {
             default:
                 return getPractice1();
         }
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    protected void setGrade(String grade) {
+        this.grade = grade;
     }
 
     protected abstract Assessment getPractice1();

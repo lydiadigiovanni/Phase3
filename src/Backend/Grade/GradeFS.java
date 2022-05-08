@@ -9,6 +9,7 @@ public class GradeFS extends Grade{
         setIsland1Name("AAAAA");
         setIsland2Name("BBBBB");
         setIsland3Name("CCCCC");
+        setGrade("FS");
     }  
 
     @Override
