@@ -43,7 +43,7 @@
                <children>
                   <HBox alignment="CENTER" layoutY="2.0" prefHeight="74.0" prefWidth="119.0">
                      <children>
-                        <RadioButton fx:id="K" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0">
+                        <RadioButton fx:id="Ki" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0">
                            <font>
                               <Font size="15.0" />
                            </font>

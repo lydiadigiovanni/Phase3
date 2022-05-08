@@ -13,7 +13,7 @@ public class changeGradeFlagController {
     private RadioButton FS;
 
     @FXML
-    private RadioButton K;
+    private RadioButton Ki;
 
     @FXML
     private RadioButton TF;
