@@ -10,7 +10,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Profile.ProfilePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Profile.ProfilePageController">
    <children>
       <ImageView fitHeight="616.0" fitWidth="840.0" layoutX="-17.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -29,7 +29,7 @@
                   <Image url="@../../../Pictures/Profile/Avatar_1.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="27.0" layoutY="263.0" prefHeight="92.0" prefWidth="304.0" text="username" textAlignment="CENTER" textFill="#0600a8">
+            <Label fx:id="usernameLabel" alignment="CENTER" layoutX="27.0" layoutY="263.0" prefHeight="92.0" prefWidth="304.0" text="username" textAlignment="CENTER" textFill="#ffc400">
                <font>
                   <Font name="Berlin Sans FB Bold" size="40.0" />
                </font>

@@ -6,9 +6,9 @@ import javafx.scene.web.WebView;
 public class GradeTF extends Grade{
 
     public GradeTF() {
-        setIsland1Name("DDDDD");
-        setIsland2Name("EEEEE");
-        setIsland3Name("FFFFF");
+        setIsland1Name("OPERATION\nCOVE");
+        setIsland2Name("FRACTION\nLAGOON");
+        setIsland3Name("ALGEBRA\nATOLL");
         setGrade("TF");
     }  
 
