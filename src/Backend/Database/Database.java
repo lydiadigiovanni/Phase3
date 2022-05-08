@@ -235,5 +235,30 @@ public class Database {
         }
         return grades;
     }
-    
+
+    public static void setAvatar(String id) {
+        connection = getConnection();
+        try {
+            Statement st = connection.createStatement();
+            st.executeUpdate("UPDATE student_information SET avatarProfile = '" + id + "' WHERE studentUserName = '" + getCurrentUsername() + "'");
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public static String getCurrentAvatar() {
+        connection = getConnection();
+        try {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM student_information WHERE studentUserName = '" + getCurrentUsername() + "'");
+            while(rs.next()) {
+                return rs.getString("avatarProfile");
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
+    }   
 }

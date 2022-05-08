@@ -3,6 +3,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import Backend.Database.Database;
 import Backend.Grade.Grade;
 import Backend.Grade.GradeKi;
 import UI.Map.MapControllerParent;
@@ -139,6 +141,7 @@ public class TutoPracTestController {
                 Scene rewardScene = new Scene(rewardParent);
                 RewardController controller = rewardLoader.getController();
                 controller.setRewardGrade((numbercorrect*100/totalNumberOfQuestions));
+                Database.setAssigmentGrade(model.getFirstLetters(), model.getLastLetter(), (numbercorrect*100/totalNumberOfQuestions));
                 controller.initialize();
                 Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
                 
