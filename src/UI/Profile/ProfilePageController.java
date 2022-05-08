@@ -114,10 +114,10 @@ public class ProfilePageController {
                     if(array[index] >= 90) {
                         kiReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Gold-Medal.png")));
                     }
-                    else if(array[index] <= 89) {
+                    else if(array[index] >= 70) {
                         kiReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Silver-Medal.png")));
                     }
-                    else if(array[index] <= 69) {
+                    else if(array[index] >= 50) {
                         kiReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Bronze-Medal.png")));
                     }
                     else if(array[index] <= 49) {
@@ -127,10 +127,10 @@ public class ProfilePageController {
                     if(array[index] >= 90) {
                         kiReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Operation-Gold-Medal.png")));
                     }
-                    else if(array[index] <= 89) {
+                    else if(array[index] >= 70) {
                         kiReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Operation-Silver-Medal.png")));
                     }
-                    else if(array[index] <= 69) {
+                    else if(array[index] >= 50) {
                         kiReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Operation-Bronze-Medal.png")));
                     }
                     else if(array[index] <= 49) {
@@ -140,10 +140,10 @@ public class ProfilePageController {
                     if(array[index] >= 90) {
                         kiReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Geometry-Gold-Medal.png")));
                     }
-                    else if(array[index] <= 89) {
+                    else if(array[index] >= 70) {
                         kiReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Geometry-Silver-Medal.png")));
                     }
-                    else if(array[index] <= 69) {
+                    else if(array[index] >= 50) {
                         kiReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Geometry-Bronze-Medal.png")));
                     }
                     else if(array[index] <= 49) {
@@ -153,10 +153,10 @@ public class ProfilePageController {
                     if(array[index] >= 90) {
                         fsReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Operation-Gold-Medal.png")));
                     }
-                    else if(array[index] <= 89) {
+                    else if(array[index] >= 70) {
                         fsReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Operation-Silver-Medal.png")));
                     }
-                    else if(array[index] <= 69) {
+                    else if(array[index] >= 50) {
                         fsReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Operation-Bronze-Medal.png")));
                     }
                     else if(array[index] <= 49) {
@@ -166,10 +166,10 @@ public class ProfilePageController {
                     if(array[index] >= 90) {
                         fsReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Time-Gold-Medal.png")));
                     }
-                    else if(array[index] <= 89) {
+                    else if(array[index] >= 70) {
                         fsReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Time-Silver-Medal.png")));
                     }
-                    else if(array[index] <= 69) {
+                    else if(array[index] >= 50) {
                         fsReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Time-Bronze-Medal.png")));
                     }
                     else if(array[index] <= 49) {
@@ -179,10 +179,10 @@ public class ProfilePageController {
                     if(array[index] >= 90) {
                         fsReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Measurement-Gold-Medal.png")));
                     }
-                    else if(array[index] <= 89) {
+                    else if(array[index] >= 70) {
                         fsReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Measurement-Silver-Medal.png")));
                     }
-                    else if(array[index] <= 69) {
+                    else if(array[index] >= 50) {
                         fsReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Measurement-Bronze-Medal.png")));
                     }
                     else if(array[index] <= 49) {
@@ -192,10 +192,10 @@ public class ProfilePageController {
                     if(array[index] >= 90) {
                         tfReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Operation-Gold-Medal.png")));
                     }
-                    else if(array[index] <= 89) {
+                    else if(array[index] >= 70) {
                         tfReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Operation-Silver-Medal.png")));
                     }
-                    else if(array[index] <= 69) {
+                    else if(array[index] >= 50) {
                         tfReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Operation-Bronze-Medal.png")));
                     }
                     else if(array[index] <= 49) {
@@ -205,10 +205,10 @@ public class ProfilePageController {
                     if(array[index] >= 90) {
                         tfReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Fraction-Gold-Medal.png")));
                     }
-                    else if(array[index] <= 89) {
+                    else if(array[index] >= 70) {
                         tfReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Fraction-Silver-Medal.png")));
                     }
-                    else if(array[index] <= 69) {
+                    else if(array[index] >= 50) {
                         tfReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Fraction-Bronze-Medal.png")));
                     }
                     else if(array[index] <= 49) {
@@ -218,10 +218,10 @@ public class ProfilePageController {
                     if(array[index] >= 90) {
                         tfReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Algebra-Gold-Medal.png")));
                     }
-                    else if(array[index] <= 89) {
+                    else if(array[index] >= 70) {
                         tfReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Algebra-Silver-Medal.png")));
                     }
-                    else if(array[index] <= 69) {
+                    else if(array[index] >= 50) {
                         tfReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Algebra-Bronze-Medal.png")));
                     }
                     else if(array[index] <= 49) {
