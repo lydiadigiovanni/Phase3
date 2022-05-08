@@ -204,7 +204,7 @@ public class Database {
         connection = getConnection();
         try {
             Statement st = connection.createStatement();
-            st.executeUpdate("UPDATE student_information SET " + firstLetters.toLowerCase() + lastLetter.toLowerCase() + " = '" + assignmentGrade + "' WHERE studentUserName = '" + getCurrentUsername() + "'");
+            st.executeUpdate("UPDATE student_information SET " + getCurrentUserGrade() + firstLetters.toLowerCase() + lastLetter.toLowerCase() + " = '" + assignmentGrade + "' WHERE studentUserName = '" + getCurrentUsername() + "'");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

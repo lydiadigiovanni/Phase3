@@ -66,9 +66,10 @@ public class Map3Controller extends MapControllerParent{
 
     @FXML
     void returnHome(ActionEvent event) {
+        mediaPlayer.stop();
+
         model.toHomePage(event);
 
-        mediaPlayer.stop();
     }
 
     @FXML
@@ -80,16 +81,18 @@ public class Map3Controller extends MapControllerParent{
 
     @FXML
     void tutorialButton5Clicked(ActionEvent event) {
+        mediaPlayer.stop();
+
         model.switchToTutoPracTest(event, tutorialButton5, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
 
-        mediaPlayer.stop();
     }
 
     @FXML
     void tutorialButton6Clicked(ActionEvent event) {
+        mediaPlayer.stop();
+
         model.switchToTutoPracTest(event, tutorialButton6, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
 
-        mediaPlayer.stop();
     }
 
     @FXML

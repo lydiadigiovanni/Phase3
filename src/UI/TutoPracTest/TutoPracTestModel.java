@@ -77,8 +77,8 @@ public class TutoPracTestModel {
                     return assessment;
                 case "test":
                     int random = ThreadLocalRandom.current().nextInt(2); //0 or 1
-                    setLastLetter((Integer.toString(Integer.parseInt(getLastLetter() + random))));
-                    assessment = grade.getPractice(lastLetter);
+                    //setLastLetter(());
+                    assessment = grade.getPractice(Integer.toString(Integer.parseInt(getLastLetter()) + random));
                     return assessment;
 
             }
