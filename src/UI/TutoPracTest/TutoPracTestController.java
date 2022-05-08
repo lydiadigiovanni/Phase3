@@ -130,7 +130,6 @@ public class TutoPracTestController {
     
     @FXML
     public void completeAssignment(ActionEvent event) { //Done button
-        //TODO: ADD CODE HERE OF LIKE SAVING ASSIGNMENT OR WHATEVER
         if (youtubeVideo != null) {
             youtubeVideo.getEngine().load("");
         }
