@@ -93,7 +93,7 @@
                   <Image url="@../../../Pictures/HomePage/Island1.png" />
                </image>
             </ImageView>
-            <Label fx:id="island1Name" layoutX="9.0" layoutY="48.0" prefHeight="107.0" prefWidth="213.0" text="COUNTING &#10;COVE" textAlignment="CENTER" textFill="#ffc41d">
+            <Label fx:id="island1Name" alignment="CENTER" layoutX="-40.0" layoutY="48.0" prefHeight="107.0" prefWidth="299.0" text="COUNTING &#10;COVE" textAlignment="CENTER" textFill="#ffc41d">
                <font>
                   <Font name="Berlin Sans FB Bold" size="36.0" />
                </font>
@@ -118,7 +118,7 @@
                   <Image url="@../../../Pictures/HomePage/Island2.png" />
                </image>
             </ImageView>
-            <Label fx:id="island2Name" layoutX="23.0" layoutY="25.0" prefHeight="107.0" prefWidth="213.0" text="OPERATION&#10;ISLE" textAlignment="CENTER" textFill="#70ad47">
+            <Label fx:id="island2Name" alignment="CENTER" layoutX="-51.0" layoutY="25.0" prefHeight="107.0" prefWidth="368.0" text="OPERATION&#10;ISLE" textAlignment="CENTER" textFill="#70ad47">
                <font>
                   <Font name="Berlin Sans FB Bold" size="36.0" />
                </font>
@@ -126,7 +126,7 @@
                   <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" spread="1.0" width="5.0" />
                </effect>
             </Label>
-            <Button id="island2" fx:id="Island2Button" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#Island2ButtonPressed" prefHeight="154.0" prefWidth="246.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#70ad47">
+            <Button id="island2" fx:id="Island2Button" contentDisplay="CENTER" graphicTextGap="0.0" layoutY="2.0" mnemonicParsing="false" onAction="#Island2ButtonPressed" prefHeight="154.0" prefWidth="246.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="#70ad47">
                <font>
                   <Font name="Berlin Sans FB Bold" size="35.0" />
                </font>
@@ -143,7 +143,7 @@
                   <Image url="@../../../Pictures/HomePage/Island3.png" />
                </image>
             </ImageView>
-            <Label fx:id="island3Name" layoutX="5.0" layoutY="129.0" prefHeight="107.0" prefWidth="213.0" text="GEOMETRY&#10;COAST" textAlignment="CENTER" textFill="RED">
+            <Label fx:id="island3Name" alignment="CENTER" layoutX="-56.0" layoutY="129.0" prefHeight="107.0" prefWidth="330.0" text="GEOMETRY&#10;COAST" textAlignment="CENTER" textFill="RED">
                <font>
                   <Font name="Berlin Sans FB Bold" size="36.0" />
                </font>
