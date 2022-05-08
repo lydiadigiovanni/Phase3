@@ -45,7 +45,7 @@ public class Database {
         return "grade failed";        
     }
 
-    public static boolean getUser(String username, String password) throws SQLException {
+    public static boolean loginUser(String username, String password) throws SQLException {
         connection = getConnection();
         Statement st = connection.createStatement();
         ResultSet rs = st.executeQuery("SELECT studentPassword FROM student_information WHERE studentUserName = '" + username + "'");
@@ -91,10 +91,19 @@ public class Database {
         st.executeUpdate("INSERT INTO tf_map3 (studentUserName, tutorialOneProgress, practiceOneProgress, tutorialTwoProgress, practiceTwoProgress, testProgress) VALUES('" + userName + "', '0', '0', '0', '0', '0')");
     }
 
-    public static void updateUserGrade(String userName, String grade) throws SQLException {
+    public static void updateUserGrade(String grade) throws SQLException {
         connection = getConnection();
         Statement st = connection.createStatement();
-        st.executeUpdate("UPDATE student_information SET studentGrade = '" + grade + "' WHERE studentUserName = '" + userName + "'");
+        st.executeUpdate("UPDATE student_information SET studentGrade = '" + grade + "' WHERE studentUserName = 'DummyUser'");
+        st.executeUpdate("UPDATE student_information SET studentGrade = '" + grade + "' WHERE studentUserName = '" + getUsername() + "'");
+    }
+
+    public static String getUsername() throws SQLException {
+        connection = getConnection();
+        Statement st = connection.createStatement();
+        ResultSet rs = st.executeQuery("SELECT studentTestVariable from student_information WHERE studentUserName = 'DummyUser'");
+        rs.next();
+            return rs.getString("studentTestVariable");
     }
 
     public static Boolean[] getMapProgress(String userName, String grade, String map) throws SQLException {

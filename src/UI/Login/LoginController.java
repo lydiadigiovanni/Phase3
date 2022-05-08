@@ -36,7 +36,7 @@ public class LoginController {
     //Take them to the homepage when they click the enter button
     @FXML
     void enterClicked(ActionEvent event) throws SQLException {
-        if(Database.getUser(usernameTextField.getText(), passwordTextField.getText())) {
+        if(Database.loginUser(usernameTextField.getText(), passwordTextField.getText())) {
             model.goToHomePage(event, enterButton);
         }
     }

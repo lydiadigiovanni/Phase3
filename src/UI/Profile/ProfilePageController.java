@@ -1,8 +1,12 @@
 package UI.Profile;
 
+import java.sql.SQLException;
+
+import Backend.Database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -48,6 +52,9 @@ public class ProfilePageController {
     @FXML
     private ImageView userAvatar;
 
+    @FXML
+    private Label usernameLabel;
+
     private Media sound;
 
     private MediaPlayer mediaPlayer;
@@ -71,13 +78,13 @@ public class ProfilePageController {
     @FXML
     void changeGradeButtonPressed(ActionEvent event) {
         model.toChangeGradeFlag(event);
-
         mediaPlayer.stop();
 
     }
 
     @FXML
-    public void initialize() {
+    public void initialize() throws SQLException {
+        usernameLabel.setText(Database.getUsername());
         sound = new Media(getClass().getResource("/Sounds/ship-creaking-1.mp3").toExternalForm());
         mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
