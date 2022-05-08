@@ -1,5 +1,7 @@
 package UI.Profile;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
 import Backend.Database.Database;
@@ -7,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -85,6 +88,24 @@ public class ProfilePageController {
     @FXML
     public void initialize() throws SQLException {
         usernameLabel.setText(Database.getCurrentUsername());
+        String avatar = Database.getCurrentAvatar();
+        if (avatar != null) {
+            try {
+                userAvatar.setImage(new Image(new FileInputStream("Pictures/Profile/" + avatar + ".png")));
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+        else {
+            try {
+                userAvatar.setImage(new Image(new FileInputStream("Pictures/Profile/Avatar_1.png")));
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+
         int[] array = Database.getAssignmentGrades();
 
 
