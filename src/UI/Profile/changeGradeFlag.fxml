@@ -41,7 +41,7 @@
             </Label>
             <AnchorPane layoutX="328.0" layoutY="200.0">
                <children>
-                  <HBox alignment="CENTER" layoutY="2.0" prefHeight="74.0" prefWidth="119.0">
+                  <HBox alignment="CENTER" layoutX="-6.0" prefHeight="74.0" prefWidth="119.0">
                      <children>
                         <RadioButton fx:id="Ki" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0">
                            <font>
@@ -65,7 +65,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="19.0" layoutY="66.0" prefHeight="74.0" prefWidth="119.0">
+                  <HBox alignment="CENTER" layoutX="14.0" layoutY="86.0" prefHeight="74.0" prefWidth="119.0">
                      <children>
                         <RadioButton fx:id="FS" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" toggleGroup="$changeGrade">
                            <font>
@@ -86,7 +86,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="13.0" layoutY="132.0" prefHeight="74.0" prefWidth="137.0">
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="172.0" prefHeight="74.0" prefWidth="137.0">
                      <children>
                         <RadioButton fx:id="TF" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" toggleGroup="$changeGrade">
                            <font>
@@ -164,6 +164,21 @@
                      </cursor></Button>
                </children>
             </AnchorPane>
+            <ImageView fitHeight="84.0" fitWidth="95.0" layoutX="244.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true" rotate="28.1">
+               <image>
+                  <Image url="@../../../Pictures/ChangeGrade/sword.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="74.0" fitWidth="119.0" layoutX="226.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true" rotate="32.3">
+               <image>
+                  <Image url="@../../../Pictures/ChangeGrade/cannon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="200.0" layoutX="474.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true" rotate="-22.5">
+               <image>
+                  <Image url="@../../../Pictures/ChangeGrade/pistol.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

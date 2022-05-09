@@ -29,8 +29,25 @@ public class ResetPasswordModel {
         
     }
 
-    /*Gotta make a popup that says "Password changed successfully. Please login to verify"
-    public void goToSubmit(ActionEvent event, Button button) {
-        
-    */
+     //Go back to login once password is set successfully
+    //Popup lets them know it was changed
+    public void openPopup(ActionEvent event, Button button) {
+        //First, have main window go to login screen
+        try {
+           Parent loginParent = FXMLLoader.load(getClass().getResource("/UI/Login/LoginView.fxml")); //Parent = path to login screen
+           Scene loginScene = new Scene(loginParent); //Make scene with that path
+           Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow()); //Assign nodes to the window
+           window.setScene(loginScene); //Set the scene
+           window.show(); //Make it visible
+       //Second, make a new stage for the popup!
+           Stage newStage = new Stage(); //Stage for popup
+           Parent popupParent = FXMLLoader.load(getClass().getResource("/UI/Login/ResetPasswordPopup.fxml")); //Parent = path to popup
+           Scene popupScene = new Scene(popupParent); //Make scene with that path
+           newStage.setScene(popupScene); //Set the popup scene
+           newStage.show(); //Make visible
+           } catch (Exception e) {
+               e.printStackTrace();
+           }
 }
+}
+
