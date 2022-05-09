@@ -1,5 +1,6 @@
 //Purpose: Second round of practice questions for Geometry Coast
 package Backend.Assessment;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
@@ -29,6 +30,23 @@ public class KiPractice6 extends Assessment {
         // TODO Auto-generated method stub
         return null;
     }
+    @Override
+    public String[][] generateUserInputQuestion() {//question one and two have pictures
+        String[][] userInput = new String[2][1];
+        int i = ThreadLocalRandom.current().nextInt(4);
+        switch (i) {
+            case 0:
+                userInput[0] = new String[] { "0" };
+                userInput[1] = generateQuestionOne();
+                break;
+            case 1:
+                userInput[0] = new String[] { "1" };
+                userInput[1] = generateQuestionTwo();
+                break;
+           
+        }
+        return userInput;
+    }
     public static void main(String[] args) {
          //Test question one
          KiPractice6 test1 = new KiPractice6();
@@ -48,15 +66,11 @@ public class KiPractice6 extends Assessment {
          System.out.println(question2[4]);
     }
 
-    @Override
-    public String[][] generateUserInputQuestion() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    
 
     //Question One: Which one is a " "? (Pics of shapes are the answers)
     private String[] generateQuestionOne() {
-        String[] nameOfShapes = {"circle", "rectangle", "oval", "triangle", "diamond"}; //Array of the different names of shapes
+        String[] nameOfShapes = {"circle", "rectangle", "oval", "triangle", "diamond"}; //Array of the different names of shapes pictures
         ArrayList<String> shapeNames = new ArrayList<String>(); //Array list will be used to remove the answer from later
         //Add the contents to the ArrayList now
         shapeNames.add(0, nameOfShapes[0]);

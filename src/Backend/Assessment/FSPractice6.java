@@ -1,5 +1,7 @@
 //Purpose: Second round of practice questions for Measurement Reef
 package Backend.Assessment;
+
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class FSPractice6 extends Assessment{
@@ -17,6 +19,10 @@ public class FSPractice6 extends Assessment{
                 multipleChoice[0] = new String[]{"1"};
                 multipleChoice[1] = generateQuestionTwo();
                 break;
+            case 2:
+                multipleChoice[0] = new String[] { "2" };
+                multipleChoice[1] = generateQuestionThree();
+                break;    
         }
         return multipleChoice;
     }
@@ -50,6 +56,13 @@ public class FSPractice6 extends Assessment{
         System.out.println(question2[2]);
         System.out.println(question2[3]);
         System.out.println(question2[4]);
+        // Test question three
+        FSPractice6 test3 = new FSPractice6();
+        String[] question3 = test3.generateQuestionThree();
+        System.out.println(question3[0]);
+        System.out.println(question3[1]);
+        System.out.println(question3[2]);
+        
     }
 
     /*Question one: Which tool would you use to measure "random object?
@@ -113,7 +126,7 @@ public class FSPractice6 extends Assessment{
         String[] objectsToMeasure = {"a paper clip", "an eraser", "a compass", "a pencil", "a shoe", "an anchor", "a car", "a couch", "a person", 
         "a truck", "a swimming pool", "a boat"};
          //Save a random object from objectsToMeasure in randomObject to use in the question
-        String randomObject = objectsToMeasure[ThreadLocalRandom.current().nextInt(13)];
+        String randomObject = objectsToMeasure[ThreadLocalRandom.current().nextInt(12)];
         String[] units = {"Centimeters", "Inches", "Feet", "Yards"}; //Different units of measure used in the answers
         String[] questionTwo = new String[5]; //Array will hold question and possible answers
         questionTwo[0] = "Which would you use to measure " + randomObject + "?";
@@ -161,5 +174,88 @@ public class FSPractice6 extends Assessment{
         return questionTwo;
         
     }
+    private String[] generateQuestionThree() {
+        // String array of the objects used in the question
+        String[] objectToGuess = { "A coffee cup", "A teapot", "A bathtub", "A tube of sunscreen", "A mug", "A yogurt cup", "Juice box", "Dump truck", "milk carton" };
+        // Get a random item from objectToGuess and assign it to randomObject
+        String randomObject = objectToGuess[ThreadLocalRandom.current().nextInt(9)];
+        String[] questionThree = new String[6]; // Array will be used to hold the question and possible answers
+        questionThree[0] = "Does it hold more or less than 1 gallon? select the correct answer.\n"+
+        "Hint: 1 gallon = 16 US cups\n"+randomObject; // The actual question
+
+        if (randomObject == objectToGuess[0]) { // If the object is a parrot
+            
+            
+            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "More than"; // Wrong: too large
+
+        }
+
+        if (randomObject == objectToGuess[1]) { // If the object is a lamp
+            
+            
+            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "More than"; // Wrong: too large
+
+        }
+
+        if (randomObject == objectToGuess[2]) { // If the object is a table
+           
+            
+            questionThree[1] = "More than"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "Less than"; // Wrong: too large
+
+        }
+
+        if (randomObject == objectToGuess[3]) { // If the object is a person
+           
+            
+            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "More than"; // Wrong: too large
+        }
+
+        if (randomObject == objectToGuess[4]) { // If the object is a tree
+            
+            
+            
+            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "More than"; // Wrong: too large
+
+        }
+
+        if (randomObject == objectToGuess[5]) { // If the object is a giraffe
+            
+            
+            
+            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "More than"; // Wrong: too large
+
+        }
+        if (randomObject == objectToGuess[6]) { // If the object is a giraffe
+            
+            
+            
+            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "More than"; // Wrong: too large
+
+        }
+        if (randomObject == objectToGuess[7]) { // If the object is a giraffe
+            
+            
+            
+            questionThree[1] = "More than"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "Less than"; // Wrong: too large
+
+        }
+        if (randomObject == objectToGuess[8]) { // If the object is a giraffe
+            
+            
+            
+            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "More than"; // Wrong: too large
+
+        }
+
+        return questionThree;
     
-}
+}}

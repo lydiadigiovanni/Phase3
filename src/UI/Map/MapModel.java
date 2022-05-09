@@ -1,5 +1,9 @@
-package UI.Map.Map2;
+package UI.Map;
 
+import java.sql.SQLException;
+
+import Backend.Database.Database;
+import Backend.Grade.Grade;
 import UI.TutoPracTest.TutoPracTestController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,15 +13,16 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
-public class Map2Model {
 
+public class MapModel {
+    
     private Boolean checkmarkIndex[] = new Boolean[]{false, false, false, false, false};
     
-    public Map2Model() {
+    public MapModel() {
 
     }
 
-    public void switchToTutoPracTest(ActionEvent event, Button button, String path) {
+    public void switchToTutoPracTest(ActionEvent event, Button button, String path, Grade grade, String mapName) {
         String firstFourLetters = button.getId().substring(0, 4);
         String lastLetter = button.getId().substring((button.getId().length()) - 1);        
         try {
@@ -30,7 +35,8 @@ public class Map2Model {
             window.show();
             controller.setFirstLetter(firstFourLetters);
             controller.setLastLetter(lastLetter);
-            controller.setMapName(this.getClass().getSimpleName().substring(0,4));
+            controller.setMapName(mapName);
+            controller.setGrade(grade);
             controller.initialize();
         } catch (Exception e) {
             e.printStackTrace();
@@ -50,11 +56,22 @@ public class Map2Model {
             
     }
 
-    public void setCheckmarkBoolean(int checkmarkindex) {
-        checkmarkIndex[checkmarkindex] = true;
+    public void setCheckmarkBoolean(int checkmarkindex, String mapName) {
+        try {
+            Database.setCheckmarkBoolean(checkmarkindex, mapName);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
     
-    public Boolean[] getCheckmarkIndex() {
-        return checkmarkIndex;
+    public Boolean[] getCheckmarkIndex(String mapName) {
+        try {
+            return Database.getMapProgress(mapName);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
     }
 }
