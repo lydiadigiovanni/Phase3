@@ -44,6 +44,9 @@ public class LoginController {
         if(Database.loginUser(usernameTextField.getText(), passwordTextField.getText())) {
             model.goToHomePage(event, enterButton);
         }
+        else { //The username or password was incorrect
+            model.openPopup(event, enterButton); //Open popup warning
+        }
     }
 
     //Take them to the create account form when they click create account

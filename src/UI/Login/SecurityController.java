@@ -41,7 +41,8 @@ public class SecurityController {
     @FXML
     void submitButtonPressed(ActionEvent event) throws SQLException {
         Database.createUser(model.getUsername(), model.getGrade(), model.getPassword(), securityAnswerOne.getText(), securityAnswerTwo.getText());
-        model.goToLogin(event, submitButton);
+        //model.goToLogin(event, submitButton);
+        model.openPopup(event, submitButton); //Goes to login on main screen and opens popup at same time
     }
 
     public void setData(String userName, String password, String grade) {
