@@ -18,7 +18,6 @@ public class GradeKi extends Grade {
     @Override
     public String getYoutubeVideo1() {
         youtubeVideo = ("https://www.youtube.com/watch?v=bGetqbqDVaA");
-
         return youtubeVideo;
     }
 
