@@ -60,7 +60,7 @@ public class MapController extends MapControllerParent{
 
     @FXML
     void practiceButton1Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, practiceButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, practiceButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade(), "MapM");  //Relic of when it was first designed, Map1 would be better, but due to how it was previously impemented, MapM is the best choice
 
         //mediaPlayer.stop();
 
@@ -68,7 +68,7 @@ public class MapController extends MapControllerParent{
 
     @FXML
     void practiceButton2Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, practiceButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, practiceButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade(), "MapM");
 
         //mediaPlayer.stop();
     }
@@ -82,21 +82,21 @@ public class MapController extends MapControllerParent{
 
     @FXML
     void testButtonClicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, testButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, testButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade() , "MapM");
 
         //mediaPlayer.stop();
     }
 
     @FXML
     void tutorialButton1Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, tutorialButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade() , "MapM");
 
        // mediaPlayer.stop();
     }
 
     @FXML
     void tutorialButton2Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, tutorialButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade() , "MapM");
 
         //mediaPlayer.stop();
     }
@@ -121,4 +121,5 @@ public class MapController extends MapControllerParent{
         //mediaPlayer.play();
         //mediaPlayer.setVolume(0.15);
     }
+
 }

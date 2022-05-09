@@ -22,7 +22,7 @@ public class MapModel {
 
     }
 
-    public void switchToTutoPracTest(ActionEvent event, Button button, String path, Grade grade) {
+    public void switchToTutoPracTest(ActionEvent event, Button button, String path, Grade grade, String mapName) {
         String firstFourLetters = button.getId().substring(0, 4);
         String lastLetter = button.getId().substring((button.getId().length()) - 1);        
         try {
@@ -35,7 +35,7 @@ public class MapModel {
             window.show();
             controller.setFirstLetter(firstFourLetters);
             controller.setLastLetter(lastLetter);
-            controller.setMapName(this.getClass().getSimpleName().substring(0,4));
+            controller.setMapName(mapName);
             controller.setGrade(grade);
             controller.initialize();
         } catch (Exception e) {
