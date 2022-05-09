@@ -1,5 +1,9 @@
 //Purpose: Controller in the MVC structure for the homepage
 package UI.Homepage;
+import java.lang.reflect.InvocationTargetException;
+import java.sql.SQLException;
+
+import Backend.Database.Database;
 import Backend.Grade.Grade;
 import Backend.Grade.GradeKi; //TODO: REMOVE THISLATER
 import javafx.event.ActionEvent;
@@ -7,8 +11,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+//import javafx.scene.media.Media;
+//import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class HomePageController {
@@ -46,9 +50,10 @@ public class HomePageController {
     @FXML
     private ImageView tfFlag;
 
-    private Media sound;
+    //SOUNDS TOO BUGGY RIGHT NOW, FIX LATER?
+    //private Media sound;
 
-    private MediaPlayer mediaPlayer;
+    //private MediaPlayer mediaPlayer;
 
     private HomePageModel model = new HomePageModel();
 
@@ -56,13 +61,12 @@ public class HomePageController {
 
     public HomePageController() {
         super();
-        grade = new GradeKi(); //TODO: GET THIS FROM DATBASE
     }
     @FXML
     void Island2ButtonPressed(ActionEvent event) {
         model.goToIsland(event, Island2Button, "/UI/Map/Map2/Map2View.fxml", grade);
         
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
@@ -71,21 +75,21 @@ public class HomePageController {
         When Island1Button is pressed, the software takes you back to the map!*/
         model.goToIsland(event, Island1Button, "/UI/Map/Map1/MapView.fxml", grade);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     void island3ButtonPressed(ActionEvent event) {
         model.goToIsland(event, Island2Button, "/UI/Map/Map3/Map3View.fxml", grade);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     void logOutButtonPressed(ActionEvent event) {
         model.logOut(event);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
 
     }
 
@@ -93,18 +97,38 @@ public class HomePageController {
     void profileButtonPressed(ActionEvent event) {
         model.goToProfile(event, ProfileButton);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     public void initialize() {
+        grade = Database.getCurrentUserGradeClass();
+        switch (grade.getGrade()) {
+            case "Ki":
+                kFlag.setVisible(true);
+                fsFlag.setVisible(false);
+                tfFlag.setVisible(false);
+                break;
+            case "FS":
+                kFlag.setVisible(false);
+                fsFlag.setVisible(true);
+                tfFlag.setVisible(false);
+                break;
+            case "TF":
+                kFlag.setVisible(false);
+                fsFlag.setVisible(false);
+                tfFlag.setVisible(true);
+                break;
+            default:
+                break;
+        }
         island1Name.setText(grade.getIsland1Name());
         island2Name.setText(grade.getIsland2Name());
         island3Name.setText(grade.getIsland3Name());
-        sound = new Media(getClass().getResource("/Sounds/ocean-waves-1.mp3").toExternalForm());
-        mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
-        mediaPlayer.setVolume(0.25);
+        //sound = new Media(getClass().getResource("/Sounds/ocean-waves-1.mp3").toExternalForm());
+        //mediaPlayer = new MediaPlayer(sound);
+        //mediaPlayer.play();
+        //mediaPlayer.setVolume(0.25);
     }
 
 }

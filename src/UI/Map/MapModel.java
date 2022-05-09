@@ -1,5 +1,8 @@
 package UI.Map;
 
+import java.sql.SQLException;
+
+import Backend.Database.Database;
 import Backend.Grade.Grade;
 import UI.TutoPracTest.TutoPracTestController;
 import javafx.fxml.FXMLLoader;
@@ -53,11 +56,22 @@ public class MapModel {
             
     }
 
-    public void setCheckmarkBoolean(int checkmarkindex) {
-        checkmarkIndex[checkmarkindex] = true;
+    public void setCheckmarkBoolean(int checkmarkindex, String mapName) {
+        try {
+            Database.setCheckmarkBoolean(checkmarkindex, mapName);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
     
-    public Boolean[] getCheckmarkIndex() {
-        return checkmarkIndex;
+    public Boolean[] getCheckmarkIndex(String mapName) {
+        try {
+            return Database.getMapProgress(mapName);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
     }
 }

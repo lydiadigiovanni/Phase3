@@ -6,9 +6,10 @@ import javafx.scene.web.WebView;
 public class GradeFS extends Grade{
 
     public GradeFS() {
-        setIsland1Name("AAAAA");
-        setIsland2Name("BBBBB");
-        setIsland3Name("CCCCC");
+        setIsland1Name("OPERATION\nBEACH");
+        setIsland2Name("TIME & MONEY\nSHORE");
+        setIsland3Name("MEASUREMENT\nREEF");
+        setGrade("FS");
     }  
 
     @Override

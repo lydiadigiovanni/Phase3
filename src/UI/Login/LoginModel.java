@@ -1,8 +1,7 @@
 //Model for the MVC structure for the login
 package UI.Login;
 
-import java.io.IOException;
-
+import UI.Homepage.HomePageModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -21,7 +20,8 @@ public class LoginModel {
   
     public void goToHomePage(ActionEvent event, Button button) {
         try {
-            Parent homePageParent = FXMLLoader.load(getClass().getResource("/UI/Homepage/Homepage.fxml")); //Parent = path to homepage
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Homepage/Homepage.fxml"));
+            Parent homePageParent = loader.load();
             Scene homePageScene = new Scene(homePageParent); //Make scene with that path 
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow()); //Assign nodes to the window
             window.setScene(homePageScene); //Set the scene

@@ -30,12 +30,16 @@ public class CreateAccountModel {
     }
 
     //Go to the security screen when the user clicks "next"
-    public void goToSecurity(ActionEvent event, Button button) {
+    public void goToSecurity(ActionEvent event, Button button, String userName, String password, String grade) {
         try {
-            Parent securityParent = FXMLLoader.load(getClass().getResource("/UI/Login/SecurityView.fxml")); //Parent = path to security screen
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Login/SecurityView.fxml"));
+            Parent securityParent = loader.load();
+            SecurityController controller = loader.getController();
             Scene securityScene = new Scene(securityParent); //Make scene with that path
             Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow()); //Assign nodes to the window
             window.setScene(securityScene); //Set the scene
+            controller.setData(userName, password, grade); //Set the data
             window.show(); //Make it visible
             } catch (Exception e) {
                 e.printStackTrace();

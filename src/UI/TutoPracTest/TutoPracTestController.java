@@ -3,6 +3,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import Backend.Database.Database;
 import Backend.Grade.Grade;
 import Backend.Grade.GradeKi;
 import UI.Map.MapControllerParent;
@@ -139,6 +141,7 @@ public class TutoPracTestController {
                 Scene rewardScene = new Scene(rewardParent);
                 RewardController controller = rewardLoader.getController();
                 controller.setRewardGrade((numbercorrect*100/totalNumberOfQuestions));
+                Database.setAssigmentGrade(model.getFirstLetters(), model.getLastLetter(), (numbercorrect*100/totalNumberOfQuestions));
                 controller.initialize();
                 Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
                 
@@ -211,8 +214,8 @@ public class TutoPracTestController {
             boolean correctBoolean = model.checkAnswer(((RadioButton) multipleChoiceQuestion.getSelectedToggle()).getText());
             correctAnswerLabel.setText(model.getAnswer());
             answerChecker(correctBoolean, multipleChoiceNextButton);
+            multipleChoiceConfirmButton.setDisable(true);
         }
-        multipleChoiceConfirmButton.setDisable(true);
     }
 
     private void answerChecker(Boolean correctBoolean, Button nextButton) {
@@ -240,7 +243,7 @@ public class TutoPracTestController {
 
     @FXML
     void userInputCheckAnswer(ActionEvent event) {
-        if(userInputTextField.getText() != null) {
+        if(!userInputTextField.getText().isEmpty()) {
             userInputTextField.setDisable(true);
             userInputNextButton.setDisable(false);
             userInputNextButton.setVisible(true);

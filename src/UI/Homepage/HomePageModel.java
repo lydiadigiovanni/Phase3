@@ -26,7 +26,7 @@ public class HomePageModel {
                 Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
                 window.setScene(scene);
                 window.show();
-                controller.setGrade(grade);
+                //controller.setGrade(grade);
                 controller.initialize();
             } catch (Exception e) {
                 e.printStackTrace();

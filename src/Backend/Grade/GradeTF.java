@@ -5,6 +5,13 @@ import javafx.scene.web.WebView;
 
 public class GradeTF extends Grade{
 
+    public GradeTF() {
+        setIsland1Name("OPERATION\nCOVE");
+        setIsland2Name("FRACTION\nLAGOON");
+        setIsland3Name("ALGEBRA\nATOLL");
+        setGrade("TF");
+    }  
+
     @Override
     public String getYoutubeVideo1() {
         // TODO Auto-generated method stub
