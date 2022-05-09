@@ -82,14 +82,14 @@ public class Map2Controller extends MapControllerParent{
 
     @FXML
     void tutorialButton3Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton3, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, tutorialButton3, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade(), "Map2");
 
         //mediaPlayer.stop();
     }
 
     @FXML
     void tutorialButton4Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton4, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, tutorialButton4, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade(), "Map2");
 
         //mediaPlayer.stop();
     }

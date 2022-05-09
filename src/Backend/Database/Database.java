@@ -293,7 +293,7 @@ public class Database {
         connection = getConnection();
         try {
             Statement st = connection.createStatement();
-            st.executeUpdate("UPDATE student_information SET password = '" + password + "' WHERE studentUserName = '" + username + "'");
+            st.executeUpdate("UPDATE student_information SET studentPassword = '" + password + "' WHERE studentUserName = '" + username + "'");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

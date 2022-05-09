@@ -82,7 +82,7 @@ public class Map3Controller extends MapControllerParent{
     @FXML
     void tutorialButton5Clicked(ActionEvent event) {
 
-        model.switchToTutoPracTest(event, tutorialButton5, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, tutorialButton5, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade(), "Map3");
 
         //mediaPlayer.stop();
     }
@@ -90,7 +90,7 @@ public class Map3Controller extends MapControllerParent{
     @FXML
     void tutorialButton6Clicked(ActionEvent event) {
 
-        model.switchToTutoPracTest(event, tutorialButton6, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade());
+        model.switchToTutoPracTest(event, tutorialButton6, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade(), "Map3");
 
         //mediaPlayer.stop();
     }

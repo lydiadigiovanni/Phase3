@@ -257,6 +257,6 @@
             </Button>
          </children>
       </AnchorPane>
-      <WebView fx:id="youtubeVideo" disable="true" layoutX="43.0" layoutY="52.0" prefHeight="482.0" prefWidth="717.0" visible="false" />
+      <WebView fx:id="youtubeVideo" disable="true" layoutX="59.0" layoutY="59.0" prefHeight="429.0" prefWidth="699.0" />
 </children>
 </AnchorPane>
