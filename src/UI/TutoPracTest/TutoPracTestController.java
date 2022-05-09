@@ -104,6 +104,9 @@ public class TutoPracTestController {
 
     @FXML
     private TextField userInputTextField;
+
+    @FXML
+    private ImageView userInputImageView;
     
 
     private TutoPracTestModel model = new TutoPracTestModel();
@@ -139,8 +142,11 @@ public class TutoPracTestController {
                 Parent rewardParent = rewardLoader.load();
                 Scene rewardScene = new Scene(rewardParent);
                 RewardController controller = rewardLoader.getController();
-                controller.setRewardGrade((numbercorrect*100/totalNumberOfQuestions));
-                Database.setAssigmentGrade(model.getFirstLetters(), model.getLastLetter(), (numbercorrect*100/totalNumberOfQuestions));
+                int testGrade = numbercorrect*100/totalNumberOfQuestions;
+                controller.setRewardGrade((testGrade));
+                if (Database.getAssignmentGrades() == null || Database.getAssignmentGrade(model.getFirstLetters(), model.getLastLetter()) < testGrade) {
+                    Database.setAssigmentGrade(model.getFirstLetters(), model.getLastLetter(), (testGrade));
+                }
                 controller.initialize();
                 Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
                 
@@ -397,7 +403,7 @@ public class TutoPracTestController {
     }
 
     private void generateQuestion() {
-        model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour, userInputAnchor, multipleChoiceAnchor);
+        model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour, userInputAnchor, multipleChoiceAnchor, userInputImageView);
     }
 
     /**

@@ -173,7 +173,7 @@
                </font>
             </Label>
             <ImageView fx:id="incorrectCorrect" fitHeight="150.0" fitWidth="135.0" layoutX="446.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" />
-            <AnchorPane fx:id="userInputAnchor" layoutX="-10.0" layoutY="103.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="437.0" visible="false">
+            <AnchorPane fx:id="userInputAnchor" layoutX="-10.0" layoutY="103.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="437.0">
                <children>
                   <Button fx:id="userInputConfirmButton" layoutX="240.0" layoutY="113.0" mnemonicParsing="false" onAction="#userInputCheckAnswer" prefHeight="47.0" prefWidth="89.0" style="-fx-background-color: #c15701;" text="SUBMIT">
                      <cursor>
@@ -192,7 +192,8 @@
                      </font>
                   </Button>
                   <HBox fx:id="pictureBox1" alignment="CENTER" layoutX="10.0" prefHeight="93.0" prefWidth="437.0" spacing="5.0" />
-                  <TextField fx:id="userInputTextField" layoutX="40.0" layoutY="88.0" />
+                  <TextField fx:id="userInputTextField" layoutX="240.0" layoutY="81.0" />
+                  <ImageView fx:id="userInputImageView" fitHeight="196.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
          </children>
