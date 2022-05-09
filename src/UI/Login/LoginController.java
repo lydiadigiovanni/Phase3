@@ -6,6 +6,9 @@ import java.sql.SQLException;
 import Backend.Database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -32,6 +35,7 @@ public class LoginController {
     private TextField usernameTextField;
 
     private LoginModel model = new LoginModel(); //Make Login Model object
+    
 
     //Take them to the homepage when they click the enter button
     @FXML
@@ -43,9 +47,8 @@ public class LoginController {
 
     //Take them to the create account form when they click create account
     @FXML
-    void createAccountClicked(ActionEvent event) {
+    void createAccountClicked(ActionEvent event) throws IOException {
         model.goToCreateAccount(event, createAccount);
-
     }
 
     //Take them to the forgot password screen when they click forgot password

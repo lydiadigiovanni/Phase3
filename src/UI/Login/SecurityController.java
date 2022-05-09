@@ -37,6 +37,7 @@ public class SecurityController {
     }
 
     //Event = user clicked submit button
+    //Take user back to login page so they can login again
     @FXML
     void submitButtonPressed(ActionEvent event) throws SQLException {
         Database.createUser(model.getUsername(), model.getGrade(), model.getPassword(), securityAnswerOne.getText(), securityAnswerTwo.getText());
