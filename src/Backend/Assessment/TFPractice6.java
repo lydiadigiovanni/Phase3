@@ -31,7 +31,6 @@ public class TFPractice6 extends Assessment{
 
     @Override
     public String[][] generateTrueFalseQuestion() {
-        // TODO Auto-generated method stub
         return null;
     }
 

@@ -25,7 +25,6 @@ public class KiPractice3 extends Assessment {
 
     @Override
     public String[][] generateTrueFalseQuestion() {
-        // TODO Auto-generated method stub
         return null;
     }
 
@@ -85,7 +84,7 @@ public class KiPractice3 extends Assessment {
            
         }
         else if (firstNumInEquation == numberItEquals){ //The two numbers cannot be the same
-           generateQuestionTwo(); //Recursion until they don't equal eachother
+           questionTwo = generateQuestionTwo(); //Recursion until they don't equal eachother
         }
 
         return questionTwo;

@@ -31,7 +31,6 @@ public class TFPractice4 extends Assessment {
  
     @Override
     public String[][] generateTrueFalseQuestion() {
-        // TODO Auto-generated method stub
         return null;
     }
  
@@ -132,7 +131,6 @@ public class TFPractice4 extends Assessment {
  
     }
         // Question Three:
-        //TODO: SHANE FIX THIS
         private String[] generateQuestionThree() {
             Random random = new Random(); // Will be used to generate the random numbers
             int num = random.nextInt(12) + 1; // The number in the question is between 1 and 100

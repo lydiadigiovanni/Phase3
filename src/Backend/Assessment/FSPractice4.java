@@ -23,7 +23,6 @@ public class FSPractice4 extends Assessment {
 
     @Override
     public String[][] generateTrueFalseQuestion() {
-        // TODO Auto-generated method stub
         return null;
     }
 

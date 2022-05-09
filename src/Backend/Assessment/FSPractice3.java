@@ -31,7 +31,6 @@ public class FSPractice3 extends Assessment {
 
     @Override
     public String[][] generateTrueFalseQuestion() {
-        // TODO Auto-generated method stub
         return null;
     }
 

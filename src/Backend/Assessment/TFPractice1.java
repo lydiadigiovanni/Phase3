@@ -34,7 +34,6 @@ public class TFPractice1 extends Assessment {
 
     @Override
     public String[][] generateTrueFalseQuestion() {
-        // TODO Auto-generated method stub
         return null;
     }
 
@@ -64,6 +63,8 @@ public class TFPractice1 extends Assessment {
     }
 
     //Question one: What is " " * " "?
+    //TODO: FIX THIS ONE? I got 7 * 11, with answers of 22, 23, 24, 20
+    //TODO: SHANE DEBUG THIS
     private String[] generateQuestionOne() {
         Random random = new Random(); //Will be used to generate the random numbers
         int firstNumber = random.nextInt(100) + 1; //First number is a number between 1 and 100

@@ -1,6 +1,8 @@
 package UI.TutoPracTest;
+import java.sql.SQLException;
 import java.util.concurrent.ThreadLocalRandom;
 import Backend.Assessment.Assessment;
+import Backend.Database.Database;
 import Backend.Grade.Grade;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -44,13 +46,22 @@ public class TutoPracTestModel {
             String[] question = whatQuestionAndQuestion[1];
             questionLabel.setText(question[0]);
             answer = question[1];
-            int numAnswer = Integer.parseInt(question[1]);
-            pictureBox.getChildren().clear();
-            if(whatQuestion.equalsIgnoreCase("0") && lastLetter.equalsIgnoreCase("1")) {
-                for (int i = 0; i < numAnswer; i++) {
-                    pictureBox.getChildren().addAll(new Circle(20.0, Paint.valueOf(question[5])));
+            try {
+                if(Database.getCurrentUserGrade().equalsIgnoreCase("Ki")) {
+                    int numAnswer = Integer.parseInt(question[1]);
+                    if(whatQuestion.equalsIgnoreCase("0") && lastLetter.equalsIgnoreCase("1")) {
+                        for (int i = 0; i < numAnswer; i++) {
+                            pictureBox.getChildren().addAll(new Circle(20.0, Paint.valueOf(question[5])));
+                        }
+                    }
                 }
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
             }
+            
+            pictureBox.getChildren().clear();
+            
             randomizePlacement = ThreadLocalRandom.current().nextInt(1,5);
             choiceButtonOne.setText(question[randomizePlacement]);
             incrementPlacement();

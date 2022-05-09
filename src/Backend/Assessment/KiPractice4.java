@@ -25,7 +25,6 @@ public class KiPractice4 extends Assessment {
 
     @Override
     public String[][] generateTrueFalseQuestion() {
-        // TODO Auto-generated method stub
         return null;
     }
 
@@ -47,6 +46,7 @@ public class KiPractice4 extends Assessment {
     }
 
     //Question One: What is " " - " "?
+    //TODO: THERE ARE NEGATIVES? 
     private String[] generateQuestionOne() {
         String questionOne[] = new String[6]; //Array wild hold questions and possible answers
         Random random = new Random(); //Random object will be used to generate two random numbers
@@ -63,6 +63,7 @@ public class KiPractice4 extends Assessment {
     }
 
      //Question Two: What is the missing number in "_" + "1,2,3,4,etc" = "1,2,3,4,etc"?
+     //TODO: THERE ARE NEGATIVES?
      private String[] generateQuestionTwo() {
         String questionTwo[] = new String[6]; //Array will hold questions and possible answers
         Random random = new Random(); //Create Random object to generate the number after the + and the number after the =
