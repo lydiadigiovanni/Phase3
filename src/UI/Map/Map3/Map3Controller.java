@@ -49,18 +49,22 @@ public class Map3Controller extends MapControllerParent{
 
     //private MediaPlayer mediaPlayer;
 
+    private String path = "/UI/TutoPracTest/TutoPracTestView.fxml";
+
+    private String mapName = "Map3";
+
     private MapModel model = new MapModel();
 
     @FXML
     void practiceButton5Clicked(ActionEvent event) {
-
+        model.switchToTutoPracTest(event, practiceButton5, path, getGrade(), mapName);
         //mediaPlayer.stop();
 
     }
 
     @FXML
     void practiceButton6Clicked(ActionEvent event) {
-
+        model.switchToTutoPracTest(event, practiceButton6, path, getGrade(), mapName);
        // mediaPlayer.stop();
 
     }
@@ -74,7 +78,7 @@ public class Map3Controller extends MapControllerParent{
 
     @FXML
     void testButtonClicked(ActionEvent event) {
-
+        model.switchToTutoPracTest(event, testButton5, path, getGrade(), mapName);
         //mediaPlayer.stop();
 
     }

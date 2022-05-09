@@ -10,19 +10,7 @@ public class KiPractice5 extends Assessment {
     
     @Override
     public String[][] generateMultipleChoiceQuestion() {
-        String[][] multipleChoice = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(4);
-        switch (i) {
-            case 0:
-                multipleChoice[0] = new String[]{"0"};
-                multipleChoice[1] = generateQuestionOne();
-                break;
-            case 1: 
-                multipleChoice[0] = new String[]{"1"};
-                multipleChoice[1] = generateQuestionTwo();
-                break;
-        }
-        return multipleChoice;
+        return null;
     }
 
     @Override
@@ -34,7 +22,7 @@ public class KiPractice5 extends Assessment {
     @Override
     public String[][] generateUserInputQuestion() {//question 1 and 2 has pictures
         String[][] userInput = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(4);
+        int i = ThreadLocalRandom.current().nextInt(2);
         switch (i) {
             case 0:
                 userInput[0] = new String[] { "0" };
@@ -47,26 +35,7 @@ public class KiPractice5 extends Assessment {
            
         }
         return userInput;
-    }
-    public static void main (String[] args) {
-        //Test question one
-        KiPractice5 test1 = new KiPractice5();
-        String[] question1 = test1.generateQuestionOne();
-        System.out.println(question1[0]);
-        System.out.println(question1[1]); 
-        System.out.println(question1[2]); 
-        System.out.println(question1[3]); 
-        System.out.println(question1[4]); 
-        //Test question two
-        KiPractice5 test2 = new KiPractice5();
-        String[] question2 = test2.generateQuestionTwo();
-        System.out.println(question2[0]);
-        System.out.println(question2[1]); 
-        System.out.println(question2[2]); 
-        System.out.println(question2[3]); 
-        System.out.println(question2[4]); 
-       
-    }  
+    } 
 
     //Question one: What shape is this? Displays picture. Answers are words
     private String[] generateQuestionOne() {

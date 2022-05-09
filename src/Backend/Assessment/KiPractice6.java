@@ -10,19 +10,7 @@ public class KiPractice6 extends Assessment {
     
     @Override
     public String[][] generateMultipleChoiceQuestion() {
-        String[][] multipleChoice = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(4);
-        switch (i) {
-            case 0:
-                multipleChoice[0] = new String[]{"0"};
-                multipleChoice[1] = generateQuestionOne();
-                break;
-            case 1: 
-                multipleChoice[0] = new String[]{"1"};
-                multipleChoice[1] = generateQuestionTwo();
-                break;
-        }
-        return multipleChoice;
+        return null;
     }
 
     @Override
@@ -33,7 +21,7 @@ public class KiPractice6 extends Assessment {
     @Override
     public String[][] generateUserInputQuestion() {//question one and two have pictures
         String[][] userInput = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(4);
+        int i = ThreadLocalRandom.current().nextInt(2);
         switch (i) {
             case 0:
                 userInput[0] = new String[] { "0" };

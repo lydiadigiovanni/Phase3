@@ -11,7 +11,7 @@ public class TFPractice3 extends Assessment {
     @Override
     public String[][] generateMultipleChoiceQuestion() {
         String[][] multipleChoice = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(4);
+        int i = ThreadLocalRandom.current().nextInt(3);
         switch (i) {
             case 0:
                 multipleChoice[0] = new String[]{"0"};
@@ -38,8 +38,19 @@ public class TFPractice3 extends Assessment {
  
     @Override
     public String[][] generateUserInputQuestion() {
-        // TODO Auto-generated method stub
-        return null;
+        String[][] multipleChoice = new String[2][1];
+        int i = ThreadLocalRandom.current().nextInt(3);
+        switch (i) {
+            case 0:
+                multipleChoice[0] = new String[]{"0"};
+                multipleChoice[1] = generateQuestionOne();
+                break;
+            case 1: 
+                multipleChoice[0] = new String[]{"2"};
+                multipleChoice[1] = generateQuestionThree();
+                break;
+        }
+        return multipleChoice;
     }
  
     public static void main(String[] args) {
@@ -96,6 +107,7 @@ public class TFPractice3 extends Assessment {
     }
  
     // Question Two: Which is an equivalent fraction to " "/ " "?
+    //TODO: answer's were all whole numbers
     private String[] generateQuestionTwo() {
         Random random = new Random(); // Will be used to generate the random numbers
         int num = random.nextInt(40) + 1; // The number in the question is between 1 and 100
@@ -139,6 +151,7 @@ public class TFPractice3 extends Assessment {
 
     
         // Question Three: fraction word problem, see question 3 string array?
+        //TODO: PLEASE SHORTEN???
         public String[] generateQuestionThree() {
             Random random = new Random(); // Will be used to generate the random numbers
             int ranNum = random.nextInt(100) + 1; // random number for first integer

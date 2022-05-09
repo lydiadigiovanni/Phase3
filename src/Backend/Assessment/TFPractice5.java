@@ -10,7 +10,7 @@ public class TFPractice5 extends Assessment{
     @Override
     public String[][] generateMultipleChoiceQuestion() {
         String[][] multipleChoice = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(4);
+        int i = ThreadLocalRandom.current().nextInt(3);
         switch (i) {
             case 0:
                 multipleChoice[0] = new String[]{"0"};
@@ -31,14 +31,29 @@ public class TFPractice5 extends Assessment{
 
     @Override
     public String[][] generateTrueFalseQuestion() {
-        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public String[][] generateUserInputQuestion() {
-        // TODO Auto-generated method stub
-        return null;
+        String[][] multipleChoice = new String[2][1];
+        int i = ThreadLocalRandom.current().nextInt(3);
+        switch (i) {
+            case 0:
+                multipleChoice[0] = new String[]{"0"};
+                multipleChoice[1] = generateQuestionOne();
+                break;
+            case 1: 
+                multipleChoice[0] = new String[]{"1"};
+                multipleChoice[1] = generateQuestionTwo();
+                break;
+            case 2: 
+                multipleChoice[0] = new String[]{"2"};
+                multipleChoice[1] = generateQuestionThree();
+                break;
+          
+        }
+        return multipleChoice;
     }
 public static void main(String[] args) {
     //Test question one

@@ -3,6 +3,10 @@ package Backend.Grade;
 import Backend.Assessment.Assessment;
 import Backend.Assessment.KiPractice1;
 import Backend.Assessment.KiPractice2;
+import Backend.Assessment.KiPractice3;
+import Backend.Assessment.KiPractice4;
+import Backend.Assessment.KiPractice5;
+import Backend.Assessment.KiPractice6;
 
 public class GradeKi extends Grade {
     private String youtubeVideo;
@@ -63,26 +67,22 @@ public class GradeKi extends Grade {
 
     @Override
     protected Assessment getPractice3() {
-        // TODO Auto-generated method stub
-        return null;
+        return new KiPractice3();
     }
 
     @Override
     protected Assessment getPractice4() {
-        // TODO Auto-generated method stub
-        return null;
+        return new KiPractice4();
     }
 
     @Override
     protected Assessment getPractice5() {
-        // TODO Auto-generated method stub
-        return null;
+        return new KiPractice5();
     }
 
     @Override
     protected Assessment getPractice6() {
-        // TODO Auto-generated method stub
-        return null;
+        return new KiPractice6();
     }
     
 }

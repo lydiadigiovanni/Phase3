@@ -40,8 +40,28 @@ public class FSPractice1 extends Assessment {
 
     @Override
     public String[][] generateUserInputQuestion() {
-        // TODO Auto-generated method stub
-        return null;
+        String[][] userInput = new String[2][1];
+        int i = ThreadLocalRandom.current().nextInt(4);
+        switch (i) {
+            case 0:
+                userInput[0] = new String[] { "0" };
+                userInput[1] = generateQuestionOne();
+                break;
+            case 1:
+                userInput[0] = new String[] { "1" };
+                userInput[1] = generateQuestionTwo();
+                break;
+            case 2:
+                userInput[0] = new String[] { "2" };
+                userInput[1] = generateQuestionThree();
+                break;    
+            case 3:
+                userInput[0] = new String[] { "3" };
+                userInput[1] = generateQuestionThree();
+                break;
+        }
+        return userInput;
+
         }
         
     

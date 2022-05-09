@@ -33,15 +33,15 @@ public class KiPractice1 extends Assessment {
 
     @Override
     public String[][] generateUserInputQuestion() {
-        String[][] multipleChoice = new String[2][1];
+        String[][] userInput = new String[2][1];
         int i = ThreadLocalRandom.current().nextInt(1);
         switch (i) {
             case 0: 
-                multipleChoice[0] = new String[]{"0"};
-                multipleChoice[1] = generateQuestionTwo();
+                userInput[0] = new String[]{"0"};
+                userInput[1] = generateQuestionTwo();
                 break;
         }
-        return multipleChoice;
+        return userInput;
     }
     
     //Question One: How many "anchors, compasses, coconuts" are there?

@@ -45,6 +45,10 @@ public class Map2Controller extends MapControllerParent{
     @FXML
     private Button tutorialButton4;
 
+    private String path = "/UI/TutoPracTest/TutoPracTestView.fxml";
+
+    private String mapName = "Map2";
+
     //SOUNDS TOO BUGGY RIGHT NOW, FIX LATER?
     //private Media sound;
 
@@ -54,14 +58,14 @@ public class Map2Controller extends MapControllerParent{
 
     @FXML
     void practiceButton3Clicked(ActionEvent event) {
-
+        model.switchToTutoPracTest(event, practiceButton3, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade(), "Map2");
         //mediaPlayer.stop();
 
     }
 
     @FXML
     void practiceButton4Clicked(ActionEvent event) {
-
+        model.switchToTutoPracTest(event, practiceButton4, path, getGrade(), mapName);
         //mediaPlayer.stop();
 
     }
@@ -75,7 +79,7 @@ public class Map2Controller extends MapControllerParent{
 
     @FXML
     void testButtonClicked(ActionEvent event) {
-
+        model.switchToTutoPracTest(event, testButton3, path, getGrade(), mapName);
         //mediaPlayer.stop();
 
     }

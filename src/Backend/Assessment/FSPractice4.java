@@ -10,7 +10,7 @@ public class FSPractice4 extends Assessment {
     @Override
     public String[][] generateMultipleChoiceQuestion() {
         String[][] multipleChoice = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(4);
+        int i = ThreadLocalRandom.current().nextInt(1);
         switch (i) {
             case 0:
                 multipleChoice[0] = new String[] { "0" };
@@ -30,7 +30,7 @@ public class FSPractice4 extends Assessment {
     @Override
     public String[][] generateUserInputQuestion() {// question 1 and 2 has images to be uploaded
         String[][] userInput = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(4);
+        int i = ThreadLocalRandom.current().nextInt(3);
         switch (i) {
             case 0:
                 userInput[0] = new String[] { "0" };

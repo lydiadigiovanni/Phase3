@@ -1,6 +1,12 @@
 package Backend.Grade;
 
 import Backend.Assessment.Assessment;
+import Backend.Assessment.FSPractice1;
+import Backend.Assessment.FSPractice2;
+import Backend.Assessment.FSPractice3;
+import Backend.Assessment.FSPractice4;
+import Backend.Assessment.FSPractice5;
+import Backend.Assessment.FSPractice6;
 import javafx.scene.web.WebView;
 
 public class GradeFS extends Grade{
@@ -51,38 +57,32 @@ public class GradeFS extends Grade{
 
     @Override
     protected Assessment getPractice1() {
-        // TODO Auto-generated method stub
-        return null;
+        return new FSPractice1();
     }
 
     @Override
     protected Assessment getPractice2() {
-        // TODO Auto-generated method stub
-        return null;
+        return new FSPractice2();
     }
 
     @Override
     protected Assessment getPractice3() {
-        // TODO Auto-generated method stub
-        return null;
+        return new FSPractice3();
     }
 
     @Override
     protected Assessment getPractice4() {
-        // TODO Auto-generated method stub
-        return null;
+        return new FSPractice4();
     }
 
     @Override
     protected Assessment getPractice5() {
-        // TODO Auto-generated method stub
-        return null;
+        return new FSPractice5();
     }
 
     @Override
     protected Assessment getPractice6() {
-        // TODO Auto-generated method stub
-        return null;
+        return new FSPractice6();
     }
     
 }

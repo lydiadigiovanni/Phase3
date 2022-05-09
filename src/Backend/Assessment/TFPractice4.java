@@ -10,7 +10,7 @@ public class TFPractice4 extends Assessment {
     @Override
     public String[][] generateMultipleChoiceQuestion() {
         String[][] multipleChoice = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(4);
+        int i = ThreadLocalRandom.current().nextInt(3);
         switch (i) {
             case 0:
                 multipleChoice[0] = new String[]{"0"};
@@ -37,8 +37,19 @@ public class TFPractice4 extends Assessment {
  
     @Override
     public String[][] generateUserInputQuestion() {
-        // TODO Auto-generated method stub
-        return null;
+        String[][] multipleChoice = new String[2][1];
+        int i = ThreadLocalRandom.current().nextInt(3);
+        switch (i) {
+            case 0:
+                multipleChoice[0] = new String[]{"1"};
+                multipleChoice[1] = generateQuestionTwo();
+                break;
+            case 1: 
+                multipleChoice[0] = new String[]{"2"};
+                multipleChoice[1] = generateQuestionThree();
+                break;
+        }
+        return multipleChoice;
     }
  
     public static void main(String[] args) {
@@ -121,6 +132,7 @@ public class TFPractice4 extends Assessment {
  
     }
         // Question Three:
+        //TODO: SHANE FIX THIS
         private String[] generateQuestionThree() {
             Random random = new Random(); // Will be used to generate the random numbers
             int num = random.nextInt(12) + 1; // The number in the question is between 1 and 100

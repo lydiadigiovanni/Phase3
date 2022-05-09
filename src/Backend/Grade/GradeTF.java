@@ -1,6 +1,12 @@
 package Backend.Grade;
 
 import Backend.Assessment.Assessment;
+import Backend.Assessment.TFPractice1;
+import Backend.Assessment.TFPractice2;
+import Backend.Assessment.TFPractice3;
+import Backend.Assessment.TFPractice4;
+import Backend.Assessment.TFPractice5;
+import Backend.Assessment.TFPractice6;
 import javafx.scene.web.WebView;
 
 public class GradeTF extends Grade{
@@ -51,38 +57,32 @@ public class GradeTF extends Grade{
 
     @Override
     protected Assessment getPractice1() {
-        // TODO Auto-generated method stub
-        return null;
+        return new TFPractice1();
     }
 
     @Override
     protected Assessment getPractice2() {
-        // TODO Auto-generated method stub
-        return null;
+        return new TFPractice2();
     }
 
     @Override
     protected Assessment getPractice3() {
-        // TODO Auto-generated method stub
-        return null;
+        return new TFPractice3();
     }
 
     @Override
     protected Assessment getPractice4() {
-        // TODO Auto-generated method stub
-        return null;
+        return new TFPractice4();
     }
 
     @Override
     protected Assessment getPractice5() {
-        // TODO Auto-generated method stub
-        return null;
+        return new TFPractice5();
     }
 
     @Override
     protected Assessment getPractice6() {
-        // TODO Auto-generated method stub
-        return null;
+        return new TFPractice6();
     }
     
 }
