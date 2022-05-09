@@ -200,7 +200,11 @@ public class TutoPracTestController {
                         checkmarkindex = 3;
                     }
                 }
-                System.out.println("index is: " + checkmarkindex);
+                else if (model.getFirstLetters().equalsIgnoreCase("Test")) {
+                    if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
+                        checkmarkindex = 4;
+                }
+                }
                 controller.setCheckmarkBoolean(checkmarkindex);
                 controller.initialize();
 
