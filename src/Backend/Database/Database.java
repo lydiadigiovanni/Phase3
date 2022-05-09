@@ -149,23 +149,6 @@ public class Database {
         }
     }
 
-    public static void main(String[] args) {
-        try {
-            //createUser("TestUser1", "Ki", "Password", "Spaghetti", "Also Spaghetti");
-            //Boolean progress[] = getMapProgress("TestUser1", "ki", "map1");
-
-            System.out.println(getCurrentUserGrade());
-            //updateUserGrade("Testing1", "Ki");
-            //System.out.println(getCurrentUserGrade());
-            //insertUser("Testing1", "Ki");
-            //updateUserGrade("Testing1", "FS");
-            //System.out.println(getCurrentUserGrade());
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
-
     public static Grade getCurrentUserGradeClass() {
         Class<?> clazz;
         Grade grade = null;
@@ -261,4 +244,59 @@ public class Database {
         }
         return null;
     }   
+
+
+    public static String getUsername(String username) {
+        connection = getConnection();
+        try {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM student_information WHERE studentUserName = '" + username + "'");
+            while(rs.next()) {
+                return rs.getString("studentUserName");
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static String getSecurityAnswerOne(String username) {
+        connection = getConnection();
+        try {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM student_information WHERE studentUserName = '" + username + "'");
+            while(rs.next()) {
+                return rs.getString("securityAnswerOne");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static String getSecurityAnswerTwo(String username) {
+        connection = getConnection();
+        try {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM student_information WHERE studentUserName = '" + username + "'");
+            while(rs.next()) {
+                return rs.getString("securityAnswerTwo");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static void setPassword(String username, String password) {
+        connection = getConnection();
+        try {
+            Statement st = connection.createStatement();
+            st.executeUpdate("UPDATE student_information SET password = '" + password + "' WHERE studentUserName = '" + username + "'");
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 }
