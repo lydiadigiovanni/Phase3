@@ -6,6 +6,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,7 +15,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Login.CreateAccountController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Login.CreateAccountController">
    <children>
       <ImageView fitHeight="837.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -194,20 +195,23 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <TextField layoutX="378.0" layoutY="15.0" prefHeight="25.0" prefWidth="208.0" style="-fx-border-color: black;" />
-                  <PasswordField layoutX="378.0" layoutY="59.0" prefHeight="25.0" prefWidth="208.0" style="-fx-border-color: black;" />
-                  <PasswordField layoutX="378.0" layoutY="103.0" prefHeight="25.0" prefWidth="208.0" style="-fx-border-color: black;" />
-                  <RadioButton layoutX="378.0" layoutY="151.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="23.0">
+                  <TextField fx:id="usernameTextField" layoutX="378.0" layoutY="15.0" prefHeight="25.0" prefWidth="208.0" style="-fx-border-color: black;" />
+                  <PasswordField fx:id="passwordTextField" layoutX="378.0" layoutY="59.0" prefHeight="25.0" prefWidth="208.0" style="-fx-border-color: black;" />
+                  <PasswordField fx:id="confirmPasswordTextField" layoutX="378.0" layoutY="103.0" prefHeight="25.0" prefWidth="208.0" style="-fx-border-color: black;" />
+                  <RadioButton fx:id="Ki" layoutX="378.0" layoutY="151.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="23.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="3.0" radius="1.0" spread="1.0" width="3.0" />
+                     </effect>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gradeToggle" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="FS" layoutX="470.0" layoutY="151.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="23.0" toggleGroup="$gradeToggle">
                      <effect>
                         <DropShadow blurType="GAUSSIAN" height="3.0" radius="1.0" spread="1.0" width="3.0" />
                      </effect>
                   </RadioButton>
-                  <RadioButton layoutX="470.0" layoutY="151.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="23.0">
-                     <effect>
-                        <DropShadow blurType="GAUSSIAN" height="3.0" radius="1.0" spread="1.0" width="3.0" />
-                     </effect>
-                  </RadioButton>
-                  <RadioButton layoutX="562.0" layoutY="151.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="23.0">
+                  <RadioButton fx:id="TF" layoutX="562.0" layoutY="151.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="23.0" toggleGroup="$gradeToggle">
                      <effect>
                         <DropShadow blurType="GAUSSIAN" height="3.0" radius="1.0" spread="1.0" width="3.0" />
                      </effect>

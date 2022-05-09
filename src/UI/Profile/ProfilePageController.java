@@ -1,11 +1,18 @@
 package UI.Profile;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
+
+import Backend.Database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+//import javafx.scene.media.Media;
+//import javafx.scene.media.MediaPlayer;
 
 public class ProfilePageController {
 
@@ -48,9 +55,13 @@ public class ProfilePageController {
     @FXML
     private ImageView userAvatar;
 
-    private Media sound;
+    @FXML
+    private Label usernameLabel;
 
-    private MediaPlayer mediaPlayer;
+    //SOUNDS TOO BUGGY RIGHT NOW, FIX LATER?
+    //private Media sound;
+
+    //private MediaPlayer mediaPlayer;
 
     private ProfilePageModel model = new ProfilePageModel();
 
@@ -58,29 +69,172 @@ public class ProfilePageController {
     void backButtonPressed(ActionEvent event) {
         model.toHomePage(event);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     void changeAvatarButtonClicked(ActionEvent event) {
         model.toChangeAvatar(event);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     void changeGradeButtonPressed(ActionEvent event) {
         model.toChangeGradeFlag(event);
-
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
 
     }
 
     @FXML
-    public void initialize() {
-        sound = new Media(getClass().getResource("/Sounds/ship-creaking-1.mp3").toExternalForm());
-        mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
+    public void initialize() throws SQLException, FileNotFoundException {
+        usernameLabel.setText(Database.getCurrentUsername());
+        String avatar = Database.getCurrentAvatar();
+        if (avatar != null) {
+            try {
+                userAvatar.setImage(new Image(new FileInputStream("Pictures/Profile/" + avatar + ".png")));
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+        else {
+            try {
+                userAvatar.setImage(new Image(new FileInputStream("Pictures/Profile/Avatar_1.png")));
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+
+        int[] array = Database.getAssignmentGrades();
+
+        for(int index = 0; index < array.length; index++) {
+            switch (index){
+                case(0):
+                    if(array[index] >= 90) {
+                        kiReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Gold-Medal.png")));
+                    }
+                    else if(array[index] >= 70) {
+                        kiReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Silver-Medal.png")));
+                    }
+                    else if(array[index] >= 50) {
+                        kiReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Counting-Bronze-Medal.png")));
+                    }
+                    else if(array[index] <= 49) {
+                        kiReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
+                    }
+                case(1):
+                    if(array[index] >= 90) {
+                        kiReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Operation-Gold-Medal.png")));
+                    }
+                    else if(array[index] >= 70) {
+                        kiReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Operation-Silver-Medal.png")));
+                    }
+                    else if(array[index] >= 50) {
+                        kiReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Operation-Bronze-Medal.png")));
+                    }
+                    else if(array[index] <= 49) {
+                        kiReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
+                    }
+                case(2):
+                    if(array[index] >= 90) {
+                        kiReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Geometry-Gold-Medal.png")));
+                    }
+                    else if(array[index] >= 70) {
+                        kiReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Geometry-Silver-Medal.png")));
+                    }
+                    else if(array[index] >= 50) {
+                        kiReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/K-Geometry-Bronze-Medal.png")));
+                    }
+                    else if(array[index] <= 49) {
+                        kiReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
+                    }
+                case(3):
+                    if(array[index] >= 90) {
+                        fsReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Operation-Gold-Medal.png")));
+                    }
+                    else if(array[index] >= 70) {
+                        fsReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Operation-Silver-Medal.png")));
+                    }
+                    else if(array[index] >= 50) {
+                        fsReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Operation-Bronze-Medal.png")));
+                    }
+                    else if(array[index] <= 49) {
+                        fsReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
+                    }
+                case(4):
+                    if(array[index] >= 90) {
+                        fsReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Time-Gold-Medal.png")));
+                    }
+                    else if(array[index] >= 70) {
+                        fsReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Time-Silver-Medal.png")));
+                    }
+                    else if(array[index] >= 50) {
+                        fsReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Time-Bronze-Medal.png")));
+                    }
+                    else if(array[index] <= 49) {
+                        fsReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
+                    }
+                case(5):
+                    if(array[index] >= 90) {
+                        fsReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Measurement-Gold-Medal.png")));
+                    }
+                    else if(array[index] >= 70) {
+                        fsReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Measurement-Silver-Medal.png")));
+                    }
+                    else if(array[index] >= 50) {
+                        fsReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/FS-Measurement-Bronze-Medal.png")));
+                    }
+                    else if(array[index] <= 49) {
+                        fsReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
+                    }
+                case(6):
+                    if(array[index] >= 90) {
+                        tfReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Operation-Gold-Medal.png")));
+                    }
+                    else if(array[index] >= 70) {
+                        tfReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Operation-Silver-Medal.png")));
+                    }
+                    else if(array[index] >= 50) {
+                        tfReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Operation-Bronze-Medal.png")));
+                    }
+                    else if(array[index] <= 49) {
+                        tfReward1.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
+                    }
+                case(7):
+                    if(array[index] >= 90) {
+                        tfReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Fraction-Gold-Medal.png")));
+                    }
+                    else if(array[index] >= 70) {
+                        tfReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Fraction-Silver-Medal.png")));
+                    }
+                    else if(array[index] >= 50) {
+                        tfReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Fraction-Bronze-Medal.png")));
+                    }
+                    else if(array[index] <= 49) {
+                        tfReward2.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
+                    }
+                case(8):
+                    if(array[index] >= 90) {
+                        tfReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Algebra-Gold-Medal.png")));
+                    }
+                    else if(array[index] >= 70) {
+                        tfReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Algebra-Silver-Medal.png")));
+                    }
+                    else if(array[index] >= 50) {
+                        tfReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/TF-Algebra-Bronze-Medal.png")));
+                    }
+                    else if(array[index] <= 49) {
+                        tfReward3.setImage(new Image(new FileInputStream("Pictures/Rewards/brownCircle.png")));
+                    }
+            }
+        }
+
+
+        //sound = new Media(getClass().getResource("/Sounds/ship-creaking-1.mp3").toExternalForm());
+        //mediaPlayer = new MediaPlayer(sound);
+        //mediaPlayer.play();
     }
 
 }

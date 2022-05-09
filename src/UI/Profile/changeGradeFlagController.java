@@ -1,5 +1,8 @@
 package UI.Profile;
 
+import java.sql.SQLException;
+
+import Backend.Database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,7 +15,7 @@ public class changeGradeFlagController {
     private RadioButton FS;
 
     @FXML
-    private RadioButton K;
+    private RadioButton Ki;
 
     @FXML
     private RadioButton TF;
@@ -34,8 +37,12 @@ public class changeGradeFlagController {
     }
 
     @FXML
-    void saveGradeChangeButtonClicked(ActionEvent event) {
-        model.saveGradeChange(event);
+    void saveGradeChangeButtonClicked(ActionEvent event) throws SQLException {
+        if (changeGrade.getSelectedToggle() != null) {
+            String grade = ((RadioButton) changeGrade.getSelectedToggle()).getId();
+            Database.updateUserGrade(grade);
+            model.saveGradeChange(event);
+        }
     }
 
 }

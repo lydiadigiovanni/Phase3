@@ -1,14 +1,17 @@
 package UI.Map.Map1;
 
+import Backend.Database.Database;
+import Backend.Grade.Grade;
 import UI.Map.MapControllerParent;
+import UI.Map.MapModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+//import javafx.scene.media.Media;
+//import javafx.scene.media.MediaPlayer;
 
-public class MapController implements MapControllerParent{
+public class MapController extends MapControllerParent{
 
     @FXML
     private Button homeButton;
@@ -43,9 +46,10 @@ public class MapController implements MapControllerParent{
     @FXML
     private Button tutorialButton2;
 
-    private Media sound;
+    //SOUNDS TOO BUGGY RIGHT NOW, FIX LATER?
+    //private Media sound;
 
-    private MediaPlayer mediaPlayer;
+    //private MediaPlayer mediaPlayer;
 
     private MapModel model = new MapModel();
 
@@ -56,65 +60,66 @@ public class MapController implements MapControllerParent{
 
     @FXML
     void practiceButton1Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, practiceButton1, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, practiceButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade(), "MapM");  //Relic of when it was first designed, Map1 would be better, but due to how it was previously impemented, MapM is the best choice
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
 
     }
 
     @FXML
     void practiceButton2Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, practiceButton2, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, practiceButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade(), "MapM");
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     void returnHome(ActionEvent event) {
         model.toHomePage(event);
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     void testButtonClicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, testButton1, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, testButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade() , "MapM");
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
 
     @FXML
     void tutorialButton1Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton1, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, tutorialButton1, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade() , "MapM");
 
-        mediaPlayer.stop();
+       // mediaPlayer.stop();
     }
 
     @FXML
     void tutorialButton2Clicked(ActionEvent event) {
-        model.switchToTutoPracTest(event, tutorialButton2, "/UI/TutoPracTest/TutoPracTestView.fxml");
+        model.switchToTutoPracTest(event, tutorialButton2, "/UI/TutoPracTest/TutoPracTestView.fxml", getGrade() , "MapM");
 
-        mediaPlayer.stop();
+        //mediaPlayer.stop();
     }
     
     @Override
     public void setCheckmarkBoolean(int checkmarkindex) {
-        model.setCheckmarkBoolean(checkmarkindex);
+        model.setCheckmarkBoolean(checkmarkindex, "map1");
     }
 
     @Override
     @FXML
     public void initialize() {
-        Boolean[] checkmarkIndex = model.getCheckmarkIndex();
+        Boolean[] checkmarkIndex = model.getCheckmarkIndex("Map1");
         tutorial1Check.setVisible(checkmarkIndex[0]);
         practice1Check.setVisible(checkmarkIndex[1]);
         tutorial2Check.setVisible(checkmarkIndex[2]);
         practice2Check.setVisible(checkmarkIndex[3]);
         testCheck.setVisible(checkmarkIndex[4]);
 
-        sound = new Media(getClass().getResource("/Sounds/lake-waves-lapping-gently-on-the-beach-01.mp3").toExternalForm());
-        mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
-        mediaPlayer.setVolume(0.15);
+        //sound = new Media(getClass().getResource("/Sounds/lake-waves-lapping-gently-on-the-beach-01.mp3").toExternalForm());
+        //mediaPlayer = new MediaPlayer(sound);
+        //mediaPlayer.play();
+        //mediaPlayer.setVolume(0.15);
     }
+
 }
