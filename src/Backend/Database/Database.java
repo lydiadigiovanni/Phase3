@@ -15,7 +15,7 @@ public class Database {
     public static Connection getConnection() {
         if (connection == null) {
             try {
-                connection = java.sql.DriverManager.getConnection(url, "root", "password666");
+                connection = java.sql.DriverManager.getConnection(url, "root", "password");
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -192,6 +192,20 @@ public class Database {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+
+    public static int getAssignmentGrade(String firstLetters, String lastLetter) { 
+        connection = getConnection();
+        try {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery("SELECT " + getCurrentUserGrade() + firstLetters.toLowerCase() + lastLetter.toLowerCase() + " FROM student_information WHERE studentUserName = '" + getCurrentUsername() + "'");
+            rs.next();
+            return rs.getInt(getCurrentUserGrade() + firstLetters.toLowerCase() + lastLetter.toLowerCase());
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     public static int[] getAssignmentGrades() {
