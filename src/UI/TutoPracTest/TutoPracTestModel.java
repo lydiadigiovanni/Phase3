@@ -1,6 +1,7 @@
 package UI.TutoPracTest;
 import java.util.concurrent.ThreadLocalRandom;
 import Backend.Assessment.Assessment;
+import Backend.Grade.Grade;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.AnchorPane;
@@ -19,6 +20,10 @@ public class TutoPracTestModel {
     private String lastLetter;
 
     private String mapName;
+
+    private Grade grade;
+
+    private String island;
 
     public TutoPracTestModel() {
         // TODO Auto-generated constructor stub
@@ -57,31 +62,30 @@ public class TutoPracTestModel {
         
     }
 
-    private Assessment getAssessmentClass() {
+    private Assessment getAssessmentClass(Grade grade, String island) {
+        /**
+         * Call the proper Practice based off of the grade and the island.
+         */
         try {
             String s = "";
-            Class<?> assessmentClass = Class.forName("Backend.Assessment.KiPractice1");
+            //Class<?> assessmentClass = Class.forName("Backend.Assessment.KiPractice1");
             Assessment assessment;
             switch (getFirstLetters()) {
                 case "prac":
                     s = "Practice";
-                    assessmentClass = Class.forName("Backend.Assessment.Ki" + s + getLastLetter());
-                    assessment = (Assessment) assessmentClass.getDeclaredConstructor().newInstance();
+                    assessment = grade.getPractice(lastLetter);
                     return assessment;
                 case "test":
-                    int random = ThreadLocalRandom.current().nextInt(2);
-                    setLastLetter(Integer.toString(random+1));
-                    assessmentClass = Class.forName("Backend.Assessment.KiPractice" + (random + 1));
-                    assessment = (Assessment) assessmentClass.getDeclaredConstructor().newInstance();
+                    int random = ThreadLocalRandom.current().nextInt(2); //0 or 1
+                    //setLastLetter(());
+                    assessment = grade.getPractice(Integer.toString(Integer.parseInt(getLastLetter()) + random));
                     return assessment;
 
             }
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
-            System.out.println("huge fuck up");
         }
-        return null; //If this returns null, there was a fuck up.
+        return null; 
     }
 
     public void generateUserInputQuestion(String[][][] questionTypeAndWhatQuestionAndQuestion, Label questionLabel) {
@@ -121,7 +125,7 @@ public class TutoPracTestModel {
     }
 
     public void generateQuestion(Label questionLabel, HBox pictureBox, RadioButton choiceButtonOne, RadioButton choiceButtonTwo, RadioButton choiceButtonThree, RadioButton choiceButtonFour, AnchorPane userInputAnchor, AnchorPane multipleChoiceAnchor) {
-        String questionTypeAndWhatQuestionAndQuestion[][][] = getAssessmentClass().generateQuestion();
+        String questionTypeAndWhatQuestionAndQuestion[][][] = getAssessmentClass(grade, island).generateQuestion();
         String questionType = questionTypeAndWhatQuestionAndQuestion[0][0][0];
         switch (questionType) {
             case "0":
@@ -149,10 +153,27 @@ public class TutoPracTestModel {
 
     public void setMapName(String substring) {
         mapName = substring;
+        switch (substring) {
+            case "MapM":
+                island = "1";
+                break;
+        
+            case "Map2":
+                island = "2";
+                break;
+            
+            case "Map3":
+                island = "3";
+                break;
+        }
     }
 
     public String getMapName() {
         return mapName;
+    }
+
+    public void setGrade(Grade grade) {
+        this.grade = grade;
     }
 
     

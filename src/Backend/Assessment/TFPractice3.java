@@ -1,13 +1,33 @@
-//Purpose: First round of practice questions for Fraction Lagoon
 package Backend.Assessment;
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+//Purpose: First round of practice questions for Fraction Lagoon
 import java.util.ArrayList;
 import java.util.Random;
 public class TFPractice3 extends Assessment {
  
     @Override
     public String[][] generateMultipleChoiceQuestion() {
-        // TODO Auto-generated method stub
-        return null;
+        String[][] multipleChoice = new String[2][1];
+        int i = ThreadLocalRandom.current().nextInt(4);
+        switch (i) {
+            case 0:
+                multipleChoice[0] = new String[]{"0"};
+                multipleChoice[1] = generateQuestionOne();
+                break;
+            case 1: 
+                multipleChoice[0] = new String[]{"1"};
+                multipleChoice[1] = generateQuestionTwo();
+                break;
+            case 2: 
+                multipleChoice[0] = new String[]{"2"};
+                multipleChoice[1] = generateQuestionThree();
+                break;
+           
+        }
+        return multipleChoice;
     }
  
     @Override
@@ -38,6 +58,14 @@ public class TFPractice3 extends Assessment {
         System.out.println(question2[2]);
         System.out.println(question2[3]);
         System.out.println(question2[4]);
+        //test question three
+        TFPractice3 test3 = new TFPractice3();
+        String[] question3 = test3.generateQuestionThree();
+        System.out.println(question3[0]);
+        System.out.println(question3[1]);
+        System.out.println(question3[2]);
+        System.out.println(question3[3]);
+        System.out.println(question3[4]);
  
     }
  
@@ -108,6 +136,33 @@ public class TFPractice3 extends Assessment {
         return questionTwo;
  
     }
+
+    
+        // Question Three: fraction word problem, see question 3 string array?
+        public String[] generateQuestionThree() {
+            Random random = new Random(); // Will be used to generate the random numbers
+            int ranNum = random.nextInt(100) + 1; // random number for first integer
+            int ranNum2 = random.nextInt(100) + 1; //random number for second integer
+            // while loop to check if int 1is less then num 2, or else give another random to int 1
+            while (ranNum <= ranNum2){
+                ranNum = random.nextInt(100) + 1;
+
+            }
+                       
+            String[] questionThree = new String[6]; // Array will hold question & possible answers
+            questionThree[0] = "Gilly and Luke went to the school library one fine morning.\n"+
+            "They planned to read books that day and borrow books to read during\n"+
+            "the winter.\n"+ "\nOf the "+ ranNum +" books on fairy tales, Gilly borrowed " + ranNum2 + ". What fraction of"+
+            " the books on fairy tales did she borrow?";            ;
+
+            questionThree[1] = ranNum2+"/"+ranNum; // Actual answer
+            questionThree[2] = (ranNum2+2)+"/"+(ranNum+6); // Wrong answer
+            questionThree[3] = (ranNum+2)+"/"+(ranNum2+6); // Wrong answer
+            questionThree[4] = (ranNum2+4)+"/"+(ranNum+4); // Wrong answer
+    
+            return questionThree;
+    
+        }
  
 }
 
