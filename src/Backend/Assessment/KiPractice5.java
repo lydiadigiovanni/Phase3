@@ -204,7 +204,7 @@ public class KiPractice5 extends Assessment {
 
     }
     
-     //Question Four: How many corners does a " " have? (show pic of shape in the question)
+     //Question Four: How many corners does a " " have? *no picture*
      private String[] generateQuestionFour() {
         String[] shapes = {"square", "circle", "rectangle", "triangle", "diamond", "pentagon",
         "hexagon", "oval", "octagon", "star", "trapezoid", "parallelogram"}; //Array of shapes for the question
