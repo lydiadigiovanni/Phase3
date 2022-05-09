@@ -1,5 +1,6 @@
 //Purpose: First round of practice questions for Geometry Coast
 package Backend.Assessment;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
@@ -31,9 +32,21 @@ public class KiPractice5 extends Assessment {
     }
 
     @Override
-    public String[][] generateUserInputQuestion() {
-        // TODO Auto-generated method stub
-        return null;
+    public String[][] generateUserInputQuestion() {//question 1 and 2 has pictures
+        String[][] userInput = new String[2][1];
+        int i = ThreadLocalRandom.current().nextInt(4);
+        switch (i) {
+            case 0:
+                userInput[0] = new String[] { "0" };
+                userInput[1] = generateQuestionOne();
+                break;
+            case 1:
+                userInput[0] = new String[] { "1" };
+                userInput[1] = generateQuestionTwo();
+                break;
+           
+        }
+        return userInput;
     }
     public static void main (String[] args) {
         //Test question one

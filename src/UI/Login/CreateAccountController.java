@@ -33,7 +33,7 @@ public class CreateAccountController {
     @FXML
     private TextField usernameTextField;
 
-    
+
     private CreateAccountModel model = new CreateAccountModel(); //Make CreateAccountModel object
 
     //Event = user clicks the loginButton to go back to login screen
