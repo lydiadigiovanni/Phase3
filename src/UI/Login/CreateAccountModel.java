@@ -32,7 +32,6 @@ public class CreateAccountModel {
     //Go to the security screen when the user clicks "next"
     public void goToSecurity(ActionEvent event, Button button, String userName, String password, String grade) {
         try {
-
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Login/SecurityView.fxml"));
             Parent securityParent = loader.load();
             SecurityController controller = loader.getController();

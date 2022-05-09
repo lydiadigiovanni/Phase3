@@ -1,6 +1,7 @@
 //Controller for the reset password scene
 package UI.Login;
 
+import Backend.Database.Database;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -28,6 +29,12 @@ public class ResetPasswordController {
     @FXML
     private TextField usernameText;
 
+    @FXML
+    private TextField securityAnswerOne;
+
+    @FXML
+    private TextField securityAnswerTwo;
+
     private ResetPasswordModel model = new ResetPasswordModel(); //Make ResetPasswordModel object
     
     //Event = user presses login button
@@ -42,10 +49,16 @@ public class ResetPasswordController {
     @FXML
     void submitButtonPressed(ActionEvent event) {
         //if passwords match & security questions are correct
+        if(Database.getUsername(usernameText.getText()) != null) {
+            if((Database.getSecurityAnswerOne(usernameText.getText())).equalsIgnoreCase(securityAnswerOne.getText()) && (Database.getSecurityAnswerTwo(usernameText.getText())).equalsIgnoreCase(securityAnswerTwo.getText())) {
+                if(passwordText.getText().equals(confirmPasswordText.getText())) {
+                    Database.setPassword(usernameText.getText(), passwordText.getText());
+            }
         model.goToLogin(event, loginButton);
         //else
         //model.openPopup(event, loginButton)
-
+            }
+        }
     }
 
 }

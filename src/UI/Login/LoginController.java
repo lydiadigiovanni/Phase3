@@ -1,6 +1,7 @@
 //Controller for login page
 package UI.Login;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 import Backend.Database.Database;
@@ -47,7 +48,7 @@ public class LoginController {
 
     //Take them to the create account form when they click create account
     @FXML
-    void createAccountClicked(ActionEvent event) throws IOException {
+    void createAccountClicked(ActionEvent event) {
         model.goToCreateAccount(event, createAccount);
     }
 
