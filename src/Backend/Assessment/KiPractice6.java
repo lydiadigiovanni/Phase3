@@ -1,6 +1,7 @@
 //Purpose: Second round of practice questions for Geometry Coast
 package Backend.Assessment;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
@@ -51,6 +52,23 @@ public class KiPractice6 extends Assessment {
          System.out.println(question2[2]); 
          System.out.println(question2[3]); 
          System.out.println(question2[4]);
+         //Test question three
+         KiPractice6 test3 = new KiPractice6();
+         String[] question3 = test3.generateQuestionThree();
+         System.out.println(question3[0]);
+         System.out.println(question3[1]); 
+         System.out.println(question3[2]); 
+         System.out.println(question3[3]); 
+         System.out.println(question3[4]);
+         //Test question four
+         KiPractice6 test4 = new KiPractice6();
+         String[] question4 = test3.generateQuestionFour();
+         System.out.println(question4[0]);
+         System.out.println(question4[1]); 
+         System.out.println(question4[2]); 
+         System.out.println(question4[3]); 
+         System.out.println(question4[4]);
+        
     }
 
     
@@ -87,7 +105,7 @@ public class KiPractice6 extends Assessment {
     private String[] generateQuestionTwo() {
         String[] itemsInQuestions = {"soccer ball", "television", "watermelon", "pizza slice", "kite"}; //Array contains the thing/item in question
         String[] shapeOfItem = {"Circle", "Rectangle", "Oval", "Triangle", "Diamond"}; //Array contains shape that thing is
-        String itemInQuestion = itemsInQuestions[ThreadLocalRandom.current().nextInt(6)]; //Used to randomize thing/item in the question
+        String itemInQuestion = itemsInQuestions[ThreadLocalRandom.current().nextInt(5)]; //Used to randomize thing/item in the question
         String[] questionTwo = new String[6]; //Array will contain the question and its answers
         questionTwo[0] = "Which shape is a " + itemInQuestion + "?";
        if (itemInQuestion == itemsInQuestions[0]) { //If the item is a soccer ball
@@ -123,9 +141,102 @@ public class KiPractice6 extends Assessment {
             questionTwo[3] = shapeOfItem[2]; //Wrong answer is oval
             questionTwo[4] = shapeOfItem[3]; //Wrong answer is triangle
         } 
+    
         return questionTwo;
 
     }  
-   
     
+    //Question Three: Which picture is a " "? (3D shapes) Multiple choice: Pictures in answers
+    private String[] generateQuestionThree() {
+        String[] shapes = {"cylinder", "sphere", "cone", "rectangular prism", "pyramid", "cube"}; //Array of shapes to use in question itself
+        String shapeInQuestion = shapes[ThreadLocalRandom.current().nextInt(7)]; //Get random shape from shapes
+        String[] answerPics = {"cylinder pic", "sphere pic", "cone pic", "rectangular prism pic", "pyramid pic", "cube pic"};
+        String[] questionThree = new String[6]; //String will hold question & possible answers
+        questionThree[0] = "Which picture is a " + shapeInQuestion + "?"; //Question
+        if (shapeInQuestion == shapes[0]) { //If shape is a cylinder
+            questionThree[1] = answerPics[0]; //Answer is cylinder pic
+            questionThree[2] = answerPics[1]; //Wrong
+            questionThree[3] = answerPics[2]; //Wrong
+            questionThree[4] = answerPics[3]; //Wrong
+        }
+        if (shapeInQuestion == shapes[1]) { //If shape is a sphere
+            questionThree[1] = answerPics[1]; //Answer is sphere pic
+            questionThree[2] = answerPics[0]; //Wrong
+            questionThree[3] = answerPics[4]; //Wrong
+            questionThree[4] = answerPics[5]; //Wrong
+        }
+        if (shapeInQuestion == shapes[2]) { //If shape is a cone
+            questionThree[1] = answerPics[2]; //Answer is cone pic
+            questionThree[2] = answerPics[3]; //Wrong
+            questionThree[3] = answerPics[4]; //Wrong
+            questionThree[4] = answerPics[5]; //Wrong
+        }
+        if (shapeInQuestion == shapes[3]) { //If shape is a rectangular prism
+            questionThree[1] = answerPics[3]; //Answer is rectangular prism pic
+            questionThree[2] = answerPics[1]; //Wrong
+            questionThree[3] = answerPics[2]; //Wrong
+            questionThree[4] = answerPics[4]; //Wrong
+        }
+        if (shapeInQuestion == shapes[4]) { //If shape is a pyramid
+            questionThree[1] = answerPics[4]; //Answer is pic
+            questionThree[2] = answerPics[5]; //Wrong
+            questionThree[3] = answerPics[0]; //Wrong
+            questionThree[4] = answerPics[3]; //Wrong
+        }
+        if (shapeInQuestion == shapes[5]) { //If shape is a cube
+            questionThree[1] = answerPics[5]; //Answer is cube pic
+            questionThree[2] = answerPics[1]; //Wrong
+            questionThree[3] = answerPics[2]; //Wrong
+            questionThree[4] = answerPics[0]; //Wrong
+        }
+        return questionThree;
+        
+    }
+
+     //Question Four: What is the name of this 3D shape? Show shape next to picture. Answers are the name of shapes
+     private String[] generateQuestionFour() {
+        String[] picsOfShapes = {"cylinder pic", "sphere pic", "cone pic", "rectangular prism pic", "pyramid pic", "cube pic"}; //Array of pictures to use next to question
+        String randomPic = picsOfShapes[ThreadLocalRandom.current().nextInt(7)]; //Get random shape from shapes
+        String[] answers = {"cylinder", "sphere", "cone", "rectangular prism", "pyramid", "cube"}; //Different answers
+        String[] questionFour = new String[6]; //String will hold question & possible answers
+        questionFour[0] = "What is the name of this shape? " + randomPic; //Question
+        if (randomPic == picsOfShapes[0]) { //If pic is a cylinder
+            questionFour[1] = answers[0]; //Answer is cylinder
+            questionFour[2] = answers[5]; //Wrong
+            questionFour[3] = answers[2]; //Wrong
+            questionFour[4] = answers[3]; //Wrong
+        }
+        if (randomPic == picsOfShapes[1]) { //If pic is sp pichere
+            questionFour[1] = answers[1]; //Answer is sphere 
+            questionFour[2] = answers[0]; //Wrong
+            questionFour[3] = answers[2]; //Wrong
+            questionFour[4] = answers[4]; //Wrong
+        }
+        if (randomPic == picsOfShapes[2]) { //If pic is cone pic
+            questionFour[1] = answers[2]; //Answer is cone 
+            questionFour[2] = answers[0]; //Wrong
+            questionFour[3] = answers[3]; //Wrong
+            questionFour[4] = answers[1]; //Wrong
+        }
+        if (randomPic == picsOfShapes[3]) { //If pic is rectangular prism pic
+            questionFour[1] = answers[3]; //Answer is rectangular prism 
+            questionFour[2] = answers[1]; //Wrong
+            questionFour[3] = answers[5]; //Wrong
+            questionFour[4] = answers[2]; //Wrong
+        }
+        if (randomPic == picsOfShapes[4]) { //If pic is pyramid pic
+            questionFour[1] = answers[4]; //Answer is pyramid
+            questionFour[2] = answers[5]; //Wrong
+            questionFour[3] = answers[1]; //Wrong
+            questionFour[4] = answers[2]; //Wrong
+        }
+        if (randomPic == picsOfShapes[5]) { //If pic is cube pic
+            questionFour[1] = answers[5]; //Answer is cube 
+            questionFour[2] = answers[3]; //Wrong
+            questionFour[3] = answers[4]; //Wrong
+            questionFour[4] = answers[0]; //Wrong
+        }
+        return questionFour;
+        
+    }
 }

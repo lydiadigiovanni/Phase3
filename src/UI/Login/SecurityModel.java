@@ -34,7 +34,7 @@ public class SecurityModel{
         
     }
 
-     //Go back to login once account is created successful
+    //Go back to login once account is created successful
     //Popup lets them know it was created
     public void openPopup(ActionEvent event, Button button) {
         //First, have main window go to login screen
