@@ -129,7 +129,7 @@ public class TFPractice2 extends Assessment {
         int rng3 = random.nextInt(9); // random number 3 for ones place
 
         String[] questionThree = new String[6]; // Array will hold question & possible answers
-        questionThree[0] = "Round " + rng + rng2 + rng3 + " to the 100th place?";
+        questionThree[0] = "Round " + rng + rng2 + rng3 + " to the 100th place";
 
         if (rng2 < 5) {
 

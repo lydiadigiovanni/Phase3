@@ -87,7 +87,7 @@ public class FSPractice5 extends Assessment {
         String[] questionOne = new String[3]; // Array will contain questions and possible answer
         // Measurement1 and measurement2 are only included in the question below for
         // testing purposes, MUST be deleted
-        questionOne[0] = "Which one is bigger? " + measurement1 + " or " + measurement2; // Actual question
+        questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
         String answer; // Will hold the answer
         // If measurement1 is centimeters and measurement2 is inches
         if ((measurement1 == measurementTypes[0]) && (measurement2 == measurementTypes[1])) {

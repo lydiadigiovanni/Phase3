@@ -52,7 +52,7 @@ public class KiPractice4 extends Assessment {
         Random random = new Random(); //Random object will be used to generate two random numbers
         int firstRandomNum = random.nextInt((10 - 1) + 1) + 1; //First random number between 1 and 10
         int secondRandomNum = random.nextInt((10 - 1) + 1); //Second random number between 1 and 10
-        questionOne[0] = "What is " + firstRandomNum + "- " + secondRandomNum + "?"; //0th index: actual question
+        questionOne[0] = firstRandomNum + " - " + secondRandomNum + " = ?"; //0th index: actual question
         int answer = firstRandomNum - secondRandomNum; //Answer is just basic addition
         questionOne[1] = Integer.toString(answer); //1st index: the answer
         questionOne[2] = Integer.toString(answer-1); //Wrong answer 1
@@ -72,7 +72,7 @@ public class KiPractice4 extends Assessment {
         int plusWhatNumber = random.nextInt((9 - 1) + 1) + 1; 
         //Generate number between 1 and 10 bc the number after the = can be 10
         int numberItEquals = random.nextInt((10 - 1) + 1) + 1; //Generate number between 1 and 10 bc the number after the = can be 10
-        questionTwo[0] = "What is the missing number in ____ + " + plusWhatNumber + "=" + numberItEquals; //Actual question
+        questionTwo[0] = "____ + " + plusWhatNumber + " = " + numberItEquals; //Actual question
         int answer = numberItEquals - plusWhatNumber; //The answer is the number after = minus the number they're adding to
         questionTwo[1] = Integer.toString(answer); //Actual answer
         questionTwo[2] = Integer.toString(answer-1); //Wrong answer

@@ -71,7 +71,7 @@ public class TFPractice1 extends Assessment {
         int secondNumber = random.nextInt(100) + 1; //Second number is between 1 and 100
         int answer = firstNumber * secondNumber; //Answer is the two multiplied
         String[] questionOne = new String[6]; //Array will hold question and possible answers
-        questionOne[0] = "What is " + firstNumber + " * " + secondNumber + "?"; //Actual question
+        questionOne[0] = firstNumber + " * " + secondNumber + " = ?"; //Actual question
         questionOne[1] = Integer.toString(answer); //The answer
         questionOne[2] = Integer.toString(answer + 1); //Wrong answer 
         questionOne[3] = Integer.toString(answer - 1); //Wrong answer 
@@ -107,7 +107,7 @@ public class TFPractice1 extends Assessment {
         int firstNumber = temp * secondNumber; //Multiply secondNumber by temp to make firstNumber a multiple of secondNumber
         int answer = firstNumber / secondNumber; //Answer is the first number divided by the second
         String[] questionThree = new String[6]; //Array will hold question and possible answers
-        questionThree[0] = "What is " + firstNumber + " / " + secondNumber + "?"; //Actual question
+        questionThree[0] = firstNumber + " ÷ " + secondNumber + " = ?"; //Actual question
         questionThree[1] = Integer.toString(answer); //The answer
         questionThree[2] = Integer.toString(answer + 1); //Wrong answer
         questionThree[3] = Integer.toString(answer + 2); //Wrong answer
@@ -126,7 +126,7 @@ public class TFPractice1 extends Assessment {
         int temp = random.nextInt(100) + 1; 
         int firstNumber = temp * quotient; //Now the quotient will be smaller than the first number
         String[] questionFour = new String[6]; //Array will hold question and possible answers
-        questionFour[0] = firstNumber + " / _____ = " + quotient; //Actual question
+        questionFour[0] = firstNumber + " ÷ _____ = " + quotient; //Actual question
         int answer = firstNumber / quotient ; //The answer is the first number / quotient
         questionFour[1] = Integer.toString(answer); //Assign answer to index 1 of questionTwo
         questionFour[2] = Integer.toString(answer + 2); //Wrong answer

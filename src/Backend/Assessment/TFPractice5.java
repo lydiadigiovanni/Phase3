@@ -90,7 +90,7 @@ private String[] generateQuestionOne() {
     String[] questionOne = new String[6]; //String will hold question & possible answers
     if (firstNum > secondNum) { //The firstNum always needs to be greater. They don't work w/ negatives
         answer = firstNum - secondNum; //Answer is y = firstNum - secondNum
-        questionOne[0] = "Solve for y in " + firstNum + " = " + secondNum + " + y"; //Actual question
+        questionOne[0] = "Solve for y:\n " + firstNum + " = " + secondNum + " + y"; //Actual question
         questionOne[1] = Integer.toString(answer); //Correct answer
         questionOne[2] = Integer.toString(answer + 1); //Wrong answer
         questionOne[3] = Integer.toString(answer - 1); //Wrong answer
@@ -98,7 +98,7 @@ private String[] generateQuestionOne() {
     }
     else { //Switch firstNum & secondNum to avoid negative answers
         answer = secondNum - firstNum; //Answer is now y = secondNum - firstNum
-        questionOne[0] = "Solve for y in " + secondNum + " = " + firstNum + " + y"; //Actual question with firstNum & secondNum switched
+        questionOne[0] = "Solve for y:\n " + secondNum + " = " + firstNum + " + y"; //Actual question with firstNum & secondNum switched
         questionOne[1] = Integer.toString(answer); //Correct answer
         questionOne[2] = Integer.toString(answer + 1); //Wrong answer
         questionOne[3] = Integer.toString(answer - 1); //Wrong answer
@@ -118,7 +118,7 @@ private String[] generateQuestionTwo() {
     int numItEquals = random.nextInt(100) + 1; //The number after the = is between 1 & 100
     int answer = numItEquals + subtractedNum; //The answer is the number after = minus the subtratedNum
     String[] questionTwo = new String[6]; //Array will hold question & possible answers
-    questionTwo[0] = "Find the value of y, if y - " + subtractedNum + " = " + numItEquals;
+    questionTwo[0] = "Solve for y:\n y - " + subtractedNum + " = " + numItEquals;
     questionTwo[1] = Integer.toString(answer); //Correct answer
     questionTwo[2] = Integer.toString(answer + 2); //Wrong answer
     questionTwo[3] = Integer.toString(answer - 2); //Wrong answer

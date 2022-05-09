@@ -462,8 +462,7 @@ public class FSPractice4 extends Assessment {
         intArray.add(num4);
 
         String[] questionThree = new String[6]; // Array will hold question & possible answers
-        questionThree[0] = "All students left the school at " + num + " o'clock. The vice " +
-                "principal stayed for " + num2 + " more hours. When did the vice-principal leave the school?";
+        questionThree[0] = "All students left school at " + num + ":00. Billy stayed for " + num2 + " more hours. When did he leave?";
         // Actual question
 
         questionThree[1] = (num + num2) + ""; // Answer

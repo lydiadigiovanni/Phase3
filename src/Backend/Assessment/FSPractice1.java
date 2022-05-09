@@ -110,7 +110,7 @@ public class FSPractice1 extends Assessment {
         int secondNumber = randomGenerator.nextInt(50) + 1; // Generate random number between 1 and 50 since sum cannot
                                                             // be > 100
         int answer = firstNumber + secondNumber; // The answer is the first plus the second number
-        questionOne[0] = "What is " + firstNumber + " + " + secondNumber + "?"; // Actual question
+        questionOne[0] = firstNumber + " + " + secondNumber + " = ?"; // Actual question
 
         if (answer <= 97) { // Because they can't work with numbers > 100
             questionOne[1] = Integer.toString(answer); // The correct answer
@@ -133,7 +133,7 @@ public class FSPractice1 extends Assessment {
                                                             // we're subtracting from
         int sum = randomGenerator.nextInt(99) + 1; // Generate random number between 1 and 99 as the sum of the question
         int answer = firstNumber - sum; // The answer is the first number - the sum
-        questionTwo[0] = "What is " + firstNumber + " - ? = " + sum + "?"; // The actual question
+        questionTwo[0] = firstNumber + " - ____ = " + sum; // The actual question
 
         if (firstNumber > sum) { // The number we're subtracting from has to be greater than the sum
             questionTwo[1] = Integer.toString(answer); // The actual answer
@@ -143,7 +143,7 @@ public class FSPractice1 extends Assessment {
         } else { // Invalid question. Sum is greater than first number
                  // Switch sum and first number in EVERYTHING
             answer = sum - firstNumber; // The answer is the sum - the first number now
-            questionTwo[0] = "What is " + sum + " - ? = " + firstNumber + " ?"; // The question switched around
+            questionTwo[0] = sum + " - ____ = " + firstNumber; // The question switched around
             questionTwo[1] = Integer.toString(answer); // The actual answer
             questionTwo[2] = Integer.toString(answer + 3); // First wrong answer
             questionTwo[3] = Integer.toString(answer - 1); // Second wrong answer
@@ -166,8 +166,7 @@ public class FSPractice1 extends Assessment {
         intArray.add(num);
 
         String[] questionThree = new String[6]; // Array will hold question & possible answers
-        questionThree[0] = "Count by Four's, What number comes next?  " + num + ", " + (num + 4) + ", " + "________"
-                + ", " + (num + 12); // Actual question
+        questionThree[0] = num + ", " + (num + 4) + ", " + "________" + ", " + (num + 12); // Actual question
         questionThree[1] = Integer.toString(num + 8); // Answer
         questionThree[2] = Integer.toString(num + 10); // Wrong Answer
         questionThree[3] = Integer.toString(num + 15); // Wrong Answer

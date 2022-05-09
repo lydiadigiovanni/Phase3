@@ -108,7 +108,7 @@ public class FSPractice2 extends Assessment {
         int answer = firstNumber - secondNumber;
 
         if (firstNumber > secondNumber) { // The first number needs to be the greater one
-            questionOne[0] = "What is " + firstNumber + " - " + secondNumber + "?"; // The actual question
+            questionOne[0] = firstNumber + " - " + secondNumber + " = ?"; // The actual question
             questionOne[1] = Integer.toString(answer); // The answer;
             questionOne[2] = Integer.toString(answer + 3); // First wrong answer
             questionOne[3] = Integer.toString(answer - 1); // Second wrong answer
@@ -116,7 +116,7 @@ public class FSPractice2 extends Assessment {
         } else { // Second number is greater than the first. Switch them!
                  // Switch the places of firstNumber and secondNumber in EVERYTHING
             answer = secondNumber - firstNumber; // The answer is the second minus the first number now
-            questionOne[0] = "What is " + secondNumber + " - " + firstNumber + "?"; // The actual question
+            questionOne[0] = secondNumber + " - " + firstNumber + " = ?"; // The actual question
             questionOne[1] = Integer.toString(answer); // The answer;
             questionOne[2] = Integer.toString(answer + 3); // First wrong answer
             questionOne[3] = Integer.toString(answer - 1); // Second wrong answer
@@ -138,7 +138,7 @@ public class FSPractice2 extends Assessment {
         int answer = sum - firstNumber; // Answer is sum - firstNumber in most cases
 
         if (sum > firstNumber) { // The sum is supposed to be the higher number
-            questionTwo[0] = "What is " + firstNumber + " + ? = " + sum + "?"; // The actual question
+            questionTwo[0] = firstNumber + " + ____ = " + sum; // The actual question
             questionTwo[1] = Integer.toString(answer); // The answer
             questionTwo[2] = Integer.toString(answer + 3); // First wrong answer
             questionTwo[3] = Integer.toString(answer - 1); // Second wrong answer
@@ -146,7 +146,7 @@ public class FSPractice2 extends Assessment {
         } else { // The first number was greater than the sum. Switch them!
                  // Switch the first number and sum in EVERYTHING
             answer = firstNumber - sum; // The answer is now the first number - the sum
-            questionTwo[0] = "What is " + sum + " + ________ = " + firstNumber + "?"; // Actual question switched around
+            questionTwo[0] = sum + " + ____ = " + firstNumber; // Actual question switched around
             questionTwo[1] = Integer.toString(answer); // The answer
             questionTwo[2] = Integer.toString(answer + 3); // First wrong answer
             questionTwo[3] = Integer.toString(answer - 1); // Second wrong answer
@@ -166,8 +166,7 @@ public class FSPractice2 extends Assessment {
         int num2 = random.nextInt(100) + 1;
 
         String[] questionThree = new String[6]; // Array will hold question & possible answers
-        questionThree[0] = "Compare the numbers. Add: > or < or =\n" +
-                +num + "______" + num2; // Actual question
+        questionThree[0] = "Compare (Add: > or < or =)\n" + num + "______" + num2; // Actual question
 
         if (num == num2) {
             questionThree[1] = "="; // Answer

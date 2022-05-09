@@ -184,8 +184,7 @@ public class FSPractice3 extends Assessment {
         intArray.add(num4);
 
         String[] questionThree = new String[6]; // Array will hold question & possible answers
-        questionThree[0] = "School starts at " + num + " o'clock in the morning and" +
-                " ends after " + num2 + " hours. What time does school end?"; // Actual question
+        questionThree[0] = "School starts at " + num + ":00 and ends after " + num2 + " hours. What time does school end?"; // Actual question
 
         if ((num + num2) > 12) {
             num = (num + num2) - 12;
@@ -193,10 +192,10 @@ public class FSPractice3 extends Assessment {
         if (num + num2 <= 12) {
             num = (num + num2);
         }
-        questionThree[1] = num + ""; // Answer
-        questionThree[2] = num2 + ""; // Wrong answer
-        questionThree[3] = num3 + ""; // Wrong answer
-        questionThree[4] = num4 + ""; // Wrong answer
+        questionThree[1] = num + ":00"; // Answer
+        questionThree[2] = num2 + ":00"; // Wrong answer
+        questionThree[3] = num3 + ":00"; // Wrong answer
+        questionThree[4] = num4 + ":00"; // Wrong answer
 
         return questionThree;
 
