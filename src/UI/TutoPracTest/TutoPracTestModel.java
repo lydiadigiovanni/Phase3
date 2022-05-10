@@ -51,19 +51,8 @@ public class TutoPracTestModel {
             questionLabel.setText(question[0]);
             answer = question[1];
             pictureBox.getChildren().clear();
-            try {
-                if(Database.getCurrentUserGrade().equalsIgnoreCase("Ki") && lastLetter.equalsIgnoreCase("1")) {
-                    int numAnswer = Integer.parseInt(question[1]);
-                    if(whatQuestion.equalsIgnoreCase("0")) {
-                        for (int i = 0; i < numAnswer; i++) {
-                            pictureBox.getChildren().addAll(new Circle(20.0, Paint.valueOf(question[5])));
-                        }
-                    }
-                }
-            } catch (SQLException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+            pictureBox.setVisible(false);
+            pictureBox.setDisable(true);
             randomizePlacement = ThreadLocalRandom.current().nextInt(1,5);
             choiceButtonOne.setText(question[randomizePlacement]);
             incrementPlacement();
@@ -101,14 +90,34 @@ public class TutoPracTestModel {
         return null; 
     }
 
-    public void generateUserInputQuestion(String[][][] questionTypeAndWhatQuestionAndQuestion, Label questionLabel, ImageView userInputImageView) {
+    public void generateUserInputQuestion(String[][][] questionTypeAndWhatQuestionAndQuestion, Label questionLabel, ImageView userInputImageView, HBox pictureBox) {
         String questionType = questionTypeAndWhatQuestionAndQuestion[0][0][0];
         String[][] whatQuestionAndQuestion = questionTypeAndWhatQuestionAndQuestion[1];
         String whatQuestion = whatQuestionAndQuestion[0][0];
         String[] question = whatQuestionAndQuestion[1];
         questionLabel.setText(question[0]);
         FileInputStream fIS;
-        if (question.length == 5) {
+        pictureBox.getChildren().clear();
+        pictureBox.setVisible(true);
+        pictureBox.setDisable(true);
+
+        try { //Lazy and terrible way to do this, but it's midnight and it works
+            if(Database.getCurrentUserGrade().equalsIgnoreCase("Ki") && lastLetter.equalsIgnoreCase("1")) {
+                int numAnswer = Integer.parseInt(question[1]);
+                if(whatQuestion.equalsIgnoreCase("0")) {
+                    for (int i = 0; i < numAnswer; i++) {
+                        pictureBox.getChildren().addAll(new Circle(20.0, Paint.valueOf(question[5])));
+                    }
+                }
+                answer = question[1];
+                return;
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        if (question.length == 6 && question[5] != null) {
             try {
                 fIS = new FileInputStream("Pictures/Questions/" + question[5] + ".png");
                 userInputImageView.setImage(new Image(fIS));
@@ -117,6 +126,9 @@ public class TutoPracTestModel {
                 e1.printStackTrace();
             }
         }
+
+        
+
         answer = question[1];
         }
         
@@ -159,7 +171,7 @@ public class TutoPracTestModel {
                 multipleChoiceAnchor.setVisible(true);
                 break;
             case "1":
-                generateUserInputQuestion(questionTypeAndWhatQuestionAndQuestion, questionLabel, userInputImageView);
+                generateUserInputQuestion(questionTypeAndWhatQuestionAndQuestion, questionLabel, userInputImageView, pictureBox);
                 userInputAnchor.setVisible(true);
                 //trueFalseAnchor.setVisible(false);
                 multipleChoiceAnchor.setVisible(false);
