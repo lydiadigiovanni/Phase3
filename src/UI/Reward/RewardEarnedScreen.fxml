@@ -27,17 +27,31 @@
             <Font name="Berlin Sans FB Bold" size="63.0" />
          </font>
       </Label>
-      <Label fx:id="gradeNum" layoutX="362.0" layoutY="150.0" text="0%" textAlignment="CENTER" textFill="#70ad47">
+      <Label fx:id="gradeNum" alignment="CENTER" layoutX="161.0" layoutY="150.0" prefHeight="85.0" prefWidth="492.0" text="0%" textAlignment="CENTER" textFill="#70ad47">
          <font>
             <Font name="Berlin Sans FB Bold" size="63.0" />
          </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" spread="1.0" width="5.0">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
       </Label>
       <ImageView fx:id="prizePhoto" fitHeight="212.0" fitWidth="198.0" layoutX="308.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Pictures/Rewards/K-Counting-Gold-Medal.png" />
          </image>
+         <effect>
+            <DropShadow height="150.0" radius="74.5" spread="0.34" width="150.0">
+               <color>
+                  <Color red="0.9529411792755127" green="1.0" blue="0.5215686559677124" />
+               </color>
+            </DropShadow>
+         </effect>
       </ImageView>
-      <Button fx:id="claimPrize" layoutX="220.0" layoutY="508.0" mnemonicParsing="false" onAction="#prizeClaim" style="-fx-background-color: #c15701;" text="CLAIM YOUR PRIZE!" textFill="WHITE">
+      <Button fx:id="claimPrize" layoutX="220.0" layoutY="508.0" mnemonicParsing="false" onAction="#prizeClaim" style="-fx-background-color: #c15701;" text="CLAIM YOUR PRIZE!" textFill="#622900">
          <font>
             <Font name="Berlin Sans FB Bold" size="35.0" />
          </font>
@@ -47,7 +61,7 @@
          <effect>
             <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0">
                <color>
-                  <Color red="1.0" green="1.0" blue="1.0" />
+                  <Color red="0.5333333611488342" green="0.2235294133424759" />
                </color>
             </DropShadow>
          </effect>

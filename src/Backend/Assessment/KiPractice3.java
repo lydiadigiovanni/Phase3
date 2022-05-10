@@ -51,7 +51,7 @@ public class KiPractice3 extends Assessment {
             Random random = new Random(); //Random object will be used to generate two random numbers
             int firstRandomNum = random.nextInt((10 - 1) + 1) + 1; //First random number between 1 and 10
             int secondRandomNum = random.nextInt((10 - 1) + 1); //Second random number between 1 and 10
-            questionOne[0] = "What is " + firstRandomNum + "+ " + secondRandomNum + "?"; //0th index: actual question
+            questionOne[0] = firstRandomNum + " + " + secondRandomNum + " = ?"; //0th index: actual question
             int answer = firstRandomNum + secondRandomNum; //Answer is just basic addition
             questionOne[1] = Integer.toString(answer); //1st index: the answer
             questionOne[2] = Integer.toString(answer-1); //Wrong answer 1
@@ -67,7 +67,7 @@ public class KiPractice3 extends Assessment {
         int firstNumInEquation = random.nextInt((10 - 1) + 1) + 1; //Generate the number before the - sign
         int numberItEquals = random.nextInt((9 - 1) + 1) + 1;  //Generate number between 1 and 9 because the number it equals can't be 10
         if (firstNumInEquation > numberItEquals) { //The number we're subtracting from needs to be > than the difference
-            questionTwo[0] = "What is the missing number in " + firstNumInEquation + "- ____ = " + numberItEquals; //Actual question
+            questionTwo[0] = firstNumInEquation + "- ____ = " + numberItEquals; //Actual question
             int answer = firstNumInEquation - numberItEquals; //Can get the answer by subtracting the number it equals from the 1st number
             questionTwo[1] = Integer.toString(answer); //Actual answer
             questionTwo[2] = Integer.toString(answer-1); //Wrong answer
@@ -75,7 +75,7 @@ public class KiPractice3 extends Assessment {
             questionTwo[4] = Integer.toString(answer+2);  //Wrong answer
         }
         else if (firstNumInEquation < numberItEquals) { //The number we're subtracting from cannot be < the difference, so we must switch around the question
-            questionTwo[0] = "What is the missing number in " + numberItEquals + "- ____ = " + firstNumInEquation; //Because numberItEquals was greater than firstNumInEquation
+            questionTwo[0] = numberItEquals + "- ____ = " + firstNumInEquation; //Because numberItEquals was greater than firstNumInEquation
             int answer = numberItEquals - firstNumInEquation; //Can get the answer by subtracting the smaller number from the larger number
             questionTwo[1] = Integer.toString(answer); //Actual answer
             questionTwo[2] = Integer.toString(answer-1); //Wrong answer
