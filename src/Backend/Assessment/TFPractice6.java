@@ -96,10 +96,10 @@ private String[] generateQuestionOne() {
     int answer = ((numItEquals - numAfterPlus) / numBeforeX);
     String[] questionOne = new String[6]; //Array will hold question and answers
     questionOne[0] = "Find the value of x if " + numBeforeX + "x + " + numAfterPlus + " = " + numItEquals;
-    questionOne[1] = "x = " + Integer.toString(answer); //Correct answer
-    questionOne[2] = "x = " + Integer.toString(answer + 2); //Wrong answer
-    questionOne[3] = "x = " + Integer.toString(answer - 2); //Wrong answer
-    questionOne[4] = "x = " + Integer.toString(answer - 1); //Wrong answer
+    questionOne[1] = Integer.toString(answer); //Correct answer
+    questionOne[2] = Integer.toString(answer + 2); //Wrong answer
+    questionOne[3] = Integer.toString(answer - 2); //Wrong answer
+    questionOne[4] = Integer.toString(answer - 1); //Wrong answer
 
     return questionOne;
 }

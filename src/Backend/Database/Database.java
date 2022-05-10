@@ -15,7 +15,7 @@ public class Database {
     public static Connection getConnection() {
         if (connection == null) {
             try {
-                connection = java.sql.DriverManager.getConnection(url, "root", "password");
+                connection = java.sql.DriverManager.getConnection(url, "root", "password666");
             } catch (Exception e) {
                 e.printStackTrace();
             }
