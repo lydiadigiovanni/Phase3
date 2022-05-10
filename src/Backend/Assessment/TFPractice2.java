@@ -169,7 +169,6 @@ public class TFPractice2 extends Assessment {
             questionThree[1] = "" + rng + rng2 + rng3;
         }
 
-        questionThree[1] = rng + "" + rng2 + "" + rng3; // Actual answer
         questionThree[2] = (rng + 1) + "" + (rng2 + 2) + "" + (rng3 + 3); // Wrong answer
         questionThree[3] = (rng + 2) + "" + (rng2 + 3) + "" + (rng3 + 1);
         ; // Wrong answer
