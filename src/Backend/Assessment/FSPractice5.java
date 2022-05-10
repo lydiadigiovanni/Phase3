@@ -295,7 +295,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Height of a sundae: " + num + "_______";
             questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "feet"; // Wrong: too large
-            questionThree[4] = "sundae";
+            questionThree[5] = "sundae";
         
 
         }
@@ -309,7 +309,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Length of hammer: " + num + "_______";
             questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "feet"; // Wrong: too large
-            questionThree[4] = "hammer";
+            questionThree[5] = "hammer";
 
         }
 
@@ -322,7 +322,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Height of a boy: " + num + "_______";
             questionThree[2] = "feet"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "inches"; // Wrong: too large
-            questionThree[4] = "boy";
+            questionThree[5] = "boy";
 
         }
 
@@ -335,7 +335,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Length of a key: " + num + "_______";
             questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "feet"; // Wrong: too large
-            questionThree[4] = "key";
+            questionThree[5] = "key";
         }
 
         if (randomObject == objectToGuess[4]) { // If the object is a tree
@@ -347,7 +347,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Length of a paintbrush: " + num + "_______";
             questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "feet"; // Wrong: too large
-            questionThree[4] = "paintbrush";
+            questionThree[5] = "paintbrush";
 
         }
 
@@ -360,7 +360,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Length of a picture frame: " + num + "_______";
             questionThree[2] = "feet"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "inches"; // Wrong: too large
-            questionThree[4] = "frame";
+            questionThree[5] = "frame";
 
         }
 

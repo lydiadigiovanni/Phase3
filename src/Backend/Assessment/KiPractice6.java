@@ -71,8 +71,6 @@ public class KiPractice6 extends Assessment {
         
     }
 
-    
-
     //Question One: Which one is a " "? (Pics of shapes are the answers)
     private String[] generateQuestionOne() {
         String[] nameOfShapes = {"circle", "rectangle", "oval", "triangle", "diamond"}; //Array of the different names of shapes pictures
@@ -98,10 +96,9 @@ public class KiPractice6 extends Assessment {
         questionOne[3] = shapeNames.get(1);
         questionOne[4] = shapeNames.get(2);
         return questionOne;
-    }
+    } 
 
-    //Question Two: What shape is a " "? *no pictures*
-    //Pics of items are the answers
+    //Question Two: What shape is a " "? *no pics*
     private String[] generateQuestionTwo() {
         String[] itemsInQuestions = {"soccer ball", "television", "watermelon", "pizza slice", "basic kite"}; //Array contains the thing/item in question
         String[] shapeOfItem = {"Circle", "Rectangle", "Oval", "Triangle", "Diamond"}; //Array contains shape that thing is
@@ -205,36 +202,42 @@ public class KiPractice6 extends Assessment {
             questionFour[2] = answers[5]; //Wrong
             questionFour[3] = answers[2]; //Wrong
             questionFour[4] = answers[3]; //Wrong
+            questionFour[5] = "cylinder";
         }
-        if (randomPic == picsOfShapes[1]) { //If pic is sp pichere
+        if (randomPic == picsOfShapes[1]) { //If pic is sphere pic
             questionFour[1] = answers[1]; //Answer is sphere 
             questionFour[2] = answers[0]; //Wrong
             questionFour[3] = answers[2]; //Wrong
             questionFour[4] = answers[4]; //Wrong
+            questionFour[5] = "sphere";
         }
         if (randomPic == picsOfShapes[2]) { //If pic is cone pic
             questionFour[1] = answers[2]; //Answer is cone 
             questionFour[2] = answers[0]; //Wrong
             questionFour[3] = answers[3]; //Wrong
             questionFour[4] = answers[1]; //Wrong
+            questionFour[5] = "cone";
         }
         if (randomPic == picsOfShapes[3]) { //If pic is rectangular prism pic
             questionFour[1] = answers[3]; //Answer is rectangular prism 
             questionFour[2] = answers[1]; //Wrong
             questionFour[3] = answers[5]; //Wrong
             questionFour[4] = answers[2]; //Wrong
+            questionFour[5] = "rectangularprism";
         }
         if (randomPic == picsOfShapes[4]) { //If pic is pyramid pic
             questionFour[1] = answers[4]; //Answer is pyramid
             questionFour[2] = answers[5]; //Wrong
             questionFour[3] = answers[1]; //Wrong
             questionFour[4] = answers[2]; //Wrong
+            questionFour[5] = "pyramid";
         }
         if (randomPic == picsOfShapes[5]) { //If pic is cube pic
             questionFour[1] = answers[5]; //Answer is cube 
             questionFour[2] = answers[3]; //Wrong
             questionFour[3] = answers[4]; //Wrong
             questionFour[4] = answers[0]; //Wrong
+            questionFour[5] = "cube";
         }
         return questionFour;
         

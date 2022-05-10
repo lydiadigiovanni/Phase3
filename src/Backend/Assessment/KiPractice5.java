@@ -60,6 +60,7 @@ public class KiPractice5 extends Assessment {
         questionOne[2] = namesOfItems.get(0);
         questionOne[3] = namesOfItems.get(1);
         questionOne[4] = namesOfItems.get(2);
+        questionOne[5] = answer;
         return questionOne;
     }
 
@@ -75,12 +76,14 @@ public class KiPractice5 extends Assessment {
             questionTwo[2] = picsForItems[1]; //Wrong answer is television
             questionTwo[3] = picsForItems[2]; //Wrong answer is watermelon
             questionTwo[4] = picsForItems[3]; //Wrong answer is pizza slice
+            questionTwo[5] = "soccerball";
         }
         if (shapeInQuestion == shapesInQuestions[1]) { //If the shape in the question is a rectangle
             questionTwo[1] = picsForItems[1]; //Correct answer is television
             questionTwo[2] = picsForItems[0]; //Wrong answer is soccer ball
             questionTwo[3] = picsForItems[2]; //Wrong answer is watermelon
             questionTwo[4] = picsForItems[3]; //Wrong answer is pizza slice
+            questionTwo[5] = "television";
           
         }
         if (shapeInQuestion == shapesInQuestions[2]) {  //If the shape in the question is an oval
@@ -88,6 +91,7 @@ public class KiPractice5 extends Assessment {
             questionTwo[2] = picsForItems[1]; //Wrong answer soccer ball
             questionTwo[3] = picsForItems[3]; //Wrong answer is pizza slice
             questionTwo[4] = picsForItems[4]; //Wrong answer is kite
+            questionTwo[5] = "watermelon";
           
         }
         if (shapeInQuestion == shapesInQuestions[3]) { //If the shape in the question is a triangle
@@ -95,6 +99,7 @@ public class KiPractice5 extends Assessment {
             questionTwo[2] = picsForItems[1]; //Wrong answer is soccerball
             questionTwo[3] = picsForItems[2]; //Wrong answer is watermelon
             questionTwo[4] = picsForItems[4]; //Wrong answer is kite
+            questionTwo[5] = "pizza";
            
         }
         if (shapeInQuestion == shapesInQuestions[4]) { //If the shape in the question is a diamond
@@ -102,6 +107,7 @@ public class KiPractice5 extends Assessment {
             questionTwo[2] = picsForItems[1]; //Wrong answer is television
             questionTwo[3] = picsForItems[2]; //Wrong answer is watermelon
             questionTwo[4] = picsForItems[3]; //Wrong answer is pizza slice
+            questionTwo[5] = "kite";
         } 
         return questionTwo;
 
@@ -119,6 +125,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "3"; //Wrong answer
             questionThree[3] = "2"; //Wrong answer
             questionThree[4] = "5"; //Wrong answer
+            questionThree[5] = "square";
 
         }
         if (randomShape == shapes[1])  { //If randomShape is a circle
@@ -126,6 +133,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "1"; //Wrong answer
             questionThree[3] = "2"; //Wrong answer
             questionThree[4] = "3"; //Wrong answer
+            questionThree[5] = "circle";
 
         }
         if (randomShape == shapes[2])  { //If randomShape is a rectangle
@@ -133,6 +141,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "3"; //Wrong answer
             questionThree[3] = "5"; //Wrong answer
             questionThree[4] = "6"; //Wrong answer
+            questionThree[5] = "rectangle";
 
         }
         if (randomShape == shapes[3])  { //If randomShape is a triangle
@@ -140,6 +149,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "4"; //Wrong answer
             questionThree[3] = "5"; //Wrong answer
             questionThree[4] = "2"; //Wrong answer
+            questionThree[5] = "triangle";
 
         }
         if (randomShape == shapes[4])  { //If randomShape is a diamond
@@ -147,6 +157,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "3"; //Wrong answer
             questionThree[3] = "2"; //Wrong answer
             questionThree[4] = "5"; //Wrong answer
+            questionThree[5] = "diamond";
 
         }
         if (randomShape == shapes[5])  { //If randomShape is a pentagon
@@ -154,6 +165,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "5"; //Wrong answer
             questionThree[3] = "2"; //Wrong answer
             questionThree[4] = "6"; //Wrong answer
+            questionThree[5] = "pentagon";
 
         }
         if (randomShape == shapes[6])  { //If randomShape is a hexagon
@@ -161,6 +173,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "7"; //Wrong answer
             questionThree[3] = "8"; //Wrong answer
             questionThree[4] = "5"; //Wrong answer
+            questionThree[5] = "hexagon";
 
         }
         if (randomShape == shapes[7])  { //If randomShape is an oval
@@ -168,6 +181,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "1"; //Wrong answer
             questionThree[3] = "2"; //Wrong answer
             questionThree[4] = "4"; //Wrong answer
+            questionThree[5] = "oval";
 
         }
         if (randomShape == shapes[8])  { //If randomShape is an octagon
@@ -175,6 +189,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "7"; //Wrong answer
             questionThree[3] = "6"; //Wrong answer
             questionThree[4] = "10"; //Wrong answer
+            questionThree[5] = "octagon";
 
         }
         if (randomShape == shapes[9])  { //If randomShape is a star
@@ -182,6 +197,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "4"; //Wrong answer
             questionThree[3] = "8"; //Wrong answer
             questionThree[4] = "9"; //Wrong answer
+            questionThree[5] = "star";
 
         }
         if (randomShape == shapes[10])  { //If randomShape is a trapezoid
@@ -189,7 +205,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "5"; //Wrong answer
             questionThree[3] = "3"; //Wrong answer
             questionThree[4] = "6"; //Wrong answer
-            
+            questionThree[5] = "trapezoid";
 
         }
         if (randomShape == shapes[11])  { //If randomShape is a parallelogram
@@ -197,6 +213,7 @@ public class KiPractice5 extends Assessment {
             questionThree[2] = "2"; //Wrong answer
             questionThree[3] = "3"; //Wrong answer
             questionThree[4] = "5"; //Wrong answer
+            questionThree[5] = "parallelogram";
 
         }
 
