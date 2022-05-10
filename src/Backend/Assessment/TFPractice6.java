@@ -85,8 +85,7 @@ public class TFPractice6 extends Assessment{
     
 
     }
-
-//Question One = Find the value of x if " "x + " " = " "
+    //Question One = Find the value of x if " "x + " " = " "
 private String[] generateQuestionOne() {
     Random random = new Random(); //Will be used to generate random numbers
     int numBeforeX = random.nextInt(30) + 1; //The number before the x, as in 3x for example
@@ -96,11 +95,11 @@ private String[] generateQuestionOne() {
     //Subtract numAfterPlus from numItEquals and divide that by numBeforeX
     int answer = ((numItEquals - numAfterPlus) / numBeforeX);
     String[] questionOne = new String[6]; //Array will hold question and answers
-    questionOne[0] = "Find the value of x:\n " + numBeforeX + "x + " + numAfterPlus + " = " + numItEquals;
-    questionOne[1] = "x = " + Integer.toString(answer); //Correct answer
-    questionOne[2] = "x = " + Integer.toString(answer + 2); //Wrong answer
-    questionOne[3] = "x = " + Integer.toString(answer - 2); //Wrong answer
-    questionOne[4] = "x = " + Integer.toString(answer - 1); //Wrong answer
+    questionOne[0] = "Find the value of x if " + numBeforeX + "x + " + numAfterPlus + " = " + numItEquals;
+    questionOne[1] = Integer.toString(answer); //Correct answer
+    questionOne[2] = Integer.toString(answer + 2); //Wrong answer
+    questionOne[3] = Integer.toString(answer - 2); //Wrong answer
+    questionOne[4] = Integer.toString(answer - 1); //Wrong answer
 
     return questionOne;
 }
@@ -113,7 +112,7 @@ private String[] generateQuestionOne() {
         int secondNum = firstNum * temp; //To ensure that the second number can be divided by y to get the first
         String[] questionTwo = new String[6]; //String will hold question and possible answers
         int answer = secondNum / firstNum; //Answer is x = secondNum / firstNum
-        questionTwo[0] = "Find the value of y:\n " + firstNum + " = " + secondNum + " / y"; //Actual question
+        questionTwo[0] = "Find the value of y if " + firstNum + " = " + secondNum + " / y"; //Actual question
         questionTwo[1] = Integer.toString(answer); //Correct answer
         questionTwo[2] = Integer.toString(answer + 1); //Wrong answer
         questionTwo[3] = Integer.toString(answer - 1); //Wrong answer
