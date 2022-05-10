@@ -54,9 +54,13 @@ public class ResetPasswordController {
                 if(passwordText.getText().equals(confirmPasswordText.getText())) {
                     Database.setPassword(usernameText.getText(), passwordText.getText());
             }
-        model.openPopup(event, submitButton); //Go back to login & open popup telling them it worked
+            model.openPopup(event, submitButton); //Go back to login & open popup telling them it worked
+            }
+            else {
+                model.passwordsDontMatch(event, submitButton);
             }
         }
+       
     }
 
 }
