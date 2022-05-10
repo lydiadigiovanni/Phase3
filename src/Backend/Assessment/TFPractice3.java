@@ -163,7 +163,7 @@ public class TFPractice3 extends Assessment {
                        
             String[] questionThree = new String[6]; // Array will hold question & possible answers
             questionThree[0] =  "Out of "+ ranNum +" books on fairy tales, Gilly borrowed " + ranNum2 + ".\n"+
-            "What fraction of the books on fairy tales did she borrow?";            ;
+            "What fraction of the books on fairy tales did she borrow?";
 
             questionThree[1] = ranNum2+"/"+ranNum; // Actual answer
             questionThree[2] = (ranNum2+2)+"/"+(ranNum+6); // Wrong answer
