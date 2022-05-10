@@ -219,6 +219,7 @@ public class FSPractice5 extends Assessment {
     // Question Two: Estimate the height of a (parrot, lamp, table, person, tree,
     // giraffe, building)
     // Show pic of the object next to the question
+    //Cannot be user input
     private String[] generateQuestionTwo() {
         // String array of the objects used in the question
         String[] objectToGuess = { "parrot", "lamp", "table", "adult human", "tree", "giraffe", "building" };
