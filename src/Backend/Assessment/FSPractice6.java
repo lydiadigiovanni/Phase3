@@ -135,15 +135,16 @@ public class FSPractice6 extends Assessment{
 
     /*Question two: Which would you use to measure a "randomObject"?
     No picture */
+    //Rephrase question to "Which measurement would you use to measure?"
     private String[] generateQuestionTwo() {
         //String array of objects to measure
         String[] objectsToMeasure = {"a paper clip", "an eraser", "a compass", "a pencil", "a shoe", "an anchor", "a car", "a couch", "a person", 
         "a truck", "a swimming pool", "a boat"};
          //Save a random object from objectsToMeasure in randomObject to use in the question
         String randomObject = objectsToMeasure[ThreadLocalRandom.current().nextInt(12)];
-        String[] units = {"Centimeters", "Inches", "Feet", "Yards"}; //Different units of measure used in the answers
+        String[] units = {"centimeters", "inches", "feet", "yards"}; //Different units of measure used in the answers
         String[] questionTwo = new String[5]; //Array will hold question and possible answers
-        questionTwo[0] = "Which would you use to measure " + randomObject + "?";
+        questionTwo[0] = "Which measurement would you use to measure " + randomObject + "?";
 
         //If it is a paper clip, erase, or compass
         if ((randomObject == objectsToMeasure[0]) || (randomObject == objectsToMeasure[1] 
@@ -155,9 +156,8 @@ public class FSPractice6 extends Assessment{
 
         }
 
-        //If it is a pencil, shoe, or anchor
-        if ((randomObject == objectsToMeasure[3]) || (randomObject == objectsToMeasure[4] 
-        || (randomObject == objectsToMeasure[5]))) {
+        //If it is a pencil or shoe
+        if ((randomObject == objectsToMeasure[3]) || (randomObject == objectsToMeasure[4])) {
             questionTwo[1] = units[1]; //Answer = inches
             questionTwo[2] = units[3]; //Wrong answer
             questionTwo[3] = units[2]; //Wrong answer
@@ -175,9 +175,9 @@ public class FSPractice6 extends Assessment{
 
         }
 
-        //If it is a truck, swimming pool, or a boat
-        if ((randomObject == objectsToMeasure[9]) || (randomObject == objectsToMeasure[10] 
-        || (randomObject == objectsToMeasure[11]))) {
+        //If it is a truck, swimming pool, boat, or anchor
+        if (((randomObject == objectsToMeasure[9]) || (randomObject == objectsToMeasure[10] 
+        || (randomObject == objectsToMeasure[11]) || (randomObject == objectsToMeasure[5])))) {
             questionTwo[1] = units[3]; //Answer = yards
             questionTwo[2] = units[1]; //Wrong answer
             questionTwo[3] = units[0]; //Wrong answer
