@@ -76,6 +76,7 @@ public class FSPractice5 extends Assessment {
     }
 
     // Question One: Which is longer? (centimeters or inches, feet or yards, etc)
+    //Fixed it
     private String[] generateQuestionOne() {
         // Array will hold the different times of measurements
         String[] measurementTypes = { "centimeters", "inches", "feet", "yards" };
