@@ -483,7 +483,7 @@ public class FSPractice4 extends Assessment {
         return questionTwo;
     }
 
-    // Question Three:
+    // Question Three: fi this one
     private String[] generateQuestionThree() {
         Random random = new Random(); // Will be used to generate the random numbers
         int num = random.nextInt(6) + 1; // The number in the question is between 1 and 100
@@ -502,10 +502,10 @@ public class FSPractice4 extends Assessment {
         questionThree[0] = "All students left school at " + num + ":00. Billy stayed for " + num2 + " more hours. When did he leave?";
         // Actual question
 
-        questionThree[1] = (num + num2) + ""; // Answer
-        questionThree[2] = num2 + ""; // Wrong answer
-        questionThree[3] = num3 + ""; // Wrong answer
-        questionThree[4] = num4 + ""; // Wrong answer
+        questionThree[1] = (num + num2) + ":00"; // Answer
+        questionThree[2] = num2 + ":00"; // Wrong answer
+        questionThree[3] = num3 + ":00"; // Wrong answer
+        questionThree[4] = num4 + ":00"; // Wrong answer
 
         return questionThree;
     }
