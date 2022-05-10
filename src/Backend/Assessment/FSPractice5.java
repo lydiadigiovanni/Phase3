@@ -294,6 +294,7 @@ public class FSPractice5 extends Assessment {
 
     }
 
+    //This can be user input though
     private String[] generateQuestionThree() {
         // String array of the objects used in the question
         String[] objectToGuess = { "sundae", "hammer", "boy", "key", "paintbrush", "picture frame" };
