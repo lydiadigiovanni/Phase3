@@ -216,6 +216,7 @@ public class FSPractice5 extends Assessment {
             questionTwo[2] = "2 ft."; // Wrong: too large
             questionTwo[3] = "1 yd."; // Wrong: too large
             questionTwo[4] = "9 cm."; // Wrong: too small
+            questionTwo[5] = "parrot";
 
         }
 
@@ -224,6 +225,7 @@ public class FSPractice5 extends Assessment {
             questionTwo[2] = "3 yd."; // Wrong for obvious reasons
             questionTwo[3] = "15 cm."; // Wrong: Not even half a foot
             questionTwo[4] = "6 ft."; // Wrong: Too big
+            questionTwo[5] = "lamp";
 
         }
 
@@ -232,6 +234,7 @@ public class FSPractice5 extends Assessment {
             questionTwo[2] = "7 ft."; // Wrong answer
             questionTwo[3] = "50 cm."; // Wrong answer
             questionTwo[4] = "1 yd."; // Wrong: 50.8 cm is 20 inches
+            questionTwo[5] = "table";
 
         }
 
@@ -240,6 +243,7 @@ public class FSPractice5 extends Assessment {
             questionTwo[2] = "4 yd."; // Wrong answer
             questionTwo[3] = "91 cm."; // Wrong answer
             questionTwo[4] = "48 in."; // wrong answer
+            questionTwo[5] = "adult";
         }
 
         if (randomObject == objectToGuess[4]) { // If the object is a tree
@@ -247,6 +251,7 @@ public class FSPractice5 extends Assessment {
             questionTwo[2] = "108 in."; // Wrong answer
             questionTwo[3] = "311 cm."; // Wrong answer
             questionTwo[4] = "5 yd."; // Wrong answer
+            questionTwo[5] = "tree";
 
         }
 
@@ -255,6 +260,7 @@ public class FSPractice5 extends Assessment {
             questionTwo[2] = "152 cm."; // Wrong answer
             questionTwo[3] = "9 yd."; // Wrong answer
             questionTwo[4] = "127 in."; // Wrong answer
+            questionTwo[5] = "giraffe";
 
         }
 
@@ -263,6 +269,7 @@ public class FSPractice5 extends Assessment {
             questionTwo[2] = "1000 cm."; // Wrong answer
             questionTwo[3] = "600 in."; // Wrong answer
             questionTwo[4] = "11 yd."; // Wrong answer
+            questionTwo[5] = "building";
 
         }
 
@@ -279,7 +286,7 @@ public class FSPractice5 extends Assessment {
         questionThree[0] = "Fill in the proper unit (inches or feet) for the measurement below.\n" +
                 "Hint: 1 foot = 12 inch "; // The actual question
 
-        if (randomObject == objectToGuess[0]) { // If the object is a parrot
+        if (randomObject == objectToGuess[0]) { // If the object is a sundae
             Random random = new Random(); // Will be used to generate the random numbers
             int num = random.nextInt(10) + 1;
             while (num < 7) {
@@ -288,6 +295,8 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Height of a sundae: " + num + "_______";
             questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "feet"; // Wrong: too large
+            questionThree[4] = "sundae";
+        
 
         }
 
@@ -300,6 +309,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Length of hammer: " + num + "_______";
             questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "feet"; // Wrong: too large
+            questionThree[4] = "hammer";
 
         }
 
@@ -312,6 +322,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Height of a boy: " + num + "_______";
             questionThree[2] = "feet"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "inches"; // Wrong: too large
+            questionThree[4] = "boy";
 
         }
 
@@ -324,6 +335,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Length of a key: " + num + "_______";
             questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "feet"; // Wrong: too large
+            questionThree[4] = "key";
         }
 
         if (randomObject == objectToGuess[4]) { // If the object is a tree
@@ -335,6 +347,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Length of a paintbrush: " + num + "_______";
             questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "feet"; // Wrong: too large
+            questionThree[4] = "paintbrush";
 
         }
 
@@ -347,6 +360,7 @@ public class FSPractice5 extends Assessment {
             questionThree[1] = "Length of a picture frame: " + num + "_______";
             questionThree[2] = "feet"; // Correct: Average medium sized bird is 8 inches
             questionThree[3] = "inches"; // Wrong: too large
+            questionThree[4] = "frame";
 
         }
 

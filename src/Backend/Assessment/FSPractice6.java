@@ -76,7 +76,7 @@ public class FSPractice6 extends Assessment{
     }
 
     /*Question one: Which tool would you use to measure "random object"?
-    Put picture next to question */
+    No picture*/
     private String[] generateQuestionOne() {
         //String array of objects used in the question
         String[] objectToMeasure = {"a beach ball", "a watermelon", "a soccerball", "a pumpkin", "a cup of salt", "2 cups of sugar", 
@@ -130,7 +130,7 @@ public class FSPractice6 extends Assessment{
     }
 
     /*Question two: Which would you use to measure a "randomObject"?
-    Put picture next to question */
+    No picture */
     private String[] generateQuestionTwo() {
         //String array of objects to measure
         String[] objectsToMeasure = {"a paper clip", "an eraser", "a compass", "a pencil", "a shoe", "an anchor", "a car", "a couch", "a person", 
@@ -184,85 +184,97 @@ public class FSPractice6 extends Assessment{
         return questionTwo;
         
     }
+
+    //Put picture next to question
     private String[] generateQuestionThree() {
         // String array of the objects used in the question
-        String[] objectToGuess = { "A coffee cup", "A teapot", "A bathtub", "A tube of sunscreen", "A mug", "A yogurt cup", "Juice box", "Dump truck", "milk carton" };
+        String[] objectToGuess = { "A coffee cup", "A teapot", "A bathtub", "A tube of sunscreen", "A mug", "A yogurt cup", "Juice box", "truck", "milk carton" };
         // Get a random item from objectToGuess and assign it to randomObject
         String randomObject = objectToGuess[ThreadLocalRandom.current().nextInt(9)];
         String[] questionThree = new String[6]; // Array will be used to hold the question and possible answers
         questionThree[0] = "Does it hold more or less than 1 gallon? select the correct answer.\n"+
         "Hint: 1 gallon = 16 US cups\n"+randomObject; // The actual question
 
-        if (randomObject == objectToGuess[0]) { // If the object is a parrot
+        if (randomObject == objectToGuess[0]) { // If the object is a coffeecup
             
             
             questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
             questionThree[2] = "More than"; // Wrong: too large
+            questionThree[3] = "cofeecup";
 
         }
 
-        if (randomObject == objectToGuess[1]) { // If the object is a lamp
+        if (randomObject == objectToGuess[1]) { // If the object is a teapot
             
             
             questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
             questionThree[2] = "More than"; // Wrong: too large
+            questionThree[3] = "teapot";
 
         }
 
-        if (randomObject == objectToGuess[2]) { // If the object is a table
+        if (randomObject == objectToGuess[2]) { // If the object is a bathtub
            
             
             questionThree[1] = "More than"; // Correct: Average medium sized bird is 8 inches
             questionThree[2] = "Less than"; // Wrong: too large
+            questionThree[3] = "bathtub";
 
         }
 
-        if (randomObject == objectToGuess[3]) { // If the object is a person
+        if (randomObject == objectToGuess[3]) { // If the object is a tube of sunscreen
            
             
             questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
             questionThree[2] = "More than"; // Wrong: too large
+            questionThree[3] = "sunscreen";
         }
 
-        if (randomObject == objectToGuess[4]) { // If the object is a tree
+        if (randomObject == objectToGuess[4]) { // If the object is a mug
             
             
             
             questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
             questionThree[2] = "More than"; // Wrong: too large
+            questionThree[3] = "mug";
 
         }
 
-        if (randomObject == objectToGuess[5]) { // If the object is a giraffe
+        if (randomObject == objectToGuess[5]) { // If the object is a yogurt cup
             
             
             
             questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
             questionThree[2] = "More than"; // Wrong: too large
+            questionThree[3] = "yogurt";
+
 
         }
-        if (randomObject == objectToGuess[6]) { // If the object is a giraffe
+        if (randomObject == objectToGuess[6]) { // If the object is a juicebox
             
             
             
             questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
             questionThree[2] = "More than"; // Wrong: too large
+            questionThree[3] = "juicebox";
 
         }
-        if (randomObject == objectToGuess[7]) { // If the object is a giraffe
+        if (randomObject == objectToGuess[7]) { // If the object is a dumptruck
             
             
             
             questionThree[1] = "More than"; // Correct: Average medium sized bird is 8 inches
             questionThree[2] = "Less than"; // Wrong: too large
+            questionThree[3] = "truck";
 
         }
-        if (randomObject == objectToGuess[8]) { // If the object is a giraffe
+        if (randomObject == objectToGuess[8]) { // If the object is a milk carton
             
             
             
             questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
             questionThree[2] = "More than"; // Wrong: too large
+            questionThree[3] = "milk";
 
         }
 

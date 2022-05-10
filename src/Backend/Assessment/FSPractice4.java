@@ -119,7 +119,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(1); // Wrong answer 1
             questionOne[3] = times.get(2); // Wrong answer 2
             questionOne[4] = times.get(3); // Wrong answer 3
-
+            questionOne[5] = "1.00";
         }
         if (randomClock == clocks[1]) { // If the time is 2:00
             answer = times.get(1); // The answer is Two
@@ -127,6 +127,8 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(4); // Wrong answer 1
             questionOne[3] = times.get(5); // Wrong answer 2
             questionOne[4] = times.get(6); // Wrong answer 3
+            questionOne[5] = "2.00";
+            
 
         }
         if (randomClock == clocks[2]) { // If the time is 2:10
@@ -135,6 +137,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(7); // Wrong answer 1
             questionOne[3] = times.get(8); // Wrong answer 2
             questionOne[4] = times.get(9); // Wrong answer 3
+            questionOne[5] = "2.10";
 
         }
         if (randomClock == clocks[3]) { // If the time is 2:30
@@ -143,6 +146,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(10); // Wrong answer 1
             questionOne[3] = times.get(11); // Wrong answer 2
             questionOne[4] = times.get(12); // Wrong answer 3
+            questionOne[5] = "2.30";
 
         }
         if (randomClock == clocks[4]) { // If the time is 3:50
@@ -151,6 +155,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(13); // Wrong answer 1
             questionOne[3] = times.get(14); // Wrong answer 2
             questionOne[4] = times.get(15); // Wrong answer 3
+            questionOne[5] = "3.50";
 
         }
         if (randomClock == clocks[5]) { // If the time is 4:35
@@ -159,6 +164,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(16); // Wrong answer 1
             questionOne[3] = times.get(17); // Wrong answer 2
             questionOne[4] = times.get(0); // Wrong answer 3
+            questionOne[5] = "4.35";
 
         }
         if (randomClock == clocks[6]) { // If the time is 5:20
@@ -167,6 +173,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(1); // Wrong answer 1
             questionOne[3] = times.get(4); // Wrong answer 2
             questionOne[4] = times.get(8); // Wrong answer 3
+            questionOne[5] = "5.20";
 
         }
         if (randomClock == clocks[7]) { // If the time is 6:00
@@ -175,6 +182,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(2); // Wrong answer 1
             questionOne[3] = times.get(4); // Wrong answer 2
             questionOne[4] = times.get(6); // Wrong answer 3
+            questionOne[5] = "6.00";
 
         }
         if (randomClock == clocks[8]) { // If the time is 7:00
@@ -183,6 +191,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(9); // Wrong answer 1
             questionOne[3] = times.get(11); // Wrong answer 2
             questionOne[4] = times.get(13); // Wrong answer 3
+            questionOne[5] = "7.00";
 
         }
         if (randomClock == clocks[9]) { // If the time is 7:30
@@ -191,6 +200,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(15); // Wrong answer 1
             questionOne[3] = times.get(17); // Wrong answer 2
             questionOne[4] = times.get(3); // Wrong answer 3
+            questionOne[5] = "7.30";
 
         }
         if (randomClock == clocks[10]) { // If the time is 8:00
@@ -199,6 +209,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(4); // Wrong answer 1
             questionOne[3] = times.get(6); // Wrong answer 2
             questionOne[4] = times.get(8); // Wrong answer 3
+            questionOne[5] = "8.00";
 
         }
         if (randomClock == clocks[11]) { // If the time is 8:30
@@ -207,6 +218,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(3); // Wrong answer 1
             questionOne[3] = times.get(9); // Wrong answer 2
             questionOne[4] = times.get(10); // Wrong answer 3
+            questionOne[5] = "8.30";
 
         }
         if (randomClock == clocks[12]) { // If the time is 9:30
@@ -215,6 +227,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(16); // Wrong answer 1
             questionOne[3] = times.get(11); // Wrong answer 2
             questionOne[4] = times.get(0); // Wrong answer 3
+            questionOne[5] = "9.30";
 
         }
         if (randomClock == clocks[13]) { // If the time is 10:30
@@ -223,6 +236,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(5); // Wrong answer 1
             questionOne[3] = times.get(15); // Wrong answer 2
             questionOne[4] = times.get(14); // Wrong answer 3
+            questionOne[5] = "10.30";
 
         }
         if (randomClock == clocks[14]) { // If the time is 10:55
@@ -231,6 +245,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(0); // Wrong answer 1
             questionOne[3] = times.get(12); // Wrong answer 2
             questionOne[4] = times.get(14); // Wrong answer 3
+            questionOne[5] = "10.55";
         }
         if (randomClock == clocks[15]) { // If the time is 11:00
             answer = times.get(15); // The answer is Eleven
@@ -238,6 +253,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(13); // Wrong answer 1
             questionOne[3] = times.get(3); // Wrong answer 2
             questionOne[4] = times.get(16); // Wrong answer 3
+            questionOne[5] = "11.00";
 
         }
         if (randomClock == clocks[16]) { // If the time is 11:30
@@ -246,6 +262,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(3); // Wrong answer 1
             questionOne[3] = times.get(9); // Wrong answer 2
             questionOne[4] = times.get(15); // Wrong answer 3
+            questionOne[5] = "11.30";
 
         }
         if (randomClock == timeInNumbers[17]) { // If the time is 12:15
@@ -254,6 +271,7 @@ public class FSPractice4 extends Assessment {
             questionOne[2] = times.get(5); // Wrong answer 1
             questionOne[3] = times.get(10); // Wrong answer 2
             questionOne[4] = times.get(16); // Wrong answer 3
+            questionOne[5] = "12.15";
 
         }
 
@@ -305,6 +323,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(1); // Wrong answer 1
             questionTwo[3] = clockNames.get(2); // Wrong answer 2
             questionTwo[4] = clockNames.get(3); // Wrong answer 3
+            questionTwo[5] = "1.00";
 
         }
         if (randomTime == timeInNumbers[1]) { // If the time is 2:00
@@ -313,6 +332,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(4); // Wrong answer 1
             questionTwo[3] = clockNames.get(5); // Wrong answer 2
             questionTwo[4] = clockNames.get(6); // Wrong answer 3
+            questionTwo[5] = "2.00";
 
         }
         if (randomTime == timeInNumbers[2]) { // If the time is 2:10
@@ -321,6 +341,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(7); // Wrong answer 1
             questionTwo[3] = clockNames.get(8); // Wrong answer 2
             questionTwo[4] = clockNames.get(9); // Wrong answer 3
+            questionTwo[5] = "2.10";
 
         }
         if (randomTime == timeInNumbers[3]) { // If the time is 2:30
@@ -329,6 +350,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(10); // Wrong answer 1
             questionTwo[3] = clockNames.get(11); // Wrong answer 2
             questionTwo[4] = clockNames.get(12); // Wrong answer 3
+            questionTwo[5] = "2.30";
 
         }
         if (randomTime == timeInNumbers[4]) { // If the time is 3:50
@@ -337,6 +359,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(13); // Wrong answer 1
             questionTwo[3] = clockNames.get(14); // Wrong answer 2
             questionTwo[4] = clockNames.get(15); // Wrong answer 3
+            questionTwo[5] = "3.50";
 
         }
         if (randomTime == timeInNumbers[5]) { // If the time is 4:35
@@ -345,6 +368,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(16); // Wrong answer 1
             questionTwo[3] = clockNames.get(17); // Wrong answer 2
             questionTwo[4] = clockNames.get(0); // Wrong answer 3
+            questionTwo[5] = "4.35";
 
         }
         if (randomTime == timeInNumbers[6]) { // If the time is 5:20
@@ -353,6 +377,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(1); // Wrong answer 1
             questionTwo[3] = clockNames.get(4); // Wrong answer 2
             questionTwo[4] = clockNames.get(8); // Wrong answer 3
+            questionTwo[5] = "5.20";
 
         }
         if (randomTime == timeInNumbers[7]) { // If the time is 6:00
@@ -361,6 +386,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(2); // Wrong answer 1
             questionTwo[3] = clockNames.get(4); // Wrong answer 2
             questionTwo[4] = clockNames.get(6); // Wrong answer 3
+            questionTwo[5] = "6.00";
 
         }
         if (randomTime == timeInNumbers[8]) { // If the time is 7:00
@@ -369,6 +395,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(9); // Wrong answer 1
             questionTwo[3] = clockNames.get(11); // Wrong answer 2
             questionTwo[4] = clockNames.get(13); // Wrong answer 3
+            questionTwo[5] = "7.00";
 
         }
         if (randomTime == timeInNumbers[9]) { // If the time is 7:30
@@ -377,6 +404,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(15); // Wrong answer 1
             questionTwo[3] = clockNames.get(17); // Wrong answer 2
             questionTwo[4] = clockNames.get(3); // Wrong answer 3
+            questionTwo[5] = "7.30";
 
         }
         if (randomTime == timeInNumbers[10]) { // If the time is 8:00
@@ -385,6 +413,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(4); // Wrong answer 1
             questionTwo[3] = clockNames.get(6); // Wrong answer 2
             questionTwo[4] = clockNames.get(8); // Wrong answer 3
+            questionTwo[5] = "8.00";
 
         }
         if (randomTime == timeInNumbers[11]) { // If the time is 8:30
@@ -393,6 +422,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(3); // Wrong answer 1
             questionTwo[3] = clockNames.get(9); // Wrong answer 2
             questionTwo[4] = clockNames.get(10); // Wrong answer 3
+            questionTwo[5] = "8.30";
 
         }
         if (randomTime == timeInNumbers[12]) { // If the time is 9:30
@@ -401,6 +431,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(16); // Wrong answer 1
             questionTwo[3] = clockNames.get(11); // Wrong answer 2
             questionTwo[4] = clockNames.get(0); // Wrong answer 3
+            questionTwo[5] = "9.30";
 
         }
         if (randomTime == timeInNumbers[13]) { // If the time is 10:30
@@ -409,6 +440,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(5); // Wrong answer 1
             questionTwo[3] = clockNames.get(15); // Wrong answer 2
             questionTwo[4] = clockNames.get(14); // Wrong answer 3
+            questionTwo[5] = "10.30";
 
         }
         if (randomTime == timeInNumbers[14]) { // If the time is 10:55
@@ -424,6 +456,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(13); // Wrong answer 1
             questionTwo[3] = clockNames.get(3); // Wrong answer 2
             questionTwo[4] = clockNames.get(16); // Wrong answer 3
+            questionTwo[5] = "11.00";
 
         }
         if (randomTime == timeInNumbers[16]) { // If the time is 11:30
@@ -432,6 +465,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(3); // Wrong answer 1
             questionTwo[3] = clockNames.get(9); // Wrong answer 2
             questionTwo[4] = clockNames.get(15); // Wrong answer 3
+            questionTwo[5] = "11.30";
 
         }
         if (randomTime == timeInNumbers[17]) { // If the time is 12:15
@@ -440,6 +474,7 @@ public class FSPractice4 extends Assessment {
             questionTwo[2] = clockNames.get(5); // Wrong answer 1
             questionTwo[3] = clockNames.get(10); // Wrong answer 2
             questionTwo[4] = clockNames.get(16); // Wrong answer 3
+            questionTwo[5] = "12.15";
 
         }
 
