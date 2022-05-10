@@ -57,7 +57,7 @@ public class ResetPasswordController {
             model.openPopup(event, submitButton); //Go back to login & open popup telling them it worked
             }
             else { //They typed something in wrong
-                model.passwordsDontMatch(event, submitButton);
+                model.somethingDontMatch(event, submitButton);
             }
         }
        
