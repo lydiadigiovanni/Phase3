@@ -189,7 +189,7 @@ public class FSPractice3 extends Assessment {
         if ((num + num2) > 12) {
             num = (num + num2) - 12;
         }
-        if (num + num2 <= 12) {
+        else if (num + num2 <= 12) {
             num = (num + num2);
         }
         questionThree[1] = num + ":00"; // Answer
