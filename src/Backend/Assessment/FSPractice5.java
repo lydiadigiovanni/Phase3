@@ -31,7 +31,7 @@ public class FSPractice5 extends Assessment {
     @Override
     public String[][] generateUserInputQuestion() {//question two needs pics uploaded
         String[][] userInput = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(3);
+        int i = ThreadLocalRandom.current().nextInt(2);
         switch (i) {
             case 0:
                 userInput[0] = new String[] { "0" };
