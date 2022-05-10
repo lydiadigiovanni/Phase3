@@ -166,9 +166,7 @@ public class TutoPracTestController {
                         RewardController rewardController = rewardLoader.getController();
                         int testGrade = numbercorrect*100/totalNumberOfQuestions;
                         int checkmarkindex = 0;
-                        if (testGrade >= 50) {
-                            checkmarkindex = 1;
-                        }
+                        
                         rewardController.setRewardGrade((testGrade));
                         if (Database.getAssignmentGrades() == null || Database.getAssignmentGrade(model.getFirstLetters(), model.getLastLetter()) < testGrade) {
                             Database.setAssigmentGrade(model.getFirstLetters(), model.getLastLetter(), (testGrade));
@@ -178,9 +176,12 @@ public class TutoPracTestController {
                         
                         window.setScene(rewardScene);
                         window.show();
-
-                        controller.setCheckmarkBoolean(checkmarkindex);
-                        controller.initialize();
+                        if (testGrade >= 50) {
+                            checkmarkindex = 4;
+                            controller.setCheckmarkBoolean(checkmarkindex);
+                            controller.initialize();
+                        }
+                        
         
                         } catch (Exception e) {
                             e.printStackTrace();
