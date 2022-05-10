@@ -1,4 +1,7 @@
 package UI.TutoPracTest;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.concurrent.ThreadLocalRandom;
 import Backend.Assessment.Assessment;
@@ -6,6 +9,8 @@ import Backend.Database.Database;
 import Backend.Grade.Grade;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Paint;
@@ -99,12 +104,22 @@ public class TutoPracTestModel {
         return null; 
     }
 
-    public void generateUserInputQuestion(String[][][] questionTypeAndWhatQuestionAndQuestion, Label questionLabel) {
+    public void generateUserInputQuestion(String[][][] questionTypeAndWhatQuestionAndQuestion, Label questionLabel, ImageView userInputImageView) {
         String questionType = questionTypeAndWhatQuestionAndQuestion[0][0][0];
         String[][] whatQuestionAndQuestion = questionTypeAndWhatQuestionAndQuestion[1];
         String whatQuestion = whatQuestionAndQuestion[0][0];
         String[] question = whatQuestionAndQuestion[1];
         questionLabel.setText(question[0]);
+        FileInputStream fIS;
+        try {
+            fIS = new FileInputStream("Pictures/Questions/" + question[1] + ".png");
+            if (fIS != null) {
+                userInputImageView = new ImageView(new Image(fIS));
+            }
+        } catch (FileNotFoundException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
         answer = question[1];
     }
 
@@ -135,7 +150,7 @@ public class TutoPracTestModel {
         return answer;
     }
 
-    public void generateQuestion(Label questionLabel, HBox pictureBox, RadioButton choiceButtonOne, RadioButton choiceButtonTwo, RadioButton choiceButtonThree, RadioButton choiceButtonFour, AnchorPane userInputAnchor, AnchorPane multipleChoiceAnchor) {
+    public void generateQuestion(Label questionLabel, HBox pictureBox, RadioButton choiceButtonOne, RadioButton choiceButtonTwo, RadioButton choiceButtonThree, RadioButton choiceButtonFour, AnchorPane userInputAnchor, AnchorPane multipleChoiceAnchor, ImageView userInputImageView) {
         String questionTypeAndWhatQuestionAndQuestion[][][] = getAssessmentClass(grade, island).generateQuestion();
         String questionType = questionTypeAndWhatQuestionAndQuestion[0][0][0];
         switch (questionType) {
@@ -146,7 +161,7 @@ public class TutoPracTestModel {
                 multipleChoiceAnchor.setVisible(true);
                 break;
             case "1":
-                generateUserInputQuestion(questionTypeAndWhatQuestionAndQuestion, questionLabel);
+                generateUserInputQuestion(questionTypeAndWhatQuestionAndQuestion, questionLabel, userInputImageView);
                 userInputAnchor.setVisible(true);
                 //trueFalseAnchor.setVisible(false);
                 multipleChoiceAnchor.setVisible(false);

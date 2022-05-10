@@ -75,7 +75,7 @@ public class FSPractice6 extends Assessment{
         
     }
 
-    /*Question one: Which tool would you use to measure "random object?
+    /*Question one: Which tool would you use to measure "random object"?
     Put picture next to question */
     private String[] generateQuestionOne() {
         //String array of objects used in the question
