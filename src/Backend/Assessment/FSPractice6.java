@@ -17,7 +17,7 @@ public class FSPractice6 extends Assessment{
     @Override
     public String[][] generateMultipleChoiceQuestion() {
         String[][] multipleChoice = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(3);
+        int i = ThreadLocalRandom.current().nextInt(2);
         switch (i) {
             case 0:
                 multipleChoice[0] = new String[]{"0"};
@@ -26,11 +26,7 @@ public class FSPractice6 extends Assessment{
             case 1: 
                 multipleChoice[0] = new String[]{"1"};
                 multipleChoice[1] = generateQuestionTwo();
-                break;
-            case 2:
-                multipleChoice[0] = new String[] { "2" };
-                multipleChoice[1] = generateQuestionThree();
-                break;    
+                break;   
         }
         return multipleChoice;
     }
@@ -200,14 +196,13 @@ public class FSPractice6 extends Assessment{
         // Get a random item from objectToGuess and assign it to randomObject
         String randomObject = objectToGuess[ThreadLocalRandom.current().nextInt(9)];
         String[] questionThree = new String[6]; // Array will be used to hold the question and possible answers
-        questionThree[0] = "Does it hold more or less than 1 gallon? select the correct answer.\n"+
-        "Hint: 1 gallon = 16 US cups\n"+randomObject; // The actual question
-
+        questionThree[0] = "Does a " + randomObject + " hold more or less than 1 gallon? (< or >)"; 
+         // The actual question
         if (randomObject == objectToGuess[0]) { // If the object is a coffeecup
             
             
-            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
-            questionThree[2] = "More than"; // Wrong: too large
+            questionThree[1] = "<"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = ">"; // Wrong: too large
             questionThree[5] = "cofeecup";
 
         }
@@ -215,8 +210,8 @@ public class FSPractice6 extends Assessment{
         if (randomObject == objectToGuess[1]) { // If the object is a teapot
             
             
-            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
-            questionThree[2] = "More than"; // Wrong: too large
+            questionThree[1] = "<"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = ">"; // Wrong: too large
             questionThree[5] = "teapot";
 
         }
@@ -224,8 +219,8 @@ public class FSPractice6 extends Assessment{
         if (randomObject == objectToGuess[2]) { // If the object is a bathtub
            
             
-            questionThree[1] = "More than"; // Correct: Average medium sized bird is 8 inches
-            questionThree[2] = "Less than"; // Wrong: too large
+            questionThree[1] = ">"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "<"; // Wrong: too large
             questionThree[5] = "bathtub";
 
         }
@@ -233,8 +228,8 @@ public class FSPractice6 extends Assessment{
         if (randomObject == objectToGuess[3]) { // If the object is a tube of sunscreen
            
             
-            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
-            questionThree[2] = "More than"; // Wrong: too large
+            questionThree[1] = "<"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = ">"; // Wrong: too large
             questionThree[5] = "sunscreen";
         }
 
@@ -242,8 +237,8 @@ public class FSPractice6 extends Assessment{
             
             
             
-            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
-            questionThree[2] = "More than"; // Wrong: too large
+            questionThree[1] = "<"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = ">"; // Wrong: too large
             questionThree[5] = "mug";
 
         }
@@ -252,8 +247,8 @@ public class FSPractice6 extends Assessment{
             
             
             
-            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
-            questionThree[2] = "More than"; // Wrong: too large
+            questionThree[1] = "<"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = ">"; // Wrong: too large
             questionThree[5] = "yogurt";
 
 
@@ -262,8 +257,8 @@ public class FSPractice6 extends Assessment{
             
             
             
-            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
-            questionThree[2] = "More than"; // Wrong: too large
+            questionThree[1] = "<"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = ">"; // Wrong: too large
             questionThree[5] = "juicebox";
 
         }
@@ -271,8 +266,8 @@ public class FSPractice6 extends Assessment{
             
             
             
-            questionThree[1] = "More than"; // Correct: Average medium sized bird is 8 inches
-            questionThree[2] = "Less than"; // Wrong: too large
+            questionThree[1] = ">"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "<"; // Wrong: too large
             questionThree[5] = "truck";
 
         }
@@ -280,8 +275,8 @@ public class FSPractice6 extends Assessment{
             
             
             
-            questionThree[1] = "Less than"; // Correct: Average medium sized bird is 8 inches
-            questionThree[2] = "More than"; // Wrong: too large
+            questionThree[1] = "<"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = ">"; // Wrong: too large
             questionThree[5] = "milk";
 
         }
