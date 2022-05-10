@@ -75,7 +75,7 @@ public class KiPractice5 extends Assessment {
     private String[] generateQuestionTwo() {
         String[] shapesInQuestions = {"circle", "rectangle", "oval", "triangle", "diamond"}; //Array contains the name of the shape
         String[] picsForItems = {"Soccer ball", "Television", "Watermelon", "Pizza slice", "Kite"}; //Array contains what picture that shape is
-        String shapeInQuestion = shapesInQuestions[ThreadLocalRandom.current().nextInt(6)]; //Used to randomize the shape in the question
+        String shapeInQuestion = shapesInQuestions[ThreadLocalRandom.current().nextInt(5)]; //Used to randomize the shape in the question
         String[] questionTwo = new String[6]; //Array will contain the question and its answers
         questionTwo[0] = "Which picture is a " + shapeInQuestion + "?";
        if (shapeInQuestion == shapesInQuestions[0]) { //If the shape is a circle
@@ -124,7 +124,7 @@ public class KiPractice5 extends Assessment {
     private String[] generateQuestionThree() {
         String[] shapes = {"square", "circle", "rectangle", "triangle", "diamond", "pentagon",
         "hexagon", "oval", "octagon", "star", "trapezoid", "parallelogram"}; //Array of shapes for the question
-        String randomShape = shapes[ThreadLocalRandom.current().nextInt(13)]; //Get random shape for the question
+        String randomShape = shapes[ThreadLocalRandom.current().nextInt(12)]; //Get random shape for the question
         String[] questionThree = new String[6]; //Array will hold questions and possible answers
         questionThree[0] = "How many sides does a " + randomShape + " have?"; //Actual question
         if (randomShape == shapes[0]) { //If randomShape is a square
@@ -232,7 +232,7 @@ public class KiPractice5 extends Assessment {
      private String[] generateQuestionFour() {
         String[] shapes = {"square", "circle", "rectangle", "triangle", "diamond", "pentagon",
         "hexagon", "oval", "octagon", "star", "trapezoid", "parallelogram"}; //Array of shapes for the question
-        String randomShape = shapes[ThreadLocalRandom.current().nextInt(13)]; //Get random shape for the question
+        String randomShape = shapes[ThreadLocalRandom.current().nextInt(12)]; //Get random shape for the question
         String[] questionFour = new String[6]; //Array will hold questions and possible answers
         questionFour[0] = "How many corners does a " + randomShape + " have?"; //Actual question
         if (randomShape == shapes[0]) { //If randomShape is a square
