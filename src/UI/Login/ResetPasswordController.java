@@ -54,9 +54,7 @@ public class ResetPasswordController {
                 if(passwordText.getText().equals(confirmPasswordText.getText())) {
                     Database.setPassword(usernameText.getText(), passwordText.getText());
             }
-        model.goToLogin(event, loginButton);
-        //else
-        //model.openPopup(event, loginButton)
+        model.openPopup(event, submitButton); //Go back to login & open popup telling them it worked
             }
         }
     }

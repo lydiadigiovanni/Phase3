@@ -49,5 +49,9 @@ public class CreateAccountController {
         if (passwordTextField.getText().equalsIgnoreCase(confirmPasswordTextField.getText())) {
             model.goToSecurity(event, nextButton, usernameTextField.getText(), passwordTextField.getText(), ((RadioButton) gradeToggle.getSelectedToggle()).getId());
         }
+        else { //The passwords didn't match
+            model.openPopup(event, nextButton); //Open popup warning
+
+        }
     }
 }

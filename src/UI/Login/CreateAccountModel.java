@@ -44,4 +44,25 @@ public class CreateAccountModel {
                 e.printStackTrace();
             }
     }
+
+    /*Remain on create account page & pull up popup warning that
+    /Confirm password and password don't match */
+    public void openPopup(ActionEvent event, Button button) {
+        //First, ensure the main screen stays on create account
+        try {
+            Parent loginParent = FXMLLoader.load(getClass().getResource("/UI/Login/CreateAccountView.fxml")); //Parent = path to create account screen
+            Scene loginScene = new Scene(loginParent); //Make scene with that path
+            Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow()); //Assign nodes to the window
+            window.setScene(loginScene); //Set the scene
+            window.show(); //Make it visible
+        //Second, make a new stage for the popup!
+            Stage newStage = new Stage(); //Stage for popup
+            Parent popupParent = FXMLLoader.load(getClass().getResource("/UI/Login/PasswordsDontMatch.fxml")); //Parent = path to popup
+            Scene popupScene = new Scene(popupParent); //Make scene with that path
+            newStage.setScene(popupScene); //Set the popup scene
+            newStage.show(); //Make visible
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
 }
