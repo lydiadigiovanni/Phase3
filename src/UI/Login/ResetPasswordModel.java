@@ -51,7 +51,7 @@ public class ResetPasswordModel {
     }
 
     //Open popup if the passwords didn't match
-    public void passwordsDontMatch(ActionEvent event, Button button) {
+    public void somethingDontMatch(ActionEvent event, Button button) {
         //First, ensure the main screen stays reset password
         try {
             Parent loginParent = FXMLLoader.load(getClass().getResource("/UI/Login/ResetPasswordView.fxml")); //Parent = path to reset password screen

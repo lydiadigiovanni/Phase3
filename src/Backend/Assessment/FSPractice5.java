@@ -38,10 +38,6 @@ public class FSPractice5 extends Assessment {
                 userInput[1] = generateQuestionOne();
                 break;
             case 1:
-                userInput[0] = new String[] { "1" };
-                userInput[1] = generateQuestionTwo();
-                break;
-            case 2:
                 userInput[0] = new String[] { "2" };
                 userInput[1] = generateQuestionThree();
                 break;
@@ -76,7 +72,7 @@ public class FSPractice5 extends Assessment {
     }
 
     // Question One: Which is longer? (centimeters or inches, feet or yards, etc)
-    //TODO: FIX
+    //Fixed it
     private String[] generateQuestionOne() {
         // Array will hold the different times of measurements
         String[] measurementTypes = { "centimeters", "inches", "feet", "yards" };
@@ -88,40 +84,45 @@ public class FSPractice5 extends Assessment {
         String[] questionOne = new String[3]; // Array will contain questions and possible answer
         // Measurement1 and measurement2 are only included in the question below for
         // testing purposes, MUST be deleted
-        questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
         String answer; // Will hold the answer
         // If measurement1 is centimeters and measurement2 is inches
         if ((measurement1 == measurementTypes[0]) && (measurement2 == measurementTypes[1])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement2; // Inches are bigger than centimeters
             questionOne[1] = answer; // The right answer is inches
             questionOne[2] = measurement1; // The wrong answer is centimeters
         }
         // If measurement1 is centimeters and measurement2 is feet
         if ((measurement1 == measurementTypes[0]) && (measurement2 == measurementTypes[2])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement2; // Feet are bigger than centimeters
             questionOne[1] = answer; // The correct answer is feet
             questionOne[2] = measurement1; // The wrong answer is centimeters
         }
         // If measurement1 is centimeters and measurement2 is yards
         if ((measurement1 == measurementTypes[0]) && (measurement2 == measurementTypes[3])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement2; // Yards are bigger than centimeters
             questionOne[1] = answer; // The correct answer is yards
             questionOne[2] = measurement1; // The wrong answer is centimeters
         }
         // If measurement1 is inches and measurement2 is centimeters
         if ((measurement1 == measurementTypes[1]) && (measurement2 == measurementTypes[0])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement1; // Inches is bigger than centimeters
             questionOne[1] = answer; // The correct answer is inches
             questionOne[2] = measurement2; // The wrong answer is centimeters
         }
         // If measurement1 is inches and measurement2 is feet
         if ((measurement1 == measurementTypes[1]) && (measurement2 == measurementTypes[2])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement2; // Feet are bigger than inches
             questionOne[1] = answer; // The correct answer is feet
             questionOne[2] = measurement1; // The wrong answer is inches
         }
         // If measurement1 is inches and measurement2 is yards
         if ((measurement1 == measurementTypes[1]) && (measurement2 == measurementTypes[3])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement2; // Yards are bigger than inches
             questionOne[1] = answer; // The correct ansswer is yards
             questionOne[2] = measurement1; // The wrong answer is inches
@@ -129,36 +130,42 @@ public class FSPractice5 extends Assessment {
 
         // If measurement1 is feet and measurement2 is centimeters
         if ((measurement1 == measurementTypes[2]) && (measurement2 == measurementTypes[0])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement1; // Feet are bigger than centimeters
             questionOne[1] = answer; // The correct answer is feet
             questionOne[2] = measurement2; // The wrong answer is centimeters
         }
         // If measurement1 is feet and measurement2 is inches
         if ((measurement1 == measurementTypes[2]) && (measurement2 == measurementTypes[1])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement1; // Feet are bigger than inches
             questionOne[1] = answer; // The correct answer is feet
             questionOne[2] = measurement2; // The wrong answer is inches
         }
         // If measurement1 is feet and measurement2 is yards
         if ((measurement1 == measurementTypes[2]) && (measurement2 == measurementTypes[3])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement2; // Yards are bigger than feet
             questionOne[1] = answer; // The correct answer is yards
             questionOne[2] = measurement1; // The wrong answer is feet
         }
         // If measurement1 is yards and measurement2 is centimeters
         if ((measurement1 == measurementTypes[3]) && (measurement2 == measurementTypes[0])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement1; // Yards are bigger than centimeters
             questionOne[1] = answer; // The correct answer is yards
             questionOne[2] = measurement2; // The wrong answer is centimeters
         }
         // If measurement1 is yards and measurement2 is inches
         if ((measurement1 == measurementTypes[3]) && (measurement2 == measurementTypes[1])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement1; // Yards are bigger than inches
             questionOne[1] = answer; // The correct answer is yards
             questionOne[2] = measurement2; // The wrong answer is inches
         }
         // If measurement1 is yards and measurement2 is feet
         if ((measurement1 == measurementTypes[3]) && (measurement2 == measurementTypes[2])) {
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement1; // Yards are bigger than feet
             questionOne[1] = answer; // The correct answer is yards
             questionOne[2] = measurement2; // The wrong answer is feet
@@ -167,6 +174,7 @@ public class FSPractice5 extends Assessment {
         if ((measurement1 == measurementTypes[0]) && (measurement2 == measurementTypes[0])) {
             // Change one of the measurements
             measurement1 = measurementTypes[1]; // Measurement1 is now inches!
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement1; // Inches are bigger than centimeters
             questionOne[1] = answer; // The correct answer is inches
             questionOne[2] = measurement2; // The wrong answer is centimeters
@@ -176,6 +184,7 @@ public class FSPractice5 extends Assessment {
         if ((measurement1 == measurementTypes[1]) && (measurement2 == measurementTypes[1])) {
             // Change one of the measurements
             measurement2 = measurementTypes[2]; // Measurement2 is now feet
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement2; // Feet are bigger than inches
             questionOne[1] = answer; // The correct answer is feet
             questionOne[2] = measurement1; // The wrong answer is inches
@@ -184,6 +193,7 @@ public class FSPractice5 extends Assessment {
         if ((measurement1 == measurementTypes[2]) && (measurement2 == measurementTypes[2])) {
             // Change one of the measurements
             measurement1 = measurementTypes[0]; // Measurement1 is now centimeters
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement2; // Feet are bigger than centimeters
             questionOne[1] = answer; // The correct answer is feet
             questionOne[2] = measurement1; // The wrong answer is centimeters
@@ -192,6 +202,7 @@ public class FSPractice5 extends Assessment {
         if ((measurement1 == measurementTypes[3]) && (measurement2 == measurementTypes[3])) {
             // Change one of the measurements
             measurement2 = measurementTypes[2]; // Measurement2 is now feet
+            questionOne[0] = "Which one is bigger?\n " + measurement1 + " or " + measurement2; // Actual question
             answer = measurement1; // Yards are bigger than feet
             questionOne[1] = answer; // The correct answer is yards
             questionOne[2] = measurement2; // The wrong answer is feet
@@ -204,7 +215,7 @@ public class FSPractice5 extends Assessment {
     // Question Two: Estimate the height of a (parrot, lamp, table, person, tree,
     // giraffe, building)
     // Show pic of the object next to the question
-    //TODO: FIX
+    //Cannot be user input
     private String[] generateQuestionTwo() {
         // String array of the objects used in the question
         String[] objectToGuess = { "parrot", "lamp", "table", "adult human", "tree", "giraffe", "building" };
@@ -279,7 +290,7 @@ public class FSPractice5 extends Assessment {
 
     }
 
-    //TODO: FIX
+    //This can be user input though
     private String[] generateQuestionThree() {
         // String array of the objects used in the question
         String[] objectToGuess = { "sundae", "hammer", "boy", "key", "paintbrush", "picture frame" };
