@@ -12,8 +12,8 @@ public class FSPractice5 extends Assessment {
         int i = ThreadLocalRandom.current().nextInt(2);
         switch (i) {
             case 0:
-                multipleChoice[0] = new String[] { "0" };
-                multipleChoice[1] = generateQuestionOne();
+                multipleChoice[0] = new String[] { "1" };
+                multipleChoice[1] = generateQuestionTwo();
                 break;
         }
         return multipleChoice;
