@@ -10,7 +10,15 @@ public class KiPractice5 extends Assessment {
     
     @Override
     public String[][] generateMultipleChoiceQuestion() {
-        return null;
+        String[][] multipleChoice = new String[2][1];
+        int i = ThreadLocalRandom.current().nextInt(1);
+        switch (i) {
+            case 0:
+                multipleChoice[0] = new String[] { "3" };
+                multipleChoice[1] = generateQuestionFour();
+                break;
+        }
+        return multipleChoice;
     }
 
     @Override
@@ -21,7 +29,7 @@ public class KiPractice5 extends Assessment {
     @Override
     public String[][] generateUserInputQuestion() {//question 1 and 2 has pictures
         String[][] userInput = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(2);
+        int i = ThreadLocalRandom.current().nextInt(3);
         switch (i) {
             case 0:
                 userInput[0] = new String[] { "0" };
@@ -31,7 +39,10 @@ public class KiPractice5 extends Assessment {
                 userInput[0] = new String[] { "1" };
                 userInput[1] = generateQuestionTwo();
                 break;
-           
+           case 2:
+                userInput[0] = new String[] { "2" };
+                userInput[1] = generateQuestionThree();
+                break;
         }
         return userInput;
     } 
