@@ -33,25 +33,25 @@ public class GradeKi extends Grade {
 
     @Override
     public String getYoutubeVideo3() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=iQQqRD-BM4U");
         return youtubeVideo;
     }
 
     @Override
     public String getYoutubeVideo4() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=7J1OkxuyLD0");
         return youtubeVideo;
     }
 
     @Override
     public String getYoutubeVideo5() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=VAWaV1upv6E");
         return youtubeVideo;
     }
 
     @Override
     public String getYoutubeVideo6() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=guNdJ5MtX1A");
         return youtubeVideo;
     }
 
