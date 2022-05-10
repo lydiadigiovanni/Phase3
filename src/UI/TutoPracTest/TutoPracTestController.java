@@ -136,30 +136,8 @@ public class TutoPracTestController {
         if (youtubeVideo != null) {
             youtubeVideo.getEngine().load("");
         }
-        if (model.getFirstLetters().equalsIgnoreCase("Test")) {
-            try {
-                FXMLLoader rewardLoader = new FXMLLoader(getClass().getResource("/UI/Reward/RewardEarnedScreen.fxml"));
-                Parent rewardParent = rewardLoader.load();
-                Scene rewardScene = new Scene(rewardParent);
-                RewardController controller = rewardLoader.getController();
-                int testGrade = numbercorrect*100/totalNumberOfQuestions;
-                controller.setRewardGrade((testGrade));
-                if (Database.getAssignmentGrades() == null || Database.getAssignmentGrade(model.getFirstLetters(), model.getLastLetter()) < testGrade) {
-                    Database.setAssigmentGrade(model.getFirstLetters(), model.getLastLetter(), (testGrade));
-                }
-                controller.initialize();
-                Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
-                
-                window.setScene(rewardScene);
-                window.show();
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-        }
-        else
-            try {
-                FXMLLoader loader = new FXMLLoader();
+        try {
+            FXMLLoader loader = new FXMLLoader();
                 MapControllerParent controller = new MapController();
                 Parent parent = new Parent(){};
                 switch (model.getMapName()) {
@@ -179,34 +157,65 @@ public class TutoPracTestController {
                         controller = loader.getController();
                         break;
                 }
-                Scene scene = new Scene(parent);
-                Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
-                window.setScene(scene);
-                window.show();
-                int checkmarkindex = 0;
-                if (model.getFirstLetters().equalsIgnoreCase("Tuto")) {
-                    if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
-                        checkmarkindex = 0;
-                    }
-                    else if (model.getLastLetter().equalsIgnoreCase("2") || model.getLastLetter().equalsIgnoreCase("4") || model.getLastLetter().equalsIgnoreCase("6")) {
-                        checkmarkindex = 2;
-                    }
+
+                if (model.getFirstLetters().equalsIgnoreCase("Test")) {
+                    try {
+                        FXMLLoader rewardLoader = new FXMLLoader(getClass().getResource("/UI/Reward/RewardEarnedScreen.fxml"));
+                        Parent rewardParent = rewardLoader.load();
+                        Scene rewardScene = new Scene(rewardParent);
+                        RewardController rewardController = rewardLoader.getController();
+                        int testGrade = numbercorrect*100/totalNumberOfQuestions;
+                        int checkmarkindex = 0;
+                        if (testGrade >= 50) {
+                            checkmarkindex = 1;
+                        }
+                        rewardController.setRewardGrade((testGrade));
+                        if (Database.getAssignmentGrades() == null || Database.getAssignmentGrade(model.getFirstLetters(), model.getLastLetter()) < testGrade) {
+                            Database.setAssigmentGrade(model.getFirstLetters(), model.getLastLetter(), (testGrade));
+                        }
+                        controller.initialize();
+                        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+                        
+                        window.setScene(rewardScene);
+                        window.show();
+                                
+                        controller.setCheckmarkBoolean(checkmarkindex);
+                        controller.initialize();
+        
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                 }
-                else if (model.getFirstLetters().equalsIgnoreCase("Prac")) {
-                    if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
-                        checkmarkindex = 1;
-                    }
-                    else if (model.getLastLetter().equalsIgnoreCase("2") || model.getLastLetter().equalsIgnoreCase("4") || model.getLastLetter().equalsIgnoreCase("6")) {
-                        checkmarkindex = 3;
-                    }
-                }
-                else if (model.getFirstLetters().equalsIgnoreCase("Test")) {
-                    if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
-                        checkmarkindex = 4;
-                }
-                }
-                controller.setCheckmarkBoolean(checkmarkindex);
-                controller.initialize();
+                else
+                    try {
+                        Scene scene = new Scene(parent);
+                        Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
+                        window.setScene(scene);
+                        window.show();
+                        int checkmarkindex = 0;
+                        if (model.getFirstLetters().equalsIgnoreCase("Tuto")) {
+                            if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
+                                checkmarkindex = 0;
+                            }
+                            else if (model.getLastLetter().equalsIgnoreCase("2") || model.getLastLetter().equalsIgnoreCase("4") || model.getLastLetter().equalsIgnoreCase("6")) {
+                                checkmarkindex = 2;
+                            }
+                        }
+                        else if (model.getFirstLetters().equalsIgnoreCase("Prac")) {
+                            if(model.getLastLetter().equalsIgnoreCase("1") || model.getLastLetter().equalsIgnoreCase("3") || model.getLastLetter().equalsIgnoreCase("5")) {
+                                checkmarkindex = 1;
+                            }
+                            else if (model.getLastLetter().equalsIgnoreCase("2") || model.getLastLetter().equalsIgnoreCase("4") || model.getLastLetter().equalsIgnoreCase("6")) {
+                                checkmarkindex = 3;
+                            }
+                        }
+                        controller.setCheckmarkBoolean(checkmarkindex);
+                        controller.initialize();
+
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+        
 
                 } catch (Exception e) {
                     e.printStackTrace();
