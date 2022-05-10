@@ -85,7 +85,7 @@ public class TFPractice6 extends Assessment{
     
 
     }
-//Question One = Find the value of x if " "x + " " = " "
+    //Question One = Find the value of x if " "x + " " = " "
 private String[] generateQuestionOne() {
     Random random = new Random(); //Will be used to generate random numbers
     int numBeforeX = random.nextInt(30) + 1; //The number before the x, as in 3x for example
@@ -120,7 +120,6 @@ private String[] generateQuestionOne() {
 
         return questionTwo;
     }
-    
          // Question Three:Solve x/### = ###
          private String[] generateQuestionThree() {
             Random random = new Random(); // Will be used to generate the random numbers
