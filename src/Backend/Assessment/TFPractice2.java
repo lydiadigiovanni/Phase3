@@ -166,7 +166,7 @@ public class TFPractice2 extends Assessment {
             }
         }
         else {
-            questionThree[0] = "" + rng + rng2 + rng3;
+            questionThree[1] = "" + rng + rng2 + rng3;
         }
 
         questionThree[1] = rng + "" + rng2 + "" + rng3; // Actual answer
