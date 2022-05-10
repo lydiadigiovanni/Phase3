@@ -76,6 +76,7 @@ public class FSPractice5 extends Assessment {
     }
 
     // Question One: Which is longer? (centimeters or inches, feet or yards, etc)
+    //TODO: FIX
     private String[] generateQuestionOne() {
         // Array will hold the different times of measurements
         String[] measurementTypes = { "centimeters", "inches", "feet", "yards" };
@@ -203,6 +204,7 @@ public class FSPractice5 extends Assessment {
     // Question Two: Estimate the height of a (parrot, lamp, table, person, tree,
     // giraffe, building)
     // Show pic of the object next to the question
+    //TODO: FIX
     private String[] generateQuestionTwo() {
         // String array of the objects used in the question
         String[] objectToGuess = { "parrot", "lamp", "table", "adult human", "tree", "giraffe", "building" };
@@ -277,6 +279,7 @@ public class FSPractice5 extends Assessment {
 
     }
 
+    //TODO: FIX
     private String[] generateQuestionThree() {
         // String array of the objects used in the question
         String[] objectToGuess = { "sundae", "hammer", "boy", "key", "paintbrush", "picture frame" };

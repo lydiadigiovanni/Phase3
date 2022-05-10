@@ -4,6 +4,14 @@ package Backend.Assessment;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+
+    //TODO: FIX ALL OF THE QUESTIONS
+    //TODO: FIX ALL OF THE QUESTIONS
+    //TODO: FIX ALL OF THE QUESTIONS
+    //TODO: FIX ALL OF THE QUESTIONS
+    //TODO: FIX ALL OF THE QUESTIONS
+
+
 public class FSPractice6 extends Assessment{
 
     @Override

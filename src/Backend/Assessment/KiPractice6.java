@@ -12,7 +12,7 @@ public class KiPractice6 extends Assessment {
     @Override
     public String[][] generateMultipleChoiceQuestion() {
         String[][] multipleChoice = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(2);
+        int i = ThreadLocalRandom.current().nextInt(1);
         switch (i) {
             case 0:
                 multipleChoice[0] = new String[] { "1" };
@@ -111,7 +111,7 @@ public class KiPractice6 extends Assessment {
         String[] shapeOfItem = {"Circle", "Rectangle", "Oval", "Triangle", "Diamond"}; //Array contains shape that thing is
         String itemInQuestion = itemsInQuestions[ThreadLocalRandom.current().nextInt(5)]; //Used to randomize thing/item in the question
         String[] questionTwo = new String[6]; //Array will contain the question and its answers
-        questionTwo[0] = "Which shape is a " + itemInQuestion + "?";
+        questionTwo[0] = "What shape is a " + itemInQuestion + "?";
        if (itemInQuestion == itemsInQuestions[0]) { //If the item is a soccer ball
             questionTwo[1] = shapeOfItem[0]; //Correct answer is circle
             questionTwo[2] = shapeOfItem[1]; //Wrong answer rectangle
@@ -153,7 +153,7 @@ public class KiPractice6 extends Assessment {
     //Question Three: Which picture is a " "? (3D shapes) Multiple choice: Pictures in answers
     private String[] generateQuestionThree() {
         String[] shapes = {"cylinder", "sphere", "cone", "rectangular prism", "pyramid", "cube"}; //Array of shapes to use in question itself
-        String shapeInQuestion = shapes[ThreadLocalRandom.current().nextInt(7)]; //Get random shape from shapes
+        String shapeInQuestion = shapes[ThreadLocalRandom.current().nextInt(6)]; //Get random shape from shapes
         String[] answerPics = {"cylinder pic", "sphere pic", "cone pic", "rectangular prism pic", "pyramid pic", "cube pic"};
         String[] questionThree = new String[6]; //String will hold question & possible answers
         questionThree[0] = "Which picture is a " + shapeInQuestion + "?"; //Question
@@ -200,10 +200,10 @@ public class KiPractice6 extends Assessment {
      //Question Four: What is the name of this 3D shape? Show shape next to picture. Answers are the name of shapes
      private String[] generateQuestionFour() {
         String[] picsOfShapes = {"cylinder pic", "sphere pic", "cone pic", "rectangular prism pic", "pyramid pic", "cube pic"}; //Array of pictures to use next to question
-        String randomPic = picsOfShapes[ThreadLocalRandom.current().nextInt(7)]; //Get random shape from shapes
+        String randomPic = picsOfShapes[ThreadLocalRandom.current().nextInt(6)]; //Get random shape from shapes
         String[] answers = {"cylinder", "sphere", "cone", "rectangular prism", "pyramid", "cube"}; //Different answers
         String[] questionFour = new String[6]; //String will hold question & possible answers
-        questionFour[0] = "What is the name of this shape? " + randomPic; //Question
+        questionFour[0] = "What is the name of this shape? "; //Question
         if (randomPic == picsOfShapes[0]) { //If pic is a cylinder
             questionFour[1] = answers[0]; //Answer is cylinder
             questionFour[2] = answers[5]; //Wrong

@@ -52,7 +52,7 @@ public class TutoPracTestModel {
             answer = question[1];
             pictureBox.getChildren().clear();
             try {
-                if(Database.getCurrentUserGrade().equalsIgnoreCase("Ki")) {
+                if(Database.getCurrentUserGrade().equalsIgnoreCase("Ki") && lastLetter.equalsIgnoreCase("1")) {
                     int numAnswer = Integer.parseInt(question[1]);
                     if(whatQuestion.equalsIgnoreCase("0")) {
                         for (int i = 0; i < numAnswer; i++) {
@@ -108,7 +108,7 @@ public class TutoPracTestModel {
         String[] question = whatQuestionAndQuestion[1];
         questionLabel.setText(question[0]);
         FileInputStream fIS;
-        if (question[5] != null) {
+        if (question.length == 5) {
             try {
                 fIS = new FileInputStream("Pictures/Questions/" + question[5] + ".png");
                 userInputImageView.setImage(new Image(fIS));
@@ -150,6 +150,7 @@ public class TutoPracTestModel {
     public void generateQuestion(Label questionLabel, HBox pictureBox, RadioButton choiceButtonOne, RadioButton choiceButtonTwo, RadioButton choiceButtonThree, RadioButton choiceButtonFour, AnchorPane userInputAnchor, AnchorPane multipleChoiceAnchor, ImageView userInputImageView) {
         String questionTypeAndWhatQuestionAndQuestion[][][] = getAssessmentClass(grade, island).generateQuestion();
         String questionType = questionTypeAndWhatQuestionAndQuestion[0][0][0];
+        userInputImageView.setImage(null);
         switch (questionType) {
             case "0":
                 generateMultipleChoiceQuestion(questionTypeAndWhatQuestionAndQuestion, questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour);
