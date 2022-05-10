@@ -166,7 +166,7 @@ public class FSPractice2 extends Assessment {
         int num2 = random.nextInt(100) + 1;
 
         String[] questionThree = new String[6]; // Array will hold question & possible answers
-        questionThree[0] = "Compare (Add: > or < or =)\n" + num + "______" + num2; // Actual question
+        questionThree[0] = "Compare: (>  <  =)\n" + num + "______" + num2; // Actual question
 
         if (num == num2) {
             questionThree[1] = "="; // Answer
@@ -204,19 +204,19 @@ public class FSPractice2 extends Assessment {
         if (firstNumber > secondNumber) { // The first number needs to be the greater one
             questionFour[0] = "You had " + firstNumber + " " + randomFruit + " and you give your friend " + secondNumber
                     + ". How many " + randomFruit + " do you have left?"; // The question
-            questionFour[1] = Integer.toString(answer) + " " + randomFruit; // The answer;
-            questionFour[2] = Integer.toString(answer + 2) + " " + randomFruit; // First wrong answer
-            questionFour[3] = Integer.toString(answer - 1) + " " + randomFruit; // Second wrong answer
-            questionFour[4] = Integer.toString(answer + 1) + " " + randomFruit; // Third wrong answer
+            questionFour[1] = Integer.toString(answer); // The answer;
+            questionFour[2] = Integer.toString(answer + 2); // First wrong answer
+            questionFour[3] = Integer.toString(answer - 1); // Second wrong answer
+            questionFour[4] = Integer.toString(answer + 1); // Third wrong answer
         } else { // Second number is greater than the first. Switch them!
                  // Switch the places of firstNumber and secondNumber in EVERYTHING
             answer = secondNumber - firstNumber; // The answer is the second minus the first number now
             questionFour[0] = "You had " + secondNumber + " " + randomFruit + " and you give your friend " + firstNumber
                     + ". How many " + randomFruit + " do you have left?"; // The question switched around
-            questionFour[1] = Integer.toString(answer) + " " + randomFruit; // The answer;
-            questionFour[2] = Integer.toString(answer + 2) + " " + randomFruit; // First wrong answer
-            questionFour[3] = Integer.toString(answer - 1) + " " + randomFruit; // Second wrong answer
-            questionFour[4] = Integer.toString(answer + 1) + " " + randomFruit; // Third wrong answer
+            questionFour[1] = Integer.toString(answer); // The answer;
+            questionFour[2] = Integer.toString(answer + 2); // First wrong answer
+            questionFour[3] = Integer.toString(answer - 1); // Second wrong answer
+            questionFour[4] = Integer.toString(answer + 1); // Third wrong answer
 
         }
 
