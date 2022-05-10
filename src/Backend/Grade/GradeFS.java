@@ -21,37 +21,37 @@ public class GradeFS extends Grade{
 
     @Override
     public String getYoutubeVideo1() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=arWnymu02og");
         return youtubeVideo;
     }
 
     @Override
     public String getYoutubeVideo2() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=n05ji0Ewxmo");
         return youtubeVideo;
     }
 
     @Override
     public String getYoutubeVideo3() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=pJ8KwRztfF0");
         return youtubeVideo;
     }
 
     @Override
     public String getYoutubeVideo4() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=r2K1Py9U87I");
         return youtubeVideo;
     }
 
     @Override
     public String getYoutubeVideo5() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=ftB5VU64yGA");
         return youtubeVideo;
     }
 
     @Override
     public String getYoutubeVideo6() {
-        youtubeVideo = ("https://www.youtube.com/watch?v=CAiuTnyhmMQ");
+        youtubeVideo = ("https://www.youtube.com/watch?v=iz7Ux7kq1Ho");
         return youtubeVideo;
     }
 
