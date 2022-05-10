@@ -95,8 +95,8 @@ public class TFPractice3 extends Assessment {
         intArray.add(num4);
  
         String[] questionOne = new String[6]; // Array will hold question & possible answers
-        questionOne[0] = "Find the missing denominator: " + num + "/" + num4 + " + " + num2 + "/" + num4 + " + "
-        + num3 + "/" + "______" + "?"; // Actual question
+        questionOne[0] = "Find the missing denominator: \n" + num + "/" + num4 + " + " + num2 + "/" + num4 + " + "
+        + num3 + "/" + "______"; // Actual question
         questionOne[1] = Integer.toString(num4); // Answer
         questionOne[2] = Integer.toString(num4 - 1); // Wrong answer
         questionOne[3] = Integer.toString(num4 + 2); // Wrong answer
