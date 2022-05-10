@@ -242,7 +242,7 @@ public class FSPractice5 extends Assessment {
             questionTwo[1] = "36 in."; // Correct answer
             questionTwo[2] = "7 ft."; // Wrong answer
             questionTwo[3] = "50 cm."; // Wrong answer
-            questionTwo[4] = "1 yd."; // Wrong: 50.8 cm is 20 inches
+            questionTwo[4] = "2 yd."; // Wrong: 50.8 cm is 20 inches
             questionTwo[5] = "table";
 
         }
