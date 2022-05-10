@@ -36,6 +36,10 @@ public class FSPractice4 extends Assessment {
                 userInput[1] = generateQuestionOne();
                 break;
             case 1:
+                userInput[0] = new String[] { "1" };
+                userInput[1] = generateQuestionTwo();
+                break;
+            case 2:
                 userInput[0] = new String[] { "2" };
                 userInput[1] = generateQuestionThree();
                 break;
@@ -276,7 +280,7 @@ public class FSPractice4 extends Assessment {
 
     }
 
-    // Which clock shows "random time"? //Pics of random clocks in the question
+    // Which time does the clock show"? //Pics of random clocks in the question
     //TODO: SOLVE
     private String[] generateQuestionTwo() {
         // String array holds the times to be used in the question
