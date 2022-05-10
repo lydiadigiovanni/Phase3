@@ -86,6 +86,7 @@ public class TFPractice6 extends Assessment{
 
     }
 
+    //TODO: FIX ROUNDING< ANSWER SO YOU DON'T NEED TO TYPE IN "x = "
 //Question One = Find the value of x if " "x + " " = " "
 private String[] generateQuestionOne() {
     Random random = new Random(); //Will be used to generate random numbers
