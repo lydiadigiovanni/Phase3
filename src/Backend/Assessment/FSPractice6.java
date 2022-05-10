@@ -92,7 +92,7 @@ public class FSPractice6 extends Assessment{
         "a couch", "a swimming pool", "the height of a wall", "a boat"};
         //Save a random object from objectToMeasure in randomObject to use in the question
         String randomObject = objectToMeasure[ThreadLocalRandom.current().nextInt(17)];
-        String[] tools = {"Meas tape", "Meas cup", "Ruler", "Yardstick"}; //Array of possible answers
+        String[] tools = {"Tape meas.", "Cup meas.", "Ruler", "Yardstick"}; //Array of possible answers
         String[] questionOne = new String[5]; //Array will hold question and possible answers
         questionOne[0] = "Which tool would use use to measure " + randomObject + "?"; //Actual question
 
