@@ -173,12 +173,12 @@ public class TutoPracTestController {
                         if (Database.getAssignmentGrades() == null || Database.getAssignmentGrade(model.getFirstLetters(), model.getLastLetter()) < testGrade) {
                             Database.setAssigmentGrade(model.getFirstLetters(), model.getLastLetter(), (testGrade));
                         }
-                        controller.initialize();
+                        rewardController.initialize();
                         Stage window = (Stage) (((Node) event.getSource()).getScene().getWindow());
                         
                         window.setScene(rewardScene);
                         window.show();
-                                
+
                         controller.setCheckmarkBoolean(checkmarkindex);
                         controller.initialize();
         
