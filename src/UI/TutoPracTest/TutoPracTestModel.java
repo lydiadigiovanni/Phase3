@@ -110,8 +110,8 @@ public class TutoPracTestModel {
         FileInputStream fIS;
         if (question[5] != null) {
             try {
-                fIS = new FileInputStream("Pictures/Questions/" + question[1] + ".png");
-                userInputImageView = new ImageView(new Image(fIS));
+                fIS = new FileInputStream("Pictures/Questions/" + question[5] + ".png");
+                userInputImageView.setImage(new Image(fIS));
             } catch (FileNotFoundException e1) {
                 // TODO Auto-generated catch block
                 e1.printStackTrace();
