@@ -50,7 +50,7 @@ public class KiPractice1 extends Assessment {
         /*String fruit contains a random number of items and the answer depending
         on that number by calling generateFruit()*/
         String fruit = generateFruit(ThreadLocalRandom.current().nextInt(4), questionAnswer);
-        questionAnswer[0] = "How many " + fruit + " are there?"; //0th index - actual question
+        questionAnswer[0] = "How many " + fruit + " circles are there?"; //0th index - actual question
         int answer = ThreadLocalRandom.current().nextInt(1,10);
         questionAnswer[1] = Integer.toString(answer); //1st index - the answer
         questionAnswer[2] = Integer.toString(answer-1); //Wrong answer
@@ -64,18 +64,18 @@ public class KiPractice1 extends Assessment {
         String returnedFruit = "";
         switch (randomNumber) {
             case 1: //When the returnedFruit is apples
-                returnedFruit = "Apples";
+                returnedFruit = "red";
                 questionAnswer[5] = "Red";
                 break;
             case 2:
-                returnedFruit = "Pears"; //When the returnedFruit is pears
+                returnedFruit = "green"; //When the returnedFruit is pears
                 questionAnswer[5] = "Green";
                 break;
             case 3: 
-                returnedFruit = "Oranges"; //When the returnedFruit is oranges
+                returnedFruit = "orange"; //When the returnedFruit is oranges
                 questionAnswer[5] = "Orange";
             default:
-                returnedFruit = "Grapes"; //When the returnedFruit is oranges
+                returnedFruit = "purple"; //When the returnedFruit is oranges
                 questionAnswer[5] = "Purple";
                 break;
         }

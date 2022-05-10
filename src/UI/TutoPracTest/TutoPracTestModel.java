@@ -1,5 +1,4 @@
 package UI.TutoPracTest;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
@@ -51,10 +50,11 @@ public class TutoPracTestModel {
             String[] question = whatQuestionAndQuestion[1];
             questionLabel.setText(question[0]);
             answer = question[1];
+            pictureBox.getChildren().clear();
             try {
                 if(Database.getCurrentUserGrade().equalsIgnoreCase("Ki")) {
                     int numAnswer = Integer.parseInt(question[1]);
-                    if(whatQuestion.equalsIgnoreCase("0") && lastLetter.equalsIgnoreCase("1")) {
+                    if(whatQuestion.equalsIgnoreCase("0")) {
                         for (int i = 0; i < numAnswer; i++) {
                             pictureBox.getChildren().addAll(new Circle(20.0, Paint.valueOf(question[5])));
                         }
@@ -64,9 +64,6 @@ public class TutoPracTestModel {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-            
-            pictureBox.getChildren().clear();
-            
             randomizePlacement = ThreadLocalRandom.current().nextInt(1,5);
             choiceButtonOne.setText(question[randomizePlacement]);
             incrementPlacement();
@@ -111,18 +108,18 @@ public class TutoPracTestModel {
         String[] question = whatQuestionAndQuestion[1];
         questionLabel.setText(question[0]);
         FileInputStream fIS;
-        try {
-            fIS = new FileInputStream("Pictures/Questions/" + question[1] + ".png");
-            if (fIS != null) {
+        if (question[5] != null) {
+            try {
+                fIS = new FileInputStream("Pictures/Questions/" + question[1] + ".png");
                 userInputImageView = new ImageView(new Image(fIS));
+            } catch (FileNotFoundException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
             }
-        } catch (FileNotFoundException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
         }
         answer = question[1];
-    }
-
+        }
+        
     private void incrementPlacement() {
         randomizePlacement++;
         if (randomizePlacement == 5) {
