@@ -107,7 +107,7 @@ public class KiPractice6 extends Assessment {
 
     //Question Two: What shape is a " "? *no pics*
     private String[] generateQuestionTwo() {
-        String[] itemsInQuestions = {"soccer ball", "television", "watermelon", "pizza slice", "basic kite"}; //Array contains the thing/item in question
+        String[] itemsInQuestions = {"coin", "television", "watermelon", "pizza slice", "basic kite"}; //Array contains the thing/item in question
         String[] shapeOfItem = {"Circle", "Rectangle", "Oval", "Triangle", "Diamond"}; //Array contains shape that thing is
         String itemInQuestion = itemsInQuestions[ThreadLocalRandom.current().nextInt(5)]; //Used to randomize thing/item in the question
         String[] questionTwo = new String[6]; //Array will contain the question and its answers

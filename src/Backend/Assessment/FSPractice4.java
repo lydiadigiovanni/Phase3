@@ -508,6 +508,5 @@ public class FSPractice4 extends Assessment {
         questionThree[4] = num4 + ""; // Wrong answer
 
         return questionThree;
-
     }
 }
