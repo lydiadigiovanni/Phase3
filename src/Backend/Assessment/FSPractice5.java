@@ -9,7 +9,7 @@ public class FSPractice5 extends Assessment {
     @Override
     public String[][] generateMultipleChoiceQuestion() {
         String[][] multipleChoice = new String[2][1];
-        int i = ThreadLocalRandom.current().nextInt(2);
+        int i = ThreadLocalRandom.current().nextInt(1);
         switch (i) {
             case 0:
                 multipleChoice[0] = new String[] { "1" };
