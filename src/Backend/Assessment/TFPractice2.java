@@ -133,15 +133,15 @@ public class TFPractice2 extends Assessment {
         String[] questionThree = new String[6]; // Array will hold question & possible answers
         if(rng == 0) {
             if (rng2 == 0) {
-                questionThree[0] = "Round " + rng3 + "to the 100th place";
+                questionThree[0] = "Round " + rng3 + " to the 100th place";
                 
             }
             else {
-                questionThree[0] = "Round " + rng2 + rng3 + "to the 100th place";
+                questionThree[0] = "Round " + rng2 + rng3 + " to the 100th place";
             }
         }
         else {
-            questionThree[0] = "Round " + rng + rng2 + rng3 + "to the 100th place";
+            questionThree[0] = "Round " + rng + rng2 + rng3 + " to the 100th place";
         }
 
         if (rng2 < 5) {
