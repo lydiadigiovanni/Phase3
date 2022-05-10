@@ -172,17 +172,20 @@ public class FSPractice2 extends Assessment {
             questionThree[1] = "="; // Answer
             questionThree[2] = ">"; // Wrong answer
             questionThree[3] = "<"; // Wrong answer
+            questionThree[4] = "$"; //Wrong
         }
         if (num < num2) {
             questionThree[1] = "<"; // Answer
             questionThree[2] = "="; // Wrong answer
             questionThree[3] = ">"; // Wrong answer
+            questionThree[4] = "$"; //Wrong
 
         }
         if (num > num2) {
             questionThree[1] = ">"; // Answer
             questionThree[2] = "="; // Wrong answer
             questionThree[3] = "<"; // Wrong answer
+            questionThree[4] = "$"; //Wrong
 
         }
 
