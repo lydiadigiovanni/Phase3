@@ -110,7 +110,7 @@ public static void main(String[] args) {
 
     
 }
-
+    //TODO: FIX ROUNDING< ANSWER SO YOU DON'T NEED TO TYPE IN "x = "
 //Find the value of y, if y - " " = " "
 private String[] generateQuestionTwo() {
     Random random = new Random(); //Will be used to generate random numbers
