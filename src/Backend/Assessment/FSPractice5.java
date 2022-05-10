@@ -12,12 +12,8 @@ public class FSPractice5 extends Assessment {
         int i = ThreadLocalRandom.current().nextInt(2);
         switch (i) {
             case 0:
-                multipleChoice[0] = new String[] { "0" };
-                multipleChoice[1] = generateQuestionOne();
-                break;
-            case 1:
                 multipleChoice[0] = new String[] { "1" };
-                multipleChoice[1] = generateQuestionThree();
+                multipleChoice[1] = generateQuestionTwo();
                 break;
         }
         return multipleChoice;
@@ -297,8 +293,8 @@ public class FSPractice5 extends Assessment {
         // Get a random item from objectToGuess and assign it to randomObject
         String randomObject = objectToGuess[ThreadLocalRandom.current().nextInt(6)];
         String[] questionThree = new String[6]; // Array will be used to hold the question and possible answers
-        questionThree[0] = "Fill in the proper unit (inches or feet) for the measurement below.\n" +
-                "Hint: 1 foot = 12 inch "; // The actual question
+//        questionThree[0] = "Fill in the proper unit (inches or feet) for the measurement below.\n" +
+  //              "Hint: 1 foot = 12 inch "; // The actual question
 
         if (randomObject == objectToGuess[0]) { // If the object is a sundae
             Random random = new Random(); // Will be used to generate the random numbers
@@ -306,9 +302,9 @@ public class FSPractice5 extends Assessment {
             while (num < 7) {
                 num = random.nextInt(10) + 1;
             }
-            questionThree[1] = "Height of a sundae: " + num + "_______";
-            questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
-            questionThree[3] = "feet"; // Wrong: too large
+            questionThree[0] = "Height of a sundae: " + num + "_______ \n in inches or feet?";
+            questionThree[1] = "inches"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "feet"; // Wrong: too large
             questionThree[5] = "sundae";
         
 
@@ -320,9 +316,9 @@ public class FSPractice5 extends Assessment {
             while (num < 10) {
                 num = random.nextInt(18) + 1;
             }
-            questionThree[1] = "Length of hammer: " + num + "_______";
-            questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
-            questionThree[3] = "feet"; // Wrong: too large
+            questionThree[0] = "Length of hammer: " + num + "_______ \n in inches or feet?";
+            questionThree[1] = "inches"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "feet"; // Wrong: too large
             questionThree[5] = "hammer";
 
         }
@@ -333,9 +329,9 @@ public class FSPractice5 extends Assessment {
             while (num < 3) {
                 num = random.nextInt(5) + 1;
             }
-            questionThree[1] = "Height of a boy: " + num + "_______";
-            questionThree[2] = "feet"; // Correct: Average medium sized bird is 8 inches
-            questionThree[3] = "inches"; // Wrong: too large
+            questionThree[0] = "Height of a boy: " + num + "_______ \n in inches or feet?";
+            questionThree[1] = "feet"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "inches"; // Wrong: too large
             questionThree[5] = "boy";
 
         }
@@ -346,9 +342,9 @@ public class FSPractice5 extends Assessment {
             while (num < 2) {
                 num = random.nextInt(4) + 1;
             }
-            questionThree[1] = "Length of a key: " + num + "_______";
-            questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
-            questionThree[3] = "feet"; // Wrong: too large
+            questionThree[0] = "Length of a key: " + num + "_______ \n in inches or feet?";
+            questionThree[1] = "inches"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "feet"; // Wrong: too large
             questionThree[5] = "key";
         }
 
@@ -358,9 +354,9 @@ public class FSPractice5 extends Assessment {
             while (num < 6) {
                 num = random.nextInt(9) + 1;
             }
-            questionThree[1] = "Length of a paintbrush: " + num + "_______";
-            questionThree[2] = "inches"; // Correct: Average medium sized bird is 8 inches
-            questionThree[3] = "feet"; // Wrong: too large
+            questionThree[0] = "Length of a paintbrush: " + num + "_______ \n in inches or feet?";
+            questionThree[1] = "inches"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "feet"; // Wrong: too large
             questionThree[5] = "paintbrush";
 
         }
@@ -371,9 +367,9 @@ public class FSPractice5 extends Assessment {
             while (num < 2) {
                 num = random.nextInt(3) + 1;
             }
-            questionThree[1] = "Length of a picture frame: " + num + "_______";
-            questionThree[2] = "feet"; // Correct: Average medium sized bird is 8 inches
-            questionThree[3] = "inches"; // Wrong: too large
+            questionThree[0] = "Length of a picture frame: " + num + "_______ \n in inches or feet?";
+            questionThree[1] = "feet"; // Correct: Average medium sized bird is 8 inches
+            questionThree[2] = "inches"; // Wrong: too large
             questionThree[5] = "frame";
 
         }

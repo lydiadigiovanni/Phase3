@@ -36,10 +36,6 @@ public class FSPractice4 extends Assessment {
                 userInput[1] = generateQuestionOne();
                 break;
             case 1:
-                userInput[0] = new String[] { "1" };
-                userInput[1] = generateQuestionTwo();
-                break;
-            case 2:
                 userInput[0] = new String[] { "2" };
                 userInput[1] = generateQuestionThree();
                 break;
