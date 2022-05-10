@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class ResetPasswordPopupController {
+public class PasswordsDontMatchController {
 
     @FXML
     private Button okButton;
@@ -14,7 +14,8 @@ public class ResetPasswordPopupController {
     @FXML
     void okPressed(ActionEvent event) {
         Stage stage = (Stage) okButton.getScene().getWindow();
-        stage.close();   
+        stage.close(); 
     }
 
 }
+

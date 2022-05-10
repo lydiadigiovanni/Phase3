@@ -205,7 +205,7 @@ public class FSPractice5 extends Assessment {
     // Show pic of the object next to the question
     private String[] generateQuestionTwo() {
         // String array of the objects used in the question
-        String[] objectToGuess = { "parrot", "lamp", "table", "person", "tree", "giraffe", "building" };
+        String[] objectToGuess = { "parrot", "lamp", "table", "adult human", "tree", "giraffe", "building" };
         // Get a random item from objectToGuess and assign it to randomObject
         String randomObject = objectToGuess[ThreadLocalRandom.current().nextInt(7)];
         String[] questionTwo = new String[6]; // Array will be used to hold the question and possible answers
