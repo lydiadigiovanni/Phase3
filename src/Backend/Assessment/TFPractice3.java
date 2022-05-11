@@ -142,7 +142,7 @@ public class TFPractice3 extends Assessment {
         questionTwo[1] = num / 2 + "/" + num2 / 2; // Answer
         questionTwo[2] = num3 + "/" + num4; // Wrong answer
         questionTwo[3] = num4 + "/" + num3; // Wrong answer
-        questionTwo[4] = num2 + "/" + num; // Wrong answer
+        questionTwo[4] = num2 + "/" + (num + 1); // Wrong answer
  
         return questionTwo;
  
