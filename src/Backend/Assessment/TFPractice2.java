@@ -81,7 +81,7 @@ public class TFPractice2 extends Assessment {
     // Question One: Which number is a factor of " "?
     public String[] generateQuestionOne() {
         Random random = new Random(); // Will be used to generate the random numbers
-        int numInQuestion = random.nextInt(100) + 1; // The number in the question is between 1 and 100
+        int numInQuestion = random.nextInt(100) + 10; // The number in the question is between 10 and 100
         ArrayList<Integer> possibleFactors = new ArrayList<>(); // ArrayList will holds possible answers / factors
         // Run loop from 1 to numInQuestion
         for (int i = 1; i <= numInQuestion; i++) {
