@@ -96,9 +96,9 @@ public class TFPractice2 extends Assessment {
         String[] questionOne = new String[6]; // Array will hold question & possible answers
         questionOne[0] = "Which number is a factor of " + numInQuestion + "?"; // Actual question
         questionOne[1] = Integer.toString(answer); // Answer
-        questionOne[2] = Integer.toString(answer - 1); // Wrong answer
-        questionOne[3] = Integer.toString(answer + 1); // Wrong answer
-        questionOne[4] = Integer.toString(answer + 3); // Wrong answer
+        questionOne[2] = Integer.toString(answer + 3); // Wrong answer
+        questionOne[3] = Integer.toString(answer + 7); // Wrong answer
+        questionOne[4] = Integer.toString(answer + 11); // Wrong answer
     
         return questionOne;
 
