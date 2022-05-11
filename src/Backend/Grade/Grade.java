@@ -16,6 +16,10 @@ public abstract class Grade {
 
     private String grade;
 
+    /**
+     * get's the tutorial youtube videos
+     * @return
+     */
     public abstract String getYoutubeVideo1();
 
     public abstract String getYoutubeVideo2();

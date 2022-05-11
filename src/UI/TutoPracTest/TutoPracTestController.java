@@ -131,6 +131,12 @@ public class TutoPracTestController {
         }
     }
     
+    /**
+     * This method is called when the done button is pressed. It brings the user back to the map.
+     * if it's a test, it calls the reward scene. 
+     * All three types will send it to the checkmark index to display the checkmark.
+     * @param event button event
+     */
     @FXML
     public void completeAssignment(ActionEvent event) { //Done button
         if (youtubeVideo != null) {
@@ -224,6 +230,12 @@ public class TutoPracTestController {
 
     }
 
+    /**
+     * simple event to check the multiple choice answer, using the submit button
+     * Disables the radio buttons, disables the submit button, displays the next button.
+     * @param event
+     * @throws FileNotFoundException
+     */
     @FXML
     public void mutlipleChoiceCheckAnswer(ActionEvent event) throws FileNotFoundException { //Confirm button's method
         if(multipleChoiceQuestion.getSelectedToggle() != null) {
@@ -237,6 +249,14 @@ public class TutoPracTestController {
         }
     }
 
+    /**
+     * Method used by both userinput and multiple choice questions
+     * Displays the x or check mark depending if the answer is correct or not.
+     * Disables the next button, and enables the done button if the end of the questions have been reached.
+     * Updates the label for the number of correct answers.
+     * @param correctBoolean
+     * @param nextButton
+     */
     private void answerChecker(Boolean correctBoolean, Button nextButton) {
         if (correctBoolean) {
             incorrectCorrect.setImage(correctmark);
@@ -260,6 +280,10 @@ public class TutoPracTestController {
         }
     }
 
+    /**
+     * Simple method for checking user input answers, with the submit button
+     * @param event
+     */
     @FXML
     void userInputCheckAnswer(ActionEvent event) {
         if(!userInputTextField.getText().isEmpty()) {
@@ -273,6 +297,10 @@ public class TutoPracTestController {
         }
     }
 
+    /**
+     * Method for setting up the question after pressing next button.
+     * @param event
+     */
     @FXML
     void userInputNextQuestion(ActionEvent event) {
         userInputTextField.setDisable(false);
@@ -289,6 +317,10 @@ public class TutoPracTestController {
         }
     }
 
+    /**
+     * Method for setting up the question after pressing next button.
+     * @param event
+     */
     @FXML
     public void multipleChoiceNextQuestion(ActionEvent event) { //Next button's method
         disableRadioButtons(false);
@@ -307,6 +339,14 @@ public class TutoPracTestController {
 
     
 
+    /**
+     * This method gets called ***after*** the object has been constructed, as the view is going to be loaded.
+     * The first thing that happens is checking if it's a tutorial, practice, or test.
+     * Disables / enables the appropriate buttons, labels, etc.
+     * Since grade has been loaded with the appropriate child grade, we can just call the respective method, for the youtube video for example.
+     * Sets the number of questions total questions for practice and test
+     * and generates questions.
+     */
     @FXML
     public void initialize() {
         if(model.getFirstLetters() != null) {
@@ -374,6 +414,11 @@ public class TutoPracTestController {
         }  
     }
 
+    /**
+     * this is the return to map button, unloads the youtube video
+     * loads the map based on the map name (which was the previous map it came from)
+     * @param event
+     */
     @FXML
     public void returnToMap(ActionEvent event) {
         if (youtubeVideo != null) {
@@ -401,14 +446,29 @@ public class TutoPracTestController {
             }
     }
 
+    /**
+     * This is a method to get the model to hold the first four letters, so tuto, prac, test hence the name of the class
+     * @param firstFourLetters
+     */
     public void setFirstLetter(String firstFourLetters) {
         model.setFirstLetter(firstFourLetters);
     }
 
+    /**
+     * This is to set the last letter, which will be of the button, so, tutorial1 test1, practic3
+     * since we the map buttons are lied out as tutorial1, pracctice1, tutorial2, practice2, test1, for map 1
+     * then map2 tutorial3, practice3, tutorial4, practice4, test2 etc.
+     * we know exactly what the last letter (number) is, and then can determine what standards we should pull from.
+     * @param lastLetter
+     */
     public void setLastLetter(String lastLetter) {
         model.setLastLetter(lastLetter);
     }
 
+    /**
+     * helper method just to disable the radio buttons easier.
+     * @param trueFalse
+     */
     private void disableRadioButtons(Boolean trueFalse) {
         choiceButtonOne.setDisable(trueFalse);
         choiceButtonTwo.setDisable(trueFalse);
@@ -416,6 +476,9 @@ public class TutoPracTestController {
         choiceButtonFour.setDisable(trueFalse);
     }
 
+    /**
+     * Helper method to generate questions 
+     */
     private void generateQuestion() {
         model.generateQuestion(questionLabel, pictureBox, choiceButtonOne, choiceButtonTwo, choiceButtonThree, choiceButtonFour, userInputAnchor, multipleChoiceAnchor, userInputImageView);
     }
@@ -428,6 +491,10 @@ public class TutoPracTestController {
         model.setMapName(substring);
     }
 
+    /**
+     * Helper method to set the grade for the model
+     * @param grade
+     */
     public void setGrade(Grade grade) {
         model.setGrade(grade);
     }

@@ -1,7 +1,4 @@
 package UI.Map;
-
-import java.sql.SQLException;
-
 import Backend.Database.Database;
 import Backend.Grade.Grade;
 import UI.TutoPracTest.TutoPracTestController;
@@ -16,12 +13,15 @@ import javafx.event.ActionEvent;
 
 public class MapModel {
     
-    private Boolean checkmarkIndex[] = new Boolean[]{false, false, false, false, false};
-    
     public MapModel() {
 
     }
 
+    /**
+     * Switches over to the tutorialpracticetest page
+     * first four letters (tuto, prac, test) get established here, along with
+     * the number of the button, (practice1, tutorial4, etc.) 
+     */
     public void switchToTutoPracTest(ActionEvent event, Button button, String path, Grade grade, String mapName) {
         String firstFourLetters = button.getId().substring(0, 4);
         String lastLetter = button.getId().substring((button.getId().length()) - 1);        
@@ -43,6 +43,10 @@ public class MapModel {
         }
     }
 
+    /**
+     * Switches over to the home page
+     * @param event
+     */
     public void toHomePage(ActionEvent event) {
         try {
             Parent homepageParent = FXMLLoader.load(getClass().getResource("/UI/Homepage/HomePage.fxml"));
@@ -56,22 +60,16 @@ public class MapModel {
             
     }
 
+    /**
+     * Setters and getters for assigning the map's boolen array for the checkmarks on the tutorial, practice tests. etc.
+     * @param checkmarkindex
+     * @param mapName
+     */
     public void setCheckmarkBoolean(int checkmarkindex, String mapName) {
-        try {
-            Database.setCheckmarkBoolean(checkmarkindex, mapName);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        Database.setCheckmarkBoolean(checkmarkindex, mapName);
     }
     
     public Boolean[] getCheckmarkIndex(String mapName) {
-        try {
-            return Database.getMapProgress(mapName);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return null;
+        return Database.getMapProgress(mapName);
     }
 }
