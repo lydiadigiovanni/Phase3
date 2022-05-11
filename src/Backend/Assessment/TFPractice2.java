@@ -74,6 +74,8 @@ public class TFPractice2 extends Assessment {
         System.out.println(question3[2]);
         System.out.println(question3[3]);
         System.out.println(question3[4]);
+
+        System.out.println("test " + null);
     }
 
     // Question One: Which number is a factor of " "?
@@ -129,7 +131,18 @@ public class TFPractice2 extends Assessment {
         int rng3 = random.nextInt(9); // random number 3 for ones place
 
         String[] questionThree = new String[6]; // Array will hold question & possible answers
-        questionThree[0] = "Round " + rng + rng2 + rng3 + " to the 100th place";
+        if(rng == 0) {
+            if (rng2 == 0) {
+                questionThree[0] = "Round " + rng3 + " to the 100th place";
+                
+            }
+            else {
+                questionThree[0] = "Round " + rng2 + rng3 + " to the 100th place";
+            }
+        }
+        else {
+            questionThree[0] = "Round " + rng + rng2 + rng3 + " to the 100th place";
+        }
 
         if (rng2 < 5) {
 
@@ -143,8 +156,19 @@ public class TFPractice2 extends Assessment {
             rng3 = 0;
 
         }
+        if(rng == 0) {
+            if (rng2 == 0) {
+                questionThree[1] = "" + rng3;
+                
+            }
+            else {
+                questionThree[1] = "" + rng2 + rng3;
+            }
+        }
+        else {
+            questionThree[1] = "" + rng + rng2 + rng3;
+        }
 
-        questionThree[1] = rng + "" + rng2 + "" + rng3; // Actual answer
         questionThree[2] = (rng + 1) + "" + (rng2 + 2) + "" + (rng3 + 3); // Wrong answer
         questionThree[3] = (rng + 2) + "" + (rng2 + 3) + "" + (rng3 + 1);
         ; // Wrong answer
