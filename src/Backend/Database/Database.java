@@ -10,7 +10,7 @@ import Backend.Grade.Grade;
 
 /**
  * WARNING:
- * YOU MUST HAVE "DummyUser" IN THE student_information DATABASE TABLE IN ORDER FOR THE CODE TO WORK.
+ * YOU MUST HAVE "DummyUser" IN THE student_information DATABASE TABLE IN THE COLLUMN "studentUsername" IN ORDER FOR THE CODE TO WORK.
  */
 public class Database {
     private static Connection connection = null;
