@@ -8,6 +8,10 @@ import java.sql.Statement;
 
 import Backend.Grade.Grade;
 
+/**
+ * WARNING:
+ * YOU MUST HAVE "DummyUser" IN THE student_information DATABASE TABLE IN ORDER FOR THE CODE TO WORK.
+ */
 public class Database {
     private static Connection connection = null;
     private static String url = "jdbc:mysql://localhost:3306/mydb";
