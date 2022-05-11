@@ -87,14 +87,13 @@ public class ProfilePageController {
     }
 
     @FXML
-    public void initialize() throws SQLException, FileNotFoundException {
+    public void initialize() throws FileNotFoundException {
         usernameLabel.setText(Database.getCurrentUsername());
         String avatar = Database.getCurrentAvatar();
         if (avatar != null) {
             try {
                 userAvatar.setImage(new Image(new FileInputStream("Pictures/Profile/" + avatar + ".png")));
             } catch (FileNotFoundException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -102,7 +101,6 @@ public class ProfilePageController {
             try {
                 userAvatar.setImage(new Image(new FileInputStream("Pictures/Profile/Avatar_1.png")));
             } catch (FileNotFoundException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
