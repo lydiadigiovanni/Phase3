@@ -155,7 +155,7 @@ public class TFPractice4 extends Assessment {
             intArray.add(num4);
      
             String[] questionThree = new String[6]; // Array will hold question & possible answers
-            questionThree[0] = "Find the difference. " + num + "/" + num2 + " - " + num3 + "/" + num2 + "?"; // Actual question
+            questionThree[0] = "Find the difference of " + num + "/" + num2 + " - " + num3 + "/" + num2; // Actual question
             questionThree[1] = (num-num3+"/"+num2); // Answer
             questionThree[2] = (num+1)+"/"+(num2+2); // Wrong answer
             questionThree[3] = (num+2)+"/"+(num4+2); // Wrong answer

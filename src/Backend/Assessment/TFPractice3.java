@@ -1,9 +1,9 @@
+//Purpose: First round of practice questions for Fraction Lagoon
 package Backend.Assessment;
 
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-//Purpose: First round of practice questions for Fraction Lagoon
 import java.util.ArrayList;
 import java.util.Random;
 public class TFPractice3 extends Assessment {
@@ -96,7 +96,7 @@ public class TFPractice3 extends Assessment {
  
         String[] questionOne = new String[6]; // Array will hold question & possible answers
         questionOne[0] = "Find the missing denominator: \n" + num + "/" + num4 + " + " + num2 + "/" + num4 + " + "
-        + num3 + "/" + "______"; // Actual question
+        + num3 + "/" + "______ = " + (num + num2 + num3) + "/" + num4; // Actual question
         questionOne[1] = Integer.toString(num4); // Answer
         questionOne[2] = Integer.toString(num4 - 1); // Wrong answer
         questionOne[3] = Integer.toString(num4 + 2); // Wrong answer
@@ -150,7 +150,6 @@ public class TFPractice3 extends Assessment {
 
     
         // Question Three: fraction word problem, see question 3 string array?
-        //TODO: PLEASE SHORTEN???
         public String[] generateQuestionThree() {
             Random random = new Random(); // Will be used to generate the random numbers
             int ranNum = random.nextInt(100) + 1; // random number for first integer
@@ -162,8 +161,8 @@ public class TFPractice3 extends Assessment {
             }
                        
             String[] questionThree = new String[6]; // Array will hold question & possible answers
-            questionThree[0] =  "Out of "+ ranNum +" books on fairy tales, Gilly borrowed " + ranNum2 + ". "+
-            "What fraction of the books on fairy tales did she borrow?";
+            questionThree[0] =  "The library had "+ ranNum +" books and Gilly borrowed " + ranNum2 + ". "+
+            "What fraction of the books did she borrow?";
 
             questionThree[1] = ranNum2+"/"+ranNum; // Actual answer
             questionThree[2] = (ranNum2+2)+"/"+(ranNum+6); // Wrong answer
