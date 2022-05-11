@@ -85,23 +85,22 @@ public class TFPractice6 extends Assessment{
     
 
     }
-    //Question One = Find the value of x if " "x + " " = " "
+//Question One = Find the value of x if " " "x = " "
 private String[] generateQuestionOne() {
-    Random random = new Random(); //Will be used to generate random numbers
-    int numBeforeX = random.nextInt(30) + 1; //The number before the x, as in 3x for example
-    int numAfterPlus = random.nextInt(30) + 1; //Number after plus, like + 7 for example
-    int temp = random.nextInt(30) + 1; //Temporary random integer
-    int numItEquals = temp * numAfterPlus; //Use temp to ensure the number after = is > the other umbers
-    //Subtract numAfterPlus from numItEquals and divide that by numBeforeX
-    int answer = ((numItEquals - numAfterPlus) / numBeforeX);
-    String[] questionOne = new String[6]; //Array will hold question and answers
-    questionOne[0] = "Find the value of x if " + numBeforeX + "x + " + numAfterPlus + " = " + numItEquals;
-    questionOne[1] = Integer.toString(answer); //Correct answer
-    questionOne[2] = Integer.toString(answer + 2); //Wrong answer
-    questionOne[3] = Integer.toString(answer - 2); //Wrong answer
-    questionOne[4] = Integer.toString(answer - 1); //Wrong answer
+         Random random = new Random(); //Will be used to generate random numbers
+        int temp = random.nextInt(100) + 1; //Temporary number will ensure correct question format
+        int firstNum = random.nextInt(100) + 1; //Second number is between 1 and 100
+        int secondNum = firstNum * temp; //To ensure that the second number can be divided by y to get the first
+        String[] questionTwo = new String[6]; //String will hold question and possible answers
+        int answer = secondNum / firstNum; //Answer is x = secondNum / firstNum
+        questionTwo[0] = "Find the value of x if " + firstNum + "x = " + secondNum; //Actual question
+        questionTwo[1] = Integer.toString(answer); //Correct answer
+        questionTwo[2] = Integer.toString(answer + 1); //Wrong answer
+        questionTwo[3] = Integer.toString(answer - 1); //Wrong answer
+        questionTwo[4] = Integer.toString(answer - 2); //Wrong answer
 
-    return questionOne;
+        return questionTwo;
+   
 }
 
    //Question Two = Find the value of y if " " = " " / y
@@ -137,7 +136,7 @@ private String[] generateQuestionOne() {
             intArray.add(num4);
      
             String[] questionThree = new String[6]; // Array will hold question & possible answers
-            questionThree[0] = "Solve for x:\n x/"+num+ " = "+num2; // Actual question
+            questionThree[0] = "Solve for x:\nx / "+num+ " = "+num2; // Actual question
             questionThree[1] = (num*num2)+""; // Answer
             questionThree[2] = (num*num)+""; // Wrong answer
             questionThree[3] = (num4*num2)+""; // Wrong answer

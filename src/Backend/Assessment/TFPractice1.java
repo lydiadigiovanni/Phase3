@@ -62,6 +62,41 @@ public class TFPractice1 extends Assessment {
         return multipleChoice;
     }
 
+    public static void main (String[] args) {
+         //Test question one
+         TFPractice1 test1 = new TFPractice1();
+         String[] question1 = test1.generateQuestionOne();
+         System.out.println(question1[0]);
+         System.out.println(question1[1]); 
+         System.out.println(question1[2]); 
+         System.out.println(question1[3]); 
+         System.out.println(question1[4]);
+         //Test question two
+         TFPractice1 test2 = new TFPractice1();
+         String[] question2 = test2.generateQuestionTwo();
+         System.out.println(question2[0]);
+         System.out.println(question2[1]); 
+         System.out.println(question2[2]); 
+         System.out.println(question2[3]); 
+         System.out.println(question2[4]);
+         //Test question three
+         TFPractice1 test3 = new TFPractice1();
+         String[] question3 = test3.generateQuestionThree();
+         System.out.println(question3[0]);
+         System.out.println(question3[1]); 
+         System.out.println(question3[2]); 
+         System.out.println(question3[3]); 
+         System.out.println(question3[4]);
+         //Test question four
+         TFPractice1 test4 = new TFPractice1();
+         String[] question4 = test3.generateQuestionFour();
+         System.out.println(question4[0]);
+         System.out.println(question4[1]); 
+         System.out.println(question4[2]); 
+         System.out.println(question4[3]); 
+         System.out.println(question4[4]);   
+    }
+
     //Question one: What is " " * " "?
     //TODO: FIX THIS ONE? I got 7 * 11, with answers of 22, 23, 24, 20
     //TODO: SHANE DEBUG THIS

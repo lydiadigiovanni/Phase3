@@ -95,9 +95,9 @@ public class TFPractice2 extends Assessment {
         questionOne[0] = "Which number is a factor of " + numInQuestion + "?"; // Actual question
         questionOne[1] = Integer.toString(answer); // Answer
         questionOne[2] = Integer.toString(answer - 1); // Wrong answer
-        questionOne[3] = Integer.toString(answer + 2); // Wrong answer
+        questionOne[3] = Integer.toString(answer + 1); // Wrong answer
         questionOne[4] = Integer.toString(answer + 3); // Wrong answer
-
+    
         return questionOne;
 
     }
@@ -113,9 +113,9 @@ public class TFPractice2 extends Assessment {
         String[] questionTwo = new String[6]; // Array will hold question & possible answers
         questionTwo[0] = "Which number is a multiple of " + numInQuestion + "?";
         questionTwo[1] = Integer.toString(answer); // Actual answer
-        questionTwo[2] = Integer.toString(answer - 2); // Wrong answer
-        questionTwo[3] = Integer.toString(answer - 3); // Wrong answer
-        questionTwo[4] = Integer.toString(answer + 2); // Wrong answer
+        questionTwo[2] = Integer.toString(answer - 1); // Wrong answer
+        questionTwo[3] = Integer.toString(answer + 1); // Wrong answer
+        questionTwo[4] = Integer.toString(answer + 3); // Wrong answer
 
         return questionTwo;
 
